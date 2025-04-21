@@ -1,71 +1,41 @@
-%% -*- coding:utf-8 -*- 
 \section{Quantum Cryptography}
 \label{subsecPart3QuantInfoQuantCrypto}
-The randomness inherent in quantum objects suggests the idea
-of using them for key distribution. There exist many different
-secure key distribution schemes based on the use of
-quantum objects. We will explore a scheme based on the verification
-of Bell inequalities (see \ref{pPart3EntangleBell}). The considered scheme
-is shown in \autoref{figPart3QuantInfoCryptoBell}.
+The randomness inherent to quantum objects suggests using them for key distribution. There are many different secure key distribution schemes based on the use of quantum objects. We explore a scheme based on testing Bell inequalities (see \ref{pPart3EntangleBell}). The considered scheme is depicted in \autoref{figPart3QuantInfoCryptoBell}.
 
 \input ./part4/crypto/figquantcrypto.tex
 
-A source of entangled photons \rindex{photon!entangled state} $S$ generates pairs of photons,
-one of which is sent to Alice and the other to Bob, who perform
-measurements of the Stokes parameters of their photons.
+The source of entangled photons \rindex{photon!entangled state} $S$ creates pairs of photons, one of which is sent to Alice and the other to Bob, who perform measurements of the Stokes parameters of their photons.
 
-Alice randomly measures either $\hat{A} = \hat{S}_1^{(1)}$
-or $\hat{A}' = \hat{S}_2^{(1)}$. Bob randomly measures the following quantities 
+Alice randomly measures either $\hat{A} = \hat{S}_1^{(1)}$ or $\hat{A}' = \hat{S}_2^{(1)}$. Bob randomly performs measurements of the following quantities
 \begin{eqnarray}
 \hat{B} = \frac{1}{\sqrt{2}}\left(\hat{S}_1^{(2)} +
   \hat{S}_2^{(2)}\right), 
 \nonumber \\
-\hat{B}' = \frac{1}{\sqrt{2}}\left(\hat{S}_1^{(2)} - \hat{S}_2^{(2)}\right),
+\hat{B}' = \frac{1}{\sqrt{2}}\left(\hat{S}_1^{(2)} - \hat{S}_2^{(2)}\right)
 \nonumber \\
 \hat{C} = \hat{S}_1^{(2)},
 \nonumber \\
 \hat{C}' = \hat{S}_2^{(2)}.
 \nonumber
 \end{eqnarray}
-Thus, as a result of the experiment, we obtain 8 pairs of values,
-which can be grouped into three sets.
+Thus, as a result of the experiment, we will obtain 8 pairs of values that can be combined into three groups.
 
-The first set contains
-correlated combinations of operators $\hat{A}$, $\hat{A}'$, $\hat{C}$, and
-$\hat{C}'$: $\left(a, c\right)$ and $\left(a', c'\right)$. For these
-combinations, we can say that if one of the numbers $a$ or $a'$
-equals $\pm 1$, then the other ($c$ or $c'$) equals $\mp 1$. Thus,
-these numbers can be used to obtain a random
-sequence of numbers, which will subsequently be used as the key.
+The first group contains correlating combinations of operators $\hat{A}$, $\hat{A}'$, $\hat{C}$, and $\hat{A}'$: $\left(a, c\right)$ and $\left(a', c'\right)$. For these combinations, we can say that if one of the numbers $a$ or $a'$ is equal to $\pm 1$, then the other ($c$ or $c'$) is equal to $\mp 1$. Therefore, these numbers can be used to obtain a random sequence of numbers, which will be subsequently used as a key.
 
-The second group contains 4 pairs of values, which will
-be used to verify Bell inequalities: $\left(a, b\right)$,
-$\left(a', b\right)$, $\left(a, b'\right)$, and $\left(a', b'\right)$.
+The second group contains 4 pairs of values that will be used to verify Bell inequalities: $\left(a, b\right)$, $\left(a', b\right)$, $\left(a, b'\right)$, and $\left(a', b'\right)$.
 
-The last group contains pairs of values $\left(a, c'\right)$ and
-$\left(a', c\right)$. This group of values is discarded in the future.
+The last group contains pairs of values $\left(a, c'\right)$ and $\left(a', c\right)$. This group of values is subsequently discarded.
 
-At the initial stage, Bob and Alice independently perform measurements in a random order.
-Upon completion of the measurements, they communicate to each other (over a conventional open communication channel) which quantities they measured in each particular trial, without revealing the measurement results themselves. Subsequently, those trials in which either failed to register a photon are discarded, as well as results related to the third group of measurements. The results of the second group of measurements are openly published and the average value $\left<F\right>$
-\eqref{eqEntangFmain} is calculated.
+At the initial stage, Bob and Alice randomly (independently of each other) perform measurements. After completing the measurements, they tell each other (via a regular open communication channel) which quantities they measured in each specific trial, without disclosing the results of the measurements themselves. Subsequently, the trials where either of them could not register a photon, and the results relating to the third group of measurements, are discarded. The results of the second group of measurements are openly published, and the average value $\left<F\right>$ \eqref{eqEntangFmain} is calculated from them.
 
-If the obtained value in magnitude is close to the predictions of quantum
-mechanics \eqref{eqEntangQuant}
+If the obtained value in absolute terms is close to the predictions of quantum mechanics \eqref{eqEntangQuant}
 \[
 \left<F\right>_{quant} = - \sqrt{2},
 \]
-then the results of the first group of measurements can be
-interpreted as the key.
+then the result of the first group of measurements can be interpreted as a key.
 
-If an eavesdropper Eve attempts to learn the results of the first
-group of measurements, which constitute the distributed key, one way 
-to do this is to replace the entangled photon pair source herself and send Alice and Bob pairs of photons
-with predetermined polarization properties, so that the outcomes of Alice’s and Bob’s experiments are predetermined in advance. However, in this case,
-$\left<F\right>$, according to \eqref{eqEntangClass}, will lie in the interval:
+If an eavesdropper Eve wants to try to learn the results of the first group of measurements, which constitute the distributed key, one way to do so is to substitute herself as the source of entangled photon pairs and send Alice and Bob a pair of photons with certain polarization properties, so their experimental results will be predetermined. However, in this case $\left<F\right>$, according to \eqref{eqEntangClass}, will lie in the interval:
 \[
 -1 \le \left<F\right>_{class} \le 1.
 \]
-Thus, Alice and Bob can determine the presence of Eve’s intervention by checking Bell inequalities,
-and consider the obtained key compromised if the test detects the presence of Eve.
-
-% FIXME add substitution of Alice by Eve for Bob and vice versa
+Thus, Alice and Bob can determine the fact of Eve's interference and consider the obtained key compromised if the check establishes the fact of Eve's presence.
