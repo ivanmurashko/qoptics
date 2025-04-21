@@ -1,0 +1,397 @@
+%% -*- coding:utf-8 -*- 
+\section{EPR Paradox for Stokes Parameters and Entangled States}
+\label{sec:part3:epr}
+Consider the single-photon state \eqref{eqEntangSimpleState}. 
+To explain
+the physical meaning of the parameters $\alpha$ and $\beta$, one needs to refer to the experimental setup scheme shown in
+\autoref{figPart3EntangJones}. Suppose that the source $S$ emits
+photons in the state \eqref{eqEntangSimpleState}. Then the average current
+of photodetector $D_x$ will be proportional to
+$\left|\alpha\right|^2$, and that of photodetector $D_y$ -
+$\left|\beta\right|^2$, i.e., $P_x = \left|\alpha\right|^2$ and $P_y =
+\left|\beta\right|^2$ describe the probabilities of detecting a photon in
+a state polarized along $x$ - $\ket{x}$ or $y$ -
+$\ket{y}$. The following question arises - "what is behind these
+probabilities?". Two possible answers exist. The first one
+assumes that we actually have incomplete knowledge about the source $S$,
+i.e., if we knew everything about this source, we could
+predict which photon, polarized along $x$ or along $y$, is created at
+an arbitrary moment in time and, correspondingly, the readings of
+photodetectors $D_x$ and $D_y$. From this point of view,
+quantum mechanics represents some intermediate
+theory, which can later be replaced by a more precise one,
+describing quantum properties of objects with absolute accuracy. 
+
+The second answer variant assumes that it is impossible to determine
+all parameters describing some quantum system with arbitrary
+precision because the measurement result is not predetermined in advance (as
+in our case by properties of source $S$), but rather defined at the moment
+of measurement as a result of the interaction between the quantum system and
+the macroscopic measuring apparatus. 
+
+The first attempt to answer this question was made by 
+A. Einstein, B. Podolsky, and N. Rosen in 1935 in a paper often called EPR \cite{bEPR}. \rindex{EPR paradox} 
+In EPR, a physical theory is considered
+complete if every element of physical reality has a counterpart in
+the physical theory. The following was adopted as a definition of an element of physical
+reality: "if, without disturbing a system, we can predict with certainty (probability equal to unity) the value of some physical quantity, then there exists an element of reality corresponding to this
+quantity" \cite{bBelokTimHrus}. Non-commuting operators are of particular interest here. In our case, these could be operators
+$\hat{S}_1$ and $\hat{S}_2$. Since these operators do not commute
+\eqref{eqEntangStokesOperS12Comm}, the values of the corresponding observables cannot be measured with arbitrary
+precision. From this, two assumptions can be made:
+\begin{enumerate}
+\item The quantum mechanical description of reality is incomplete
+\item The quantities defined by operators $\hat{S}_1$ and $\hat{S}_2$ cannot be simultaneously real
+\end{enumerate}
+
+As a test system, following EPR, we consider a complex
+system consisting of several particles. At the same time, some overall wave function is used to describe the entire
+system.
+
+To describe the polarization properties of a complex system consisting of two
+photons, one must use a wave function of the following form:
+\begin{eqnarray}
+\left|\psi\right> = \sum_{i,j = x,y} 
+c_{ij}\ket{i}_1\ket{j}_2 = 
+\nonumber \\
+= c_{xx} \ket{x}_1\ket{x}_2 +
+c_{xy} \ket{x}_1\ket{y}_2 +
+c_{yx} \ket{y}_1\ket{x}_2 +
+c_{yy} \ket{y}_1\ket{y}_2.
+\label{eqEntang2Common}
+\end{eqnarray}
+If two or more coefficients $c_{ij}$ in \eqref{eqEntang2Common}
+are nonzero, then the wave function is non-factorizable, i.e., 
+\[
+\left|\psi\right> \ne \left|\psi\right>_1 \left|\psi\right>_2.
+\]
+Thus, no single wave function can be assigned to each separate photon. Such states are called entangled.
+
+\begin{remark}
+Consider the following pure entangled state
+\[
+  \ket{\psi_{12}} = \frac{
+    \ket{ x }_1\ket{ y }_2 -
+    \ket{ y }_1\ket{ x }_2
+  }{\sqrt{2}},
+\]
+whose density matrix has the form
+\begin{eqnarray}
+\hat{\rho}_{12} = \ket{\psi_{12}}\bra{\psi_{12}} =
+\nonumber \\ 
+\frac{1}{2}
+\left(
+\ket{ x }_1\ket{ y }_2 -
+\ket{ y }_1\ket{ x }_2
+\right)
+\left(
+\bra{ x }_1\bra{ y }_2 -
+\bra{ y }_1\bra{ x }_2
+\right) =
+\nonumber \\
+= 
+\frac{
+\ket{ x }_1\ket{ y }_2\bra{ y }_2\bra{ x }_1 +
+\ket{ y }_1\ket{ x }_2\bra{ x }_2\bra{ y }_1 }
+{2} -
+\nonumber \\
+-
+\frac{
+\ket{ x }_1\ket{ y }_2\bra{ x }_2\bra{ y }_1 +
+\ket{ y }_1\ket{ x }_2\bra{ y }_2\bra{ x }_1 
+}
+{2}.
+\nonumber
+\end{eqnarray}
+At the same time, the density matrix of the second photon has the form
+(see \autoref{sec:add:quantum:composite})
+\begin{eqnarray}
+\hat{\rho}_2 = \mathrm{Tr}_1 \hat{\rho}_{12} = 
+\bra{x}_1 \hat{\rho}_{12} \ket{x}_1 +
+\bra{y}_1 \hat{\rho}_{12} \ket{y}_1 =
+\nonumber \\
+=
+\frac{
+\ket{ y }_2\bra{ y }_2 +
+\ket{ x }_2\bra{ x }_2 }
+{2}.
+\nonumber
+\end{eqnarray}
+Thus, the state of the second photon is mixed.
+
+This astonishing fact greatly distinguishes
+quantum systems from classical ones: if we have a pure state
+\rindex{Pure state}
+of two particles, then the corresponding states of individual particles are not
+necessarily pure. In particular,
+if the state of the Universe is a pure quantum state
+\cite{PhysRevD.28.2960}, then 
+the states of individual parts of this Universe (stars, planets, etc.) are not
+necessarily pure and can be mixed, i.e.,
+classical. 
+
+\end{remark}
+
+As an example, we study the following wave function:
+\begin{equation}
+  \ket{\psi} = \frac{
+    \ket{ + }_1\ket{ - }_2 -
+    \ket{ - }_1\ket{ + }_2
+  }{\sqrt{2}},
+\label{eqEntang2Test}
+\end{equation}
+i.e., all we know about the photons is that they have different
+circular polarizations. With 50\% probability the first photon has left
+circular polarization, and in this case the second photon has right
+circular polarization. Conversely, with 50\% probability the first photon
+has right circular polarization, and the second photon has
+left circular polarization. 
+
+\input ./part3/entang/figent.tex
+
+To measure the polarization properties of the state \eqref{eqEntang2Test},
+the scheme shown in \autoref{figEntangMes} can be used. 
+In this scheme, entangled photons from the source $S$ are fed to two detectors
+of Stokes parameters $D^{(1,2)}$. Detector $D^{(1)}$ measures the average
+values of the Stokes operators for the first photon - $\hat{S}_k^{(1)}$, and
+$D^{(2)}$ measures the average values of the Stokes operators
+$\hat{S}_k^{(2)}$ for the second photon. The setup of each detector
+is identical to the scheme shown in \autoref{figPart3EntangStokes}.
+
+Since the eigenvalues of the Stokes operators
+\eqref{eqEntangStokesOper} are $s = \pm 1$, at the detector outputs we
+will obtain either $+1$ or $-1$. Suppose we measure the Stokes parameter
+$\hat{S}_1^{(1)}$ for the first photon. Suppose the measurement outcome is $+1$. At this point, the wave function
+\eqref{eqEntang2Test} undergoes reduction. The reduction can be described by the projection operator (see \autoref{AddDiracProjector}) onto the state
+$\ket{x}_1$:
+\[
+\hat{P}_{\ket{x}_1} = \ket{x}_1\bra{x}_1,
+\]
+and the wave function
+\eqref{eqEntang2Test} transforms as follows:
+\begin{eqnarray}
+  \hat{P}_{\ket{x}_1}\left|\psi\right> =
+  \ket{x}_1\bra{x}_1 \left|\psi\right> =
+  \nonumber \\
+    =
+  \ket{x}_1\bra{x}_1
+  \frac{
+    \left( \ket{x}_1 + i \ket{y}_1 \right)\ket{ - }_2 -
+    \left( \ket{x}_1 - i \ket{y}_1 \right)\ket{ + }_2
+  }{2} =
+  \nonumber \\
+  =
+  \ket{x}_1
+  \frac{\ket{ - }_2 - \ket{ + }_2}{2} = -
+  \frac{1}{2\sqrt{2}}\ket{x}_1 \left(2 i\right)
+  \ket{y}_2 = -
+  \frac{i}{\sqrt{2}}\ket{x}_1\ket{y}_2.
+\nonumber
+\end{eqnarray}
+Therefore, after measuring $\hat{S}_1^{(1)}$, the wave function of the entire
+system will be written as
+\[
+\left|\psi\right>_{red} = \ket{x}_1\ket{y}_2.
+\]
+This means that the second photon will be in the state $\ket{y}_2$,
+i.e., the reading of detector $D^{(2)}$ will be $-1$.
+
+Similarly, if the reading of the first detector was $-1$, the
+wave function after measurement will be equal to
+\begin{eqnarray}
+  P_{\ket{y}_1}\left|\psi\right> =
+  \ket{y}_1\bra{y}_1 \left|\psi\right> =
+  \nonumber \\
+  =
+  \ket{y}_1\bra{y}_1
+  \frac{
+    \left( \ket{x}_1 + i \ket{y}_1 \right)\ket{ - }_2 -
+    \left( \ket{x}_1 - i \ket{y}_1 \right)\ket{ + }_2
+  }{2} =
+  \nonumber \\
+  =
+  \ket{y}_1 i 
+  \frac{\ket{ - }_2 + \ket{ + }_2}{2} =
+  \frac{i}{2\sqrt{2}}\ket{y}_1 \left(2\right)
+  \ket{x}_2 =
+  \frac{i}{\sqrt{2}}\ket{y}_1\ket{x}_2,
+  \nonumber
+\end{eqnarray}
+i.e.,
+\[
+\left|\psi\right>_{red} = \ket{x}_2\ket{y}_1,
+\]
+the state of the second photon will be described by the state
+$\ket{x}_2$ and the reading of detector $D^{(2)}$ will be $+1$.
+Thus, for any measurement of $\hat{S}_1^{(1)}$, we can
+reliably (with probability equal to 1) predict the measurement result of
+$\hat{S}_1^{(2)}$, without directly affecting the second photon, i.e.,
+the quantity $\hat{S}_1^{(2)}$ should be considered an element
+of physical reality.
+
+At the same time, the Stokes parameters for the second particle,  $\hat{S}_1^{(2)}$ and
+$\hat{S}_2^{(2)}$ have 
+different eigenvectors:
+$\ket{x}_2, \ket{y}_2$ (\ref{eq:part2:pol:stocks_s1_1},
+  \ref{eq:part2:pol:stocks_s1_2}) and
+$\frac{1}{\sqrt{2}}\left(\ket{x}_2 \pm
+\ket{y}_2\right)$ (\ref{eq:part2:pol:stocks_s2_1},
+  \ref{eq:part2:pol:stocks_s2_2}), respectively.
+Thus, the first and second Stokes parameters for the second particle
+cannot be measured simultaneously; indeed, otherwise,
+the measured value would correspond to  
+a certain state vector that would be an eigenvector of both
+operators $\hat{S}_1^{(2)}$ and
+$\hat{S}_2^{(2)}$ (see also
+\autoref{AddHeisenbergUncertaintyPrincipleMesuranmet}). 
+
+
+%% In the considered state, the average value of Stokes parameter
+%% $\left<\hat{S}_3^{(2)}\right>$ has the form
+%% \begin{eqnarray}
+%%   \left<\hat{S}_3^{(2)}\right> =
+%%   \left<\psi\right|\hat{S}_3^{(2)}\left|\psi\right> =
+%%   \left<\psi\right|\hat{S}_3^{(2)}\frac{
+%%     \ket{ + }_1\ket{ - }_2 -
+%%     \ket{ - }_1\ket{ + }_2
+%%   }{\sqrt{2}} =
+%%   \nonumber \\
+%%   = \left<\psi\right|\frac{
+%%     \ket{ + }_1\ket{ - }_2 +
+%%     \ket{ - }_1\ket{ + }_2
+%%   }{\sqrt{2}} =
+%%   \nonumber \\
+%%   = \frac{1}{2} \left(
+%%   \bra{ + }_1\bra{ - }_2 -
+%%   \bra{ - }_1\bra{ + }_2
+%%   \right)
+%%   \left(
+%%   \ket{ + }_1\ket{ - }_2 -
+%%   \ket{ - }_1\ket{ + }_2
+%%   \right) = 1.
+%%   \label{eqEntangS3Mean}
+%% \end{eqnarray}
+
+%% The derivation of \eqref{eqEntangS3Mean} employed expressions
+%% \eqref{eqEntangS3Eigenvec}. Thus, from the Heisenberg inequality
+%% \eqref{eqAddHeisenbergUncertaintyPrinciple} one obtains
+%% \begin{eqnarray}
+%%   \Delta s_1^{(2)} \Delta s_2^{(2)} \ge
+%%   \frac{\left|\left<\left[\hat{S}_1^{(2)},
+%%       \hat{S}_2^{(2)}\right]/i\right>\right|}{2} =
+%%   \nonumber \\
+%%   = \frac{2 \left|\left< \hat{S}_3^{(2)} \right> \right|}{2} = 1,
+%%   \nonumber
+%% \end{eqnarray}
+%% i.e., quantum mechanics implies that the first and second Stokes
+%% parameters for the second particle cannot be measured simultaneously. 
+
+
+%% On the other hand, we could perform a measurement of
+%% $\hat{S}_2^{(1)}$ in detector $D^{(1)}$. In this case, we would observe two values at the detector outputs: $+1$ or $-1$. For the first of these, the wave function \eqref{eqEntang2Test}
+%% would transform as follows:
+%% \begin{eqnarray}
+%% \hat{P}_{\frac{\ket{x}_1 +
+%%     \ket{y}_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \nonumber \\
+%% =
+%% \frac{1}{2}\left[
+%% \left(\ket{x}_1 + \ket{y}_1\right)
+%% \left(\bra{x}_1 + \bra{y}_1\right)
+%% \left(
+%% \ket{x}_1\ket{y}_2 -
+%% \ket{y}_1\ket{x}_2
+%% \right)
+%% \right] = 
+%% \nonumber \\
+%% = \frac{1}{2}\left[
+%% \left(\ket{x}_1 + \ket{y}_1\right)
+%% \left(
+%% \ket{y}_2 -
+%% \ket{x}_2
+%% \right)
+%% \right] =
+%% \nonumber \\
+%% = \frac{\ket{x}_1 + \ket{y}_1}{\sqrt{2}}
+%%  \frac{\ket{y}_2 - \ket{x}_2}{\sqrt{2}}.
+%% \nonumber
+%% \end{eqnarray}
+%% Thus, when measuring $\hat{S}_2^{(2)}$ we obtain $-1$ as the result on detector $D^{(2)}$. If the reading of detector $D^{(1)}$ is $-1$, then the system state transforms to 
+%% \begin{eqnarray}
+%% \hat{P}_{\frac{\ket{x}_1 -
+%%     \ket{y}_1}{\sqrt{2}}}\left|\psi\right> = 
+%% \nonumber \\
+%% =
+%% \frac{1}{2}\left[
+%% \left(\ket{x}_1 - \ket{y}_1\right)
+%% \left(\bra{x}_1 - \bra{y}_1\right)
+%% \left(
+%% \ket{x}_1\ket{y}_2 -
+%% \ket{y}_1\ket{x}_2
+%% \right)
+%% \right] = 
+%% \nonumber \\
+%% = \frac{1}{2}\left[
+%% \left(\ket{x}_1 - \ket{y}_1\right)
+%% \left(
+%% \ket{y}_2 +
+%% \ket{x}_2
+%% \right)
+%% \right] =
+%% \nonumber \\
+%% = \frac{\ket{x}_1 - \ket{y}_1}{\sqrt{2}}
+%%  \frac{\ket{x}_2 + \ket{y}_2}{\sqrt{2}}
+%% \nonumber
+%% \end{eqnarray}
+%% and the reading of detector $D^{(2)}$ will be $+1$. Thus, for
+%% any measurement of $\hat{S}_2^{(1)}$ we can 
+%% reliably (with probability equal to 1) predict the measurement result of
+%% $\hat{S}_2^{(2)}$, so $\hat{S}_2^{(2)}$ should be considered an element of physical reality.
+
+Now, if we assume that the results of experiments
+are predetermined in advance, i.e., do not depend on which
+quantity ($S_1$ or $S_2$) was measured, and since measurements on
+the first photon are made in arbitrary order, it follows that for the second photon
+$\hat{S}^{(2)}_1$ and
+$\hat{S}^{(2)}_2$ must simultaneously be elements of physical
+reality. This entails the thesis about the incompleteness of quantum mechanics.
+
+We have a different situation when we accept the assumption that
+the result of some measurement is determined at the moment the
+experiment is performed. In this case, we can no longer claim that 
+$\hat{S}_1^{(2)}$ and $\hat{S}_2^{(2)}$ should be {\bf simultaneously}
+considered as elements of physical reality, so there are no
+contradictions with the basic principles of quantum mechanics.
+
+% If one measures the averaged values
+% of the Stokes operators, i.e., averages the readings of detectors over some
+% period of time, then we obtain
+% \begin{eqnarray}
+% \left<\hat{S}_k^{(1)}\right> =
+% \left<\psi\right|\hat{S}_k^{(1)}\left|\psi\right> = 0,
+% \nonumber \\
+% \left<\hat{S}_k^{(2)}\right> =
+% \left<\psi\right|\hat{S}_k^{(2)}\left|\psi\right> = 0.
+% \nonumber
+% \end{eqnarray}
+
+% On the other hand, the wave function \eqref{eqEntang2Test} is an eigenstate of the operator $\hat{S}_k^{(1)}\hat{S}_k^{(2)}$:
+% \begin{equation}
+% \hat{S}_k^{(1)}\hat{S}_k^{(2)}\left|\psi\right> = -\left|\psi\right>
+% \label{eqEntangCorrel}
+% \end{equation}
+
+% From expression \eqref{eqEntangCorrel} it follows that when measuring the mean value of the operator $\hat{S}_k^{(1)}\hat{S}_k^{(2)}$ one gets
+% \begin{equation}
+% \left<\hat{S}_k^{(1)}\hat{S}_k^{(2)}\right> =
+% \left<\psi\right|\hat{S}_k^{(1)}\hat{S}_k^{(2)}\left|\psi\right> = 
+% - \left<\psi\right|\left.\psi\right> = -1,
+% \nonumber
+% \end{equation}
+% i.e., there is some correlation between the readings of detectors
+% $D^{(1)}$ and $D^{(2)}$: when the output of the first detector is $+1$,
+% the output of the second is always $-1$. Such correlations are also possible in
+% the classical case. The difference between quantum and classical
+% treatments lies in the quantitative magnitude of these correlations.
+% To demonstrate this difference, one uses the test of the so-called
+% Bell inequalities.

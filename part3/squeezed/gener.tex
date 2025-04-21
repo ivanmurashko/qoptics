@@ -1,0 +1,287 @@
+%% -*- coding:utf-8 -*- 
+\section{Generation of Quadrature-Squeezed States}
+\label{pNonClassGenerSqueezed}
+So far, we have considered the theoretical possibility of the existence and
+generation of squeezed states. The question arises — in what real
+processes can one obtain light in a squeezed state? Here we consider
+the possibility of obtaining a quadrature squeezed state through
+parametric interaction occurring when a strong
+pump field passes through a medium with quadratic nonlinearity. In such
+an interaction, two waves arise, related to the pump frequency by the relations:
+\begin{equation}
+\omega_p = \omega_s + \omega_i,
+\nonumber
+\end{equation}
+where $\omega_p$ is the pump frequency, $\omega_s$ is the signal frequency,
+$\omega_i$ is the idler frequency. This is schematically shown in 
+\autoref{figPart3Squeezed_10}.
+
+\input ./part3/squeezed/fig10.tex
+
+
+\rindex{Hamiltonian}The interaction Hamiltonian between the pump, signal, and idler
+waves in the interaction picture is given by:
+\begin{equation}
+\hat{V} = \hbar \kappa \left(
+\hat{a}^{\dag}_s \hat{a}^{\dag}_i \hat{b} + 
+\hat{a}_s \hat{a}_i \hat{b}^{\dag}
+\right),
+\label{eqPart3Squeezed30}
+\end{equation}
+where $\hat{a}^{\dag}_s$, $\hat{a}^{\dag}_i$, 
+$\hat{a}_s$, and $\hat{a}_i$ are creation and annihilation operators for
+the signal and idler waves, and $\kappa$ is the interaction constant.
+
+\input ./part3/squeezed/fig11.tex
+
+In the degenerate regime, the signal and idler waves have the same
+frequency equal to half the pump frequency (see \autoref{figPart3Squeezed_11}):
+\[
+\omega_s = \omega_i = \frac{\omega_p}{2} = \omega.
+\]
+
+For the degenerate parametric process, the interaction Hamiltonian
+\eqref{eqPart3Squeezed30} simplifies to:
+\begin{equation}
+\hat{V} = \hbar \kappa \left(
+\left(\hat{a}^{\dag}\right)^2 \hat{b} + 
+\hat{a}^2 \hat{b}^{\dag}
+\right).
+\nonumber
+\end{equation}
+If the pump field is in a coherent state with large
+amplitude $\alpha_p = A_p e^{i \varphi}$, $\left|\alpha_p\right| \gg
+1$, the pump can be replaced by a classical field. Then the interaction
+Hamiltonian \rindex{Hamiltonian}
+further simplifies to:
+\begin{equation}
+\hat{V} = \hbar \kappa A_p\left(
+\left(\hat{a}^{\dag}\right)^2 e^{- i \varphi} + 
+\hat{a}^2 e^{i \varphi}
+\right),
+\nonumber
+\end{equation}
+where $A_p$ and $\varphi$ are the real amplitude and phase
+of the pump. Obviously, in this approximation, we neglect pump depletion. This is valid
+as long as the amplitude of the signal (idler)
+wave remains small compared to the pump field amplitude. The Heisenberg equation
+for the operator $\hat{a}$ takes the form:
+\begin{eqnarray}
+\frac{d\hat{a}}{dt} = \frac{i}{\hbar}
+\left[\hat{V}, \hat{a}\right] = i \kappa A_p
+\left[
+\left(\hat{a}^{\dag}\right)^2 e^{- i \varphi} + 
+\hat{a}^2 e^{i \varphi},
+\hat{a}
+\right] = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\left(
+\hat{a}^{\dag}\right)^2  \hat{a} -
+\hat{a}
+\left(
+\hat{a}^{\dag}\right)^2
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\left(
+\hat{a}^{\dag}\right)^2  \hat{a} -
+\left(\hat{a}^{\dag}\hat{a} + 1\right)
+\hat{a}^{\dag}
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\left(
+\hat{a}^{\dag}\hat{a}^{\dag}  \hat{a} -
+\hat{a}^{\dag}\hat{a}\hat{a}^{\dag} -
+\hat{a}^{\dag}
+\right) = 
+\nonumber \\
+=
+i \kappa A_p e^{- i \varphi}
+\hat{a}^{\dag}
+\left(
+\hat{a}^{\dag}  \hat{a} -
+\hat{a}\hat{a}^{\dag} -
+1
+\right) = 
+i \kappa A_p e^{- i \varphi}
+\hat{a}^{\dag}
+\left(
+\left(-1\right) -
+1
+\right) =
+\nonumber \\
+= 
+- 2 i \kappa A_p e^{- i \varphi}
+\hat{a}^{\dag}.
+\nonumber
+\end{eqnarray}
+Thus we have
+\begin{equation}
+\frac{d\hat{a}}{dt} = 
+- i \Omega_p e^{- i \varphi}
+\hat{a}^{\dag},
+\label{eqPart3Squeezed34a}
+\end{equation}
+where 
+\[
+\Omega_p = 2 \kappa A_p
+\]
+is the effective Rabi frequency (energy expressed through frequency).
+Similarly,
+\begin{equation}
+\frac{d\hat{a}^{\dag}}{dt} = 
+i \Omega_p e^{i \varphi}
+\hat{a}.
+\label{eqPart3Squeezed34b}
+\end{equation}
+
+Eliminating $\hat{a}^{\dag}$ from the system \eqref{eqPart3Squeezed34a} and
+\eqref{eqPart3Squeezed34b}, we get
+\begin{equation}
+\frac{d^2\hat{a}\left(t\right)}{dt^2} = 
+- i \Omega_p e^{- i \varphi}
+\frac{d\hat{a}^{\dag}\left(t\right)}{dt} = 
+\Omega_p^2\hat{a}\left(t\right).
+\label{eqPart3Squeezed35}
+\end{equation}
+The initial conditions for this equation are
+\begin{eqnarray}
+\hat{a}\left(0\right) = \hat{a}_0, 
+\nonumber \\
+\hat{a}^{\dag}\left(0\right) = \hat{a}^{\dag}_0, 
+\nonumber
+\end{eqnarray}
+from which
+\begin{eqnarray}
+\left.\hat{a}\right|_{t=0} = \hat{a}_0, 
+\nonumber \\
+\left.\frac{d\hat{a}}{dt}\right|_{t=0} = 
+- i \Omega_p e^{- i \varphi} \hat{a}^{\dag}_0,
+\label{eqPart3Squeezed36}
+\end{eqnarray}
+where $\hat{a}_0$ and $\hat{a}^{\dag}_0$ are the initial values of the operators at $t
+= 0$. The solution of \eqref{eqPart3Squeezed35} with the initial
+conditions \eqref{eqPart3Squeezed36} is:
+\begin{equation}
+\hat{a}\left(t\right) = \hat{a}_0 ch \left(\Omega_p t \right) - 
+i \hat{a}^{\dag}_0 sh \left(\Omega_p t\right) e^{-i \varphi}.
+\label{eqPart3Squeezed37a}
+\end{equation}
+Similarly,
+\begin{equation}
+\hat{a}^{\dag}\left(t\right) = \hat{a}^{\dag}_0 ch \left(\Omega_p t \right) +
+i \hat{a}_0 sh \left(\Omega_p t\right) e^{i \varphi}.
+\label{eqPart3Squeezed37b}
+\end{equation}
+
+%% Check in maxima
+%% (%i10) e1: diff(x(t),t) = - %i * Omega * exp(-%i * Phi) * y(t);
+%%                     d                        - %i Phi
+%% (%o10)              -- (x(t)) = - %i Omega %e         y(t)
+%%                     dt
+%% (%i11) e2: diff(y(t),t) =  %i * Omega * exp(%i * Phi) * x(t);
+%%                       d                      %i Phi
+%% (%o11)                -- (y(t)) = %i Omega %e       x(t)
+%%                       dt
+%% (%i12) desolve ([e1, e2], [x(t), y(t)]);
+%%                        %i Phi              Omega t - %i Phi
+%%                (x(0) %e       - %i y(0)) %e
+%% (%o12) [x(t) = --------------------------------------------
+%%                                     2
+%%            %i Phi              - Omega t - %i Phi
+%%    (x(0) %e       + %i y(0)) %e
+%%  + ----------------------------------------------, 
+%%                          2
+%%                   %i Phi           Omega t
+%%        (%i x(0) %e       + y(0)) %e
+%% y(t) = -----------------------------------
+%%                         2
+%%               %i Phi           - Omega t
+%%    (%i x(0) %e       - y(0)) %e
+%%  - -------------------------------------]
+%%                      2
+%% (%i13)
+
+
+Note that at $\varphi = \frac{\pi}{2}$ expressions
+\eqref{eqPart3Squeezed37a} and \eqref{eqPart3Squeezed37b} reduce to
+the relations
+\eqref{eqPart3Squeezed16a}:
+\begin{eqnarray}
+\hat{a}\left(t\right) = \hat{a}_0 ch \left(\Omega_p t \right) - 
+\hat{a}^{\dag}_0 sh \left(\Omega_p t\right),
+\nonumber \\
+\hat{a}^{\dag}\left(t\right) = \hat{a}^{\dag}_0 ch \left(\Omega_p t \right) -
+\hat{a}_0 sh \left(\Omega_p t\right).
+\nonumber
+\end{eqnarray}
+
+As we see, the operator $\hat{a}\left(t\right)$ results from a unitary
+transformation \eqref{eqPart3Squeezed16a} which in our case
+has the form:
+\begin{equation}
+\hat{a}\left(t\right) =
+\hat{S}^{\dag}\left(t\right)
+\hat{a}\left(0\right)
+\hat{S}\left(t\right) =
+\hat{a}_0 ch \left(\Omega_p t \right) - 
+\hat{a}^{\dag}_0 sh \left(\Omega_p t\right).
+\label{eqPart3SqueezedGenerHeizenberg}
+\end{equation}
+Thus, moving from the Heisenberg picture
+\eqref{eqAddWaveFunc_HeizenbergU}
+to the Schrödinger picture \eqref{eqAddWaveFunc_ShredingerU}, one can
+conclude that the initial coherent state undergoes the same
+unitary transformation as the annihilation
+operator \eqref{eqPart3SqueezedGenerHeizenberg}:
+\begin{equation}
+\hat{S}\left(t\right)
+\left|\alpha\right> =
+\left|t, \alpha\right>,
+\nonumber
+\end{equation}
+i.e., the parametric interaction is equivalent to the action of the squeezing operator. In this case,
+for the quadrature components
+\[
+\hat{X}_1 = \frac{\hat{a} + \hat{a}^{\dag}}{2}
+\]
+and
+\[
+\hat{X}_2 = \frac{\hat{a} - \hat{a}^{\dag}}{2i}
+\]
+a squeezed state is realized with uncertainties
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 = 
+\frac{1}{4}e^{-2 \Omega_p t},
+\nonumber \\
+\left(\Delta X_2\right)^2 = 
+\frac{1}{4}e^{2 \Omega_p t},
+\nonumber \\
+\left(\Delta X_1 \Delta X_2\right) = 
+\frac{1}{4}.
+\nonumber
+\end{eqnarray}
+The squeezing parameter $r = \Omega_p t$ grows unbounded in time and,
+therefore, the degree of squeezing increases indefinitely. In
+reality, this does not happen. Unlimited squeezing is a consequence
+of overly idealized assumptions: pump depletion, deviation of the real pump from
+a monochromatic classical light, and several other factors were neglected. All these lead to limitations on the degree
+of squeezing. The closer the real conditions to ideal, the higher the degree
+of squeezing that can be obtained.
+
+The case considered above of obtaining squeezed states via
+parametric processes pertains to the generation of squeezed vacuum,
+since the generation of the squeezed state occurs from the always-present
+vacuum seed field. This is sometimes called parametric
+scattering of the pump field. As we have found, the "squeezed vacuum" is not
+a vacuum field in the strict sense. The mean photon number in this field is not
+zero but depends on the degree of squeezing according to
+formula \eqref{eqPart3Squeezed24} and can be quite large at
+high degrees of squeezing.

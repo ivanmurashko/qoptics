@@ -1,0 +1,451 @@
+%% -*- coding:utf-8 -*- 
+\chapter{Introduction to Quantum Information Theory}
+\label{chQuantInfo}
+
+Classical information theory was developed by Claude Shannon
+\cite{bShenon} applied to communication theory problems and is currently
+finding increasing 
+application. In this section, we will consider the basic concepts and results
+of information theory, including its application to quantum phenomena.
+
+\section{Information and Entropy}
+
+The very concept of information is closely related to the measure of uncertainty
+of a system, i.e., what in statistical physics is called
+entropy. The more disordered a system is, the less information we
+know about it. Acquiring information reduces the measure
+of uncertainty. Accordingly, the more disordered the original
+system was, the more information we acquire about it as a result of the outcome
+of some experiment.
+%
+% For example, consider information about
+% the weather. Suppose we are interested in the event - will it snow or not on
+% a particular day. If this day is July 1, then we have a
+% quite definite (ordered) system and if on July 2 we are told
+% there was no snow on the 1st, this will not give us any information because the result was already
+% predictable. At the same time, the same experiment conducted say on February 1 is not definite and provides some information.
+%
+Thus, as a measure of information, one can take the complexity
+(uncertainty) of the system. Following Shannon, we will call this
+measure entropy, while we will not distinguish between
+"amount of information measure" and "entropy," i.e., we will consider these
+concepts synonyms.
+
+\subsection{Entropy in Classical Information Theory}
+
+We begin the definition of entropy with an experiment with equally probable outcomes.
+Suppose we have an event $\mathcal{A}$,
+which has $a$ equally likely outcomes. As entropy (a measure
+of uncertainty), it is reasonable to use some positive function
+that depends on the number of outcomes $a$ and increases with increasing $a$:
+\begin{equation}
+H_{\mathcal{A}} = f\left(\mathcal{A}\right) = f\left(a\right).
+\nonumber
+\end{equation}
+In this case, it is reasonable to assume that $f\left(1\right) = 0$, since the result of an experiment with
+a single possible value is fully determined.
+
+Now consider another experiment $\mathcal{B}$ with a number of outcomes
+$b$. Obviously, for it the relation
+\[
+H_{\mathcal{B}} = f\left(b\right).
+\]
+holds.
+If we consider the event $\mathcal{A}\mathcal{B}$,
+which consists of simultaneous occurrence of $\mathcal{A}$ and
+$\mathcal{B}$, then the number of equally likely outcomes of such an
+event is $a \cdot b$, so we can write
+\[
+H_{\mathcal{A}\mathcal{B}} = f\left(ab\right).
+\]
+On the other hand, we would like to express $H_{\mathcal{A}\mathcal{B}}$
+through $H_{\mathcal{A}}$ and $H_{\mathcal{B}}$. To do this, recall
+the property of entropy increase with increasing system complexity, i.e., the following inequality holds:
+\begin{equation}
+H_{\mathcal{A}\mathcal{B}} \ge H_{\mathcal{A}}, H_{\mathcal{B}}.
+\label{eqEntropyComp}
+\end{equation}
+If we use only the four simplest arithmetic operations to find the desired relation, then only addition and multiplication satisfy property
+\eqref{eqEntropyComp}. Moreover, if we consider the situation where the number
+of outcomes of event $\mathcal{B}$ equals 1, then for the desired
+relation only the operation of addition can be used:
+\begin{equation}
+H_{\mathcal{A}\mathcal{B}} = H_{\mathcal{A}} + H_{\mathcal{B}},
+\nonumber
+%\label{eqEntropyComp1}
+\end{equation}
+from which
+\begin{equation}
+f\left(ab\right) = f\left(a\right) + f\left(b\right).
+\nonumber
+%\label{eqEntropyProperty1}
+\end{equation}
+Now, let's combine what we know about the desired function $f$
+\begin{eqnarray}
+f\left(1\right) = 0,
+\nonumber \\
+f\left(a\right) > f\left(b\right), \mbox{ if } a > b,
+\nonumber \\
+f\left(a b\right) = f\left(a\right) + f\left(b\right).
+\label{eqEntropyProperty}
+\end{eqnarray}
+There is only one continuous function that satisfies
+the requirements \eqref{eqEntropyProperty} (proof
+see \cite{bYaglom}):
+\begin{equation}
+f\left(a\right) = K\,\log\,a.
+\label{eqEntropyDef1}
+\end{equation}
+The coefficient $K$ in \eqref{eqEntropyDef1} determines the logarithm base and the unit
+of information measurement. For example, if we use as the unit
+of entropy the experiment with two equally probable outcomes (such as
+heads or tails in coin tossing), then \eqref{eqEntropyDef1} uses the logarithm base 2:
+\begin{equation}
+f\left(a\right) = \log_2\,a,
+\label{eqEntropyDefBit}
+\end{equation}
+and the corresponding unit of information is called a {\bf bit}\footnote{from
+English {\bf bi}nary digi{\bf t} - binary digit}. This
+unit choice for measuring information
+is explained by the fact that often information is encoded using objects
+which have only two stable states (e.g., signal power exceeding
+a certain threshold or not). Along with the logarithm base 2, the natural logarithm is often used in \eqref{eqEntropyDef1}:
+\begin{equation}
+f\left(a\right) = \ln\,a,
+\label{eqEntropyDefNat}
+\end{equation}
+where the corresponding unit of information is called a {\bf nat}. In
+what follows, we will use entropy definition in the form
+\eqref{eqEntropyDef1} with the logarithm base taken as 2.
+
+Expression \eqref{eqEntropyDef1} was obtained under the assumption of
+equally probable outcomes. As is known, the probability of event
+$\mathcal{A}$ is defined as
+\[
+p_{\mathcal{A}} = \frac{1}{a},
+\]
+from which entropy $H_{\mathcal{A}}$ can be written as
+\begin{equation}
+H_{\mathcal{A}} = -\log \, p_{\mathcal{A}}.
+\label{eqEntropy11}
+\end{equation}
+
+Now consider the case when event $\mathcal{A}$ has
+unequal probabilities of outcomes. In this case, each outcome $\xi$ of event
+$\mathcal{A}$ should be associated with the probability of that outcome,
+$p_{\xi}$. To define the measure of information acquired upon realization of outcome $\xi$,
+we will still use expression \eqref{eqEntropy11}:
+\begin{equation}
+H_{\xi} = -\log \, p_{\xi}.
+\label{eqEntropy12}
+\end{equation}
+% Let's clarify this expression with a simplest example. Suppose
+% that the probability of some student passing a test is $0.9$. Accordingly,
+% the probability of not passing is $0.1$. If the test result
+% is positive, then the amount of acquired information
+% will be about $0.1$ nat, which is less than in the case of failing
+% test $\approx 2.3$ nat. Indeed, in the first case (unlike
+% the second) one can say that almost no information was received
+% because we were almost certain the student would pass.
+
+The quantity $H_{\xi}$ in \eqref{eqEntropy12} characterizes
+only one particular outcome $\xi$ of the event and, accordingly, cannot be used as a measure of uncertainty of the whole event
+$\mathcal{A}$. As a measure, it is reasonable to use the averaged
+value of entropy:
+\begin{equation}
+H_{class} = H_{\mathcal{A}} = \sum_{\xi} - p_{\xi} \log \, p_{\xi}.
+\label{eqEntropyClass}
+\end{equation}
+In expression \eqref{eqEntropyClass} it is taken that
+\begin{equation}
+0 \cdot \log 0 = 0.
+\label{eqEntropyClassAdd}
+\end{equation}
+
+Despite the seeming convention in introducing \eqref{eqEntropyClass}, this
+expression indeed describes the amount of information; in particular,
+living organisms process information at a speed proportional to \eqref{eqEntropyClass}. In \cite{bYaglom}
+%\footnote{not an original source FIX ME!!!}
+experiments on human reaction speed
+to external stimuli are described. As the stimulus, one of several
+light bulbs illuminated, each with different frequency. Before
+the experiment, examinees were given time to train, after which
+it was found that reaction speed is determined precisely by expression \eqref{eqEntropyClass}.
+
+Entropy \eqref{eqEntropyClass} has the following property:
+\begin{equation}
+H_{min} \le H_{\mathcal{A}} \le H_{max},
+\label{eqEntropyClassProperty}
+\end{equation}
+where $H_{min} = 0$ and is achieved when the probability of one
+of the outcomes of event $\mathcal{A}$ equals 1 and the rest are 0 (minimal
+system uncertainty). $H_{max} = \log a$ is achieved when all
+outcomes are equally probable (maximum system uncertainty).
+
+\subsection{Entropy in Quantum Systems}
+
+The analog of the probability distribution $\left\{p_{\xi}\right\}$ in
+the quantum case is the density matrix \rindex{Density matrix}
+$\hat{\rho}$. The averaging here uses the trace operation in some
+basis. That is, \eqref{eqEntropyClass} in quantum systems corresponds to:
+\begin{equation}
+H_{quant} = - \mathrm{Tr} \left(\hat{\rho} \, \log \, \hat{\rho}\right).
+\label{eqEntropyQuant}
+\end{equation}
+
+When analyzing relation \eqref{eqEntropyQuant}, the following
+questions arise:
+\begin{itemize}
+\item How to compute the entropy \eqref{eqEntropyQuant}
+\item In which cases the entropy will be maximal and minimal,
+  i.e., what is the quantum analog of the classical expression
+  \ref{eqEntropyClassProperty}. 
+\end{itemize}
+
+To answer the first question, recall that the trace operation does not
+depend on the representation (see \autoref{AddDiracTrace}), so it is
+enough to consider the density matrix in the basis where it is diagonal. If we denote the diagonal elements of the density matrix by $\rho_{nn}$,
+then using \eqref{eqAddDiracFL} we can rewrite \eqref{eqEntropyQuant} as
+\begin{equation}
+H_{quant} = - \mathrm{Tr} \left(\hat{\rho} \, \log \, \hat{\rho}\right) = 
+- \sum_n \rho_{nn} \, \log \, \rho_{nn}.
+\label{eqEntropyQuant1}
+\end{equation}
+
+Let's start analyzing expression \eqref{eqEntropyQuant1} by considering pure states.
+If we take an arbitrary pure state $\left|\psi\right>$,
+\rindex{Pure state} 
+written in some basis $\left\{\ket{n}\right\}$:
+\[
+\left|\psi\right> = \sum_n c_n \ket{n},
+\]
+then one can always find a basis $\left\{\ket{m}\right\}$ in
+which $\left|\psi\right>$ is one of the basis states, for example the first: 
+%\footnote{FIX ME!!! add link or expand this statement}
+\[
+\left|\psi\right> = \sum_m c_m \ket{m} = 
+\left.\ket{m}\right|_{m = 1},
+\]
+thus, the diagonal density matrix will have only one
+non-zero element $\rho_{11} = 1$, and the entropy will be
+\begin{equation}
+H_{pure} = 0,
+\label{eqQIEntropyPure}
+\end{equation}
+where we used expression \eqref{eqEntropyClassAdd}. This
+expression tells us that the pure state 
+\rindex{Pure state} is completely
+determined. 
+
+If we consider a mixed state,
+\rindex{Mixed state} the density matrix
+\rindex{Density matrix}
+will be diagonal, with
+diagonal elements equal to
+the probabilities of the system being in the corresponding states:
+\[
+\rho_{nn} = p_n.
+\]
+If now we use \eqref{eqEntropyQuant1}, we get
+that the expression for entropy of the mixed state coincides with
+the classical entropy expression \eqref{eqEntropyClass}:
+\begin{equation}
+H_{misc} = - \sum_n p_n \, \log \, p_n = H_{class},
+\label{eqQIEntropyMisc}
+\end{equation}
+which, as mentioned earlier, is maximal for uniform probability distribution
+and minimal for degenerate one (one outcome probability 1, the others 0).
+
+%% Looking at expressions \eqref{eqQIEntropyPure} and
+%% \eqref{eqQIEntropyMisc}, one can conclude that the process of decoherence
+%% \footnote{The process of destroying pure state - when a pure state due to
+%% interaction with external environment turns into mixed state} can be
+%% considered as the loss of information about the quantum system.
+
+Along with expressions \eqref{eqEntropyQuant1} and \eqref{eqQIEntropyMisc},
+in which the unit of information is nat, it is convenient
+to use a logarithm base two - then the unit
+is called a qubit ({\bf q}uantum {\bf bit}).
+
+\section{Information Transmission. Communication Channel.}
+
+Such general characteristics of information as entropy do not take into account the concrete content of information, which may also be important, and
+therefore may not always be applicable. 
+Nevertheless, there are situations when the specific value is unimportant,
+and what matters is the amount of information. As an example of such systems we can consider information transmission systems.
+
+\input ./part4/quantinfo/figchanel.tex
+
+% For example, suppose
+% we have two events characterized by outcomes represented in the following tables:
+% \begin{longtable}{|c|c|}
+% \hline
+% Value & Probability \\ \hline
+% 100  & 0.3 \\
+% 100.1  & 0.3 \\
+% 50  & 0.4 \\ \hline
+% \end{longtable}
+% \begin{longtable}{|c|c|}
+% \hline
+% Value & Probability \\ \hline
+% 150  & 0.3 \\
+% 100  & 0.4 \\
+% 50  & 0.3 \\ \hline
+% \end{longtable}
+% Obviously, entropy in both cases will be the same, but it should
+% be noted that the first two results in the first table may be caused by
+% measuring device error and are probably to be
+% considered as one.
+
+\subsection{Classical Communication Channel}
+
+A typical information transmission system is shown in
+\autoref{figQITransfer}. As seen in this figure, before
+information is transmitted, it must be encoded,
+i.e., represented in states that can be transmitted through
+the channel. At the channel output, information must be decoded,
+i.e., transformed back into the form used at the input. 
+
+Encoding information with classical
+objects that have only two stable states (e.g., signal power exceeding
+or not a threshold) is the most convenient. Obviously,
+classical states are chosen so that they can be easily detected. 
+
+\subsection{Quantum Communication Channel}
+
+Using quantum objects for information transmission significantly
+expands the capabilities of the communication channel because a quantum system
+has a much larger choice of states that can be used for
+transmission.
+
+At the same time, the quantum channel itself has some special
+properties. For example, consider transmitting information encoded
+using pure quantum states. As mentioned earlier (see \ref{pPart3EntangleNoClone}),
+an arbitrary quantum state cannot be copied, whence
+it follows that in such a system, unlike the classical communication channel,
+not only substitution of information is impossible, but even unauthorized reading.
+This is particularly important for information security. 
+
+\subsection{Quantum Dense Coding}
+\label{subsecPart3QuantInfoBigCoding}
+As an example of a quantum communication channel, consider the quantum dense coding protocol proposed by Bennett and Wiesner
+\cite{bBennettWiesner}, \cite{bDenseCodeExp}. This protocol
+uses the polarization-entangled two-photon state,
+considered earlier by us (see \autoref{ch:entangl}).  
+
+Each of the photons individually has two orthogonal states 
+$\ket{x}_{1,2}$ and $\ket{y}_{1,2}$. Thus, from
+the classical point of view using these two photons, one can encode
+four bits of information using the following
+states:
+$\ket{x}_1 \ket{x}_2$,
+$\ket{x}_1 \ket{y}_2$,
+$\ket{y}_1 \ket{x}_2$,
+and 
+$\ket{y}_1 \ket{y}_2$.
+
+\input ./part4/quantinfo/figdensecode.tex
+
+In the quantum dense coding protocol, one can also encode 4
+bits of information, but while operating on {\it only one} of the two 
+photons. The scheme of this protocol is shown in
+\autoref{figPart3QuantInfoDenseCode}. Source $S$ produces a pair
+of entangled photons in some Bell state, for example
+$\left|\Psi^{\dag}\right>_{12}$. The first photon of this pair is sent to Alice,
+and the second to Bob. By changing the properties of his (second) photon, Bob
+transforms the initial state into one of the 4 Bell states \eqref{eqEntangBellBase}:
+\begin{eqnarray}
+  \left|\psi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{y}_2 + 
+  \ket{y}_1\ket{x}_2
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{y}_2 - 
+  \ket{y}_1\ket{x}_2
+  \right),
+  \nonumber \\
+  \left|\phi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{x}_2 + 
+  \ket{y}_1\ket{y}_2
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{x}_2 - 
+  \ket{y}_1\ket{y}_2
+  \right).
+  \label{eqQuantInfoBellBase}
+\end{eqnarray}
+
+In the case of the state $\left|\Psi^{\dag}\right>_{12}$ no
+additional action is required since it is the initial: 
+\begin{equation}
+\ket{y}_2 \rightarrow \ket{y}_2, \, 
+\ket{x}_2 \rightarrow \ket{x}_2.
+\label{eqQuantInfoDense1}
+\end{equation}
+To obtain the state $\left|\psi^{-}\right>_{12}$ Bob must
+produce a polarization-dependent phase shift:
+\begin{equation}
+\ket{y}_2 \rightarrow \ket{y}_2, \, 
+\ket{x}_2 \rightarrow e^{i \pi}\ket{x}_2.
+\label{eqQuantInfoDense2}
+\end{equation}
+In the case of the state $\left|\phi^{\dag}\right>_{12}$ Bob performs
+polarization flip to the orthogonal
+\begin{equation}
+\ket{y}_2 \rightarrow \ket{x}_2, \, 
+\ket{x}_2 \rightarrow \ket{y}_2.
+\label{eqQuantInfoDense3}
+\end{equation}
+Finally, for the state $\left|\phi^{-}\right>_{12}$ Bob performs
+both polarization flip and polarization-dependent phase
+shift:
+\begin{equation}
+\ket{y}_2 \rightarrow \ket{x}_2, \, 
+\ket{x}_2 \rightarrow e^{i \pi}\ket{y}_2.
+\label{eqQuantInfoDense4}
+\end{equation}
+
+After Bob performs one of the transformations
+\eqref{eqQuantInfoDense1} - \ref{eqQuantInfoDense4}, he sends his
+particle to Alice. Alice, in turn, measures the received Bell
+state \eqref{eqQuantInfoBellBase}, for example using the detector
+described in \ref{pPart3EntangleBellReg}, and determines which of the four
+actions Bob took. Thus, Bob can transmit 4 bits of information to Alice.
+
+\input ./part4/quantinfo/code.tex
+
+
+\section{Exercises}
+\begin{enumerate}
+\item Prove the quantum expression for entropy \eqref{eqEntropyQuant1}.  
+\end{enumerate}
+
+
+%% \begin{thebibliography}{99}
+%% \bibitem{bShenon} C. E. Shannon, A Mathematical Theory of
+%%   Communication, Bell System Technical Journal, 27, pp. 379-423, 
+%%   623-656, July, October, 1948
+%% \bibitem{bYaglom} А. М. Яглом, И. М. Яглом,
+%%   Вероятность и информация, М. Наука, 1973,
+%%   512 с.
+%% \bibitem{bStratonovich}  
+%%   Р. Л. Стратонович,
+%%   Теория информации, М. Советское радио, 1975,
+%%   424 с.
+%% \bibitem{bPhisQuantInfo} Физика квантовой информации, под
+%%   ред. А. Цайлингера. М. Постмаркет 2002
+%% \bibitem{bBennettWiesner} C. Bennett, S. Wiesner, Communication via one- and
+%%   two-particle operators on Einstein-Podolsky-Rosen states,
+%%   Phys. Rev. Lett. 69 (1992) pp. 2881-2884. 
+%% \bibitem{bDenseCodeExp} K. Mattle, H. Weinfurter, P. G. Kwiat,
+%%   and A. Zeilinger, Dense Coding in Experimental Quantum
+%%   Communication, Phys. Rev. Lett. 76, 4656 (1996). 
+%% \bibitem{bShenonCrypto} C. E. Shannon, Communication Theory of Secrecy
+%%   Systems. Bell System Technical Journal 28 (4), pp.  656-715. 
+%% \end{thebibliography} 

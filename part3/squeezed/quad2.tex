@@ -1,0 +1,292 @@
+%% -*- coding:utf-8 -*- 
+\section{Squeezed Quadrature State}
+First, let's consider the theoretical possibility of creating squeezed
+quadrature states. Consider constructing a squeezed state from
+a coherent state, in which one of the quadrature
+components will be squeezed. The state transformation is performed using
+a certain unitary transformation.
+
+Consider the unitary operator known as the squeezing operator
+(the reason for this name will become clear later)
+\begin{equation}
+\hat{S}\left(z\right) = e^{\frac{1}{2}z^{*}\hat{a}^2 -
+\frac{1}{2}z\hat{a}^{+2}},
+\nonumber
+\end{equation}
+where $z = r e^{i\theta}$ is an arbitrary complex number.
+The conjugate operator has the form
+\begin{equation}
+\hat{S}^{\dag}\left(z\right) = e^{\frac{1}{2}z\hat{a}^{+2} -
+\frac{1}{2}z^{*}\hat{a}^{2}}, 
+\nonumber
+\end{equation}
+from which it follows that
+\begin{equation}
+\hat{S} \hat{S}^{\dag} = \hat{S}^{\dag} \hat{S} = \hat{I},
+\nonumber
+\end{equation}
+where $\hat{I}$ is the identity operator. Thus, $\hat{S}^{\dag} =
+\hat{S}^{-1}$ is indeed a unitary operator.
+
+Consider the action of the operator $\hat{S}\left(z\right)$ on the operators
+$\hat{a}$ and $\hat{a}^{\dag}$ and on the coherent state. For this purpose,
+we apply the operator decomposition theorem (see detailed derivation
+in \myref{thm:addoperatorequality}{the theorem on operator identity}):  
+\begin{equation}
+e^{\hat{A}}\hat{B}e^{-\hat{A}} = 
+\hat{B} + \left[\hat{A},\hat{B}\right] + 
+\frac{1}{2!} \left[\hat{A},\left[\hat{A},\hat{B}\right]\right] + \dots
+\label{eqPart3Squeezed15}
+\end{equation}
+Using \eqref{eqPart3Squeezed15}, it is easy to show, by taking
+\[
+e^{\hat{A}} = \hat{S}\left(z\right), \quad \hat{B} = \hat{a},
+\]
+that
+\begin{eqnarray}
+\hat{A} = \hat{S}\left(z\right)\hat{a}\hat{S}^{\dag}\left(z\right) =
+\hat{a} + z \hat{a}^{\dag} + \frac{\left|z\right|^2\hat{a}}{2!} +
+\frac{z\left|z\right|^2\hat{a}^{\dag}}{3!} + \dots = 
+\nonumber \\
+=\hat{a} \cosh r + \hat{a}^{\dag} e^{i\theta} \sinh r = 
+\mu \hat{a} + \nu \hat{a}^{\dag},
+\label{eqPart3Squeezed16}
+\end{eqnarray}
+where $\mu = \cosh r$, $\nu = e^{i\theta} \sinh r$, $\left|\mu\right|^2 -
+\left|\nu\right|^2  = 1$.
+Similarly, it can be shown that for the reverse order of operators
+$\hat{S}^{\dag} \dots \hat{S}$ the formula differs from \eqref{eqPart3Squeezed16} only by the sign between
+the terms:
+\begin{eqnarray}
+\hat{S}^{\dag}\left(z\right)\hat{a}\hat{S}\left(z\right) 
+=\hat{a} \cosh r - \hat{a}^{\dag} e^{i\theta} \sinh r,
+\nonumber \\
+\hat{S}^{\dag}\left(z\right)\hat{a}^{\dag}\hat{S}\left(z\right) 
+=\hat{a}^{\dag} \cosh r - \hat{a} e^{-i\theta} \sinh r.
+\label{eqPart3Squeezed16a}
+\end{eqnarray}
+
+Let's act with the operator $\hat{S}$ on the coherent state vector. Then
+we obtain a new state:
+\begin{equation}
+\left|\alpha, z\right> = \hat{S}\left(z\right)\left|\alpha\right>.
+\label{eqPart3Squeezed17}
+\end{equation}
+Now show that the state $\left|\alpha, z\right>$ is an eigenstate of the operator $\hat{A}$:
+\begin{eqnarray}
+\hat{A}\left|\alpha, z\right> = 
+\hat{S}\left(z\right)\hat{a}\hat{S}^{\dag}\left(z\right)\hat{S}\left(z\right)\left|\alpha\right>
+= 
+\hat{S}\left(z\right)\hat{a}\left|\alpha\right> = 
+\nonumber \\
+= \alpha \hat{S}\left(z\right)\left|\alpha\right> = 
+\alpha \left|\alpha, z\right>.
+\label{eqPart3Squeezed18}
+\end{eqnarray}
+Here the definition of $\hat{A}$ and $\hat{S}\hat{S}^{\dag} = \hat{I}$ were used.
+From \eqref{eqPart3Squeezed18} it follows that the state $\left|\alpha, z\right>$ is
+an eigenstate of the operator $\hat{A}$, and the eigenvalue coincides with
+the eigenvalue of the coherent state from which
+the state $\left|\alpha, z\right>$ is obtained.
+The conjugate equality is
+\begin{equation}
+\left<\alpha, z\right|\hat{A}^{\dag} = 
+\alpha^{*}\left<\alpha, z\right|
+\label{eqPart3Squeezed19}
+\end{equation}
+Based on relations \eqref{eqPart3Squeezed18} and
+\eqref{eqPart3Squeezed19}, by analogy with the operators $\hat{a}$ and
+$\hat{a}^{\dag}$, $\hat{A}$ and $\hat{A}^{\dag}$ are called quasiparticle creation and quasiparticle annihilation operators.
+
+It remains to determine whether the state $\left|\alpha, z\right>$
+is a squeezed state. To this end, the uncertainty relation
+for $\Delta X_1$ and $\Delta X_2$ should be written. We have
+\begin{equation}
+\left(\Delta X_{1,2}\right)^2 = 
+\left<\alpha, z\right| \hat{X}_{1,2}^2\left|\alpha, z\right> -
+\left<\alpha, z\right| \hat{X}_{1,2}\left|\alpha, z\right>^2.
+\nonumber
+\end{equation}
+This expression, using \eqref{eqPart3Squeezed17}, can be rewritten as
+\begin{equation}
+\left(\Delta X_{1,2}\right)^2 = 
+\left<\alpha\right|\hat{S}^{\dag}\left(z\right) \hat{X}_{1,2}^2\hat{S}\left(z\right)\left|\alpha\right> -
+\left<\alpha\right|\hat{S}^{\dag}\left(z\right) \hat{X}_{1,2}\hat{S}\left(z\right)\left|\alpha\right>^2.
+\label{eqPart3Squeezed20}
+\end{equation}
+The operators $\hat{X}_{1,2}$ can be expressed through $\hat{a}$ and $\hat{a}^{\dag}$:
+\begin{eqnarray}
+\hat{X}_1 = \frac{1}{2}\left(\hat{a} + \hat{a}^{\dag}\right), 
+\nonumber \\
+\hat{X}_2 = \frac{1}{2 i}\left(\hat{a} - \hat{a}^{\dag}\right).
+\nonumber
+\end{eqnarray}
+Substituting this into \eqref{eqPart3Squeezed20} and transforming the operators
+$\hat{a}$ and $\hat{a}^{\dag}$ using \eqref{eqPart3Squeezed16a},
+we obtain the final expressions for $\Delta X_1$ and $\Delta X_2$:
+(under the condition $z = r$, i.e. $\theta = 0$)
+%(see detailed derivation in appendix FIXME!!! add it):
+\begin{eqnarray}
+\left(\Delta X_1\right)^2 = \frac{1}{4}e^{-2 r},
+\nonumber \\
+\left(\Delta X_2\right)^2 = \frac{1}{4}e^{2 r},
+\nonumber \\
+\left(\Delta X_1 \Delta X_2\right) = \frac{1}{4},
+\label{eqPart3Squeezed21}
+\end{eqnarray}
+where $r = \left|z\right|$ is the squeezing parameter. From
+\eqref{eqPart3Squeezed21} it follows that the state $\left|\alpha,
+z\right>$ is indeed a squeezed state for one of the
+quadrature components. Since the uncertainty product has
+the minimum value, the state is an ideally squeezed
+state. We will call this state the ideally squeezed
+quadrature state.
+
+If the operator $\hat{S}\left(z\right)$ acts on the vacuum
+state ($\alpha = 0$), we obtain the squeezed vacuum state (squeezed
+vacuum)
+\begin{equation}
+\hat{S}\left(z\right)\ket{0} = \ket{z, 0}.
+\nonumber
+\end{equation}
+
+The average photon number in the quadrature squeezed coherent state
+is given by the expression:
+\begin{eqnarray}
+\left<\alpha, z\right|\hat{a}^{\dag}\hat{a}\left|\alpha, z\right> =
+\left<\alpha\right|\hat{S}^{\dag}\hat{a}^{\dag}\hat{a}\hat{S}\left|\alpha\right>
+=
+\nonumber \\
+=
+\left<\alpha\right|\hat{S}^{\dag}\hat{a}^{\dag}\hat{S}\hat{S}^{\dag}\hat{a}\hat{S}\left|\alpha\right>
+= 
+\nonumber \\
+=
+\left<\alpha\right|
+\left(\hat{a}^{\dag} \cosh r - \hat{a}e^{-i\theta}\sinh r \right)
+\left(\hat{a} \cosh r - \hat{a}^{\dag} e^{i\theta}\sinh r \right)
+\left|\alpha\right> = 
+\nonumber \\
+=
+\left(
+\left|\alpha\right|^2\left(\cosh^2 r + \sinh^2 r\right) -
+\left(\alpha^{*}\right)^2
+e^{i\theta} \sinh r \cosh r - 
+\alpha^2 \sinh r \cosh r e^{- i\theta} + \sinh^2 r
+\right).
+\label{eqPart3Squeezed23}
+\end{eqnarray}
+In deriving \eqref{eqPart3Squeezed23} we used relation
+\eqref{eqPart3Squeezed16a}.
+
+\rindex{Squeezed vacuum state}
+\rindex{squeezed vacuum}
+For the squeezed vacuum state, $\alpha = 0$. Then the average
+photon number in this state is
+\begin{equation}
+\bra{0, z}\hat{a}^{\dag}\hat{a}\ket{0, z} =
+\sinh^2 r \ne 0,
+\label{eqPart3Squeezed24}
+\end{equation}
+where $r$ is the squeezing parameter.
+
+Obviously, the squeezed vacuum state is not a true
+vacuum state, since it can be detected by a photodetector
+using the photoelectric effect, which is impossible for a true vacuum state.
+
+\input ./part3/squeezed/fig1.tex
+\input ./part3/squeezed/fig2.tex
+\input ./part3/squeezed/fig3.tex
+%\input ./part3/squeezed/fig4.tex
+%\input ./part3/squeezed/fig5.tex
+
+Visually, quadrature squeezed states are shown in Figures
+\ref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3}, where initial states and
+time evolution of oscillations in various squeezed states are presented.
+The graphs on the right depict the uncertainty regions, which have the shape of ellipses.
+Such an image could be seen if we had something like an optical
+stroboscopic oscilloscope, which in reality does not exist.
+
+Let's examine the obtained states in more detail. The formula
+\eqref{eqPart3Squeezed17} can be written somewhat differently by
+using the representation of the coherent state via the vacuum state
+in the form \eqref{eqCh1_astate4squeezed}:
+\begin{equation}
+\left|\alpha\right> =  
+e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\ket{0} = 
+\hat{D}\ket{0},
+\nonumber
+\end{equation}
+where $\hat{D} = e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}$ is called
+the displacement operator. $\hat{D}$ is a unitary operator, since 
+\[
+\hat{D}^{\dag} = e^{-\left(\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}\right)},
+\]
+from which
+\[
+\hat{D}^{\dag} \hat{D} = \hat{D} \hat{D}^{\dag} = \hat{I},
+\]
+i.e. $\hat{D}^{\dag} = \hat{D}^{-1}$.
+
+The name of the operator is related to the fact that the action of
+$\hat{D}\left(\alpha\right)$ on the operators $\hat{a}$ and $\hat{a}^{\dag}$
+leads to their displacement by the amount $\alpha$ ($\alpha^{*}$):
+\begin{eqnarray}
+\hat{D}^{\dag}\left(\alpha\right)\hat{a}\hat{D}\left(\alpha\right) =
+\hat{a} + \alpha,
+\nonumber \\
+\hat{D}^{\dag}\left(\alpha\right)\hat{a}^{\dag}\hat{D}\left(\alpha\right) =
+\hat{a}^{\dag} + \alpha^{*},
+\label{eqPart3SqueezedTaskOffset}
+\end{eqnarray}
+This result follows from the operator decomposition theorem
+\eqref{eqPart3Squeezed15} when taking $\hat{A} = - \alpha \hat{a}^{\dag}
++ \alpha^{*} \hat{a}$, $B=\hat{a}, \hat{a}^{\dag}$.
+
+\input ./part3/squeezed/fig6.tex
+
+Thus, the coherent state $\left|\alpha\right>$ is
+a vacuum state displaced by $\alpha$
+(see \autoref{figPart3Squeezed_6}).
+%where the shaded area shows the coherence area). 
+Based on the above, a squeezed
+state can be considered as a result of two actions: displacement of the vacuum state and
+its subsequent squeezing, as shown in
+\autoref{figPart3Squeezed_7}. 
+
+\input ./part3/squeezed/fig7.tex
+\input ./part3/squeezed/fig8.tex
+
+The squeezing procedure considered here is not unique. One can
+apply another sequence of operations – first squeeze the vacuum
+state, then displace it to obtain a new squeezed state
+(see \autoref{figPart3Squeezed_8}). In operator form, this operation can be written as:
+\begin{equation}
+\left|\alpha, z\right> =
+\hat{D}\left(\alpha\right)\hat{S}\left(z\right) \ket{0}.
+\label{eqPart3Squeezed28}
+\end{equation}
+To distinguish the states, the parameter order here is reversed compared to 
+\[
+\left|z,\alpha\right> =
+\hat{S}\left(z\right) \hat{D}\left(\alpha\right)\ket{0}.
+\]
+The state \eqref{eqPart3Squeezed28} also corresponds to a quadrature squeezed state, but they are not entirely identical.
+We will not consider this case in detail here.
+
+\input ./part3/squeezed/fig9.tex
+
+The above results and illustrations shown in
+\autoref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3} were obtained for the
+case when parameters $z = r e^{i\theta}$ and $\alpha =
+\left|\alpha\right|e^{i \varphi}$ are real ($\varphi = \theta =
+0$). If the parameters are complex, the picture changes somewhat
+(see \autoref{figPart3Squeezed_9}): the squeezing axis is rotated by an angle $\frac{\theta}{2}$
+relative to the $X_1$, $X_2$ axes, and the position of the uncertainty region center is rotated by an angle $\varphi$ relative to
+$X_1$. By changing the phase of the light beams used in the generation and detection process, we can move to new quadratures $Y_1$, $Y_2$ as
+shown in \autoref{figPart3Squeezed_9}. If we further compensate the phase shift
+$\varphi$, we return to the situation depicted in Figures 
+\ref{figPart3Squeezed_1}-\ref{figPart3Squeezed_3}. From
+\autoref{figPart3Squeezed_9}, it is clear that by measuring the angles $\theta$ and
+$\varphi$ it is possible, for example, to transform a state squeezed in $X_1$ into a
+state squeezed in $X_2$, and vice versa.

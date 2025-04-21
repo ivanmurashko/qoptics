@@ -1,0 +1,100 @@
+%% -*- coding:utf-8 -*- 
+\section{RSA Algorithm}
+\label{AddRSA}
+\rindex{RSA algorithm}
+The RSA algorithm (an acronym for the surnames Rivest, Shamir, and Adleman) is a 
+public-key encryption algorithm
+\footnote{A public-key (asymmetric) encryption algorithm is one in which 
+  two different keys are used: one for encryption and the other for decryption},  
+based on the difficulty of factoring a number into prime factors.  
+
+\subsection{Key Generation}
+\rindex{RSA algorithm!key generation}
+Consists of several steps
+\input ./add/discretmath/rsagenalgo.tex
+
+The original numbers $p$ and $q$ are kept secret, since they make
+computing $\phi(n)$ trivial.
+
+It should be noted that to obtain the private key from the public key,
+one must compute $\phi(n)$ given $n$. This is a difficult problem (if 
+$p$ and $q$ are unknown), as noted in remark
+\ref{rem:add:discretmath:eulerfuncomplex}. 
+
+\input ./add/discretmath/rsagenex.tex
+
+\subsection{Encryption}
+\rindex{RSA algorithm!encryption}
+\input ./add/discretmath/rsaencrypt.tex
+
+\subsection{Decryption}
+\rindex{RSA algorithm!decryption}
+\input ./add/discretmath/rsadecrypt.tex
+
+\subsection{Proof}
+We want to prove that 
+\[
+\left(m^e\right)^d \equiv m \mod{p \cdot q}
+\]
+for any positive number $m$ when $p$ and $q$ are prime numbers, and $e$
+and $d$ satisfy the relation
+\[
+d \cdot e \equiv 1 \mod{\phi\left(p \cdot q\right)},
+\]
+which can be rewritten as
+\[
+d \cdot e - 1 = h \left(p - 1\right)\left(q - 1\right).
+\]
+
+Thus,
+\[
+m^{e \cdot d} = m \cdot m^{h \left(p - 1\right)\left(q - 1\right)}.
+\]
+Next, two cases are possible: when $m$ is divisible by $p$, and when $m$ and
+$p$ are coprime.
+
+In the first case,
+\[
+m^{e \cdot d} \equiv m \equiv 0 \mod{p}.
+\]
+In the second case, we use
+\myref{addDiscretSmallFerma}{Fermat's little theorem}:
+\[
+m \cdot m^{h \left(p - 1\right)\left(q - 1\right)} 
+= m \left(m^{p - 1}\right)^{h \left(q - 1\right)} \equiv m \cdot 1^{h
+  \left(q - 1\right)} \equiv m \mod{p}.
+\]
+Similarly, we have either
+\[
+m^{e \cdot d} \equiv m \equiv 0 \mod{q}
+\]
+or, by Fermat's little theorem,
+\[
+m \cdot m^{h \left(p - 1\right)\left(q - 1\right)} 
+= m \left(m^{q - 1}\right)^{h \left(p - 1\right)} \equiv m \cdot 1^{h
+  \left(p - 1\right)} \equiv m \mod{q}.
+\]
+Thus, we have the following two types of congruences:
+the trivial equalities
+\begin{eqnarray}
+x_1 = m \equiv m \mod p,
+\nonumber \\
+x_1 = m \equiv m \mod q,
+\nonumber
+\end{eqnarray}
+and the just obtained congruences
+\begin{eqnarray}
+x_2 = m^{ed} \equiv m \mod p,
+\nonumber \\
+x_2 = m^{ed} \equiv m \mod q,
+\nonumber
+\end{eqnarray}
+from which, by \myref{thm:chineseremainder}{the Chinese remainder theorem}, 
+we get
+\[
+x_1 \equiv x_2 \mod p \cdot q,
+\]
+i.e.
+\[
+m^{e \cdot d} \equiv m \mod n.
+\]

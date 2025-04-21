@@ -1,0 +1,286 @@
+%% -*- coding:utf-8 -*- 
+\section{Coherent States}
+The states $\ket{n}$ do not tend, as $n$ increases, to the classical solution for the oscillator. This property is possessed by the so-called coherent states. They were introduced by E. Schrödinger and later developed in modern times by R. Glauber
+\cite{bQuantumOpticsAndRadioPhisicsLecture1966} and E. Sudarshan 
+\cite{bKaluderSudershan1970} in relation to problems of quantum optics. A coherent state can be defined in various ways. We use the definition as a superposition of states
+$\ket{n}$:
+\begin{equation}
+\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\ket{n},
+\quad
+\left<\alpha\right| = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\bra{n},
+\label{eqCh1_coh_def}
+\end{equation}
+where $\alpha$ is a certain complex parameter, the meaning of which will become clear later. 
+
+From the definition \eqref{eqCh1_coh_def}, several properties of coherent states follow. First of all,
+\begin{equation}
+\left<\alpha\right|\left.\alpha\right> = 
+e^{-\left|\alpha\right|^2}\sum_{(n)}
+\frac{\left(\alpha\alpha^{*}\right)^n}{n!} = 
+e^{\left|\alpha\right|^2} e^{-\left|\alpha\right|^2} = 1,
+\end{equation}
+i.e., coherent states are normalized. However, these states are not orthogonal:
+\begin{equation}
+\left<\alpha\right|\left.\beta\right> = 
+e^{-\frac{1}{2}\left(\left|\alpha\right|^2 +
+  \left|\beta\right|^2\right)}\sum_{(n)} 
+\frac{\left(\alpha^{*}\beta\right)^n}{n!} = 
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta 
+}
+\label{eqCh1_ortog}
+\end{equation}
+From this
+\begin{equation}
+\left|\left<\alpha\right|\left.\beta\right>\right|^2 = 
+e^{
+-\left|\alpha\right|^2  - \left|\beta\right|^2
++
+\alpha^{*} \beta  + \alpha \beta^{*}} = 
+e^{-\left|\alpha - \beta\right|^2}, 
+\end{equation}
+i.e., these states can be considered approximately orthogonal if
+$\left|\alpha - \beta\right|$ is sufficiently large. 
+
+The nonorthogonality of coherent states is a consequence of the overcompleteness of the system ($\alpha$ is any complex number, while $n$ only takes integer values). 
+
+Coherent states are eigenstates of the annihilation operator
+with eigenvalue $\alpha$: 
+\begin{equation}
+\hat{a}\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\sqrt{n}\ket{n - 1} = 
+e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(m = n - 1)} \frac{\alpha \alpha^m}{\sqrt{m!}}\ket{m} = 
+\alpha\left|\alpha\right>
+\end{equation}
+
+The conjugate relation has the form
+\begin{equation}
+\left<\alpha\right|\hat{a}^{\dag} =  
+\alpha^{*}\left<\alpha\right|
+\end{equation}
+
+The probability to detect (measure) $n$ photons in the coherent state is
+\begin{equation}
+\left|\bra{n}\left.\alpha\right>\right|^2 =
+e^{-\left|\alpha\right|^2}
+\frac{\left(\left|\alpha\right|^2\right)^n}{n!}
+\label{eqCh1_PuassonCoh}
+\end{equation}
+which corresponds to the Poisson distribution
+\rindex{Poisson distribution}
+with mean photon number  
+$\left<n\right> = \left|\alpha\right|^2$. Using the known relation 
+\begin{equation}
+\ket{n} = \frac{1}{\sqrt{n!}}
+\left(\hat{a}^{\dag}\right)^n\ket{0}
+\label{eqCh1_nstate}
+\end{equation}
+the coherent state can be represented as
+\begin{equation}
+\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}\sum_{(n)}
+\frac{\left(\alpha \hat{a}^{\dag}\right)^n}{n!}\ket{0} = 
+e^{\alpha \hat{a}^{\dag} -
+  \frac{1}{2}\left|\alpha\right|^2}\ket{0}
+\label{eqCh1_astate}
+\end{equation}
+
+Rewrite \eqref{eqCh1_astate} in another form, using the following relation
+\[
+e^{- \alpha^{*} \hat{a}} \ket{0} = \left(1 - \alpha^{*} \hat{a} +
+\dots\right) \ket{0} = \ket{0},
+\]
+we obtain
+\begin{equation}
+\left|\alpha\right> = 
+e^{\alpha \hat{a}^{\dag}} 
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{- \alpha^{*} \hat{a}} 
+\ket{0}.
+\label{eqCh1_astate_add}
+\end{equation}
+Next, we use the operator identity (Baker–Hausdorff formula)
+\begin{equation}
+e^{\hat{c} + \hat{d}} = e^{- \frac{1}{2}\left[\hat{c},
+    \hat{d}\right]}e^{\hat{c}} e^{\hat{d}} 
+\label{eqPart1Ch1_BeikerHausdorf}
+\end{equation}
+valid under the condition  
+$\left[\hat{c},\left[\hat{c}, \hat{d}\right]\right] =
+\left[\hat{d},\left[\hat{c}, \hat{d}\right]\right] = 0$.
+If we set $\hat{c} = \alpha\hat{a}^{\dag}$, $\hat{d} = -\alpha^*\hat{a}$
+then from \eqref{eqCh1_astate_add} we get 
+\begin{eqnarray}
+\left|\alpha\right> =  
+e^{\alpha \hat{a}^{\dag}} 
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{- \alpha^{*} \hat{a}} 
+\ket{0} =
+e^{-\frac{1}{2}\left|\alpha\right|^2}
+e^{\alpha \hat{a}^{\dag}} 
+e^{- \alpha^{*} \hat{a}} 
+\ket{0} = 
+\nonumber \\
+=
+e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\ket{0}.
+\label{eqCh1_astate4squeezed}
+\end{eqnarray}
+
+To visually represent coherent states, the coordinate representation of the coherent state is given in \autoref{AddQCoh}. 
+
+We give a few more useful relations derived from
+\eqref{eqCh1_astate}. Differentiating \eqref{eqCh1_astate} with respect to $\alpha$,
+we have:  
+\[
+\frac{\partial}{\partial \alpha}\left|\alpha\right> = 
+\left( \hat{a}^{\dag} - \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>,
+\]
+or equivalently 
+\[
+\hat{a}^{\dag}\left|\alpha\right> = \left(\frac{\partial}{\partial
+  \alpha} +  \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>.
+\]
+The conjugate equality has the form
+\[
+\left<\alpha\right|\hat{a} = \left(\frac{\partial}{\partial
+  \alpha^{*}} +  \frac{1}{2}\alpha\right)\left<\alpha\right|
+\]
+
+In general, the positive-frequency part of the electric field operator has the form
+\[
+\hat{\vec{E}}^{(+)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k\left(t\right) \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}, 
+\]
+
+Let us assume that the field (multimode) is in a state
+\[
+\left| \left\{\alpha_s\right\}\right> = 
+\left| \alpha_1, \alpha_2, \dots, \alpha_s, \dots\right> = 
+\left| \alpha_1\right>
+\otimes
+\left| \alpha_2\right>
+\otimes
+\dots
+\otimes
+\left| \alpha_s\right>
+\otimes
+\dots,
+\]
+where $\left\{\alpha_s\right\}= \left\{\alpha_{k_s}\right\}$
+denotes a set of parameters $\alpha$. Acting with the operator $\hat{\vec{E}}^{(+)}$ on the state  $\left|\left\{\alpha_{k_s}\right\}\right>$, we get 
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left|\left\{\alpha_{k_s}\right\}\right> = 
+\left\{ \sum_{(k_s)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}\right\}\left|\left\{\alpha_{k_s}\right\}\right> = 
+\nonumber \\
+= 
+\sum_{(k_s)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \alpha_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)}\left|\left\{\alpha_{k_s}\right\}\right>,
+\end{eqnarray}
+i.e., $\left|\left\{\alpha_{k_s}\right\}\right>$ is an eigenvector of the positive-frequency part of the electric field operator, and the eigenvalue is a classical field (analytic signal) whose complex mode amplitudes are  
+\(
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \alpha_k.
+\)
+Hence, each classical field corresponds to some coherent state. 
+
+The expectation value of the electric field operator $\hat{\vec{E}} =
+\hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)}$ in the coherent state is obtained by first considering a single mode: 
+\[
+\left<\alpha_{k}\right|\hat{\vec{E}}_k\left|\alpha_{k}\right> = 2
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}}\left|\alpha_{k}\right|\cos 
+\left(\omega_k t - \left(\vec{k} \vec{r} + \theta_k\right) \right),
+\]
+where $\alpha_k = \left|\alpha_{k}\right| e^{i \theta_k}$, which follows from the relations
+\[
+\left<\alpha_k\right|\hat{a}_k\left|\alpha_k\right> = \alpha_k, \quad
+\left<\alpha_k\right|\hat{a}^{\dag}_k\left|\alpha_k\right> = \alpha^{*}_k
+\]
+Generalizing this to the multimode case, we get
+\begin{equation}
+\left<\left\{\alpha_{k}\right\}\right|\hat{\vec{E}}\left|\left\{\alpha_{k}\right\}\right>
+= 2 \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \left|\alpha_k\right|\cos \left(\omega_k t -
+\left(\vec{k}\vec{r}\right) + \theta_k \right),
+\end{equation}
+which corresponds to a classical multimode field, i.e., the expectation value of $\hat{\vec{E}}$ in the coherent state is the classical field with the corresponding amplitudes and phases of the modes. 
+
+Coherent states, as we have seen, are not orthogonal due to the overcompleteness of the eigenvector system, but they satisfy the completeness relation: 
+\begin{equation}
+\frac{1}{\pi}\int \left|\alpha\right>\left<\alpha\right| d^2 \alpha =
+\hat{I},
+\label{eqCh1_full4coh}
+\end{equation}
+Here $d^2 \alpha = d\, \mathrm{Re}\, \alpha\, d\, \mathrm{Im} \alpha$, $\hat{I}$ is the identity operator, and the integration is performed over the entire complex plane. We prove this using polar coordinates,
+illustrated in \autoref{figCh1_Coh}.  
+
+\input ./part1/quantel/fig5.tex
+
+Using the expansion of $\left|\alpha\right>$ in terms of $\ket{n}$ in
+polar coordinates, we get 
+\begin{eqnarray}
+\int d^2 \alpha \left|\alpha\right>\left<\alpha\right| =
+\nonumber \\
+=
+\int_0^{\infty} d \left|\alpha\right|\int_0^{2
+  \pi}\left|\alpha\right|\sum_{(n)}\sum_{(m)}e^{-i \left(n -
+  m\right)\varphi}
+e^{-\left|\alpha\right|^2}\ket{m}\bra{n}
+\frac{\left|\alpha\right|^m \left|\alpha\right|^n}{\sqrt{n! m!}} d\varphi
+= 
+\nonumber \\
+= \pi \sum_{(n)}\frac{1}{n!}\int_0^{\infty} 2
+\left|\alpha\right|\left|\alpha\right|^{2n} e^{-\left|\alpha\right|^2} 
+\ket{n}\bra{n}
+d\left|\alpha\right| = 
+\nonumber \\
+=
+\pi
+\sum_{(n)}\frac{\ket{n}\bra{n}}{n!} \int_0^{\infty}x^n
+e^{-x}dx = 
+\pi \sum_{(n)}\ket{n}\bra{n} = \pi \hat{I},
+\end{eqnarray}
+where it is taken into account that
+\[
+\int_0^{2\pi} e^{-i \left(n - m\right)\varphi} d\varphi = 2 \pi \delta_{nm},
+\]
+the variable substitution is made:  
+\[
+\left|\alpha\right|^2 = x, \quad 2 \left|\alpha\right| d
+\left|\alpha\right| = d x,
+\]
+and the integral representation of factorial is used:
+\[
+n! = \int_0^{\infty}x^n e^{-x} dx.
+\]
+
+Thus, formula \eqref{eqCh1_full4coh} is proven. Using this relation, one can express one coherent state through all others: 
+\[
+\left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>\left<\beta\right|\left.\alpha\right> d^2 \beta,
+\]
+but in \eqref{eqCh1_ortog} we had
+\(
+\left<\alpha\right|\left.\beta\right> = 
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta
+},
+\)
+therefore,
+\begin{equation}
+\left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>
+e^{
+-\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
++
+\alpha^{*} \beta
+} d^2 \beta.
+\end{equation}

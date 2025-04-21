@@ -1,0 +1,166 @@
+%%
+%% Common directives for all texts
+%%
+\usepackage{anysize}
+\pagestyle{myheadings}
+\marginsize{2cm}{2cm}{2cm}{1cm}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{chapterbib}
+\usepackage{amsmath}
+\usepackage{xparse} %to make Mac OSX compilation happy
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[xindy]{imakeidx}
+\makeindex
+
+\makeatletter
+\newcommand{\rindex}[2][\imki@jobname]{%
+  \index[#1]{\detokenize{#2}}%
+}
+\makeatother
+
+
+%% \makeindex[
+%%   program=xindy,
+%%   options=-M texindy -L russian -C utf8,
+%% ]
+\usepackage{physics}
+
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex]{graphicx}
+\else
+  \usepackage[dvips]{graphicx}
+\fi
+\usepackage{tikz}
+
+\ifpdf
+  \usepackage[pdfusetitle]{hyperref}
+  \hypersetup{
+    pdftex,
+    allcolors=blue,
+    bookmarksnumbered=true,     
+    bookmarksopen=true,         
+    bookmarksopenlevel=1,       
+    colorlinks=true,            
+    pdfstartview=Fit,           
+    pdfpagemode=UseOutlines,  
+    pdfpagelayout=TwoPageRight
+  }
+\else
+  \usepackage[breaklinks]{hyperref}
+\fi
+
+\floatname{algorithm}{Algorithm}
+
+\usepackage{longtable}
+\usepackage{indentfirst}
+\renewcommand\thepart{\arabic{part}}
+
+%
+% https://tex.stackexchange.com/questions/187388/amsthm-with-shared-counters-messes-up-autoref-references
+%
+\usepackage{aliascnt}
+\usepackage{cleveref}
+
+
+\theoremstyle{theorem}
+\newtheorem{xtheorem}{Theorem}[section]
+\providecommand*{\xtheoremautorefname}{Theorem}
+\NewDocumentEnvironment{theorem}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xtheorem}}
+                         {\begin{xtheorem}[#1]\rindex{#1!theorem definition}}
+                       }%
+                       {\end{xtheorem}}
+
+
+\newtheorem{lemma}[xtheorem]{Lemma}
+
+\newtheorem{proposition}[xtheorem]{Proposition}
+\newtheorem{corollary}[xtheorem]{Corollary}
+\theoremstyle{example}
+\newtheorem{xexample}{Example}[section]
+
+\providecommand*{\xtheoremautorefname}{Axiom}
+\NewDocumentEnvironment{example}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xexample}}
+                         {\begin{xexample}[#1]\rindex{#1!example}}
+                       }%
+                       {\end{xexample}}
+
+
+\theoremstyle{axiom}
+\newtheorem{xaxiom}{Axiom}[section]
+\NewDocumentEnvironment{axiom}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xaxiom}}
+                         {\begin{xaxiom}[#1]\rindex{Axiom!#1!definition}}
+                       }%
+                       {\end{xaxiom}}
+
+\theoremstyle{definition}
+\newtheorem{xdefinition}{Definition}[section]
+\NewDocumentEnvironment{definition}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xdefinition}}
+                         {\begin{xdefinition}[#1]\rindex{#1!definition}}
+                       }%
+                       {\end{xdefinition}}
+
+\theoremstyle{property}
+\newtheorem{xproperty}{Property}[section]
+\NewDocumentEnvironment{property}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to theorem
+                         {\begin{xproperty}}
+                         {\begin{xproperty}[#1]\rindex{#1!property}}
+                       }%
+                       {\end{xproperty}}
+
+\newtheorem{remark}{Remark}[section]
+
+
+
+%% \newenvironment{definition}[1][Definition]{\begin{trivlist}
+%% \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+%
+% https://tex.stackexchange.com/questions/357118/expand-nameref-before-creating-index
+%
+
+\makeatletter
+\newcommand{\getnamereftext}[1]{%
+  \@ifundefined{r@#1}{}{%
+    \unexpanded\expandafter\expandafter\expandafter{%
+      \expandafter\expandafter\expandafter\@thirdoffive\csname r@#1\endcsname
+    }%
+  }%
+}
+
+
+\usepackage{ifthen}
+\newcommand{\myref}[2]{%
+  {\ifthenelse{\equal{#2}{}}
+    {
+      {\nameref{#1} }%
+    }%
+    {#2}
+  }
+  {\expandafter\rindex{{\getnamereftext{#1}}}}
+  (\autoref{#1})
+}%
+
+\providecommand*\xexampleautorefname{ex.}
+\providecommand*\exampleautorefname{ex.}
+
+\usepackage{cleveref}

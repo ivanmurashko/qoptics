@@ -1,0 +1,126 @@
+%% -*- coding:utf-8 -*-
+\section{Quantum Pseudo-Telepathic Games}
+
+The nonclassicality of entangled states can be vividly
+demonstrated in the so-called quantum pseudo-telepathic games
+\cite{bPseudoTelepathy2003,bPseudoTelepathy2004}
+
+\subsection{Game Description}
+Consider the Mermin-Peres game in which two players,
+Alice and Bob, play against a casino. 
+Alice and Bob fill a $3 \times 3$ square with numbers $\pm 1$.
+The casino tells Alice the number of the row that Alice must fill, and
+Bob the number of the column. Alice's product of all digits must be
+equal to $+1$, while Bob's must be $-1$. The players win if the number
+at the intersection of the chosen row and column matches. They lose otherwise.
+
+Alice and Bob are isolated from each other until they receive
+from the casino the row and column numbers, respectively. Thus, they can
+only agree on a strategy before this moment.
+
+\begin{example}[Mermin-Peres Game]
+Suppose Alice ($A$) received row number 1, and Bob ($B$) column number 3. In this case, a winning combination may look like  
+\begin{eqnarray}
+A = \left(
+\begin{array}{ccc}
++1 & -1 & -1 \\
+\ast & \ast & \ast \\
+\ast & \ast & \ast  
+\end{array}
+\right),
+\nonumber \\
+B = \left(
+\begin{array}{ccc}
+\ast & \ast & -1 \\
+\ast & \ast & +1 \\
+\ast & \ast & +1  
+\end{array}
+\right).
+\nonumber 
+\end{eqnarray}
+This combination is winning because both Alice and Bob have the same number $-1$ 
+at the intersection of the selected row and column.
+
+
+In the opposite case (row 1, column 1) 
+\begin{eqnarray}
+A = \left(
+\begin{array}{ccc}
++1 & -1 & -1 \\
+\ast & \ast & \ast \\
+\ast & \ast & \ast  
+\end{array}
+\right),
+\nonumber \\
+B = \left(
+\begin{array}{ccc}
+-1 & \ast & \ast \\
++1 & \ast & \ast \\
++1 & \ast & \ast  
+\end{array}
+\right),
+\nonumber 
+\end{eqnarray}
+the players lose, since Alice obtains $+1$ at the intersection, while Bob has $-1$. 
+\end{example}
+
+
+\subsection{Classical Strategy}
+In the classical strategy, Alice and Bob cannot agree on all
+elements of the matrix because Alice's and Bob's conditions conflict:
+according to Alice, the product of all elements of the matrix
+equals $(+1)^3 = 1$, while according to Bob it equals $(-1)^3 = -1$.
+Thus, sometimes Alice and Bob win, but there will always be games in which
+they lose, since the probability of winning $p < 1$.
+
+\subsection{Quantum Strategy}
+As we have found, the classical strategy does not exist, but on the other
+hand, if Alice and Bob can create in advance some
+entangled state and agree on the measurements they
+will perform on this state
+\footnote{
+naturally, the measurements are performed by Alice and Bob separately, each in their own laboratory
+}, then there is a way to ensure a winning probability $p=1$.
+
+The entangled state used by Alice and Bob:
+\begin{equation}
+\ket{\psi} = \ket{\psi}_{A_1,B_1} \otimes \ket{\psi}_{A_2,B_2}
+\nonumber
+\end{equation}
+
+The matrix used for measurements
+\begin{equation}
+X =
+\left(
+\begin{array}{ccc}
+\hat{S}_0 \otimes \hat{S}_3 & \hat{S}_3 \otimes \hat{S}_0 & \hat{S}_3 \otimes \hat{S}_3 \\
+\hat{S}_1 \otimes \hat{S}_0 & \hat{S}_0 \otimes \hat{S}_1 & \hat{S}_1 \otimes \hat{S}_1 \\
+- \hat{S}_1 \otimes \hat{S}_3 & - \hat{S}_3 \otimes \hat{S}_1 & \hat{S}_2 \otimes \hat{S}_2  
+\end{array}
+\right)
+\label{eq:quantumgames:matrix}
+\end{equation}
+
+Since 
+\[
+\hat{S}_1^2 = \hat{S}_2^2 = \hat{S}_3^2 = \hat{S}_0^2 = \hat{I}
+\]
+for each element $\hat{x}_{ij}$ of the matrix
+\eqref{eq:quantumgames:matrix} we have $\hat{x}_{ij}^2 = \hat{I}$, and
+therefore upon measurement we get eigenvalues $\pm 1$.
+
+Moreover, Alice and Bob can perform measurements since the operators in
+the same row or the same column commute, i.e., can be measured
+simultaneously. The values Alice obtains satisfy
+the requirements imposed on the row, and Bob's on the column.
+
+Finally, the measurements performed by Alice and Bob at the matching
+position also coincide. This follows from the relation
+\[
+\left(\hat{x}_{ij}^A \otimes \hat{x}_{ij}^B\right) \ket{\psi} = \ket{\psi},
+\]
+where $\hat{x}_{ij}^A$ is Alice's measurement, and $\hat{x}_{ij}^B$ is Bob's measurement. Thus the product of the results obtained by Alice and Bob
+is equal to $1$, or, since the results can only be $\pm 1$, Alice's and Bob's results coincide. 
+
+
+TBD

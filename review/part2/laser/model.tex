@@ -1,0 +1,207 @@
+%% -*- coding:utf-8 -*- 
+\section{Laser Model}
+
+Earlier in \eqref{eqCh2_rho_final2} we considered the interaction of a resonator mode
+(harmonic oscillator) with a reservoir in thermal
+equilibrium at temperature $T$. The same model can be used
+to study the operation of a laser, but it needs to be supplemented by an additional
+reservoir that provides pumping.  
+See \autoref{figPart2Ch1_1}: the first reservoir, $R_1$, contains atoms
+at temperature $T$. The second, $R_2$, contains atoms (of a different
+type) in an inverted state.
+
+\input ./part2/laser/fig1.tex
+
+In the linear approximation (to second order perturbation theory) we already solved
+the problem of the interaction of the resonator mode with a reservoir.
+For the density matrix describing the state of the resonator mode field, the equations obtained were:  
+\begin{eqnarray}
+\dot{\hat{\rho}} =
+- \frac{1}{2}\frac{\omega}{Q}\left\{
+\bar{n}_T\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+\hat{a}^{\dag}\hat{\rho}\hat{a}
+\right)\right.
++ 
+\nonumber \\
+\left.
++ \left(\bar{n}_T + 1\right)
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{\dag}
+\right)
+\right\}
+ + \mbox{h.c.}
+\label{eqCh3_1a}
+\end{eqnarray}
+or in another form \eqref{eqCh2_rho_final2}
+\begin{eqnarray}
+\dot{\hat{\rho}} =
+- \frac{1}{2}R_a
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+\hat{a}^{\dag}\hat{\rho}\hat{a}
+\right)
+- 
+\nonumber \\
+- \frac{1}{2}R_b
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{\dag}
+\right)
+ + \mbox{h.c.}
+\label{eqCh3_1b}
+\end{eqnarray}
+
+If we limit ourselves to the linear approximation (in the field), the equation for
+the laser density matrix can be written using these equations. To
+describe the action of the reservoir introducing losses, it is convenient to use
+\eqref{eqCh3_1a}, taking into account that at not too high
+temperatures $\bar{n}_T \ll 1$ and $\bar{n}_T$
+can be neglected compared to unity.
+ 
+To describe the reservoir providing pumping, it is convenient to use
+\eqref{eqCh3_1b}, discarding the second term, since for simplicity
+it is assumed that all atoms of the pumping reservoir are in the upper
+state.
+
+All this leads to the following equation:
+\begin{eqnarray}
+\dot{\hat{\rho}} =
+- \frac{1}{2}\frac{\omega}{Q}
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{\dag}
+\right)
+-
+\nonumber \\
+- \frac{1}{2}A
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+\hat{a}^{\dag}\hat{\rho}\hat{a}
+\right)
+ + \mbox{h.c.}
+\label{eqCh3_2}
+\end{eqnarray}
+where $A = R_a$ is determined by the pumping intensity.
+
+Equation \eqref{eqCh3_2} is obtained in the second-order perturbation approximation.
+It can describe the behavior of the laser below
+the generation threshold, allows determining threshold conditions, but cannot
+describe the laser above the generation threshold.
+
+Let us assume losses are linear, and the first term in \eqref{eqCh3_2}
+accurately describes the losses. The second term in \eqref{eqCh3_2} should be
+found in the next non-zero approximation (fourth order perturbation theory).
+
+The procedure to find this approximation is analogous to the one used earlier
+in the derivation of equations \eqref{eqCh3_1a} - \eqref{eqCh3_1b}. One just
+needs to continue it to higher order terms. Third-order terms
+will give zero, since the resulting matrix has zero diagonal
+elements and its trace is zero. The next non-zero term is 
+fourth order and has the form: 
+\begin{eqnarray}
+Sp_{at}\left\{
+\left(-\frac{i}{\hbar}\right)^4
+\int_t^{t+\tau}dt_1
+\int_t^{t_1}dt_2
+\int_t^{t_2}dt_3
+\right.
+\nonumber \\
+\left.
+\int_t^{t_3}
+\left[\hat{V},
+\left[\hat{V},
+\left[\hat{V},
+\left[\hat{V},
+\hat{\rho}_{at}\left(t\right)
+\otimes
+\hat{\rho}_{f}\left(t\right)
+\right]
+\right]
+\right]
+\right]
+dt_4
+\right\}
+\label{eqCh3_3}
+\end{eqnarray}
+Calculations similar to those done earlier lead to the expression
+(see \cite{bMandel2000}):
+%FIXME!!! unfold in appendix
+\begin{eqnarray}
+\frac{1}{8}B\left[
+\left(\hat{a} \hat{a}^{\dag}\right)^2\hat{\rho}
++ 3 \hat{a} \hat{a}^{\dag} \hat{\rho} \hat{a} \hat{a}^{\dag} -
+\right.
+\nonumber \\
+\left.
+-
+4 \hat{a}^{\dag} \hat{a} \hat{a}^{\dag} \hat{\rho} \hat{a}
+\right] + \mbox{h.c.}
+\label{eqCh3_4}
+\end{eqnarray}
+Taking \eqref{eqCh3_4} into account, the equation for the density matrix
+(statistical operator) of the laser mode takes the form: 
+\begin{eqnarray}
+\dot{\hat{\rho}}\left(t\right) = 
+- \frac{1}{2}\frac{\omega}{Q}
+\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
+\hat{a}\hat{\rho}\hat{a}^{\dag}
+\right)
+- \frac{1}{2}A
+\left(\hat{a}\hat{a}^{\dag}\hat{\rho} - 
+\hat{a}^{\dag}\hat{\rho}\hat{a}
+\right) + 
+\nonumber \\
++ \frac{1}{8}B\left[
+\left(\hat{a} \hat{a}^{\dag}\right)^2\hat{\rho}
++ 3 \hat{a} \hat{a}^{\dag} \hat{\rho} \hat{a} \hat{a}^{\dag} -
+4 \hat{a}^{\dag} \hat{a} \hat{a}^{\dag} \hat{\rho} \hat{a}
+\right] + \mbox{h.c.}
+\label{eqCh3_5}
+\end{eqnarray}
+where $A$ is the linear (unsaturated) gain, 
+$B=\frac{g^2 \tau^2 A}{3} = \frac{1}{3}r_ag^4\tau^4$ is the
+saturation parameter.
+
+Equation \eqref{eqCh3_5} is the motion equation for the density matrix of the laser field interacting with a nonlinear medium consisting of active atoms and linear losses.
+
+Equation \eqref{eqCh3_5} can be written in various representations. Here we restrict ourselves to the photon number (photon number states) representation and the coherent state representation.
+
+In the first case, from \eqref{eqCh3_5} it is easy to obtain a system of equations for the matrix elements $\bra{m}\hat{\rho}\ket{n} = \rho_{mn}$.  
+
+For the diagonal elements we have:
+\begin{eqnarray}
+\dot{\rho}_{nn}\left(t\right) = 
+-\left[A - \left(n + 1\right)B\right]\left(n + 1\right)\rho_{nn} +
+\nonumber \\
++ \left(A - n B\right)n \rho_{n - 1, n - 1} 
+- \frac{\omega}{Q}n \rho_{nn} + 
+\frac{\omega}{Q} \left(n + 1\right)\rho_{n + 1, n + 1}.
+\label{eqCh3_6}
+\end{eqnarray}
+Note that only diagonal terms enter this equation.
+
+Equations for off-diagonal terms are obtained in the same way.
+They are somewhat more complicated and are not presented here.
+
+To write equation \eqref{eqCh3_5} in the coherent state representation,
+one can proceed as before when considering the decay of the resonator mode.
+Write 
+\[
+\hat{\rho} = \int
+P\left(\alpha\right)\left|\alpha\right>\left<\alpha\right| d^2 \alpha 
+\]
+and substitute it into equation \eqref{eqCh3_5}. Then perform the familiar procedure used previously for resonator mode relaxation. For the linear terms characterizing losses and unsaturated gain, the previously obtained results can be used. Additionally, the terms characterizing saturation must be considered. The calculations are more cumbersome here, although not fundamentally different from those done before. The resulting equation is quite complex, but recalling that perturbation theory (small field) was used, one can neglect smaller terms, leaving only the main ones \cite{bMandel2000}. 
+%Details are given in the appendix (FIX ME!!! add it). 
+In conclusion, one obtains an equation of the Fokker-Planck type for the quasi-probability
+$P\left(\alpha, t\right)$:  
+\begin{equation}
+\frac{\partial}{\partial t} P\left(\alpha, t\right) = 
+- \frac{1}{2}\left\{ 
+\frac{\partial}{\partial \alpha}
+\left[
+A - \frac{\omega}{Q} - B \left|\alpha\right|^2
+\right] \alpha P + \mbox{c.c.}
+\right\} + 
+A \frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}
+\label{eqCh3_7}
+\end{equation}
+That is, compared to formula \eqref{eqCh2_74}, $-\frac{\omega}{Q}$
+is replaced by $A - \frac{\omega}{Q} - B\left|\alpha\right|^2$, where $A
+- \frac{\omega}{Q} = G$ is the unsaturated gain minus losses, and $B$  
+characterizes gain reduction due to saturation. 

@@ -1,0 +1,148 @@
+%% -*- coding:utf-8 -*- 
+\section{No-Cloning Theorem and Quantum Teleportation.}
+\label{pPart3EntangleNoClone}
+In quantum mechanics, there exists the so-called no-cloning theorem \cite{bNoClone}. The meaning of this theorem can be explained using our example of a photon with two mutually orthogonal polarizations, whose wave function is given by relation \eqref{eqEntangSimpleState}. The no-cloning theorem states that it is impossible to create a device where a particle in the state \eqref{eqEntangSimpleState} is input and two particles in the same state are output.
+
+Indeed, suppose we have a device that performs state cloning. The action of this device on a photon polarized along $x$ is described by the cloning operator $\hat{D}$ as follows:
+\begin{equation}
+  \hat{D} \ket{D_I}\ket{x} = \ket{D_{F_x}}\ket{x}\ket{x},
+  \nonumber
+\end{equation}
+where $\ket{D_I}$ is the wave function describing the initial state of the cloning device, and $\ket{D_{F_x}}$ is the wave function describing the state of the device after cloning the photon with vertical $x$-polarization. For a photon polarized along $y$, we have
+\begin{equation}
+  \hat{D} \ket{D_I}\ket{y} = \ket{D_{F_y}}\ket{y}\ket{y},
+  \nonumber
+\end{equation}
+where $\ket{D_{F_y}}$ is the wave function describing the state of the device after cloning this photon.
+
+If we apply the cloning operator $\hat{D}$ to a photon in an arbitrary state \eqref{eqEntangSimpleState}, we get
+\begin{equation}
+  \hat{D} \ket{D_I}\left|\psi\right> = 
+  \hat{D} \ket{D_I} \left(\alpha \ket{x} +
+  \beta \ket{y}\right) = 
+  \alpha \ket{D_{F_x}}\ket{x}\ket{x} +
+  \beta \ket{D_{F_y}}\ket{y}\ket{y},
+  \nonumber
+\end{equation}
+from which it is clearly impossible to obtain the expected result
+\begin{equation}
+  \hat{D} \ket{D_I}\left|\psi\right> = 
+  \ket{D_{F_{xy}}}  \left(\alpha \ket{x} +
+  \beta \ket{y}\right)
+  \left(\alpha \ket{x} +
+  \beta \ket{y}\right).
+  \nonumber
+\end{equation}
+
+But if the state of a photon cannot be cloned, it turns out that it can be transmitted from one point in space to another (naturally, with destruction of the original state), as demonstrated by quantum teleportation experiments.
+
+\input ./part3/entang/figteleport.tex
+
+The scheme of the quantum teleportation protocol is shown in \autoref{figTeleport}. In this figure, Alice wants to send to Bob the state of photon 1, which is described by the wave function \eqref{eqEntangSimpleState}. 
+\[
+\left|\psi\right>_1 = \alpha \ket{x}_1 +
+\beta \ket{y}_1, 
+\]
+\rindex{photon!entangled state} There is also an entangled photon source $S$ that emits pairs of photons 2 and 3 in the state described by the following wave function:
+\begin{equation}
+  \left|\psi\right>_{23} = \left|\psi^{-}\right>_{23} = \frac{1}{\sqrt{2}}\left(
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
+  \right).
+  \nonumber
+\end{equation}
+
+Alice mixes photons 1 and 2 on a beamsplitter $LS$ and then registers a certain Bell state using detectors $D^{(1,2)}$. The easiest registration is of the state $\left|\psi^{-}\right>_{12}$, in which both photodetectors must trigger simultaneously.
+
+The total state of the three particles is written as
+\begin{equation}
+  \left|\psi\right>_{123} = \left|\psi\right>_1 \left|\psi\right>_{23},
+  \nonumber
+\end{equation}
+which can be expanded into Bell states of photons 1 and 2:
+\begin{eqnarray}
+\left|\psi\right>_{123} = 
+c_{\left|\psi^{\dag}\right>_{12}}\left|\psi^{\dag}\right>_{12} +
+c_{\left|\psi^{-}\right>_{12}}\left|\psi^{-}\right>_{12} +
+\nonumber \\
++
+c_{\left|\phi^{\dag}\right>_{12}}\left|\phi^{\dag}\right>_{12} +
+c_{\left|\phi^{-}\right>_{12}}\left|\phi^{-}\right>_{12}.
+\label{eqPart3EntangTeleportsepar}
+\end{eqnarray}
+In the expansion \eqref{eqPart3EntangTeleportsepar}, we are interested in the coefficient 
+$c_{\left|\psi^{-}\right>_{12}}$, since it describes 
+the state of the third photon when Alice registers the Bell state 
+$\left|\psi^{-}\right>_{12}$. For the desired coefficient, we obtain:
+\begin{eqnarray}
+  c_{\left|\psi^{-}\right>_{12}} = 
+  \left<\psi^{-}\right|_{12} \left.\psi\right>_{123} = 
+  \nonumber \\
+  =
+  \frac{1}{\sqrt{2}}
+  \left(
+  \bra{x}_1\bra{y}_2 - 
+  \bra{y}_1\bra{x}_2
+  \right)
+  \left(
+  \alpha \ket{x}_1 +
+  \beta \ket{y}_1
+  \right)
+  \frac{1}{\sqrt{2}}
+  \left(
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
+  \right) = 
+  \nonumber \\
+  = \frac{1}{2}
+  \left(
+  \alpha\bra{y}_2 - 
+  \beta\bra{x}_2
+  \right)
+  \left(
+  \ket{x}_2\ket{y}_3 - 
+  \ket{y}_2\ket{x}_3
+  \right) = 
+  - \frac{1}{2}  
+  \left(
+  \alpha \ket{x}_3 +
+  \beta \ket{y}_3
+  \right).
+\nonumber
+\end{eqnarray}
+This means that whenever Alice registers the pair of photons 1 and 2 
+in the state $\left|\psi^{-}\right>_{12}$, i.e., when both detectors
+$D^{(1)}$ and $D^{(2)}$ simultaneously trigger, photon 3 on Bob's side ends up in the state identical to the original photon 1 state,
+that is, teleportation of photon 1 to Bob occurs.
+
+%% The wave function $\left|\psi\right>_{123}$ can be expanded
+%% in the Bell basis \eqref{eqEntangBellBase}.
+%% The result of the expansion is given as follows (FIX ME!!! check it)
+%% \begin{eqnarray}
+%%   \left|\psi\right>_{123} = \left|\psi\right>_1 \left|\psi\right>_{23} = 
+%%   \nonumber \\
+%%   = \left|\psi^{-}\right>_{12} \frac{\alpha\ket{x}_3 + \beta\ket{y}_3}{2} + 
+%%   \nonumber \\
+%%   + 
+%%   \left|\psi^{\dag}\right>_{12} \frac{- \alpha\ket{x}_3 + \beta\ket{y}_3}{2} +
+%%   \nonumber \\
+%%   + 
+%%   \left|\phi^{\dag}\right>_{12} \frac{- \beta\ket{x}_3 + \alpha\ket{y}_3}{2} +
+%%   \nonumber \\
+%%   +
+%%   \left|\phi^{-}\right>_{12} \frac{\beta\ket{x}_3 + \alpha\ket{y}_3}{2}.
+%%   \nonumber
+%% \end{eqnarray}
+
+%% Thus, every time Alice registers the pair of photons 1 and 2
+%% in the Bell state $\left|\psi^{-}\right>_{12}$, photon 3 on Bob's side will be in the state
+%% $\alpha\ket{x}_3 + \beta\ket{y}_3$, i.e., teleportation of photon 1 to Bob occurs.
+
+%% The Bell state $\left|\psi^{-}\right>_{12}$, as noted above, can be registered by Alice by simultaneous triggering of
+%% photodetectors $D^{(1)}$ and $D^{(2)}$
+
+% Two facts are worth noting:
+% \begin{itemize}
+% \item In this teleportation scheme, what is transmitted is not matter but some information about the quantum object.
+% \item The transmission of this information is instantaneous, but for Bob to learn about the teleportation event, a classical communication channel between Alice and Bob is necessary \footnote{Through this channel, Alice informs Bob when both photodetectors triggered, thus signaling the teleportation event}.
+% \end{itemize}

@@ -1,0 +1,58 @@
+%% -*- coding:utf-8 -*- 
+From the moment the importance of information was realized, means of its protection began to appear. 
+%% Among the first to apply information protection methods were the ancient Greeks. For these purposes, they used
+%% the first encryption machine - the scytale. The scytale represented a
+%% cone-shaped baton around which a strip of leather was wound. Then a message was written on the leather. When the strip was removed,
+%% the records on it represented a certain permutation
+%% of the symbols of the original message - the ciphertext. 
+
+%% Since then, the science of information protection, called
+%% cryptography, has made significant progress. 
+New encryption methods were invented, such as the Caesar cipher, where each letter
+of the alphabet was replaced by another (for example, the one three positions after it
+in the alphabet). Along with new encryption methods, techniques for breaking these ciphers appeared,
+for example, for the Caesar cipher, one can use the statistical properties of the language in which
+the original message was written.
+
+Very often, the security of a cipher was ensured by keeping the encryption algorithm secret, as was the case
+with the Caesar cipher mentioned above. In modern classical
+cryptography, algorithms are usually published and available for study by anyone. Security
+is ensured by mixing the message itself with a secret key
+according to some public algorithm. 
+
+Suppose we need to transmit a message from Alice to Bob via
+some secure communication channel. The message must be
+represented in some digital form.
+The protocol describing such
+transmission consists of several stages. In the first, Alice and Bob must
+obtain a common random sequence of numbers, which will be called the key. This procedure is called key distribution. 
+
+At the next stage, Alice should use
+some algorithm $E$ to obtain from the original message $P$ and key $K$
+the encrypted message $C$. This procedure can be described by the following relation: 
+\begin{equation}
+E_{K}\left(P\right) = C.
+\label{eqPart3CryptoEncryptClass}
+\end{equation}
+
+At the third stage, the resulting encrypted message must be
+transmitted to Bob.
+
+In the last stage, Bob, using the known algorithm $D$ and the key $K$ obtained in
+the first stage, should recover the original message $P$ from
+the received encrypted message $C$. This procedure can be described
+by the following relation
+\begin{equation}
+D_{K}\left(C\right) = P.
+\label{eqPart3CryptoDeEncryptClass}
+\end{equation}
+
+Analyzing this protocol raises the following questions. How
+to securely implement key distribution. Second - does
+an absolutely secure algorithm exist. And finally - is
+it possible to securely transmit an encrypted message without it being
+eavesdropped on or tampered with. 
+
+Classical cryptography gives a definitive answer only to the second
+question. An absolutely secure algorithm exists - it is called
+the one-time pad. A detailed description of this algorithm is given below.

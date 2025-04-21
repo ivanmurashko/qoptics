@@ -1,0 +1,203 @@
+%% -*- coding:utf-8 -*- 
+\section{General Considerations}
+In quantum optics, as in classical optics, one of the main devices used for studying optical fields (light) is the interferometer.
+
+In quantum physics, the device is described based on classical physics concepts, while the quantum object interacting with the device is described by quantum equations.
+
+The boundary between the device and the quantum object is somewhat conditional and can be chosen depending on the problem to be solved.
+
+In quantum optics, the interferometer itself is described by classical equations, just as in classical optics. The light field is described by quantum equations for field operators, usually using the Heisenberg picture.
+
+The most important element of any interferometer is a mirror. According to the above, we consider the mirror as part of the device and describe it classically, introducing reflection coefficients $r$, $r'$ and transmission coefficients $t$, $t'$ (see \autoref{figPart2Interfero_1}). The figure shows coefficients $r$, $t$ and $r'$, $t'$ corresponding to different sides of the mirror. Also shown are the annihilation operators of two input field modes $\hat{a}_0$ and $\hat{a}_1$ and two output mode operators $\hat{a}_2$ and $\hat{a}_3$.
+
+\input ./part2/interfero/fig1.tex
+
+If the mirror is lossless, then the ``scattering matrix'' is unitary, as in the classical case:
+\[
+\hat{S} = 
+\begin{bmatrix}
+t' & r \\
+r' & t \\
+\end{bmatrix},
+\]
+where $r$, $t$ and $r'$, $t'$ are the transmission and reflection coefficients from different sides of the mirror.
+
+The unitarity condition is written as follows:
+\begin{eqnarray}
+\hat{S}^{-1} = 
+\hat{S}^{\dag} =
+\begin{bmatrix}
+t'^\ast & r'^\ast \\
+r^\ast & t^\ast \\
+\end{bmatrix}, 
+\nonumber \\
+\hat{S} \hat{S}^{\dag} =
+\begin{bmatrix}
+t' & r \\
+r' & t \\
+\end{bmatrix}
+\begin{bmatrix}
+t'^\ast & r'^\ast \\
+r^\ast & t^\ast \\
+\end{bmatrix} =
+\nonumber \\
+=
+\begin{bmatrix}
+\left|t'\right|^2 + \left|r\right|^2 & t' r'^\ast + r t^\ast \\
+r' t'^\ast + t r^\ast & \left|r'\right|^2 + \left|t\right|^2 \\
+\end{bmatrix} = 
+\hat{I},
+\nonumber \\
+\hat{S}^{\dag} \hat{S} =
+\begin{bmatrix}
+t'^\ast & r'^\ast \\
+r^\ast & t^\ast \\
+\end{bmatrix}
+\begin{bmatrix}
+t' & r \\
+r' & t \\
+\end{bmatrix}
+ =
+\nonumber \\
+=
+\begin{bmatrix}
+\left|t'\right|^2 + \left|r'\right|^2 & t'^\ast r + r'^\ast t \\
+r^\ast t' + t^\ast r' & \left|r\right|^2 + \left|t\right|^2 \\
+\end{bmatrix} = 
+\hat{I}
+\label{eqPart2Interfero2}
+\end{eqnarray}
+For the unitarity condition
+\eqref{eqPart2Interfero2} to hold, the energy conservation law and the reciprocity theorem must be satisfied. This leads to certain conditions that the coefficients $r$, $r'$, $t$, and $t'$ must satisfy:
+\begin{eqnarray}
+\left|r\right| = \left|r'\right|, \, \left|t\right| = \left|t'\right|,
+\nonumber \\
+\left|r\right|^2 + \left|t\right|^2 = 1, 
+\nonumber \\
+r' t'^\ast + t r^\ast = 0,
+\nonumber \\
+t' r^\ast + r' t^\ast = 0.
+\label{eqPart2Interfero3}
+\end{eqnarray}
+It should be noted that the last expression is not independent. Indeed, assuming $t \ne 0$ (otherwise one can consider the relation for the reflection coefficients) and from the relation $\left|t\right| = \left|t'\right|$ we have
+\(
+t t^\ast = t' t'^\ast
+\)
+from which
+\[
+t^\ast = \frac{t' t'^\ast}{t}.
+\]
+Therefore, using $r' t'^\ast + t r^\ast = 0$, we have
+\begin{eqnarray}
+  t' r^\ast + r' t^\ast =
+  t' r^\ast + r' \frac{t' t'^\ast}{t} =
+  \nonumber \\
+  = \frac{t'}{t}\left(t r^\ast + r't'^\ast\right) = 0.
+  \nonumber
+\end{eqnarray}
+
+The reference phase plane can be shifted slightly with respect to the mirror plane, especially since a real mirror is not infinitely thin. In some cases, the reference plane can be moved by a distance of the order of the wavelength. By choosing the reference plane, the scattering matrix can be brought to a simpler form, with conditions 
+\eqref{eqPart2Interfero3} automatically satisfied.
+Assuming $t = t' = T e^{i \theta}$ and $r = r' = R e^{i \phi}$, from
+\eqref{eqPart2Interfero3} we get
+\[
+t r^\ast + r' t^\ast = TR e^{ i \theta} e^{- i \phi} + TR e^{ i \phi}
+e^{- i \theta} =
+e^{i (\phi-\theta)} TR \left(e^{-2 i (\phi-\theta)} + 1\right) = 0,
+\]
+i.e., $\phi - \theta = \frac{\pi}{2}$. Taking $\theta = 0$ and redefining $t = T, r = R$ we have
+\begin{equation}
+\hat{S} = \left(
+\begin{array}{cc}
+t & i r \\
+i r & t \\
+\end{array}
+\right).
+\label{eqPart2Interfero4a}
+\end{equation}
+
+If we take $t,t',r,r' \in \mathbb{R}$, then obviously the necessary conditions will also be satisfied for $t' = t$ and $r' = -r$:
+\begin{equation}
+\hat{S} = \left(
+\begin{array}{cc}
+t & r \\
+-r & t \\
+\end{array}
+\right).
+\label{eqPart2Interfero4b}
+\end{equation}
+In equations \eqref{eqPart2Interfero4a} and \eqref{eqPart2Interfero4b},
+the coefficients $r$ and $t$ are real and positive.
+
+In expression \eqref{eqPart2Interfero4a} the phase of the reflection coefficient is shifted by $\frac{\pi}{2}$ relative to the phase of the transmission coefficient. In the second variant \eqref{eqPart2Interfero4b}, all coefficients are real, but the reflection coefficients from different sides have different signs. Since by choosing the reference plane the general case can be reduced either to \eqref{eqPart2Interfero4a} or to \eqref{eqPart2Interfero4b}, we will subsequently use one of these expressions.
+
+\begin{example}[Symmetric Splitter. Classical Case]
+  \input ./part2/interfero/fig1ex.tex
+  
+  Suppose our splitter is symmetric, i.e., $r=r'$ and $t = t'$
+  (see \autoref{figPart2Interfero_1ex}).
+  Obviously, the law of energy conservation must hold:
+  \[
+  \left|E_0\right|^2 + \left|E_1\right|^2 =
+  \left|E_2\right|^2 + \left|E_3\right|^2, 
+  \]
+  or
+  \begin{eqnarray}
+    \left|E_0\right|^2 + \left|E_1\right|^2 =
+    \left|t E_0 + r E_1\right|^2 + \left|r E_0 + t E_1\right|^2 =
+    \nonumber \\
+    =
+    \left(\left|t\right|^2 + \left|r\right|^2\right) 
+    \left(\left|E_0\right|^2 + \left|E_1\right|^2\right) +
+    \nonumber \\
+    + E_0 E_1^\ast \left(t r^\ast + r t^\ast\right)
+    + E_1 E_0^\ast \left(t r^\ast + r t^\ast\right)
+    \nonumber
+  \end{eqnarray}
+  That is,
+  \begin{eqnarray}
+    \left|t\right|^2 + \left|r\right|^2 = 1,
+    \nonumber \\
+    t r^\ast + r t^\ast = 0
+    \label{eqPart2InterferoEx1}
+  \end{eqnarray}
+  The last equality will hold if the phases of $t$ and $r$
+  differ by $\frac{\pi}{2}$, in particular if we take
+  $t = \left|t\right|$, $r = i \left|r\right|$, which corresponds
+  to expression \eqref{eqPart2Interfero4a}.
+
+  Moreover, expressions \eqref{eqPart2InterferoEx1} correspond to
+  \eqref{eqPart2Interfero2}, indeed
+  \begin{eqnarray}
+    \hat{S} \hat{S}^{\dag} = 
+    \left(
+    \begin{array}{cc}
+      t & r \\
+      r & t \\      
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{cc}
+      t^{*} & r^{*} \\
+      r^{*} & t^{*} \\      
+    \end{array}
+    \right) =
+    \nonumber \\
+    =
+    \left(
+    \begin{array}{cc}
+      \left|t\right|^2 + \left|r\right|^2 & t r^\ast + r t^\ast \\
+      t^\ast r + r^\ast t & \left|t\right|^2 + \left|r\right|^2 \\
+    \end{array}
+    \right) =
+    \left(
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & 1 \\
+    \end{array}
+    \right) = \hat{I}.
+    \nonumber
+  \end{eqnarray}
+  Thus the unitarity condition \eqref{eqPart2Interfero2}
+  represents the law of energy conservation.
+\end{example}

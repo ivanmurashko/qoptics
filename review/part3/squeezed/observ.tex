@@ -1,0 +1,367 @@
+%% -*- coding:utf-8 -*- 
+\section{Observation of the squeezed state. Measurement of the squeezing degree}
+
+In quadrature squeezing of light, the fluctuations of one of the quadrature
+components can be significantly smaller than the other. If this
+component is selected and used for measurement purposes, one can expect
+a strong reduction of noise that limits measurement accuracy.
+
+\input ./part3/squeezed/fig12.tex
+
+Selection can be carried out using a homodyne (synchronous)
+detector. The simplest scheme of a homodyne detector is shown in
+\autoref{figPart3Squeezed_12}. The beam splitter has the following
+parameters: the transmission coefficient is close to 1 ($t \approx 1$) and,
+consequently, $r \ll 1$, since $\left|t\right|^2 +\left|r\right|^2 =
+1$. This is necessary so that the signal $\hat{a}_0$ is not significantly
+attenuated. At the same time, the amplitude of the local oscillator, whose field is in
+a coherent state $\left|\alpha_{H}\right>$, is so large that the local oscillator field intensity strongly exceeds the signal field. For the
+homodyne detector to operate, the local oscillator field and signal
+must have the same frequency. This is achieved by forming the signal and
+local oscillator fields from the same specified laser. For example, if
+$\hat{a}_0$ corresponds to the squeezed vacuum, the pumping of the parametric
+generator is done by the second harmonic of the master laser $2
+\omega_p$. During degenerate parametric interaction, a
+signal with frequency $\omega_p$ is generated, which coincides with the frequency of the local oscillator
+$\omega_p$. Thus, the condition of frequency equality is satisfied.
+
+The field operator incident on the photodetector $\hat{a}_2$ can be expressed
+through the operators $\hat{a}_0$ and $\hat{a}_1$ — the signal field and
+local oscillator field operators:
+\begin{equation}
+\hat{a}_2 = t \hat{a}_0 + r\hat{a}_1.
+\nonumber
+\end{equation}
+Then the photon number operator is
+\begin{eqnarray}
+\hat{a}_2^{\dag}\hat{a}_2 = 
+\left(t \hat{a}_0^{\dag} + r\hat{a}_1^{\dag}\right)
+\left(t \hat{a}_0 + r\hat{a}_1\right) = 
+\nonumber \\
+=
+t^2\hat{a}_0^{\dag}\hat{a}_0 + r t \left(
+\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{\dag}\hat{a}_0 
+\right) +
+r^2\hat{a}_1^{\dag}\hat{a}_1.
+\nonumber
+\end{eqnarray}
+Assume that the local oscillator is in a coherent state, and the signal is in
+a squeezed vacuum state. Then the input state is two-mode
+\[
+\left|\psi\right> = 
+\left|\alpha_p\right> \ket{r, 0}.
+\]
+The expectation value of the photon number operator $\hat{n}_2 =
+\hat{a}_2^{\dag}\hat{a}_2$ in this case is:
+\begin{eqnarray}
+\left<\hat{n}_2\right> = 
+\left<\psi\right|\hat{a}_2^{\dag}\hat{a}_2\left|\psi\right> = 
+\nonumber \\
+=
+t^2\bra{r, 0}\hat{a}_0^{\dag}\hat{a}_0\ket{r, 0} + 
+r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
+\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0},
+\label{eqPart3SqueezedAdd3}
+\end{eqnarray}
+where
+\[
+\hat{X}\left(\varphi\right) = \frac{1}{2}\left(
+\hat{a}_0 e^{-i \varphi} +
+\hat{a}_0^{\dag} e^{i \varphi}
+\right),
+\]
+\[
+\alpha_p = 
+\left|\alpha_p\right|
+ e^{i \varphi}.
+\]
+Here $\varphi$ is the local oscillator phase. Then at $\varphi = 0$ and at 
+$\varphi = \frac{\pi}{2}$ we have
+\begin{eqnarray}
+\hat{X}\left(0\right) = 
+\frac{1}{2}\left(\hat{a}_0 + \hat{a}_0^{\dag}\right) = \hat{X}_1,
+\nonumber \\
+\hat{X}\left(\frac{\pi}{2}\right) = 
+\frac{1}{2i}\left(\hat{a}_0 - \hat{a}_0^{\dag}\right) = \hat{X}_2,
+\nonumber
+\end{eqnarray}
+i.e., by changing the local oscillator phase with a phase shifter, one can select
+the corresponding quadrature component.
+
+Equation \eqref{eqPart3SqueezedAdd3} contains three terms: those containing 
+$\left<\hat{a}_0^{\dag}\hat{a}_0\right>$ — the average photon number in the signal mode, $r^2\left|\alpha_p\right|^2$ — the average photon number in the local oscillator mode, and the interference term 
+$\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0}$,
+which selects the respective quadrature component. Assume that
+the local oscillator intensity is so high that 
+\[
+r^2 \left|\alpha_p\right|^2 \gg 
+\left<\hat{a}_0^{\dag}\hat{a}_0\right>,
+\]
+then the first term in \eqref{eqPart3SqueezedAdd3} can be neglected. In
+this case, the average photon number incident on the photodetector is
+\begin{equation}
+\left<\hat{n}_2\right> = 
+r^2 \left|\alpha_p\right|^2 + 2 t r \left|\alpha_p\right|
+\bra{r, 0}\hat{X}\left(\varphi\right)\ket{r, 0},
+\nonumber
+\end{equation}
+where the first term is a known number and can be
+subtracted. Only the term containing the signal quadrature remains. Next,
+the photon number fluctuations (uncertainty) can be determined using the formula
+\begin{equation}
+\left(\Delta n_2\right)^2 = 
+\left<\hat{n}_2^2\right>
+-
+\left<\hat{n}_2\right>^2.
+\nonumber
+\end{equation}
+Calculations lead to the formula
+%FIXME!!! calculate it
+\begin{equation}
+\left(\Delta n_2\right)^2 =
+r^2 \left|\alpha_p\right|^2
+\left\{
+r^2 + 4 t^2 
+\left(
+\Delta X \left(\varphi\right)
+\right)^2
+\right\}.
+\label{eqPart3SqueezedAdd7}
+\end{equation}
+From \eqref{eqPart3SqueezedAdd7} it follows that noise has two
+components, one of which $r^2 \left|\alpha_p\right|^2 r^2$ —
+expresses the local oscillator noise, the other 
+$r^2 \left|\alpha_p\right|^2 4 t^2 
+\left(
+\Delta X \left(\varphi\right)
+\right)^2$ — is related to the signal noise. If the signal is vacuum
+fluctuations,
+\[
+\left(\Delta X \left(\varphi\right)\right)^2  = \frac{1}{4},
+\]
+then the squeezing condition is
+\[
+\left(\Delta X_1 \right)^2 < \frac{1}{4}
+\]
+for the squeezed component.
+
+The squeezing effect can be detected using
+a homodyne detector in the following experiment. First, only the vacuum state
+is present at the input, and the noise level is measured. Then, the studied oscillation is fed to the input, and the noise
+level is measured depending on $\varphi$. If a squeezed
+state is applied at the input, at some value $\varphi = \varphi^{(1)}$,
+the noise will be minimal (less than in the case of vacuum fluctuations at the input). At
+another value $\varphi = \varphi^{(2)}$, differing by $\pi$, the noise
+will be maximal (higher than in the case of vacuum
+fluctuations). Such experiments have been carried out repeatedly. At the same time,
+the squeezing effect was observed and its degree measured (see for example
+\cite{bNonclassSqueezedStateDetection}).
+
+\input ./part3/squeezed/fig13.tex
+
+\subsection{Balanced homodyne detector scheme}
+A more complex homodyne receiver scheme is the balanced scheme,
+shown in \autoref{figPart3Squeezed_13}. It allows
+substantial reduction of the local oscillator noise. It differs from the previously discussed scheme
+by having two photodetectors, one for each
+output beam. The signals from each photodetector are subtracted, and
+the difference is recorded. The beam splitter is semi-transparent with $t = r =
+\frac{1}{\sqrt{2}}$ (this time we assume $t$ and $r$
+are real, but the reflection coefficient on different sides of the beam splitter has opposite sign).
+
+In the scheme, $\hat{a}_0$ is the signal operator, and $\hat{a}_1$ is the local oscillator mode operator. It is assumed that the local oscillator is in a coherent
+state with a large amplitude. The fields of modes 2 and 3 (operators $\hat{a}_2$
+and $\hat{a}_3$) are detected by separate photodetectors $D^{(2)}$ and
+$D^{(3)}$, and the signals from each photodetector are subtracted. Thus,
+the output signal is defined by the expectation value of the operator
+\begin{equation}
+\hat{n}_{23} = \hat{a}_2^{\dag}\hat{a}_2 - 
+\hat{a}_3^{\dag}\hat{a}_3.
+\nonumber
+\end{equation}
+The operators $\hat{a}_2$ and $\hat{a}_3$ are related to the input field operators $\hat{a}_0$ and $\hat{a}_1$ by the beam splitter through the relations:
+\begin{eqnarray}
+\hat{a}_2 = \frac{1}{\sqrt{2}} \left(\hat{a}_0 + \hat{a}_1\right),
+\nonumber \\
+\hat{a}_3 = \frac{1}{\sqrt{2}} \left(- \hat{a}_0 + \hat{a}_1\right),
+\nonumber
+\end{eqnarray}
+so
+\begin{eqnarray}
+\hat{n}_{23} = \frac{1}{2}
+\left(
+\left(\hat{a}_0^{\dag} + \hat{a}_1^{\dag}\right)
+\left(\hat{a}_0 + \hat{a}_1\right)
+-
+\left(-\hat{a}_0^{\dag} + \hat{a}_1^{\dag}\right)
+\left(-\hat{a}_0 + \hat{a}_1\right)
+\right) = 
+\nonumber \\
+=
+\frac{1}{2}
+\left(
+\hat{a}_0^{\dag}\hat{a}_0 + \hat{a}_1^{\dag}\hat{a}_0
++
+\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{\dag}\hat{a}_1
+-
+\left(
+\hat{a}_0^{\dag}\hat{a}_0 - \hat{a}_1^{\dag}\hat{a}_0
+-\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{\dag}\hat{a}_1
+\right)
+\right) = 
+\nonumber \\
+=\hat{a}_0^{\dag}\hat{a}_1 + \hat{a}_1^{\dag}\hat{a}_0 = 
+\left(
+\hat{a}_0^{\dag}e^{i\varphi} + \hat{a}_0 e^{- i\varphi}
+\right)\left|\alpha_H\right|,
+\nonumber
+\end{eqnarray}
+where it was used that the local oscillator is in a
+coherent state with large amplitude 
+\[
+\alpha_H = \left|\alpha_H\right|e^{i\varphi},
+\]
+and $\hat{a}_1$ is replaced by the classical field
+$\left|\alpha_H\right|e^{i\varphi}$ ($\left|\alpha_H\right| \gg 1$).
+
+Let us find the expectation value of the operator $\hat{n}_{23}$ in the case of the signal in
+a squeezed vacuum state $\ket{z, 0}$, where for simplicity
+let $z = r$ be real ($r = \left|z\right|$). Also for simplicity, set $\varphi = 0$. In this case
+\[
+\hat{n}_{23} =
+\left(\hat{a}_0 + \hat{a}_0^{\dag}\right) \left|\alpha_H\right| = 
+2 \hat{X}_1 \left|\alpha_H\right|.
+\]
+This means we consider squeezing of the quadrature
+component $\hat{X}_1$. The expectation value of $\hat{n}_{23}$
+writes as
+\begin{eqnarray}
+\left<\hat{n}_{23}\right> = 
+2 \left|\alpha_H\right|\left<\hat{X}_1\right> = 
+\left|\alpha_H\right|\bra{r, 0}\hat{a}_0 +
+\hat{a}_0^{\dag}\ket{r, 0} =
+\nonumber \\
+=
+\left|\alpha_H\right|\bra{0}
+\hat{S}^{\dag}\left(r\right)
+\left(\hat{a}_0 +
+\hat{a}_0^{\dag}\right)
+\hat{S}\left(r\right)
+\ket{0} =
+\nonumber \\
+=
+\left|\alpha_H\right|
+\left(
+\bra{0}
+\hat{a}_0 ch\,r -
+\hat{a}_0^{\dag} sh\,r
+\ket{0} 
++
+\bra{0}
+\hat{a}_0^{\dag} ch\,r -
+\hat{a}_0 sh\,r
+\ket{0} 
+\right)
+= 0,
+\nonumber
+\end{eqnarray}
+since $\hat{a}_0\ket{0} = 0$, 
+$\bra{0}\hat{a}_0^{\dag} = 0$.
+Thus, the mean value $\left<\hat{n}_{23}\right> =
+0$. However, the mean square is not zero; it reflects noise limiting
+measurement accuracy.
+
+Calculate the uncertainty $\left(\Delta X_{1,2}\right)^2$, which
+determines the noise level for the considered balanced scheme:
+\begin{eqnarray}
+\left(\Delta X_{1,2}\right)^2 = 
+\left<r,
+0\right|\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)^2\left|r,
+0\right> -
+\nonumber \\
+-
+\left<r,
+0\right|\frac{1}{2}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)\left|r,
+0\right>^2.
+\label{eqPart3SqueezedAddAdd5}
+\end{eqnarray}
+Since we showed that the last term in
+\eqref{eqPart3SqueezedAddAdd5} equals zero, we obtain:
+\begin{eqnarray}
+\left(\Delta X_{1,2}\right)^2 = 
+\bra{0}\hat{S}^{\dag}\left(r, 0\right)
+\frac{1}{4}\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)^2
+\hat{S}\left(r, 0\right)
+\ket{0} = 
+\nonumber \\
+=
+\bra{0}\hat{S}^{\dag}\left(r, 0\right)
+\frac{1}{4}
+\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
+\hat{S}^{\dag}\left(r, 0\right)
+\hat{S}\left(r, 0\right)
+\left(\hat{a}_0\pm\hat{a}_0^{\dag}\right)
+\hat{S}\left(r, 0\right)
+\ket{0}.
+\label{eqPart3SqueezedAddAdd6}
+\end{eqnarray}
+To find 
+$\left(\Delta X_{1,2}\right)^2$, calculate the averages:
+\begin{eqnarray}
+\left<\hat{a}_0\right> = 
+\bra{0}
+\hat{S}^{\dag}\left(r, 0\right)
+\hat{a}_0
+\hat{S}\left(r, 0\right)
+\ket{0} = 
+\bra{0}
+\hat{a}_0 ch\,r - \hat{a}_0^{\dag} sh\,r
+\ket{0} = 0,
+\nonumber \\
+\left<\hat{a}_0^{\dag}\right> = 
+\bra{0}
+\hat{a}_0^{\dag} ch\,r - \hat{a}_0 sh\,r
+\ket{0} = 0,
+\label{eqPart3SqueezedAddAdd7}
+\end{eqnarray}
+since $\hat{a}_0\ket{0} = 0$, 
+$\bra{0}\hat{a}_0^{\dag} = 0$.
+
+Similarly, one can show
+\begin{eqnarray}
+\left<\hat{a}_0^{\dag}\hat{a}_0\right> = sh^2 r,
+\nonumber \\
+\left<\hat{a}_0\hat{a}_0^{\dag}\right> = 
+1 + \left<\hat{a}_0^{\dag}\hat{a}_0\right> =
+1 + sh^2 r = ch^2 r,
+\nonumber \\
+\left<\hat{a}_0\hat{a}_0\right> = 
+\left<\hat{a}_0^{\dag}\hat{a}_0^{\dag}\right>^{*} = - ch\,r sh\,r.
+\label{eqPart3SqueezedAddAdd8}
+\end{eqnarray}
+Transforming \eqref{eqPart3SqueezedAddAdd6} using
+\eqref{eqPart3SqueezedAddAdd7}
+and
+\eqref{eqPart3SqueezedAddAdd8},
+we get the following expression:
+\begin{equation}
+\left(\Delta X_{1,2}\right)^2 = 
+ch\,2 r \mp sh\, 2 r = 
+e^{\mp 2 r},
+\nonumber
+\end{equation}
+from which
+\begin{equation}
+\left(\Delta n_{2,3}\right)^2 = 
+n_H
+e^{- 2 r}
+\nonumber
+\end{equation}
+for the $X_1$ component. The variance is
+\[
+\Delta n_{2,3} = 
+\sqrt{n_H}
+e^{- r},
+\]
+where $n_H = \left|\alpha_H\right|^2$ is the photon number in the local oscillator field.
+Using the balanced scheme, it is possible to measure the degree of squeezing in the same way as with the simplest homodyne scheme. The advantage here is that the local oscillator noise is compensated, and measurement accuracy increases.

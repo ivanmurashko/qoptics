@@ -1,0 +1,30 @@
+%% -*- coding:utf-8 -*- 
+\section{Radiation and Absorption of Light by an Atom}
+Let us consider the simplest problem of the interaction of single-mode radiation with a two-level atom. The simplifications are justified by the fact that laser radiation can often be considered as single-mode, and under resonant interaction, all atomic levels except two can be neglected, whose transition frequency is close to the frequency of the mode interacting with the atom. This simplest situation is shown in \autoref{figPart1Ch2_1}
+
+\input ./part1/interaction/fig1.tex
+
+Suppose that the atom and the field are initially in the states
+\begin{equation}
+\left|\psi_A\right> = C_a\ket{a} + C_b\ket{b}, \,
+\left|\psi_F\right> = \sum_{(n)}C_n\ket{n}
+\end{equation}
+where: $\ket{a}$, $\ket{b}$ are vectors of the upper and lower states of the atom, respectively, and $\ket{n}$ is the state vector of the mode containing $n$ photons.
+  
+The full state vector of the atom-field system is
+\begin{equation}
+\left|\psi_{AF}\right> = \sum_{(n)} 
+\left(
+C_{an}\ket{a}\ket{n} + 
+C_{bn}\ket{b}\ket{n}
+\right).
+\end{equation}
+Here $C_{an}$, $C_{bn}$ are the corresponding probability amplitudes. Due to the interaction between the atom and the field, the probability amplitudes change over time. For example, if initially the atom was in the upper level and the field mode contained $n$ photons, i.e.
+$\left|\psi_{AF}\right> = \ket{a}\ket{n}$,
+then at subsequent times the field will be in the state  
+\begin{equation}
+\left|\psi_{AF}\right> =
+C_{an}\ket{a}\ket{n} + 
+C_{b,n + 1}\ket{b}\ket{n + 1}.
+\label{eq:part1:rabi_solution}
+\end{equation}

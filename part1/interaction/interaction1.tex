@@ -1,0 +1,313 @@
+%% -*- coding:utf-8 -*- 
+\section{Interaction of an atom with a mode of the electromagnetic field}
+The Schrödinger equation in the interaction representation has the form
+\begin{equation}
+i \hbar \frac{\partial}{\partial t} \left|\psi\left(r, t\right)\right>_I
+= \hat{V}_I \left|\psi\left(r, t\right)\right>_I,
+\label{eqCh2_Shredinger_inter}
+\end{equation}
+ where the wave function in the interaction representation is written as
+\(
+\left|\psi\left(r, t\right)\right>_I
+\):
+\begin{equation}
+\left|\psi\left(r, t\right)\right>_I = e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}}
+\left|\psi\left(r, t\right)\right>.
+\label{eqCh2_Psi_inter}
+\end{equation}
+Let us solve this equation for the initial state 
+$\left|\psi\left(r, 0\right)\right>_I = \ket{b, n + 1}_I$, i.e. 
+we assume that at the initial moment the atom is in the lower
+state, and the field contains $n + 1$ photons. The other case
+corresponds to the initial state of the system  
+$\ket{a, n}_I$, i.e. the atom is in the upper
+state, and the field mode contains $n$ photons. After some time, as a result of the interaction of the atom and the field, the system will be in a
+superposition state  
+\begin{equation}
+\left|\psi\left(r, t\right)\right>_I = 
+C_{a,n}\left(t\right)_I\ket{a, n}_I +
+C_{b,n+1}\left(t\right)_I\ket{b, n + 1}_I.
+\label{eqCh2_OurPsi_inter}
+\end{equation}
+
+Using \eqref{eqCh2_Psi_inter} on the left-hand side of expression
+\eqref{eqCh2_OurPsi_inter}, we get 
+\begin{eqnarray}
+C_{a,n}\left(t\right)_I\ket{a, n}_I +
+C_{b,n+1}\left(t\right)_I\ket{b, n + 1}_I =
+\nonumber \\
+= C_{a,n}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}} \ket{a, n} +
+C_{b,n+1}\left(t\right)_I e^{i \frac{\hat{\mathcal{H}}_0
+    t}{\hbar}} \ket{b, n + 1} = 
+\nonumber \\
+=
+C_{a,n}\left(t\right)_I \exp\left\{i \left(
+ \omega_a +  \omega 
+\left( n + \frac{1}{2}\right) 
+\right) t
+\right\} \ket{a, n} +
+\nonumber \\
++
+C_{b,n+1}\left(t\right)_I \exp\left\{i 
+\left(
+\omega_b +  \omega 
+\left( n + 1 + \frac{1}{2}\right) 
+\right)
+    t \right\} \ket{b, n + 1}
+\nonumber \\
+=
+C_{a,n}\left(t\right) \ket{a, n} +
+C_{b,n+1}\left(t\right) \ket{b, n + 1},
+\nonumber
+\end{eqnarray}
+where $C_{a,n}\left(t\right)$ and $C_{b,n+1}\left(t\right)$ are defined as
+\begin{eqnarray}
+C_{a,n}\left(t\right) = 
+C_{a,n}\left(t\right)_I \exp\left\{i 
+\left(
+\omega_a +  \omega 
+\left( n + \frac{1}{2}\right) 
+\right) 
+    t \right\},
+\nonumber \\
+C_{b,n+1}\left(t\right) =
+C_{b,n+1}\left(t\right)_I \exp\left\{i \left(
+\omega_b + \omega 
+\left( n + 1 + \frac{1}{2}\right) 
+\right)
+    t\right\}.
+\nonumber
+\end{eqnarray}
+
+Thus, equation \eqref{eqCh2_Shredinger_inter} takes the following form   
+\begin{eqnarray}
+i \left( 
+{\dot C}_{a,n}\left(t\right)\ket{a, n} +
+{\dot C}_{b,n+1}\left(t\right)\ket{b, n + 1}
+\right) =
+\nonumber \\
+= g \left(
+\hat{a}\hat{\sigma}^{\dag} e^{-i \left(\omega - \omega_{ab}\right)t} +
+\hat{a}^{\dag}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t}
+\right) 
+\left( 
+C_{a,n}\ket{a, n} +
+C_{b,n+1}\ket{b, n + 1}
+\right) = 
+\nonumber \\
+= g \sqrt{n + 1} \left(
+C_{b, n+1} e^{-i \left(\omega - \omega_{ab}\right)t} \ket{a, n} + 
+C_{a, n} e^{i \left(\omega - \omega_{ab}\right)t} \ket{b, n + 1}
+\right).
+\end{eqnarray}
+Multiply this equation from the left by 
+$\bra{a, n}$ and $\bra{b, n + 1}$ respectively. Taking into account the properties
+of the operators $\hat{a}$, $\hat{a}^{\dag}$, $\hat{\sigma}$,
+$\hat{\sigma}^{\dag}$ and the orthogonality of the state vectors, we obtain  
+a system of equations for probability amplitudes 
+\begin{eqnarray}
+{\dot C}_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+e^{-i \left(\omega - \omega_{ab}\right)t} 
+C_{b, n + 1}\left(t\right),
+\nonumber \\
+{\dot C}_{b, n + 1}\left(t\right) = -i g \sqrt{n + 1}
+e^{i \left(\omega - \omega_{ab}\right)t} 
+C_{a, n}\left(t\right).
+\label{eqCh2_task3}
+\end{eqnarray}
+
+\input ./part1/interaction/fig3.tex
+
+For the case when the atom is in the lower state (case of photon absorption) we have at the initial moment  
+$C_{a, n}\left(0\right) = 0$, $C_{b, n + 1}\left(0\right) = 1$
+(\autoref{figPart1Ch2_3}). Formal integration of \eqref{eqCh2_task3} gives  
+\begin{equation}
+C_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+\int_0^t e^{-i \left(\omega - \omega_{ab}\right)t'} 
+C_{b, n + 1}\left(t'\right) dt'
+\label{eqCh2_ampl_prob_int}
+\end{equation}
+In the first approximation for small times, one can put
+$C_{b, n + 1}\left(t'\right) = 1$ under the integral in \eqref{eqCh2_ampl_prob_int}. Integrating then yields  
+\begin{equation}
+C_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+\frac{e^{-i \left(\omega - \omega_{ab}\right)t} - 1}
+{-i \left(\omega - \omega_{ab}\right)}
+\end{equation}
+from which the probability of excitation of the atom and photon absorption is 
+\begin{equation}
+\left|C_{a,n}\left(t\right)\right|^2 = g^2 \left(n + 1\right) t^2
+\frac{\sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2\left(t/2\right)^2}. 
+\label{eqCh2_prob_C_an}
+\end{equation}
+
+\input ./part1/interaction/fig4.tex
+
+In this approximation, one can also solve the second problem (\autoref{figPart1Ch2_4}) 
+$C_{a, n}\left(0\right) = 1$, $C_{b, n + 1}\left(0\right) = 0$. 
+We obtain an expression analogous to \eqref{eqCh2_prob_C_an} for the probability of atom transition to the lower state and emission of a photon  
+\begin{equation}
+\left|C_{b, n + 1}\left(t\right)\right|^2 = g^2 \left(n + 1\right) t^2
+\frac{\sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2\left(t/2\right)^2}.
+\label{eqCh2_prob_C_bn}
+\end{equation}
+
+In the case when the field contains no photons ($n = 0$),
+a nonzero probability is obtained 
+$\left|C_{b, 1}\left(t\right)\right|^2 \cong g^2 t^2$
+($\frac{\sin^2 x}{x^2} \cong 1$, if
+$x \ll 1$), which shows that an excited atom can transition to the lower state even in the absence of photons. This process is known as spontaneous emission or spontaneous transition. It
+is related to the zero-point fluctuations of the field. Note that in the semiclassical
+treatment spontaneous emission does not follow from semiclassical equations and is introduced by additional considerations. From quantum equations,
+spontaneous emission naturally follows. 
+The system of equations \eqref{eqCh2_task3} can be solved exactly. For simplicity,
+we will consider the resonant case $\omega = \omega_{ab}$.
+Eliminate $C_{b, n + 1}\left(t\right)$ from the equations:   
+\[
+{\ddot C}_{a,n}\left(t\right) = -i g \sqrt{n + 1}
+{\dot C}_{b, n + 1}\left(t\right) = -g^2 \left(n + 1\right)
+C_{a,n}\left(t\right). 
+\]
+The solution of the obtained equation:
+\begin{equation}
+C_{a,n}\left(t\right) = A \sin\left(g \sqrt{n + 1} t\right) +
+B \cos\left(g \sqrt{n + 1} t\right)
+\nonumber
+\end{equation}
+
+For absorption, the initial conditions ($C_{a,n}\left(0\right) = 0$, $C_{b,n+1}\left(0\right)
+= 1$) give $A = i$, $B = 0$, hence  
+\begin{equation}
+C_{a,n}\left(t\right) = -i \sin\left(\frac{\omega_R t}{2}\right), \quad
+C_{b, n + 1}\left(t\right) = \cos\left(\frac{\omega_R t}{2}\right),
+\label{eqPart1RabiAbsorbtion}
+\end{equation}
+where $\omega_R = 2g\sqrt{n + 1}$ is the Rabi frequency in the quantum case. For emission, from initial conditions ($C_{a,n}\left(0\right) = 1$,
+$C_{b,n+1}\left(0\right) = 0$) we have $A = 0$, $B = 1$, hence 
+\begin{equation}
+C_{a,n}\left(t\right) = \cos\left(\frac{\omega_R t}{2}\right), \quad
+C_{b, n + 1}\left(t\right) = -i \sin\left(\frac{\omega_R t}{2}\right),
+\label{eqPart1RabiEmission}
+\end{equation}
+On \autoref{fig:part1:rabi}, the dependencies of probabilities 
+$\left|C_{a,n}\left(t\right)\right|^2$ and 
+$\left|C_{b, n + 1}\left(t\right)\right|^2$ on time are shown for the case
+of photon emission.
+
+\input ./part1/interaction/fig5.tex
+\rindex{Rabi frequency}
+In the semiclassical expression, the Rabi frequency $\omega_R$ equals 
+$\frac{\left|p E\right|}{\hbar}$, while in the quantum case it is $2g\sqrt{n + 1}$,
+i.e. $E$ corresponds to $E_1\sqrt{n + 1}$, where $E_1$ is the field
+corresponding to one photon in the mode. \rindex{photon} At large $n$, these two
+expressions practically coincide. However, for small $n$ the difference can be 
+significant. From the quantum expression it follows that even when there are no photons in the mode, the probabilities oscillate with frequency $g$.  In fact, 
+it is known that Rabi oscillations damp out. The discrepancy arises because the atom interacts with all modes of the space, but we considered only interaction with one mode.  
+
+Let's now try to find the general solution of the system of equations
+\eqref{eqCh2_task3}. The relations can be written as
+\begin{eqnarray}
+  {\dot C}_{a,n}\left(t\right) = -i \frac{\omega_R}{2} e^{-i \delta t} 
+C_{b, n + 1}\left(t\right),
+\nonumber \\
+{\dot C}_{b, n + 1}\left(t\right) = -i \frac{\omega_R}{2} e^{i \delta t} 
+C_{a, n}\left(t\right),
+  \nonumber
+\end{eqnarray}
+where $\delta = \omega - \omega_{ab}$ is the frequency detuning.
+We will solve the problem only for the emission case, i.e., the initial
+conditions are
+\begin{eqnarray}
+  C_{a,n}\left(0\right) = 1,
+  \nonumber \\
+  C_{b,n+1}\left(0\right) = 0.
+  \nonumber
+\end{eqnarray}
+We are mainly interested in the behavior of the probabilities
+$\left|C_{b, n + 1}\left(t\right)\right|^2$. Denoting $x\left(t\right) = C_{b,n+1}\left(t\right)$, we get
+\begin{eqnarray}
+  \ddot{x} =  -i \frac{\omega_R}{2} \frac{d \left(e^{i \delta t} 
+    C_{a, n}\left(t\right)\right) }{d t} =
+  \nonumber \\
+  = i \delta \left(- i \frac{\omega_R}{2} e^{ i\delta t} 
+  C_{a, n}\left(t\right) \right) -i \frac{\omega_R}{2} e^{i \delta t}
+  \frac{d C_{a, n}\left(t\right)}{dt} =
+  \nonumber \\
+  = i \delta \dot{x} - \frac{\omega_R^2}{4} e^{-i \delta t} e^{i \delta t} x =
+  \nonumber \\
+  = i \delta \dot{x} - \frac{\omega_R^2}{4} x,
+  \nonumber
+\end{eqnarray}
+i.e.
+\begin{equation}
+  \ddot{x} - i \delta \dot{x} + \frac{\omega_R^2}{4} x = 0.
+  \label{eqPart1RabiCommon}
+\end{equation}
+Equation \eqref{eqPart1RabiCommon} must be solved with the following
+initial conditions:
+\begin{eqnarray}
+  \left.x\right|_{t=0} = C_{b,n+1}\left(0\right) = 0,
+  \nonumber \\
+  \left.\dot{x}\right|_{t=0} = -i \frac{\omega_R}{2} C_{a,n}\left(0\right) =
+  -i \frac{\omega_R}{2}.
+  \nonumber
+\end{eqnarray}
+%% (%i1) eq: 'diff(x(t),t,2) - 2*%i*d*'diff(x(t),t) + w^2*x(t)/4 = 0;
+%% (%i2) atvalue(x(t),t=0,0);
+%% (%i3) atvalue('diff(x(t),t),t=0,-%i*w/2);
+%% (%i4) desolve(eq, x(t));
+%% positive;
+%% (%i5) 
+The result:
+\begin{equation}
+  x\left(t\right) = -  i e^{\frac{ i \delta t}{2}}
+  \frac{\omega_R}{\sqrt{\omega_R^2 + \delta^2}}
+  \sin{\left(\frac{\sqrt{\omega_R^2 + \delta^2}}{2}t\right)},
+  \nonumber
+\end{equation}
+denoting $\Omega_R = \sqrt{\omega_R^2 + \delta^2}$ as
+the generalized Rabi frequency, for the desired probability
+$\left|C_{b,n+1}\right|^2$ we get (see \autoref{figPart1InteractionRabiDelta})
+\begin{eqnarray}
+  \left|C_{b,n+1}\right|^2 =  \frac{\omega_R^2}{\Omega_R^2}
+  \sin^2{\frac{\Omega_R}{2} t}.
+  \label{eqPart1InteractionRabiProbability}
+\end{eqnarray}
+%% TODO FIXME wrong result - should be
+%%  \frac{\omega_R^2}{\Omega_R^2}
+%%  \sin^2{\frac{\Omega_R t}{2}}
+
+\input ./part1/interaction/figrabi.tex
+
+\rindex{AC Stark effect}
+\begin{remark}[AC Stark effect]
+  It is worth noting that in the case $\delta \ne 0$ the states we
+  used in expression \ref{eq:part1:rabi_solution} do not
+  satisfy the law of energy conservation. Indeed, if the system
+  initially was in the state $\ket{a}\ket{n}$ with
+  energy $E_a + \hbar n \omega$, then after some time it,
+  with nonzero probability,
+  can
+  be registered in the state
+  $\ket{b}\ket{n+1}$ with energy
+  \[
+  E_b + \hbar (n+1)
+  \omega \ne E_a + \hbar n \omega.
+  \]
+  That is, a violation of the law of
+  energy conservation appears. This contradiction is resolved as follows. Due to the AC Stark effect
+  (also called the Autler-Townes effect in the English literature)\cite{wiki:autler_townes_effect},
+  the atomic energy levels shift, 
+  which ensures that the law of conservation of energy is fulfilled.
+
+  For example,
+  at small detunings $\delta \approx 0$, this shift equals
+  \cite{wiki:autler_townes_effect} 
+  \[
+  \Delta E \approx \pm \frac{\hbar \omega_R}{2}.
+  \]
+\end{remark}

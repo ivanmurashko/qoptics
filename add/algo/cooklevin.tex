@@ -1,0 +1,18 @@
+%% -*- coding:utf-8 -*-
+\subsection{Cook-Levin Theorem}
+
+As soon as we introduced the complexity class $NPC$, the question arises about the problems that belong to it. Below it will be shown that the SAT problem (the satisfiability of a Boolean formula in conjunctive normal form) is $NP$-complete.
+
+\begin{theorem}[Cook-Levin]
+The problem of satisfiability of a Boolean formula in CNF is NP-complete, i.e., it belongs to the class $NPC$.
+\label{theoremAddAlgoCookTheorem}
+\end{theorem}
+
+\begin{proof}
+  The proof consists of two parts. First, we must prove that the SAT problem (see example \ref{exAddAlgoSAT}) belongs to the class $NP$. Second, we must show that any problem from the class $NP$ can be reduced to the SAT problem in polynomial time.
+  
+  Membership in the class $NP$ is proven in an obvious way, since it is possible to verify the correctness of a solution in $O\left(N\right)$ steps, where $N$ is the number of Boolean operations used in the considered Boolean formula.
+
+ 
+  TBD
+\end{proof}

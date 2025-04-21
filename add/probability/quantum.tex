@@ -1,0 +1,94 @@
+%% -*- coding:utf-8 -*-
+\section{Quantum Probability Theory}
+\label{sec:add:quantprobability}
+When speaking about quantum probability theory, we will rely on the classical
+(Kolmogorov) theory, while trying to choose a formulation
+that is applicable in both cases. As a
+model, we will consider a system with $n$ possible outcomes, i.e.
+one where the classical probability distribution is given by
+the following distribution:
+\begin{equation}
+p = \{p_1, p_2, \dots, p_n\}
+\label{eq:quantprob_class}
+\end{equation}
+
+A quantum state is fully described in the general case (both pure
+and mixed states) by the density matrix
+\rindex{Density matrix}
+\begin{equation}
+\hat{\rho} = \begin{bmatrix}
+\rho_{11} & \rho_{12} & \cdots & \rho_{1n} \\
+\rho_{21} & \rho_{22} & \cdots & \rho_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+\rho_{n1} & \rho_{n2} & \cdots & \rho_{nn} \\
+\end{bmatrix}.
+\nonumber
+\end{equation}
+In the classical case, this object corresponds
+to the probability distribution \eqref{eq:quantprob_class}, which
+can also be represented as a certain matrix
+\begin{equation}
+\hat{p} = \begin{bmatrix}
+p_1 & 0 & \cdots & 0 \\
+0 & p_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & p_n \\
+\end{bmatrix}.
+\nonumber
+\end{equation}
+It is worth noting that for both cases the equality holds
+\[
+Sp\left(\hat{\rho}\right) =
+Sp\left(\hat{p}\right) = 1,
+\]
+which is a rewritten version of axiom
+\ref{ax:ProbabilityNormalization}. 
+
+An observable $\hat{x}$ corresponds to a certain matrix
+\begin{equation}
+\hat{x} = \begin{bmatrix}
+x_{11} & x_{12} & \cdots & x_{1n} \\
+x_{21} & x_{22} & \cdots & x_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+x_{n1} & x_{n2} & \cdots & x_{nn} \\
+\end{bmatrix},
+\label{eq:quantprob_obser_quant}
+\end{equation}
+which in the classical case is diagonal 
+\begin{equation}
+\hat{x} = \begin{bmatrix}
+x_1 & 0 & \cdots & 0 \\
+0 & x_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & x_n \\
+\end{bmatrix}.
+\label{eq:quantprob_obser_class}
+\end{equation}
+It is also worth noting that the calculation of the mean then takes the familiar classical form
+\begin{equation}
+\bar{x} = Sp\left(\hat{p} \hat{x}\right) = \sum_{i=1}^n p_i x_i.
+\nonumber
+\end{equation}
+\begin{remark}
+  It is worth noting that for any observable $\hat{X}$, due to
+  self-adjointness $\hat{X} = \hat{X}^\dag$, one can choose
+  a basis in which the corresponding matrix will be diagonal, with
+  eigenvalues on the diagonal. Moreover, if two
+  observables $\hat{X}$ and $\hat{Y}$ commute:  
+  \[
+  \hat{X} \hat{Y} = \hat{Y} \hat{X},
+  \]
+  then they can be diagonalized in a common basis.
+\end{remark}
+
+The difference between quantum probability theory and classical theory can be
+shown in several ways \cite{bHolevo2003, bHolevo2003add},
+one of which is based on the noncommutativity of the quantum description.
+Indeed, it can be noted that in the general case quantum observables,
+represented by matrices of the form \eqref{eq:quantprob_obser_quant}, do not
+commute with each other. At the same time, classical observables,
+written as diagonal matrices
+\eqref{eq:quantprob_obser_class} always commute with each other. From
+this, many facts follow TBD
+
+

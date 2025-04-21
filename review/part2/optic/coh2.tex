@@ -1,0 +1,442 @@
+%% -*- coding:utf-8 -*- 
+\section{Second-Order Coherence}
+Second-order coherence can be introduced based on the analysis of various experiments where the rate of simultaneous photon registration by two detectors is measured. The analysis leads to the following definition of the second-order degree of coherence:
+\begin{eqnarray}
+G^{(2)}\left(\vec{r}_1, t_1, \vec{r}_2, t_2\right) = 
+G^{(2)}_{12} = 
+\nonumber \\
+=
+\frac{\left<
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right>}
+{\left<
+\hat{E}^{(-)}\left(\vec{r}_1, t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)
+\right>
+\left<
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)
+\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)
+\right>
+}.
+\label{eqCh4_25}
+\end{eqnarray}
+Angle brackets denote quantum mechanical averaging over the ensemble using the statistical operator (density matrix)
+\[
+\left<\left(\dots\right)\right> = Sp\left\{\hat{\rho}\left(\dots\right)\right\}
+\]
+
+Expression \eqref{eqCh4_25} resembles the classical expression that defines second-order coherence, but instead of classical fields, operators are used, and averaging is carried out using the density matrix.
+
+\input ./part2/optic/figadd1.tex
+
+Formula \eqref{eqCh4_25} can be justified as follows. Consider the operator 
+$\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)$. It corresponds to the absorption of one photon at point $\vec{r}_1$ and time $t_1 = t$, and a second photon at point $\vec{r}_2$ at time $t_2 = t - \tau$. This procedure can be realized using the setup shown in \autoref{figPart4Ch2_add1}. Points $\vec{r}_1$ and $\vec{r}_2$ are defined by the positions of the photodetectors. Times $t_1 = t$ and $t_2 = t - \tau$ are determined by coincident photo counts. $\tau$ is an adjustable delay. Signals from both detectors are fed into a coincidence circuit.
+
+Applying the procedure used for the photoelectric effect to the operator $\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2, t_2\right)$, the probability of detecting the first photon at time $t_1 = t$ and the second at time $t_2 = t - \tau$ within the interval $\Delta t$ is:
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) \Delta t= 
+\alpha \left| \bra{f}
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\ket{i}\right|^2 \Delta t,
+\nonumber
+\end{equation}
+where $\ket{i}$ is the initial state of the system, $\ket{f}$ is the final state of the system, $\alpha$ is a quantity depending on the properties of the photodetectors. Then, the counting rate (number of counts per unit time) after summation over final states is given by:
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) = 
+\alpha \bra{i}
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)\hat{E}^{(-)}\left(\vec{r}_1,
+t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\ket{i}.
+\nonumber
+\end{equation}
+Here, only the field part is of interest; the atomic part is included in the coefficient $\alpha$.
+
+If the initial field is in a statistically mixed state, averaging must be done using the statistical operator of the initial field. Then we have:
+\begin{equation}
+w\left(\vec{r}_1, \vec{r}_2, t_1, t_2\right) = 
+\alpha Sp \left\{\hat{\rho}
+\hat{E}^{(-)}\left(\vec{r}_2, t_2\right)\hat{E}^{(-)}\left(\vec{r}_1,
+t_1\right)
+\hat{E}^{(+)}\left(\vec{r}_1, t_1\right)\hat{E}^{(+)}\left(\vec{r}_2,
+t_2\right)
+\right\}.
+\nonumber
+\end{equation}
+Using this expression for the normalized degree of coherence, we obtain formula \eqref{eqCh4_25}.
+
+Let us provide some examples of calculating the second-order degree of coherence. We start with a simple one. Find the second-order coherence for a single-mode state with a definite number of photons. For this, we need to consider the matrix element  
+\[
+\bra{n}\hat{a}^{\dag}\hat{a}^{\dag}\hat{a}\hat{a}\ket{n} = n
+\left(n - 1\right).
+\]
+This expression will be in the numerator. In the denominator, we have  
+\[
+\left(\bra{n}\hat{a}^{\dag}\hat{a}\ket{n}\right)^2 = 
+n^2.
+\]
+
+The numerical coefficients in numerator and denominator cancel out. We get:
+\begin{eqnarray}
+G^{(2)}_{12} = \frac{n\left(n - 1\right)}{n^2} = \frac{n - 1}{n} 
+\mbox{ for } n > 2,
+\nonumber \\
+G^{(2)}_{12} = 0
+\mbox{ for } n = 1,
+\nonumber \\
+G^{(2)}_{12} 
+\mbox{ is undefined for } n = 0.
+\label{eqCh4_26}
+\end{eqnarray}
+The obvious fact in \eqref{eqCh4_26} is worth noting: if there is one photon, the probability of detecting two photons equals zero, which leads to $G^{(2)}_{12} = 0$ at $n=1$.
+
+Consider another simple case: a single-mode field in a coherent state. We have
+\begin{eqnarray}
+\left<\alpha\right|\hat{a}^{\dag}\hat{a}^{\dag}\hat{a}\hat{a}\left|\alpha\right>
+= \left(\alpha^{*}\alpha\right)^2
+\mbox{ - in numerator},
+\nonumber \\
+\left(\left<\alpha\right|\hat{a}^{\dag}\hat{a}\left|\alpha\right>\right)^2
+= \left(\alpha^{*}\alpha\right)^2
+\mbox{ - in denominator}.
+\nonumber
+\end{eqnarray}
+
+Altogether this gives
+\[
+G^{(2)}_{12} = 1.
+\]
+
+So far, we have considered the coherence of pure states. Let us proceed to the consideration of mixed states. Consider single-mode chaotic light, whose density matrix \rindex{Density matrix} is  
+\[
+\hat{\rho} = \sum_{n}\frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n +
+    1}} \ket{n}\bra{n} = 
+\sum_n\rho_{nn}\ket{n}\bra{n}.
+\]
+From this, we obtain
+\begin{eqnarray}
+Sp \left\{\hat{\rho}\hat{a}^{\dag}\hat{a}^{\dag}\hat{a}\hat{a}\right\} = 
+\sum_{n}\sum_{m}\bra{n}\ket{m}\bra{m}
+\hat{a}^{\dag}\hat{a}^{\dag}\hat{a}\hat{a}
+\ket{m} \rho_{mm} = 
+\nonumber \\
+= \sum_{n}\rho_{nn}\left(n - 1\right)n = \bar{n^2} - \bar{n}.
+\label{eqCh4_add1_sp}
+\end{eqnarray}
+
+For chaotic light, the relation holds
+\begin{equation}
+\bar{n^2} = 2
+\left(\bar{n}\right)^2 + \bar{n}.
+\label{eqCh4_add1_mid_n2}
+\end{equation}
+Indeed,
+\begin{eqnarray}
+\bar{n^2} = 
+\sum_n n^2 \frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}} = 
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_n n^2
+\frac{\bar{n}^{n-1}}{\left(\bar{n} + 1\right)^{n}} =
+\nonumber \\
+= 
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_{m = n -1} \left(m +
+1\right)^2
+\frac{\bar{n}^m}{\left(\bar{n} + 1\right)^{m + 1}} = 
+\nonumber \\
+= \frac{\bar{n}}{\left(\bar{n} + 1\right)}\sum_m
+\left(m^2 + 2 m + 1\right)
+\frac{\bar{n}^m}{\left(\bar{n} + 1\right)^{m + 1}} = 
+\nonumber \\
+=
+\frac{\bar{n}}{\left(\bar{n} + 1\right)}\left(\bar{n^2} + 2 \bar{n} +
+1\right),
+\nonumber
+\end{eqnarray}
+thus we get
+\begin{equation}
+\bar{n^2}\left(\bar{n} + 1\right) = 
+\bar{n}\left(\bar{n^2} + 2 \bar{n} + 1\right)
+\nonumber
+\end{equation}
+from which follows the desired expression \eqref{eqCh4_add1_mid_n2}:
+\begin{equation}
+\bar{n^2} = 2
+\left(\bar{n}\right)^2 + \bar{n}.
+\nonumber
+\end{equation}
+
+Thus, from \eqref{eqCh4_add1_sp} and \eqref{eqCh4_add1_mid_n2}, we have
+\[
+Sp\left\{\dots\right\} = 2\left(\bar{n}\right)^2
+\] 
+In the denominator, we have $\left(\bar{n}\right)^2$. Hence, for chaotic light,
+\begin{equation}
+G_{12}^{(2)} = 2,
+\label{eqCh4_27}
+\end{equation}
+which means photon pairs are registered more frequently than observed for more ordered light. Physically, this is related to fluctuations of chaotic light. Because of this, it is sometimes said that photons tend to bunch. Generally, for an arbitrary single-mode field, the second-order coherence is
+\begin{equation}
+G^{(2)} = \frac{\bar{n^2} - \bar{n}}{\left(\bar{n}\right)^2}.
+\label{eqCh4_28}
+\end{equation}
+We will consider this issue in more detail in the third part of this book (see ch. \ref{chNonClass} Non-classical light).
+
+In practice, multimode fields are more common. Define the second-order degree of coherence in two limiting cases: multimode coherent state and multimode chaotic light. The first case is simple to consider. The state vector can be represented as  
+\begin{equation}
+\left|\left\{\alpha_k\right\}\right> = 
+\left|\left\{\alpha_{k_1}\right\}\right>
+\left|\left\{\alpha_{k_2}\right\}\right>
+\dotsc
+\left|\left\{\alpha_{k_s}\right\}\right>
+\dots.
+\label{eqCh4_29}
+\end{equation}
+Using the equalities 
+\[
+\hat{E}^{(+)}\left(x\right)\left|\left\{\alpha_k\right\}\right> = 
+E\left(x\right)\left|\left\{\alpha_k\right\}\right>
+\]
+and
+\[
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)}\left(x\right) = 
+\left<\left\{\alpha_k\right\}\right|E^{*}\left(x\right),
+\]
+where $x = \left(t, r\right)$, $E\left(x\right)$ is the analytic signal (positive-frequency part) of the classical field obtained from the operator $\hat{E}^{(+)}$ by replacing $\hat{a}_k \rightarrow \alpha_k$. From this, we get:
+\begin{eqnarray}
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)}\left(x_2\right)
+\hat{E}^{(-)}\left(x_1\right)\hat{E}^{(+)}\left(x_1\right)
+\hat{E}^{(+)}\left(x_2\right)\left|\left\{\alpha_k\right\}\right> = 
+\nonumber \\
+= E^{*}\left(x_2\right)E^{*}\left(x_1\right)
+E\left(x_1\right)E\left(x_2\right).
+\nonumber
+\end{eqnarray}
+Similarly, we see that the denominator has the quantity  
+$E^{*}\left(x_1\right)E\left(x_1\right)
+E^{*}\left(x_2\right)
+E\left(x_2\right)$. Therefore, in this case,
+\begin{equation}
+G_{12}^{(2)} = 1,
+\label{eqCh4_30}
+\end{equation}
+
+The case of a chaotic multimode light field is more difficult. The statistical operator in this case will have the form \eqref{eqCh1_102} 
+\begin{eqnarray}
+\hat{\rho} = \sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}} \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right| = 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{n_k\right\}} 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}} = 
+\nonumber \\
+= 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{n_k\right\}} P_{\left\{n_k\right\}}.
+\label{eqCh4_31}
+\end{eqnarray}
+When multiplying the electric field operators, we obtain a fourfold sum, since $\hat{E}^{(+)}$ and $\hat{E}^{(-)}$ are expanded in plane waves: 
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right) = \sum_{(k)}
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k \hat{a}_k
+e^{-i \omega_k t + i \left(\vec{k} \vec{r}\right)},
+\nonumber \\
+\hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sum_{(k)}
+\sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0 V}} \vec{e}_k^{*} \hat{a}_k^{\dag}
+e^{i \omega_k t - i \left(\vec{k} \vec{r}\right)}.
+\label{eqCh4_32}
+\end{eqnarray}
+General term in the product of sums \eqref{eqCh4_32} will contain operator products of the form 
+\begin{equation}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{\dag}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\label{eqCh4_33}
+\end{equation}
+Averaging this term using the statistical operator \eqref{eqCh4_31} leads to
+\[
+Sp\left(\hat{\rho}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{\dag}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\right) = 
+\sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}}
+\left<\left\{n_k\right\}\right|
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{\dag}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\left|\left\{n_k\right\}\right>.
+\]
+It is easy to see that terms in which all modes are different: 
+\[
+k^{I} \neq k^{II} \neq k^{III} \neq k^{IV},
+\]
+will be zero. Non-zero terms satisfy the conditions:
+\[
+k^{I} = k^{III} = k_1, \quad k^{II} = k^{IV} = k_2
+\]
+or
+\[
+k^{I} = k^{IV} = k_1, \quad k^{II} = k^{III} = k_2
+\]
+or
+\[
+k^{I} = k^{II} =  k^{III} = k^{IV} = k.
+\]   
+
+We have: in the first case -
+\begin{equation}
+\sum_{n_{k_1}}\sum_{n_{k_2}} P_{n_{k_1}} P_{n_{k_2}} 
+n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2},
+\label{eqCh4_34}
+\end{equation}
+in the second -
+\begin{equation}
+\sum_{n_{k_1}}\sum_{n_{k_2}} P_{n_{k_1}} P_{n_{k_2}} 
+n_{k_1} n_{k_2} = \bar{n}_{k_1} \bar{n}_{k_2}.
+\label{eqCh4_35}
+\end{equation}
+The last case was considered earlier \eqref{eqCh4_28}, which gives
+\begin{equation}
+\sum_{n_{k}} P_{n_{k}}
+\bra{n_k}\hat{a}_k^{\dag}\hat{a}_k^{\dag}\hat{a}_k\hat{a}_k\ket{n_k}
+= 2 \left(\bar{n}_k\right)^2.
+\label{eqCh4_36}
+\end{equation}
+
+All the above allows writing the coherence function as
+\begin{eqnarray}
+G_{12}^{(2)} = \frac{\sum_{k_1}\sum_{k_2 \neq k_1} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2} e^{i \omega_{k_1} \tau} 
+e^{- i \omega_{k_2} \tau} } 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++
+\frac{2 \sum_{k} \bar{n}_{k}^2 \omega_k^2} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++
+\frac{\sum_{k_1}\sum_{k_2 \neq k_1} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2}
+\label{eqCh4_37}
+\end{eqnarray}
+where
+\[
+\omega \tau = \omega \left(t_2 - t_1\right) - \left(\vec{k}, \vec{r}_2
+- \vec{r}_1\right) = 
+\omega \left[
+\left(t_2 - t_1\right) - \frac{1}{c}\left(\vec{k}_0, \vec{r}_2
+- \vec{r}_1\right)
+\right],
+\]
+if we have a narrow light beam in which all modes propagate approximately in the same direction.
+
+Half of the average sum $2 \sum_{k} \bar{n}_{k}^2 \omega_k^2$ can be combined with the left sum, and the other half with the right one. We get: 
+\begin{eqnarray}
+G_{12}^{(2)} = \frac{\sum_{k_1}\sum_{k_2} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2} e^{i \omega_{k_1} \tau} 
+e^{- i \omega_{k_2} \tau}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} + 
+\nonumber \\
++ \frac{\sum_{k_1}\sum_{k_2} \bar{n}_{k_1}
+  \bar{n}_{k_2} \omega_{k_1} \omega_{k_2}} 
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\nonumber \\
+= 
+\frac{\sum_{k_1}\bar{n}_{k_1} \omega_{k_1} e^{i \omega_{k_1} \tau}
+\sum_{k_2}\bar{n}_{k_2} \omega_{k_2} e^{- i \omega_{k_2} \tau} +
+\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2
+}
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\nonumber \\
+= \frac{\left|\sum_{(k)}\bar{n}_{k} \omega_{k} e^{i \omega_{k}
+  \tau}\right|^2 + \left(\sum_{(k)} \bar{n}_k \omega_k\right)^2}
+{\left(\sum_{(k)} \bar{n}_k \omega_k\right)^2} = 
+\left(G_{12}^{(1)}\right)^2 + 1,
+\label{eqCh4_38}
+\end{eqnarray}
+where $G_{12}^{(1)}$ is the first-order coherence function.  
+
+An important result has been obtained: the second-order coherence for chaotic light is expressed via the first-order coherence. This fact forms the basis of so-called intensity interferometry. It was first observed in the experiments by Hanbury Brown and Twiss, whose setup is shown in \autoref{figPart4Ch2_4}.
+
+\input ./part2/optic/fig4.tex
+
+As seen from \autoref{figPart4Ch2_4}, using a 50\% beam splitter, the light beam is directed to two photodetectors. Delay is introduced by moving one of the photodetectors. The coincidence circuit records detection of two photons with a given time delay.
+
+\input ./part2/optic/fig4a.tex
+
+\autoref{figPart4Ch2_4a} shows the dependence of the number of coincidences on the delay. In the classical case, the experimental setup remains the same, only the coincidence circuit is replaced by a correlator. The experimental result in this case has the form shown in \autoref{figPart4Ch2_4a}.
+
+In these experiments, intensity correlation was measured, i.e., the second-order coherence function. Using the relation between correlation functions of different orders, one can calculate the first-order function, and then, using the relation between the correlation function and the power spectrum (Wiener-Khinchin theorem), determine the emission spectrum. Thus, by "counting photons," spectral measurements can be indirectly performed. This is widely used nowadays. As will be seen later, this procedure allows measurement of spectra of chaotic light with high resolution, complementing traditional spectral measurement methods (using spectral devices such as diffraction gratings, prisms, etc.). 
+
+Expression \eqref{eqCh4_38} can also be obtained using the coherent state representation. In this case,
+\begin{equation}
+\hat{\rho} = \int \dots \int P\left(\left\{\alpha_k\right\}\right)
+\left|\left\{\alpha_k\right\}\right>\left<\left\{\alpha_k\right\}\right|d^2 \left\{\alpha_k\right\},
+\nonumber
+\end{equation}
+where
+\begin{equation}
+P\left(\left\{\alpha_k\right\}\right) = \prod_k\frac{1}{\pi
+  \bar{n}_k}e^{-\frac{\left|\alpha_k\right|^2}{\bar{n}_k}}=
+\prod_k P_k\left(\alpha_k\right).
+\nonumber
+\end{equation} 
+The operator product to be averaged is
+\begin{equation}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{\dag}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}.
+\nonumber
+\end{equation}
+This leads to the integral
+\begin{eqnarray}
+Sp \left\{
+\hat{\rho}
+\hat{a}^{\dag}_{k^{I}}\hat{a}^{\dag}_{k^{II}}\hat{a}_{k^{III}}\hat{a}_{k^{IV}}
+\right\} = 
+\nonumber \\
+= 
+\int \dots \int 
+d^2 \left\{\alpha_k\right\},
+P\left(\left\{\alpha_k\right\}\right)
+\left(
+\alpha^{*}_{k^{I}}\alpha^{*}_{k^{II}}\alpha_{k^{III}}\alpha_{k^{IV}}
+\right).
+\nonumber
+\end{eqnarray}
+
+Again, non-zero contributions come from paired products satisfying
+\[
+k^{I} = k^{III} = k_1, \quad k^{II} = k^{IV} = k_2
+\]
+or
+\[
+k^{I} = k^{IV} = k_1, \quad k^{II} = k^{III} = k_2
+\]
+and also
+\[
+k^{I} = k^{II} =  k^{III} = k^{IV} = k.
+\]   
+It is easy to show by integrating in polar coordinates $\alpha = r e^{i\theta}$ that the non-zero integrals are:
+\begin{equation}
+\int d^2 \alpha_{k_1} P\left(\alpha_{k_1}\right)
+\alpha_{k_1}^{*} \alpha_{k_1}
+\int d^2 \alpha_{k_2} P\left(\alpha_{k_2}\right)
+\alpha_{k_2}^{*} \alpha_{k_2} = 
+\bar{n}_{k_1} \bar{n}_{k_2}.
+\nonumber
+\end{equation}
+In the third case, given 
+\[
+P\left(\alpha_k\right) = \frac{1}{\pi \bar{n}_k}e^{-\frac{r^2}{\bar{n}_k}}
+\]
+we have
+\begin{eqnarray}
+\int d^2\alpha_k P\left(\alpha_k\right)
+\left(\alpha_k^{*}\alpha_k\right)^2 = 
+\int_0^{\infty}r dr \int_0^{2\pi}P\left(\alpha_k\right) r^4 d \theta = 
+\nonumber \\
+= \frac{2 \pi}{\pi \bar{n}_k}\int_0^{\infty} r^4 r dr e^{-
+  \frac{r^2}{\bar{n}_k}} = 
+\bar{n}_k^2 \int_0^{\infty}x^2 d x e^{-x} = 2 \bar{n}_k^2.
+\nonumber
+\end{eqnarray}
+Here, the substitution $x = \frac{r^2}{\bar{n}_k}$, $dx = \frac{2 r dr}{\bar{n}_k}$ is made.
+Thus, we arrive at the same results as previously obtained. Therefore, the final result \eqref{eqCh4_38} remains unchanged.

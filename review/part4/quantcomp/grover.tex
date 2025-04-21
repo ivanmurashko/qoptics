@@ -1,0 +1,145 @@
+%% -*- coding:utf-8 -*- 
+\section{Grover's Algorithm}
+\rindex{Grover's algorithm}
+Consider the following problem. Suppose there is a large data set
+consisting of $N$ elements in which it is necessary to find an element
+satisfying certain conditions (see \autoref{figQuantCompSearch}).
+If the data are sorted, then using algorithms of the ``divide and conquer'' type,
+the desired element can be found in time on the order of $O\left(\log N\right)$
+(see \autoref{addDivideAndConquer}). In some cases, the original data set
+cannot be prepared for fast search; in this case,
+a classical search takes time on the order of $O\left(N\right)$.
+
+\input ./part4/quantcomp/figsearch.tex
+
+One example is symmetric encryption algorithms, 
+where the task is to determine the key given known ciphertext
+and its corresponding original text. In this case,
+preprocessing the data seems impossible, and the straightforward
+solution to the problem is a simple brute force search over all possible values.
+
+Grover's algorithm \cite{Grover96afast} solves the
+unstructured search problem in time on the order of $O\left(\sqrt{N}\right)$.
+
+\subsection{Algorithm Description}
+
+Suppose we have a quantum circuit that computes the value
+of a function $f\left(x\right)$ which can take only two values:
+$0$ and $1$. Here, the value $1$ is true only for the desired
+element:
+\begin{eqnarray}
+\left.f\left(x\right)\right|_{x = x^{\ast}} = 1,
+\nonumber \\
+\left.f\left(x\right)\right|_{x \ne x^{\ast}} = 0.
+\label{eqQuantCompGroverF}
+\end{eqnarray}
+\autoref{figQuantCompGrover1} shows a scheme for computing
+the desired function. At the output we have a state of the form
+\begin{equation}
+\ket{out} = \frac{1}{\sqrt{N}}\left(
+ \sum_{x \ne x^{\ast}} \ket{x}\otimes\ket{0}
++ \left|x^{\ast}\right>\otimes\ket{1}
+\right),
+\label{eqQuantCompGroverFake}
+\end{equation}
+where $N$ is the total number of elements in the sequence in which
+the search is performed.
+
+\input ./part4/quantcomp/figgroverfake.tex
+
+Looking at expression \eqref{eqQuantCompGroverFake}, one can
+note that the proposed scheme, although it computes the function at the desired point,
+does not allow selecting the sought element, because all elements of the resulting sequence
+are equally probable, i.e., each element can be selected (as a result of measurement) with equal probability: $\frac{1}{N}$.
+
+Grover proposed an algorithm that would increase
+the probability of detecting the desired element in the resulting
+superposition \eqref{eqQuantCompGroverFake}.
+
+\input ./part4/quantcomp/figgrover.tex
+
+\input ./part4/quantcomp/figgroverbase.tex
+
+The scheme implementing Grover's algorithm is a certain block
+described by the operator $\hat{U}_G$, which is repeated a certain number
+of times (see \autoref{figQuantCompGrover}). At each step
+of iteration, the probability of detecting the desired element increases.
+
+The basic element $\hat{U}_G$ represents a sequential application
+of two operators (see \autoref{figQuantCompGroverBase}):
+\begin{equation}
+\hat{U}_G=\hat{U}_s\hat{U}_{x^{\ast}},
+\nonumber
+\end{equation}
+where $\hat{U}_{x^{\ast}}$ is the phase inversion operator, and $\hat{U}_s$
+is the inversion about the mean operator.
+
+\input ./part4/quantcomp/figgroverinv.tex
+
+The action of the operator $\hat{U}_{x^{\ast}}$ is described by the following relation
+(see \autoref{figQuantCompGroverInv}):
+\begin{equation}
+\hat{U}_{x^{\ast}}\left(\sum_x \alpha_x \ket{x}\right) = 
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\ket{x}.
+\label{eqQuantCompGroverUxast}
+\end{equation} 
+The operator $\hat{U}_{x^{\ast}}$ can be rewritten in the form
+\begin{equation}
+\hat{U}_{x^{\ast}} = \hat{I} - 2 \left|x^{\ast}\right>\left<x^{\ast}\right|.
+\nonumber
+\end{equation} 
+Indeed,
+\begin{eqnarray}
+\left(\hat{I} - 2 \left|x^{\ast}\right>\left<x^{\ast}\right|\right)
+\left(\sum_x \alpha_x \ket{x}\right) =
+\nonumber \\
+= \sum_x \alpha_x \ket{x} - 2 \alpha_{x^{\ast}}
+\left|x^{\ast}\right> = 
+\sum_{x\ne x^{\ast}} \alpha_x \ket{x} -  \alpha_{x^{\ast}}
+\left|x^{\ast}\right> =
+\nonumber \\
+=
+\sum_x \alpha_x \left(-1\right)^{f\left(x\right)}\ket{x},
+\nonumber
+\end{eqnarray}
+which coincides with \eqref{eqQuantCompGroverUxast}.
+
+\input ./part4/quantcomp/figgroverinvmiddle.tex
+
+The action of the operator $\hat{U}_s$ is described by the following relation
+(see \autoref{figQuantCompGroverInvMiddle}):
+\begin{equation}
+\hat{U}_s\left(\sum_x \alpha_x \ket{x}\right) = 
+\sum_x \left(2 \mathcal{M} - \alpha_x \right)\ket{x},
+\label{eqQuantCompGroverUs}
+\end{equation} 
+where $\mathcal{M} = \sum_x \frac{\alpha_x}{N}$.
+
+The operator $\hat{U}_s$ can be rewritten in the following form
+\begin{equation}
+\hat{U}_s = 
+2 \ket{s}\bra{s} - \hat{I},
+\nonumber
+\end{equation}
+where $\ket{s}=\frac{1}{\sqrt{N}}\sum_x \ket{x}$ -
+the initial state in Grover's algorithm.
+Indeed,
+\begin{eqnarray}
+\left(2 \ket{s}\bra{s} - \hat{I}\right)
+\left(\sum_x \alpha_x \ket{x}\right) =
+\nonumber \\
+=  2 \sum_x \alpha_x \bra{s}\ket{x} \ket{s} 
+- \sum_x \alpha_x \ket{x} = 
+\nonumber \\
+=
+\frac{2}{N} \sum_x \alpha_x \sum_x \ket{x} -
+\sum_x \alpha_x \ket{x} = 
+\nonumber \\
+= \sum_x \left( 2 \mathcal{M} -\alpha_x \right) \ket{x},
+\nonumber
+\end{eqnarray}
+which coincides with \eqref{eqQuantCompGroverUs}.
+
+\input part4/quantcomp/groveranalyze.tex
+
+\input part4/quantcomp/groverrealize.tex

@@ -1,0 +1,211 @@
+%% -*- coding:utf-8 -*-
+\subsection{Properties of the Discrete Fourier Transform}
+The following properties of the Fourier transform should be noted, which
+play a fundamental role in Shor's algorithm:
+
+\begin{lemma}
+\emph{(Shift)}
+\label{lemmaAddFourierDiscretFourierShiftTime}
+If $\left\{x_n\right\} \longleftrightarrow \left\{\tilde{X}_k\right\}$ then
+$\left\{x_{\left(n - m\right) \mod M}\right\} \longleftrightarrow
+\left\{e^{-i \omega m k}\tilde{X}_k\right\}$ 
+\end{lemma}
+
+\begin{proof}
+For the sequence $\left\{x_{\left(n - m\right) \mod M}\right\}$
+one can write
+\begin{eqnarray}
+\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\begin{pmatrix}
+x_{-m \mod M} \\
+x_{-m+1 \mod M}\\ 
+\vdots \\
+x_{-1 \mod M}\\
+x_0 \\
+x_1 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix} = 
+\begin{pmatrix}
+x_{M - m} \\
+x_{M - m + 1}\\ 
+\vdots \\
+x_{M - 1}\\
+x_0 \\
+x_1 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix},
+\nonumber
+\end{eqnarray}
+and
+\begin{eqnarray}
+\hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\nonumber \\
+= \frac{1}{\sqrt{M}}
+\begin{pmatrix}
+1 & 1 & 1 & \cdots & 1 \\
+1 & e^{-i \omega} & e^{-2 i \omega} & \cdots & 
+e^{-\left( M - 1 \right) i \omega} \\
+1 & e^{-2 i \omega} & e^{-4 i \omega} & \cdots & 
+e^{-2 \left( M - 1 \right) i \omega} \\
+1 & e^{-3 i \omega} & e^{-6 i \omega} & \cdots & 
+e^{-3 \left( M - 1 \right) i \omega} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & e^{-\left( M - 1 \right) i \omega} & e^{-2\left( M - 1 \right) i \omega} & \cdots & 
+e^{- \left( M - 1 \right)\left( M - 1 \right) i \omega} \\
+\end{pmatrix}
+\begin{pmatrix}
+x_{M - m} \\
+x_{M - m + 1}\\ 
+\vdots \\
+x_0 \\
+\vdots \\
+x_{M - m - 1}
+\end{pmatrix} = 
+\nonumber \\
+= 
+\begin{pmatrix}
+\frac{x_{M - m}}{\sqrt{M}} + \frac{x_{M - m + 1}}{\sqrt{M}} + \cdots + 
+\frac{x_0}{\sqrt{M}} + \cdots + \frac{x_{M - m - 1}}{\sqrt{M}}\\
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-i \omega} x_{M - m + 1}}{\sqrt{M}} + 
+\cdots + 
+\frac{e^{-i \omega m  } x_0}{\sqrt{M}} + 
+\cdots +
+\frac{e^{-i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-2 i \omega} x_{M - m + 1}}{\sqrt{M}} + 
+\cdots + 
+\frac{e^{-2 i \omega m  } x_0}{\sqrt{M}} + 
+\cdots +
+\frac{e^{-2 i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
+\vdots \\
+\frac{x_{M - m}}{\sqrt{M}} + 
+\frac{e^{-m i \omega} x_{M - m + 1}}{\sqrt{M}} + 
+\cdots + 
+\frac{e^{-m i \omega m  } x_0}{\sqrt{M}} + 
+\cdots +
+\frac{e^{-m i \omega \left( M - 1 \right) } x_{M - m - 1}}{\sqrt{M}}\\ 
+\vdots 
+\end{pmatrix}.
+\label{eqlemmaAddFourierDiscretFourierShiftTimeMatrix}
+\end{eqnarray}
+Taking into account the relation
+\[
+e^{-i \omega k M} = 1, k \in \left\{0, 1, \dots \right\},
+\]
+the expression
+\eqref{eqlemmaAddFourierDiscretFourierShiftTimeMatrix} can
+be rewritten in the following form
+\begin{eqnarray}
+\hat{F}\left\{x_{\left(n - m\right) \mod M}\right\} = 
+\nonumber \\
+=
+\frac{1}{\sqrt{M}}
+\begin{pmatrix}
+x_{M - m} + \cdots +
+x_{M - m - 1}\\
+e^{-i \omega m } e^{-i \omega \left( M - m \right) } x_{M - m} + 
+\cdots + 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m - 1\right) }\\ 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - m \right) } x_{M - m} + 
+\cdots + 
+e^{-i \omega 2 m } e^{-i 2 \omega \left( M - 1\right) }\\ 
+\vdots 
+\end{pmatrix} = 
+\nonumber \\
+= 
+\begin{pmatrix}
+\tilde{X}_0 \\
+e^{-i \omega m} \tilde{X}_1 \\
+e^{-i \omega 2 m} \tilde{X}_2 \\
+\vdots  
+\end{pmatrix}.
+\nonumber
+\end{eqnarray}
+\end{proof}
+
+
+\begin{lemma}
+\emph{(Periodicity)}
+\label{lemmaAddFourierDiscretFourierPeriod}
+If the sequence $\left\{x_n\right\}$ has period $r$: $x_n =
+x_{n + r}$, and the number of samples $M$ is divisible by $r$, then the nonzero terms
+of the Fourier transform appear with period $\frac{M}{r}$.
+\begin{proof}
+Indeed, if $M \mod r = 0$ and $k r \mod M \ne 0$,
+then
+\[
+1 - e^{-i \omega k r} \ne 0,
+\]
+whence
+\begin{eqnarray}
+\tilde{X}_k = \frac{1}{\sqrt{M}}\sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left(
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_{n+r} +
+\right.
+\nonumber \\
+\left. +
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_{n+2r} + 
+\dots  \right)=
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left(
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + r \right) } x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k \left(n + 2r \right) } x_n + 
+\dots \right) =
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left( \sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
+\sum_{l = 0}^{\frac{M}{r}- 1} e^{-i \omega k l r } = 
+\sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} 
+\frac{1 - e^{-i \omega k \frac{M}{r} r }}{1 - e^{-i \omega k r }}
+\right) = 
+\nonumber \\
+=
+\frac{1}{\sqrt{M}}
+\frac{1 - e^{-i \omega k M }}{1 - e^{-i \omega k r}}
+\sum_{n = 0}^{r - 1} x_n e^{-i \omega k n} = 0.
+\label{eqAddFourierDiscretFourierPeriodCase1}
+\end{eqnarray}
+If $M \mod r = 0$ and $k r \mod M = 0$, then
+\[
+e^{-i \omega k r } = e^{-i \frac{2 \pi }{M} k r } = 1,
+\]
+whence
+\begin{eqnarray}
+\tilde{X}_k = \frac{1}{\sqrt{M}} \sum_{n = 0}^{M - 1}e^{-i \omega k n}x_n = 
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left(
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+r} + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n } x_{n+2r} + 
+\dots \right)=
+\nonumber \\
+= \frac{1}{\sqrt{M}} \left(
+\sum_{n = 0}^{r - 1}e^{-i \omega k n} x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
+\sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n + 
+\dots \right) = 
+\nonumber \\ 
+= \frac{1}{\sqrt{M}} \frac{M}{r} \sum_{n = 0}^{r - 1}e^{-i \omega k n  } x_n \ne 0.
+\label{eqAddFourierDiscretFourierPeriodCase2}
+\end{eqnarray}
+Thus, from expressions 
+\eqref{eqAddFourierDiscretFourierPeriodCase1} and 
+\eqref{eqAddFourierDiscretFourierPeriodCase2} it follows that
+the nonzero terms appear with a period $T = \frac{M}{r}$.
+\end{proof}
+\end{lemma}
+
+\begin{remark}
+\emph{(Periodicity of maxima)}
+\label{rem:dsp:fourier:periodprop}
+It is worth noting that expression 
+\eqref{eqAddFourierDiscretFourierPeriodCase1} (in the case when
+the period is not a divisor of the number of samples: $M \mod r \ne 0$) will be approximately
+equal to 0 for those values of $k$ that are far from multiples of $\frac{M}{r}$, i.e. local maxima of the Fourier transform
+will repeat with period $\frac{M}{r}$.
+\end{remark}

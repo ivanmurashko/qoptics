@@ -1,0 +1,62 @@
+%% -*- coding:utf-8 -*- 
+\section{Fermat's Little Theorem}
+
+\begin{theorem}[Fermat's Little Theorem]
+\label{addDiscretSmallFerma}
+If $p$ is a prime number, and $a$ is not divisible by $p$, then 
+\begin{equation}
+a^{p-1} \equiv 1 \mod{p}
+\label{addDiscretSmallFermaEq}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Consider the following relation
+\[
+a \cdot k_i \mod{p},
+\]
+where $k_i \subset \left\{1, \dots, p - 1\right\}$.
+
+Obviously, 
+\begin{equation}
+a \cdot k_i \equiv k_j \mod{p}.
+\label{addDiscretSmallFermaInt}
+\end{equation}
+Indeed,
+\[
+a \cdot k_i \mod{p} \subset \left\{1, \dots, p - 1\right\},
+\]
+since any remainder from division by $p$ takes values $0, 1, \dots,
+p-1$. A zero remainder is impossible because $a$ and $p$ are coprime.
+
+Moreover, each of the remainders $a \cdot k_i \mod{p}$ occurs
+only once. Indeed, suppose that $a \cdot k_i \mod{p} = a
+\cdot k_j \mod{p}$ or $a \cdot \left( k_i - k_j \right ) \equiv 0
+\mod{p}$, i.e. $a$ is divisible by $p$, which contradicts the condition that they are coprime. 
+
+Multiplying all expressions \autoref{addDiscretSmallFermaInt} we get
+\[
+a \cdot 2a \cdot 3a \cdot \dots \cdot a\left(p - 1\right) 
+\equiv 1 \cdot 2 \cdot 3 \cdot \dots \cdot \left(p - 1\right) \mod{p}.
+\]
+or
+\[
+a^{p-1} \left(p - 1\right)! \equiv \left(p - 1\right)! \mod{p},
+\]
+from which we obtain the required equality due to the coprimality of $p$ and
+$\left(p-1\right)!$:
+\[
+a^{p-1} \equiv 1 \mod{p}
+\]
+\end{proof}
+
+\subsection{Pseudoprime numbers}
+The generalization of Fermat's Little Theorem is not true, i.e., if $a$ and $p$ are coprime numbers satisfying the relation
+\autoref{addDiscretSmallFermaEq}, then $p$ may not be prime. For example,
+\[
+2 ^ {341 - 1} \equiv 1 \mod{ 341 },
+\] 
+even though $341 = 11 \cdot 31$.
+
+Numbers $p$ satisfying the relation \autoref{addDiscretSmallFermaEq},
+but not being prime, are called pseudoprime numbers to the base $a$. For example, 341 is the first pseudoprime number to base 2.

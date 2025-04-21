@@ -1,0 +1,68 @@
+%% -*- coding:utf-8 -*-
+\chapter{Density Matrix and Operator}
+\label{AddState}
+
+\subsection{Pure and Mixed States}
+\rindex{Mixed state}
+\rindex{Pure state}
+In general, the state of a quantum system is considered defined if
+the wave function describing this state is known. The wave function
+can be obtained as follows. We perform measurements of the eigenvalues
+of operators corresponding to a complete set. The number of these measured
+quantities (quantum numbers) equals the number of degrees of freedom of the system. Using the obtained quantum numbers,
+we find the wave function which
+is an eigenfunction for each of the operators in the complete set,
+and the eigenvalues must correspond to the measured quantum numbers.
+In general (up to a constant factor) such
+a function is unique. It can be accepted that this function describes the state
+at the initial moment of time. The state at subsequent moments in time
+can be found using the Schrödinger equation. Such a state with
+a precisely defined wave function is called
+a \textbf{pure state}.
+
+In some cases, the wave function of the system cannot be uniquely
+defined, for example in a system with a large number of degrees of freedom.
+In this case, we consider a statistical mixture of states in which
+each wave function enters with its statistical weight. That is,
+the system may be in states described by wave functions
+\(\left\{\left|\psi_n\right>\right\}\). At the same time, the probability
+of the system being in a particular state \(\left|\psi_n\right>\) from
+this set equals \(p_n\). Obviously,
+\[
+\sum_n p_n = 1.
+\]
+A state described by a mixture of pure states is called
+a \textbf{mixed state}.
+
+\subsection{Density Matrix}
+For a system in a mixed state, to calculate the expectation values of a certain operator, it is convenient to use the formalism of the density matrix, which was proposed by John von Neumann and
+independently by Landau and Bloch in 1927.
+\rindex{Density matrix!definition}
+
+In \ref{eqAddDiracMidViaRho}, it was shown that the expectation value
+of some operator \(\hat{L}\) in a pure state
+\(\left|\psi_n\right>\) can be written as
+\[
+\left< \hat{L} \right>_{\psi_n} = \mathrm{Sp} \left(\hat{\rho_n} \hat{L} \right),
+\]
+where
+\[
+\hat{\rho_n} = \hat{P}_n = \left|\psi_n\right>\left<\psi_n\right|.
+\]
+
+For a mixed state, the formula for calculating the expectation values can be written
+as the sum of the expectation values in pure states with given weights:
+\[
+\left< \hat{L} \right>_{mix} = \sum_n p_n \left< \hat{L}
+\right>_{\psi_n}.
+\]
+Thus, the expectation value in a mixed state can be written in the following
+form
+\begin{eqnarray}
+\left< \hat{L} \right>_{mix} = \mathrm{Sp} \left(\hat{\rho} \hat{L} \right),
+\end{eqnarray}
+where
+\begin{eqnarray}
+\hat{\rho} = \sum_n p_n \hat{\rho_n} = 
+\sum_n p_n \left|\psi_n\right>\left<\psi_n\right|.
+\end{eqnarray}

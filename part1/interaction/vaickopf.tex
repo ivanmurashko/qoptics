@@ -1,0 +1,226 @@
+%% -*- coding:utf-8 -*- 
+\section{Spontaneous Emission. \\
+  Weisskopf-Wigner Approximation.}
+Above we obtained a formula for the rate of spontaneous emission,
+valid for sufficiently short times. At the same time, when solving,
+for example, the problem of the lifetime of an excited atom, one cannot
+restrict to short times. In this case, a different method is applied,
+called the Weisskopf-Wigner approximation.
+
+Let us consider this method. We have established that the atom transitions from the excited
+state to the ground state due to interaction with all modes
+of the space, even if they are not excited and are in the vacuum
+state. The interaction Hamiltonian in this case has the form
+\begin{equation}
+\hat{V}_I = \hbar \sum_{k} g_k \hat{\sigma}^{\dag}\hat{a}_k e^{i\left(
+\omega_{ab} - \omega_k
+\right)t} + \mbox{h.c.},
+\label{eqCh2VaiskopfV}
+\end{equation}
+where $g_k$ is the interaction constant with the $k$-th mode. Compared to the Hamiltonian \eqref{eqCh2_task22}
+we used earlier,
+\eqref{eqCh2VaiskopfV} differs by summation over all quantization modes
+of the space.
+
+Assume that at the initial time $t=0$ the atom is excited, and
+there are no photons in the field. Then the initial state reads
+\begin{equation}
+\left|\psi\left(0\right)\right> =
+ \left|a, \left\{0\right\}\right>,
+\nonumber
+\end{equation}
+that is, the atom is excited and all modes are in the vacuum state. At
+later times, due to atom-field interaction, the state of the system
+will be
+\begin{equation}
+\left|\psi\left(t\right)\right> =
+\sum_{k} C_{bk}\left(t\right) \ket{b, 1_k}
++
+C_{a}\left(t\right) \left|a, \left\{0\right\}\right>,
+\label{eqCh2Vaiskopf3}
+\end{equation}
+where $\ket{b, 1_k}$ is the state in which the atom is in the ground
+state and there is one photon in the $k$-th mode. \rindex{photon}
+
+The Schrödinger equation in the interaction picture reads
+\begin{equation}
+\frac{d}{dt} \left|\psi\left(t\right)\right> =
+- \frac{i}{\hbar} \hat{V}_I \left|\psi\left(t\right)\right>.
+\label{eqCh2Vaiskopf4}
+\end{equation}
+Substituting \eqref{eqCh2Vaiskopf3} here and projecting equation
+\eqref{eqCh2Vaiskopf4} sequentially onto
+$\left<a, \left\{0\right\}\right|$ and $\bra{b, 1_k}$, we obtain
+a system of equations for the probability amplitudes 
+$C_{a}\left(t\right)$ and $C_{bk}\left(t\right)$:
+\begin{eqnarray}
+\dot{C}_{a}\left(t\right) = - i \sum_{k} g_k e^{i \left(\omega_{ab} - 
+  \omega_k\right)t} C_{bk}\left(t\right),
+\nonumber \\
+\dot{C}_{bk}\left(t\right) = - i g_k e^{- i \left(\omega_{ab} -
+  \omega_k\right)t} C_{a}\left(t\right).
+\label{eqCh2Vaiskopf5}
+\end{eqnarray}
+Integrate the second equation \eqref{eqCh2Vaiskopf5} over time from $0$ to
+$t$: 
+\begin{equation}
+C_{bk}\left(t\right) = - i g_k \int_0^{t} e^{- i \left(\omega_{ab} -
+  \omega_k\right)t'} C_{a}\left(t'\right) dt'.
+\label{eqCh2Vaiskopf6}
+\end{equation}
+Substituting \eqref{eqCh2Vaiskopf6} into the first equation of the system
+\eqref{eqCh2Vaiskopf5}, we obtain the following integro-differential
+equation:
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - \sum_{k} g_k^2 
+\int_0^t
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right) dt'.
+\label{eqCh2Vaiskopf7}
+\end{equation}
+
+Now, let's make several simplifications (the Weisskopf-Wigner approximation).
+We will consider the mode distribution quasi-continuous and replace summation over
+$k$ by integration using the relation
+\eqref{eqCh1_modenumber_1pre}:
+\begin{equation}
+d N = 2 \left(\frac{L}{2 \pi} \right)^3 k^2 d k d \Omega = 
+2 \frac{V}{\left(2 \pi\right)^3}  k^2 d k d \Omega
+\nonumber
+\end{equation}
+Then we get \eqref{eqCh1_modenumber_kvazy_contig}
+\begin{eqnarray}
+\sum_{k} g_k^2 
+\int_0^t
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right) dt' = 
+\nonumber \\
+= 2 \frac{V}{\left(2 \pi\right)^3} \int_{4\pi}d \Omega \int_0^{\infty}
+g_k^2 k^2 dk  \int_0^t dt'
+e^{i \left(\omega_{ab} - \omega_k\right)\left(t - t'\right)}  
+C_{a}\left(t'\right).
+\label{eqCh2Vaiskopf8pre}
+\end{eqnarray}
+In \eqref{eqCh2Vaiskopf8pre} 
+\begin{equation}
+g_k^2 = \frac{\omega_k\left|p\right|^2 \sin^2 \theta}{4 \hbar
+  \varepsilon_0 V},
+\label{eqCh2VaiskopfGk}
+\end{equation}
+where $\theta$ is the angle between the directions $\vec{k}$ and $\vec{p}$.
+Expression \eqref{eqCh2VaiskopfGk} is obtained taking into account averaging over
+polarizations \eqref{eqCh2_PolyarMedian}.
+
+Transitioning in \eqref{eqCh2Vaiskopf8pre} from $k$ to $\omega$ using the relations 
+\begin{equation}
+k = \frac{\omega_k}{c}, \quad k^2 dk = \frac{\omega_k^2 d \omega_k}{c^3}
+\nonumber
+\end{equation}
+and denoting for convenience \(\omega_k = \omega\),
+we get
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - 
+2 \frac{V}{\left(2 \pi c\right)^3} \int_{4\pi}d \Omega \int_0^{\infty}
+g^2\left(\omega\right) \omega^2 d\omega  \int_0^t dt'
+e^{i \left(\omega_{ab} - \omega\right)\left(t - t'\right)}  
+C_{a}\left(t'\right).
+\label{eqCh2Vaiskopf8}
+\end{equation}
+
+For an approximate evaluation of the integral in \eqref{eqCh2Vaiskopf8}
+we additionally use a number of simplifying assumptions.
+We first integrate \eqref{eqCh2Vaiskopf8} over frequency (i.e., changing
+the order of integration, assuming this is possible). From the structure of 
+\eqref{eqCh2Vaiskopf8} it is seen that the main contribution to the time integral
+comes from the frequency region $\omega \approx \omega_{ab}$. For this reason,
+we can take 
+\[
+\omega^2 g^2\left(\omega\right) \approx 
+\omega_{ab}^2 g^2\left(\omega_{ab}\right).
+\]
+In this approximation, the frequency integral looks like (see
+the integral representation of the delta-function
+\eqref{eq:delta_from_integral}):  
+\begin{eqnarray}
+\int_0^{\infty}d \omega e^{i\left(\omega_{ab} - \omega\right)\left(t -
+  t'\right)}  = \left|\nu = \omega - \omega_{ab}\right| =
+\int_{- \omega_{ab}}^{\infty}d \nu e^{-i \nu\left(t - t'\right)} \approx
+\nonumber \\
+\approx \int_{- \infty}^{\infty} d \nu e^{-i \nu\left(t - t'\right)} = 
+\int_{- \infty}^{\infty} d \nu e^{i \nu\left(t' - t\right)} =
+2 \pi \delta\left(t' - t\right).
+\label{eqCh2Vaiskopf9}
+\end{eqnarray}
+
+Substituting \eqref{eqCh2Vaiskopf9} into equation \eqref{eqCh2Vaiskopf8} and
+integrating over time, we get
+\begin{equation}
+\dot{C}_{a}\left(t\right) = - 
+2 \frac{V}{\left(2 \pi c\right)^3} \int_{4\pi}d \Omega 
+g^2\left(\omega_{ab}\right) \omega_{ab}^2   
+2 \pi C_{a}\left(t\right) = - \frac{\Gamma}{2} C_{a}\left(t\right).
+\label{eqCh2Vaiskopf10}
+\end{equation}
+Substituting here the expression for $g_k^2$ \eqref{eqCh2VaiskopfGk} and
+performing the angular integral (over $d \Omega$), we find an expression for
+the decay coefficient $\Gamma$:
+\begin{equation}
+\Gamma = \frac{\omega_{ab}^3 \left|p\right|^2}{3 \pi c^2 \hbar}
+\sqrt{\frac{\mu_0}{\varepsilon_0}}. 
+\label{eqCh2Vaiskopf11}
+\end{equation}
+Note that expression \eqref{eqCh2Vaiskopf11} coincides with that obtained
+earlier by another method \eqref{eqCh2_Wspon_final}.
+
+From \eqref{eqCh2Vaiskopf10} it follows that $\Gamma$ characterizes
+the rate of change of the probability $\left|C_{a}\right|^2$. Indeed,
+from \eqref{eqCh2Vaiskopf10} we have:
+\begin{eqnarray}
+\dot{C}_{a}C_{a}^{*} = - \frac{\Gamma}{2}C_{a}C_{a}^{*},
+\nonumber \\
+\dot{C}_{a}^{*}C_{a} = - \frac{\Gamma}{2}C_{a}^{*}C_{a},
+\nonumber
+\end{eqnarray}
+from which it follows that
+\begin{equation}
+\frac{d C_{a}C_{a}^{*}}{dt} = -\Gamma \left(C_{a}C_{a}^{*}\right),
+\nonumber
+\end{equation}
+or equivalently
+\begin{equation}
+\frac{d \left|C_{a}\right|^2}{dt} = -\Gamma \left|C_{a}\right|^2.
+\nonumber
+\end{equation}
+The solution has the form (see \autoref{fig:part1:vaickopf})
+\[
+\left|C_{a}\right|^2 = e^{- \Gamma t},
+\]
+if the initial value $\left.\left|C_{a}\right|^2\right|_{t = 0} =
+1$, i.e. the atom was initially excited.
+
+\input ./part1/interaction/figvaickopf.tex 
+
+\begin{remark}[Weisskopf-Wigner Approximation and Rabi Oscillations]
+If we compare \autoref{fig:part1:rabi} and
+\autoref{fig:part1:vaickopf}, we can see that these two graphs
+differ significantly despite apparently describing the same model system.
+In this regard, the question arises when we can
+apply the single-mode approximation and correspondingly obtain
+Rabi oscillations (see \autoref{fig:part1:rabi}), and when it is necessary
+to use a multi-mode approximation like
+Weisskopf-Wigner (see \autoref{fig:part1:vaickopf}).
+
+Formally, we can consider that the interaction with each mode
+of the electromagnetic field gives its contribution to the resulting probabilities,
+while according to \eqref{eqCh2_prob_C_bn} the change
+of probability (for small $t$)
+\[
+\Delta \left|C_{a, n}\left(t\right)\right|^2 = -\Delta \left|C_{b, n +
+  1}\left(t\right)\right|^2 \sim \left(n + 1\right).
+\]
+Thus, those modes with a large number of photons give a greater contribution than
+those with fewer. Consequently, if we have a mode with
+a large number of photons $n \gg 1$, then the influence of vacuum modes with photon number $n = 0$ can be neglected. Otherwise,
+especially when all modes are equivalent, it is necessary to take into account all modes and
+apply approximations of the Weisskopf-Wigner type.
+\end{remark}

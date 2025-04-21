@@ -1,0 +1,106 @@
+%% -*- coding:utf-8 -*- 
+\section{Determination of photon statistics through the distribution of photocounts}
+Usually, the main interest is the photon statistics characterizing the light beam. To determine it from the measured
+$P_m\left(T\right)$, one should invert \eqref{eqCh4_49}, expressing
+$P\left(\bar{I}\right)$ through $P_m\left(T\right)$.
+
+There are several methods to find $P\left(\bar{I}\right)$. (See \cite{bDvait1973} for inversion methods.) We will focus on one of them. Consider the expression \eqref{eqCh4_49}
+\[
+P_m\left(T\right) = 
+\int_0^{\infty}
+P\left(\bar{I}\right)
+\frac{\left(\xi \bar{I}T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+d \bar{I}.
+\]
+From this equality, given the measured $P_m\left(T\right)$, one needs to determine
+the probability density $P\left(\bar{I}\right)$ that characterizes
+the statistics of the incident light.
+
+Let us change the variable to $u = \xi \bar{I} T$ and define a new
+probability density 
+\[
+P_T\left(u\right) = \frac{1}{\xi T} P\left(\bar{I}\right).
+\]
+We have: 
+\[
+P_T\left(u\right) du = \frac{1}{\xi T} P\left(\bar{I}\right) \xi T d
+\bar{I} = P\left(\bar{I}\right) d \bar{I}.
+\]
+Hence: 
+\[
+\int_0^{\infty}P_T\left(u\right) du = 
+\int_0^{\infty}P\left(\bar{I}\right) d\bar{I} = 1, 
+\]
+as it should be. Rewrite equation \eqref{eqCh4_49} using these variables:
+\begin{equation}
+P_m\left(T\right) = 
+\int_0^{\infty}
+P_T\left(u\right)
+\frac{u^m}{m!} e^{-u} 
+d u.
+\label{eqCh4_53}
+\end{equation}
+Next, we use the orthogonal Laguerre polynomials
+\begin{eqnarray}
+L_n\left(y\right) = \sum_{k = 0}^{n}{n\choose k}
+\frac{\left(-y\right)^k}{k!},
+\nonumber \\
+{n\choose k} = C_k^n = \frac{n!}{k!\left(n - k\right)!}
+\label{eqCh4_54}
+\end{eqnarray}
+which satisfy the orthogonality conditions
+\begin{equation}
+\int_0^{\infty}L_p\left(y\right)L_q\left(y\right)e^{-y} dy =
+\delta_{pq},
+\label{eqCh4_TaskLager1}
+\end{equation}
+which can be put into the form by substituting $y \rightarrow 2y$:
+\begin{equation}
+2 \int_0^{\infty}L_p\left(2 y\right)L_q\left(2 y\right)e^{-2 y} dy =
+\delta_{pq}.
+\label{eqCh4_TaskLager2}
+\end{equation}
+Now, expand $P_T\left(u\right)$ in a series of Laguerre polynomials:
+\begin{equation}
+P_T\left(u\right) = 
+\sum_{n = 0}^{\infty}
+A_n L_n\left(2u \right)
+e^{-u} 
+\label{eqCh4_55}
+\end{equation}
+Using the orthogonality conditions \eqref{eqCh4_TaskLager2}, we get for
+the expansion coefficients $A_n$ the expression  
+\begin{equation}
+A_n = 2 \int_0^{\infty}
+L_n\left(2 u\right)P_T\left(u\right)e^{-u}du.
+\label{eqCh4_56}
+\end{equation}
+Substituting $L_n\left(2 u\right)$ in the form of the series
+\eqref{eqCh4_54} into \eqref{eqCh4_56}, we obtain: 
+\begin{eqnarray}
+A_n = 2 \sum_{k = 0}^{k = n}
+{n\choose k}\left(- 2\right)^k\int_0^{\infty}
+P_T\left(y\right)\frac{y^k}{k!}e^{-y} dy = 
+\nonumber \\
+= 2 \sum_{k = 0}^{k = n}
+{n\choose k}
+\left(- 2\right)^k
+P_k\left(T\right),
+\label{eqCh4_57}
+\end{eqnarray}
+where the expression
+\[
+\int_0^{\infty}P\left(y\right)\frac{y^k}{k!}e^{-y}dy =
+P_k\left(T\right)
+\]
+was used. 
+
+Assume that from measurements we know a sufficient number of values $P_k\left(T\right)$. This will allow us to compute a sufficient number of expansion coefficients $A_n$ using formula \eqref{eqCh4_57}. Substituting them into the series \eqref{eqCh4_55} for
+$P_T\left(u\right)$ and reverting to the original variables, we get
+\begin{equation}
+P\left(\bar{I}\right) = \xi T\sum_{k = 0}^{\infty}
+A_n L_n\left(2 \xi T \bar{I}\right)e^{- \xi T \bar{I}}.
+\label{eqCh4_58}
+\end{equation}
+Using this expression, it is in principle possible to invert Mandel's formula. The difficulty here lies in the fact that only a finite number of $P_n\left(T\right)$ are known with limited accuracy.

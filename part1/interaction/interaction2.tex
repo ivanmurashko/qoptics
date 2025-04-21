@@ -1,0 +1,291 @@
+%% -*- coding:utf-8 -*- 
+\section{Interaction of an atom with a multimode field. Induced and
+  spontaneous transitions}
+Above, we established that the probability of the atom transitioning from the lower to
+the upper state when interacting with a single mode of the field, which is in
+a state with $n$ photons, is given by \eqref{eqCh2_prob_C_an} 
+\begin{equation}
+\left|C_{a,n}\left(t\right)\right|^2 = 4 g^2 \left(n+1\right)
+  \frac{\sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+  \omega_{ab}\right)^2}
+  \nonumber
+\end{equation}
+Let us write this probability in the following form
+\begin{equation}
+  P_a = \left|C_{a,n}\left(t\right)\right|^2 =
+  P_a^{\mbox{ind}} + P_a^{\mbox{sp}},
+  \label{eqCh2_prob_C_an_2_1}
+\end{equation}
+where
+\begin{eqnarray}
+  P_a^{\mbox{ind}} = 4 g^2 n
+  \frac{\sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+    \omega_{ab}\right)^2},
+  \nonumber \\
+  P_a^{\mbox{sp}} = 4 g^2 
+  \frac{\sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+  \omega_{ab}\right)^2}
+  \label{eqCh2_prob_C_an_2}
+\end{eqnarray}
+are the probabilities of induced ($P_a^{\mbox{ind}}$)
+and spontaneous ($P_a^{\mbox{sp}}$) transitions.
+
+\subsection{Induced transitions}
+Further, we will focus on the probability of the induced transition
+$P_a^{\mbox{ind}}$.
+To obtain the transition probability considering interaction with all
+modes, one needs to sum the probabilities \eqref{eqCh2_prob_C_an_2},
+corresponding to each mode. 
+
+In the case of an atom interacting with the free space field
+(expansion of the field into plane waves), the interaction constant is
+\cite{bLuisell1972}: 
+\begin{equation}
+g = - \frac{\left(\vec{p}\cdot\vec{e}\right)}{\hbar}
+\sqrt{\frac{\hbar \omega}{2 \varepsilon_0 V}}
+\end{equation}
+where $\vec{p}$ is the matrix element of the dipole moment operator,
+$\vec{e}$ is the polarization vector of the field. 
+
+If in expression \eqref{eqCh2_prob_C_an_2} the time $t$ is not very small (but
+significantly less than the characteristic time for the change of probabilities),
+the dependence of $\left|C_{a,n}\left(t\right)\right|^2$ on frequency will
+have a sharp peak at $\omega = \omega_{ab}$, which indicates
+energy conservation in the elementary act (the energy of the absorbed photon
+equals the change in the atom's energy). Let us assume that the field incident in the direction
+$\vec{k}$ within the solid angle $d \Omega$ has a spectrum that varies little near the frequency $\omega_{ab}$. 
+ 
+The number of modes within the frequency interval $d \omega$ near
+$\omega_{ab}$ and the solid angle $d \Omega$ around the direction
+$\vec{k}$, as is known from \eqref{eqCh1_modenumber_1}, is
+\begin{equation}
+d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega.
+\end{equation}
+
+The probability of photon absorption \rindex{photon} during atom interaction with one mode
+is given by formula \eqref{eqCh2_prob_C_an_2}. The total probability can
+be obtained by summing over all modes. Treating the mode spectrum
+as quasi-continuous (see \eqref{eqCh1_modenumber_kvazy_contig}),
+the summation can be replaced by integration
+\begin{equation}
+W_{b \rightarrow a} = \int_{\Omega} 8 \left|g\right|^2 n(\vec{k})
+\left(\frac{L}{2 \pi c}\right)^3 \omega_{ab}^2 d \Omega 
+\int_{-\infty}^{+\infty} 
+\frac{\sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+  \omega_{ab}\right)^2} d \omega.
+\label{eqCh2Wba_1}
+\end{equation}
+Here it is acknowledged that $\frac{\sin^2 x}{x^2}$ has a narrow peak near $x = 0$, and in expression \eqref{eqCh2Wba_1} we assume that $t$ is small compared to the characteristic time of change in $C$, but large enough for the filtering properties of the integral to manifest. All slowly varying terms are taken at $\omega = \omega_{ab}$ and pulled out of the integral. It is known that $\int_{-\infty}^{+\infty} \frac{\sin^2 x}{x^2} dx = \pi$. Hence,
+\[
+\int_{-\infty}^{+\infty} \frac{\sin^2\left(\left(\omega - 
+  \omega_{ab}\right)t/2\right)} {\left(\omega - 
+  \omega_{ab}\right)^2} d \omega = \frac{\pi t }{2}.
+\]
+Thus, we have   
+\begin{equation}
+W_{b \rightarrow a} = t \frac{\omega^2 2 \pi \omega}
+{\hbar \varepsilon_0 \left(2 \pi c\right)^3}\int_{\Omega} 
+n(\vec{k})\left|\left(\vec{p} \cdot \vec{e}\right)\right|^2
+d \Omega.
+\label{eqCh2_Wab} 
+\end{equation}
+Note that the quantization volume does not appear in the final expression,
+and the photon number $n$ depends on direction, i.e. on solid angle $\Omega$. Formula \eqref{eqCh2_Wab} shows that the transition probability 
+is proportional to time. This allows introducing the concept of the transition rate, i.e., transition probability per unit time
+\begin{equation}
+w_{b \rightarrow a} = \frac{W_{b \rightarrow a}}{t} = \frac{2 \pi
+  \omega^3 }  
+{\hbar \varepsilon_0 \left(2 \pi c\right)^3}\int_{\Omega} 
+n(\vec{k}) \left|\left(\vec{p} \cdot \vec{e}\right)\right|^2
+d \Omega.
+\label{eqCh2_wab} 
+\end{equation}
+The transition rate or photon absorption rate can be expressed
+\cite{bLuisell1972} through the energy flux (photon flux),
+propagating in direction $\vec{k}$ in  
+the solid angle $d \Omega$. Energy flux is defined as energy
+transferred through a unit area $dS$ per unit time $dt$, i.e.
+\[
+d I = \frac{dH}{dS dt}.
+\]
+\input ./part1/interaction/fig_add1.tex
+
+From \autoref{figPart1Ch2_add1} we have that through the area $dS$ during unit
+time $dt$ passes as many photons as are contained in the cylinder
+depicted in \autoref{figPart1Ch2_add1}, i.e., the transferred energy can be written as
+\[
+dH = n \hbar \omega d N ,
+\]
+where $dN$ is the number of modes within the interval $d \omega d \Omega$ in
+the volume $c \cdot dS  dt$ \eqref{eqCh1_modenumber_1}:
+\[
+d N = 2 \left(\frac{1}{2 \pi c} \right)^3 \omega^2 
+c \cdot dS  dt
+d \omega d \Omega,
+\]
+from which we have 
+\begin{equation}
+d I = I\left(\omega, \vec{k}\right) d \omega d \Omega = 
+\frac{2 n \hbar \omega c}{\left(2 \pi c\right)^3}
+\omega^2 d \omega d \Omega,
+\label{eqCh2_dI}
+\end{equation}
+where $I\left(\omega, \vec{k}\right)$ is the energy flux of photons in the direction $\vec{k}$ within unit frequency interval and unit solid angle. Thus, from
+\eqref{eqCh2_dI} we obtain 
+\begin{equation}
+I\left(\omega, \vec{k}\right) = 
+\frac{2 n \hbar \omega^3 c}{\left(2 \pi c\right)^3}
+\nonumber
+\end{equation}
+Substituting this into expression \eqref{eqCh2_wab}, we get:
+\begin{equation}
+w_{ab} = \frac{\pi}{\hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\int_{\Omega}I\left(\omega, \vec{k}\right)
+\left|\left(\vec{p} \cdot \vec{e}\right)\right|^2
+d \Omega.
+\label{eqCh2_WWab}
+\end{equation}
+Here the relation $\mu_0 \varepsilon_0 = \frac{1}{c^2}$ is used.
+
+\input ./part1/interaction/fig6.tex
+
+To find the total absorption rate, one must
+integrate \eqref{eqCh2_WWab} over all propagation directions.
+Moreover, the incoming radiation is usually
+unpolarized. To account for this, averaging over all polarization directions is performed.
+We use the coordinate system shown in \autoref{figPart1Ch2_6}. The polar axis $z$
+is chosen along $\vec{k}$. The polarization vectors $\vec{e}_1$ and $\vec{e}_2$ are directed along $x$ and $y$ respectively.
+The angles $\varphi$ and $\theta$ define the direction of $\vec{p}$. 
+The angle $\varphi'$ defines the polarization direction of the incoming wave. From the figure, it follows that
+\[
+\left|\left(\vec{p} \cdot \vec{e}\right)\right|^2 = 
+\left|p\right|^2 \sin^2 \theta \cos^2 \varphi'. 
+\]
+Averaging over all polarizations gives: 
+\begin{equation}
+\frac{\left|p\right|^2}{2 \pi} \int_0^{2 \pi}
+\cos^2 \varphi' d \varphi' = \frac{\left|p\right|^2}{2}.
+\label{eqCh2_PolarMedian}
+\end{equation}
+
+Summing over all directions of wave incidence leads to the expression
+\begin{equation}
+w_{ab} = \frac{\pi}{2 \hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\left|p\right|^2
+\int_{\Omega}I\left(\omega, \vec{k}\right)
+\sin^3 \theta d \theta d \varphi.
+\end{equation}
+Assuming the radiation arrives from all directions and is isotropic, 
+we have: 
+\begin{equation}
+w_{ab} = \frac{\pi}{2 \hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\left|p\right|^2 I\left(\omega\right)
+\int_{0}^{2 \pi}d \varphi \int_0^{\pi}
+\sin^3 \theta d \theta = 
+\frac{\pi}{ \hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\frac{\left|p\right|^2}{3}I_0,
+\label{eqCh2_Wab_1}
+\end{equation}
+where $I_0 = 4 \pi I\left(\omega\right)$ is the total energy flux incident on the atom. In deriving  \eqref{eqCh2_Wab_1}
+we used the following relation:
+\[
+ \int_0^{\pi}
+\sin^3 \theta d \theta = \frac{4}{3}.
+\]
+
+If the radiation arrives from a small solid angular region
+$\Delta \Omega$ near angles $\theta_0$, $\varphi_0$, then 
+we can write:  
+\begin{eqnarray}
+w_{ab} = \frac{\pi}{2 \hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\left|p\right|^2 \sin^2 \theta_0
+\int_{\Delta \Omega} I\left(\theta, \varphi\right)
+d \Omega = 
+\nonumber \\
+= 
+\frac{\pi}{2 \hbar^2}\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\left|p\right|^2  I_0 \sin^2 \theta_0,
+\label{eqCh2_Wab_2}
+\end{eqnarray}
+where $I_0 = \int_{\Delta \Omega} I\left(\theta, \varphi\right)
+d \Omega$ is the total flux irradiating the atom.
+
+\subsection{Spontaneous transitions}
+Now consider a different problem. Define the probability of photon emission
+or transition of the excited atom to the lower state.  
+
+For the probability of photon emission by the atom into one mode we had expression
+\eqref{eqCh2_prob_C_bn}:
+\[
+\left|C_{b, n + 1}\left(t\right)\right|^2 = 4 g^2 \left(n + 1\right)
+\frac{\sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2},
+\]
+which similarly to \eqref{eqCh2_prob_C_an_2_1} can be considered as a sum of two terms
+\[
+P_b = \left|C_{b, n + 1}\left(t\right)\right|^2 =
+P_b^{\mbox{ind}} + P_b^{\mbox{sp}}
+\]
+where the first term
+\[
+P_b^{\mbox{ind}} = 4 g^2 n
+\frac{\sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2}
+\]
+corresponds to induced emission, and
+the second
+\[
+P_b^{\mbox{sp}} = 4 g^2 
+\frac{\sin^2\left(\left(\omega - \omega_{ab}\right)t/2\right)}
+{\left(\omega - \omega_{ab}\right)^2}
+\]
+to spontaneous emission. The term corresponding to induced emission is analyzed similarly to the case of photon absorption. The result will, of course, be the same. Corresponding formulas coincide with \eqref{eqCh2_Wab_1}, 
+\eqref{eqCh2_Wab_2}. Hence, the probabilities of induced processes of absorption and emission are equal to each other. The probability of spontaneous emission per unit time will evidently be 
+\begin{equation}
+w_{\mbox{sp}} = 
+\frac{2 \pi \omega^3}
+{\hbar \varepsilon_0 \left(2 \pi c\right)^3}
+\int_{\Omega}
+\left|\left(\vec{p} \cdot \vec{e}\right)\right|^2
+d \Omega
+\label{eqCh2_Wspon}
+\end{equation}
+To obtain the total probability, one must integrate \eqref{eqCh2_Wspon}
+over all directions, since spontaneous emission may occur into any mode. For polarizations, the average value \eqref{eqCh2_PolarMedian} is used. Thus, the entire procedure reduces to computing the integral 
+\begin{equation}
+w_{\mbox{sp}} = 
+\frac{\left|p\right|^2 \omega^3}
+{\varepsilon_0 \hbar \left(2 \pi\right)^2 c^3}
+\int_{0}^{2 \pi}d \varphi \int_0^{\pi}
+\sin^3 \theta d \theta
+= 
+\frac{4 \pi}{3}\frac{\left|p\right|^2 \omega^3}
+{\hbar \varepsilon_0 \left(2 \pi\right)^2 c^3}.
+\end{equation}
+Finally, we obtain
+\begin{equation}
+w_{\mbox{sp}} = 
+\frac{\left|p\right|^2 \omega^3}
+{3 \pi c^2 \hbar}
+\sqrt{\frac{\mu_0}{\varepsilon_0}}
+\label{eqCh2_Wspon_final}
+\end{equation}
+Here the relation  
+\[
+\frac{1}{c} = \sqrt{\mu_0 \varepsilon_0}
+\]
+was used.
+Formula \eqref{eqCh2_Wspon_final} indicates a strong
+dependence of the spontaneous transition probability on frequency as  
+$\omega^3$. Thus,
+based on quantum electrodynamics equations, without invoking extraneous considerations, we directly obtained
+expressions for the probabilities of induced and spontaneous atomic transitions per
+unit time. A drawback of this consideration is the use of perturbation theory and, therefore, the necessity to restrict to
+small times. For example, when solving the problem of the lifetime
+of an excited atom, one cannot restrict to small times. In this case, another approximation called the Weisskopf-Wigner approximation \cite{bLuisell1972} is used. Interestingly, the results
+obtained in these two cases are consistent with each other.  
+

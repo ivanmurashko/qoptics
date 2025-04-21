@@ -1,0 +1,117 @@
+\chapter{\nameref{part1}}
+
+\section{\nameref{chQuantel}} 
+
+\subsection{\ref{qQuantelNumberMods}: Number of modes}
+How many electromagnetic field modes with wavelength
+  $\lambda \ge 500 \mbox{nm}$ are in the quantization cube with side
+$L=1 \mbox{mm}$?
+
+The wavelength range $\lambda \ge \lambda_0 = 500 \mbox{nm}$
+corresponds to frequency range
+$\omega \le \omega_0 = \frac{2 \pi c}{\lambda_0}$.
+
+Using formula \ref{eqCh1_modenumber_1}
+\[
+d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega
+\]
+hence
+\begin{eqnarray}
+  N = \int_0^{\omega_0} 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d
+  \omega d \int_{4 \pi} d \Omega =
+  \nonumber \\
+  = 8 \pi \int_0^{\omega_0} \left(\frac{L}{2 \pi c} \right)^3 d \omega
+  = 8 \pi \left(\frac{L}{2 \pi c}\right)^3 \frac{\omega_0^3}{3} =
+  \nonumber \\
+  = \frac{8 \pi}{3} \left(\frac{L}{\lambda_0}\right)^3 \approx 67
+  \cdot 10^9
+  \nonumber
+\end{eqnarray}
+
+
+\section{\nameref{chInteraction}}
+
+\subsection{\ref{qInteractionFreq}: Determination of lithium atom transition frequency} 
+
+%\input ./part1/interaction/figfreq.tex
+
+Let us denote by $\Omega_R^{(1,2)}$ the effective Rabi frequencies for
+measurements 1 and 2, respectively. The frequency detunings for the two
+experiments are $\delta_{1,2}$. Thus, we have
+\begin{eqnarray}
+  \Omega_R^{(1)} = \sqrt{\omega_R^2 + \delta_1^2},
+  \nonumber \\
+  \Omega_R^{(2)} = \sqrt{\omega_R^2 + \delta_2^2}
+  \label{eqAnswersInteraction40}
+\end{eqnarray}
+
+On the other hand, from the graphs
+\autoref{figPart1InteractionQuestionFreq} it is seen that the maximum
+probability to detect lithium atoms in state $\ket{2}$ for
+frequency $\omega_2 = 2 \pi \cdot 228.4 \mbox{MHz}$ will be $P_2 = 0.49$,
+while from \eqref{eqPart1InteractionRabiProbability} we have
+\begin{equation}
+  P_2 = \left(\frac{\omega_R}{\Omega_R^{(2)}}\right)^2 =
+  \frac{1}{1 + \frac{\delta_2^2}{\omega_R^2}},
+  \nonumber
+\end{equation}
+from which
+\begin{equation}
+  \omega_R = 0.98 \cdot \delta_2 .
+  \label{eqAnswersInteraction41}
+\end{equation}
+
+On the other hand, one can conclude that
+\[
+\frac{\Omega_R^{(1)} \cdot 6 \mbox{µs}}{2} = \pi
+\]
+and
+\[
+\frac{\Omega_R^{(2)} \cdot 12.5 \mbox{µs}}{2} = \pi,
+\]
+thus
+\[
+\Omega_R^{(1)} = 2 \pi \cdot 0.167 \mbox{MHz},
+\]
+and
+\[
+\Omega_R^{(2)} = 2 \pi \cdot 0.08 \mbox{MHz},
+\]
+
+From \eqref{eqAnswersInteraction40} and  \eqref{eqAnswersInteraction41}
+one can find
+\[
+\delta_2 = 2 \pi \cdot 0.057 \mbox{MHz},
+\]
+i.e. two candidates
+\begin{equation}
+  f_0 = 228.4 \pm 0.057 \mbox{MHz} = 228.343 \mbox{MHz},\,
+  228.457 \mbox{MHz} 
+\label{eqAnswersInteraction4Res1}
+\end{equation}
+
+For $\delta_1$ we have
+\[
+\delta_1 = \sqrt{\left(\Omega_R^{(1)}\right)^2 - \omega_R^2} =
+2 \pi \sqrt{0.167^2 - (0.98 \cdot 0.057)^2} \mbox{MHz} =
+2 \pi \cdot 0.157 \mbox{MHz}
+\]
+thus we get the next two candidates
+\begin{equation}
+  f_0 = 228.5 \pm 0.157 \mbox{MHz} = 228.343 \mbox{MHz},\,
+  228.657 \mbox{MHz} 
+\label{eqAnswersInteraction4Res2}
+\end{equation}
+
+From \eqref{eqAnswersInteraction4Res1} and
+\eqref{eqAnswersInteraction4Res2} we finally have
+\[
+f_0 = 228.343 \mbox{MHz}.
+\]
+
+It is worth noting that the obtained value differs from the real $f_0 =
+228.205 \mbox{MHz}$. This deviation is caused by the influence of the Zeeman effect from
+the magnetic field, which is usually present in such experiments.
+
+
+

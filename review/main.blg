@@ -1,0 +1,26 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'main.blg'
+[23] biber:340> INFO - === Mon Apr 21, 2025, 14:56:44
+[27] Biber.pm:420> INFO - Reading 'main.bcf'
+[53] Biber.pm:994> INFO - Found 62 citekeys in bib section 0
+[58] Biber.pm:4463> INFO - Processing section 0
+[61] Biber.pm:4654> INFO - Looking for bibtex file 'main.bib' for section 0
+[62] bibtex.pm:1713> INFO - LaTeX decoding ...
+[88] bibtex.pm:1519> INFO - Found BibTeX data source 'main.bib'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[199] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[199] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[199] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[218] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[228] bbl.pm:779> INFO - Output to main.bbl
+[228] Biber.pm:131> WARN - legacy year field '"2017"' in entry 'wiki:autler_townes_effect' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'Oct' in entry 'bNonclassSqueezedStateDetection' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'PhysRevD.28.2960' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'Apr' in entry 'PhysRevLett.28.938' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'October' in entry 'bNoClone' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy year field '{1992}' in entry 'bBennettWiesner' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'Jun' in entry 'bDenseCodeExp' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy month field 'oct' in entry 'bBennettGroverOptimal' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy year field '"2019"' in entry 'wiki:fourier_transform' is not an integer - this will probably not sort properly.
+[228] Biber.pm:131> WARN - legacy year field '"2019"' in entry 'wiki:deltafunction' is not an integer - this will probably not sort properly.
+[228] Biber.pm:133> INFO - WARNINGS: 10

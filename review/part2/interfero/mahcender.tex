@@ -1,0 +1,389 @@
+%% -*- coding:utf-8 -*- 
+\section{Mach-Zehnder Interferometer. Error of Phase Measurements.}
+\subsection{Interferometer Equation}
+\rindex{Mach-Zehnder Interferometer}
+Let us now consider in more detail the operation of the Mach-Zehnder interferometer,
+the schematic of which is shown in \autoref{figPart2Interfero_4}.
+
+\input ./part2/interfero/fig4.tex
+
+Assume that the input $M_1$ and output $M_2$ mirrors are partially transparent
+(50:50), i.e.
+\[
+t = r = \frac{1}{\sqrt{2}},
+\]
+and the other two mirrors are fully reflective
+\[
+t = 0, \, r = 1.
+\]
+The ``scattering matrix'' of the beam splitters has the form
+\begin{equation}
+\hat{S} = \frac{1}{\sqrt{2}} 
+\left(
+\begin{array}{cc}
+1 & i \\
+i & 1 \\
+\end{array}
+\right).
+\nonumber
+\end{equation}
+Here we used the notation \eqref{eqPart2Interfero4a}. 
+The interferometer equation is:
+\begin{eqnarray}
+\hat{a}_2 = \frac{1}{\sqrt{2}} \left(\hat{a}_0 + i \hat{a}_1\right),
+\,
+\hat{a}_3 = \frac{1}{\sqrt{2}} \left(i \hat{a}_0 + \hat{a}_1\right),
+\nonumber \\
+\hat{a}_4 = \frac{1}{\sqrt{2}} \left(i \hat{a}_2 + e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+i \left(1 + e^{i \varphi}\right)\hat{a}_0 -
+\left(1 - e^{i \varphi}\right)\hat{a}_1
+\right],
+\nonumber \\
+\hat{a}_5 = \frac{1}{\sqrt{2}} \left(\hat{a}_2 + i e^{i \varphi}
+\hat{a}_3\right) = 
+\frac{1}{2}\left[
+\left(1 - e^{i \varphi}\right)\hat{a}_0 +
+i \left(1 + e^{i \varphi}\right)\hat{a}_1
+\right],
+\label{eqPart2Interfero11}
+\end{eqnarray}
+where $\varphi$ is the difference in optical path lengths of the interferometer arms (the phase difference accrued in the arms).
+
+Formulas \eqref{eqPart2Interfero11} connect the input fields with
+the output fields. Let us assume that the input field at port zero is in
+the vacuum state $\ket{0}$, and the input field at port one is in
+a coherent state $\left|\alpha\right>$. Thus the input
+field is in a two-mode state $\left|\psi\right> =
+\ket{0}_0\left|\alpha\right>_1$. Next, one can find
+the mean number of photons at outputs 4 and 5 depending on
+$\varphi$. The result will be indistinguishable from the classical one.
+Indeed,
+\begin{eqnarray}
+  \hat{a}_5^{\dag}\hat{a}_5 =
+  \frac{1}{4}
+  \left[
+    \left(1 - e^{-i \varphi}\right)\hat{a}_0^{\dag} -
+    i \left(1 + e^{-i \varphi}\right)\hat{a}_1^{\dag}
+    \right]
+  \nonumber \\
+  \left[
+    \left(1 - e^{i \varphi}\right)\hat{a}_0 +
+    i \left(1 + e^{i \varphi}\right)\hat{a}_1
+    \right] = 
+  \nonumber \\
+  = \frac{1}{2}
+  \left[
+    \left(
+    1 -  \cos \varphi 
+    \right)
+    \hat{a}_0^{\dag}\hat{a}_0 +
+    \left(
+    1 +  \cos \varphi 
+    \right)
+    \hat{a}_1^{\dag}\hat{a}_1
+    \right] -
+  \frac{\sin \varphi}{2}
+  \left[
+    \hat{a}_0^{\dag}\hat{a}_1 +
+    \hat{a}_1^{\dag}\hat{a}_0
+    \right]
+  \label{eqPart2InterferoA55}
+\end{eqnarray}
+Thus, for the state $\left|\psi\right> =
+\ket{0}_0\left|\alpha\right>_1$ the detector at port 5 produces
+the following signal
+\[
+\left<\psi\right|\hat{a}^{\dag}_5 \hat{a}_5\left|\psi\right> =
+\frac{1}{2}\left(1+\cos \varphi \right) \left|\alpha\right|^2.
+\]
+
+For the photodetector at port 4 similarly we obtain
+\begin{eqnarray}
+  \hat{a}_4^{\dag}\hat{a}_4 =
+  \frac{1}{4}
+  \left[
+    - i \left(1 + e^{-i \varphi}\right)\hat{a}_0^{\dag} -
+    \left(1 - e^{-i \varphi}\right)\hat{a}_1^{\dag}
+    \right]
+  \nonumber \\
+  \left[
+    i \left(1 + e^{i \varphi}\right)\hat{a}_0 -
+    \left(1 - e^{i \varphi}\right)\hat{a}_1
+    \right] = 
+  \nonumber \\
+  = \frac{1}{2}
+  \left[
+    \left(
+    1 +  \cos \varphi 
+    \right)
+    \hat{a}_0^{\dag}\hat{a}_0 +
+    \left(
+    1 -  \cos \varphi 
+    \right)
+    \hat{a}_1^{\dag}\hat{a}_1
+    \right] +
+  \frac{\sin \varphi}{2}
+  \left[
+    \hat{a}_0^{\dag}\hat{a}_1 +
+    \hat{a}_1^{\dag}\hat{a}_0
+    \right]
+  \label{eqPart2InterferoA44}
+\end{eqnarray}
+At photodetector 4 we have
+the following signal
+\[
+\left<\psi\right|\hat{a}^{\dag}_4 \hat{a}_4\left|\psi\right> =
+\frac{1}{2}\left(1-\cos \varphi \right) \left|\alpha\right|^2.
+\]
+
+\input ./part2/interfero/fig5.tex
+
+We consider a more complex balanced detection scheme,
+shown in \autoref{figPart2Interfero_5}. Each channel
+is detected by its own photodetector. The signals coming from the photodetectors
+are subtracted and recorded. This detection scheme essentially is a
+\rindex{homodyne!homodyne detector}
+synchronous detector (homodyne detector), where the local oscillator is
+the field in the coherent state, and the signal consists of vacuum fluctuations.
+
+Using (\ref{eqPart2InterferoA44},
+\ref{eqPart2InterferoA55}) one can calculate
+the signal at the input of the balanced detector, which is defined as the expectation value
+of the operator  
+\begin{equation}
+\hat{R} = 
+\hat{a}_5^{\dag} \hat{a}_5 - 
+\hat{a}_4^{\dag} \hat{a}_4 =
+\left(
+\hat{a}_1^{\dag} \hat{a}_1 - 
+\hat{a}_0^{\dag} \hat{a}_0
+\right) \cos\,\varphi -
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 + 
+\hat{a}_1^{\dag} \hat{a}_0
+\right) \sin\,\varphi.
+\label{eqPart2Interfero12}
+\end{equation}
+In deriving \eqref{eqPart2Interfero12} the relations
+\eqref{eqPart2Interfero11} were used.
+
+\rindex{homodyne}
+If the mode of the local oscillator (input 1, mode $\hat{a}_1$) is in
+a coherent state with a large amplitude $\alpha$, while the signal mode
+(input 0, mode $\hat{a}_0$) is in the vacuum state, then the output signal
+is
+\begin{eqnarray}
+\left<\hat{R}\right> = 
+\left<\psi\right|\hat{R} \left|\psi\right> = 
+\bra{0}_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{\dag} \hat{a}_1 - 
+\hat{a}_0^{\dag} \hat{a}_0
+\right)
+\ket{0}_0\left|\alpha\right>_1
+\cos\,\varphi
+-
+\nonumber \\
+-
+\bra{0}_0\left<\alpha\right|_1
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 + 
+\hat{a}_1^{\dag} \hat{a}_0
+\right) 
+\ket{0}_0\left|\alpha\right>_1 = 
+\nonumber \\
+= \left|\alpha\right|^2 \cos\,\varphi.
+\label{eqPart2Interfero13}
+\end{eqnarray}
+In deriving \eqref{eqPart2Interfero13} it was taken into account that the operators
+of the first and zero modes act only on the state of their
+own mode. Therefore,
+\[
+\hat{a}_0\ket{0} = 0, \, 
+\bra{0}\hat{a}_0^{\dag} = 0,
+\]
+and hence 
+\[
+\bra{0}_0\left<\alpha\right|_1
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 + 
+\hat{a}_1^{\dag} \hat{a}_0
+\right) 
+\ket{0}_0\left|\alpha\right>_1 = 0,
+\]
+while
+\begin{eqnarray}
+\left<\psi\right|\hat{R} \left|\psi\right>= 
+\bra{0}_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{\dag} \hat{a}_1 - 
+\hat{a}_0^{\dag} \hat{a}_0
+\right)
+\ket{0}_0\left|\alpha\right>_1
+=
+\nonumber \\
+=
+\bra{0}_0\left<\alpha\right|_1
+\left(
+\hat{a}_1^{\dag} \hat{a}_1
+\right)
+\ket{0}_0\left|\alpha\right>_1
+= \left|\alpha\right|^2 = 
+\left<\hat{n}\right>
+\nonumber
+\end{eqnarray}
+\rindex{homodyne}
+is equal to the mean photon number in the local oscillator mode.
+
+If $\varphi = \frac{\pi}{2}$, then $\left<\hat{R}\right> = 0$ and
+the output signal is absent. At the same time, the operator $\hat{R} \ne 0$:
+\[
+\hat{R} = 
+-
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 + 
+\hat{a}_1^{\dag} \hat{a}_0
+\right).
+\]
+Although the mean of this operator is zero, the mean of its square will
+be nonzero and will describe the noise which limits the accuracy
+of measuring $\varphi$, which itself describes the difference
+in optical path lengths of the interferometer arms.
+
+\subsection{Measurement Accuracy of the Interferometer}
+
+First, let us find the mean square of the noise term:
+\begin{eqnarray}
+\left<\psi\right|\hat{R}\hat{R}^{\dag}\left|\psi\right> = 
+\left<\psi\right|
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 + 
+\hat{a}_1^{\dag} \hat{a}_0
+\right)
+\left(
+\hat{a}_0 \hat{a}_1^{\dag} +
+\hat{a}_1 \hat{a}_0^{\dag}
+\right)
+\left|\psi\right> = 
+\nonumber \\
+\left<\psi\right|
+\left(
+\hat{a}_0^{\dag} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{\dag} 
++ 
+\hat{a}_0^{\dag} \hat{a}_1 
+\hat{a}_1 \hat{a}_0^{\dag}
++
+\hat{a}_1^{\dag} \hat{a}_0
+\hat{a}_0 \hat{a}_1^{\dag} 
++
+\hat{a}_1^{\dag} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{\dag}
+\right)
+\left|\psi\right>.
+\label{eqPart2Interfero15}
+\end{eqnarray}
+Of the four terms in \eqref{eqPart2Interfero15}, the first three vanish upon averaging, while the last one is nonzero.
+For example, for the first term we have
+\begin{eqnarray}
+\left<\psi\right|
+\hat{a}_0^{\dag} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{\dag} 
+\left|\psi\right> = 
+\bra{0}_0\left<\alpha\right|_1
+\hat{a}_0^{\dag} \hat{a}_1 
+\hat{a}_0 \hat{a}_1^{\dag} 
+\ket{0}_0\left|\alpha\right>_1 =
+\nonumber \\
+=
+\bra{0}_0\left<\alpha\right|_1
+\hat{a}_0^{\dag} \hat{a}_0 
+\hat{a}_1 \hat{a}_1^{\dag} 
+\ket{0}_0\left|\alpha\right>_1 =
+\bra{0}_0
+\hat{a}_0^{\dag} \hat{a}_0 
+\ket{0}_0
+\left<\alpha\right|_1
+\hat{a}_1 \hat{a}_1^{\dag} 
+\left|\alpha\right>_1 =
+0.
+\nonumber
+\end{eqnarray}
+The last term equals
+\begin{eqnarray}
+\left<\psi\right|
+\hat{a}_1^{\dag} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{\dag}
+\left|\psi\right> = 
+\bra{0}_0\left<\alpha\right|_1
+\hat{a}_1^{\dag} \hat{a}_0
+\hat{a}_1 \hat{a}_0^{\dag}
+\ket{0}_0\left|\alpha\right>_1 =
+\nonumber \\
+=
+\bra{0}_0\left<\alpha\right|_1
+\hat{a}_1^{\dag} \hat{a}_1 
+\hat{a}_0 \hat{a}_0^{\dag}
+\ket{0}_0\left|\alpha\right>_1 =
+\left<\alpha\right|_1
+\hat{a}_1^{\dag} \hat{a}_1 
+\left|\alpha\right>_1 
+\bra{0}_0
+\hat{a}_0 \hat{a}_0^{\dag}
+\ket{0}_0 =
+\nonumber \\
+=
+\left<\alpha\right|_1
+\hat{a}_1^{\dag} \hat{a}_1 
+\left|\alpha\right>_1 
+\bra{1}
+\ket{1}_0 =
+\left<\alpha\right|_1
+\hat{a}_1^{\dag} \hat{a}_1 
+\left|\alpha\right>_1 
+= \left|\alpha\right|^2.
+\end{eqnarray}
+Thus, we have found that the root mean square value of the noise is equal to
+the mean photon number in the mode that is in the coherent state:
+\begin{equation}
+\bar{\left|R\right|^2} = 
+\left<\hat{R}\hat{R}^{\dag}\right> = 
+\left|\alpha\right|^2 =
+\bar{n}.
+\nonumber
+\end{equation}
+The standard deviation is
+\begin{equation}
+\sqrt{\bar{\left|R\right|^2}} = 
+\sqrt{\bar{n}}.
+\nonumber
+\end{equation}
+The signal arises due to the variation
+\[
+\varphi = \frac{\pi}{2} + \Delta \varphi.
+\]
+Its magnitude is
+\[
+\bar{R} = \bar{n} \cos\left(\frac{\pi}{2} + \Delta \varphi\right) \approx
+- \bar{n} \Delta \varphi.
+\]
+The minimal distinguishable signal, i.e., the threshold signal, will be
+considered the signal equal to the noise standard deviation:
+\[
+\left|\bar{n} \Delta \varphi\right| \ge
+\sqrt{\bar{\left|R\right|^2}} = 
+\sqrt{\bar{n}},
+\]
+from which it follows that
+\[
+\Delta \varphi  \ge \frac{1}{\sqrt{\bar{n}}}.
+\]
+Equality corresponds to the threshold value of $\Delta \varphi$.
+
+As we will see later (see ch. \ref{chSqueezed}), the measurement accuracy
+can be significantly improved if the ``squeezed vacuum'' is supplied
+to the signal arm of the interferometer.  
+
+

@@ -1,0 +1,2231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{wiki:deltafunction}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3bf2012d5ee45a9642d2ecbebc18c0bd}{%
+           family={"Википедия"},
+           familyi={"\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{fullhash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{fullhashraw}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{bibnamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorbibnamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authornamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorfullhash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorfullhashraw}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \field{extraname}{1}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{"Дельта-функция --- Википедия, свободная энциклопедия"}
+      \field{year}{"2019"}
+      \verb{urlraw}
+      \verb "https://ru.wikipedia.org/?oldid=99318415"
+      \endverb
+      \verb{url}
+      \verb https://ru.wikipedia.org/?oldid=99318415
+      \endverb
+    \endentry
+    \entry{wiki:fourier_transform}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3bf2012d5ee45a9642d2ecbebc18c0bd}{%
+           family={"Википедия"},
+           familyi={"\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{fullhash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{fullhashraw}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{bibnamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorbibnamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authornamehash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorfullhash}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \strng{authorfullhashraw}{3bf2012d5ee45a9642d2ecbebc18c0bd}
+      \field{extraname}{2}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{"Преобразование Фурье --- Википедия, свободная энциклопедия"}
+      \field{year}{"2019"}
+      \verb{urlraw}
+      \verb "https://ru.wikipedia.org/?oldid=99860150"
+      \endverb
+      \verb{url}
+      \verb https://ru.wikipedia.org/?oldid=99860150
+      \endverb
+    \endentry
+    \entry{bPseudoTelepathy2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a66216ed00df74b370ae60c08dc98be0}{%
+           family={Aravind},
+           familyi={A\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{fullhash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{fullhashraw}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{bibnamehash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{authorbibnamehash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{authornamehash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{authorfullhash}{a66216ed00df74b370ae60c08dc98be0}
+      \strng{authorfullhashraw}{a66216ed00df74b370ae60c08dc98be0}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J.Phys}
+      \field{month}{10}
+      \field{title}{Quantum mysteries revisited again}
+      \field{volume}{72}
+      \field{year}{2004}
+      \field{pages}{1303\bibrangedash 7}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1119/1.1773173
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/228356664_Quantum_mysteries_revisited_again
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/228356664_Quantum_mysteries_revisited_again
+      \endverb
+    \endentry
+    \entry{bBell}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf630862cd70124837828aa7e08bbf1f}{%
+           family={Bell},
+           familyi={B\bibinitperiod},
+           given={John\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{fullhash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{fullhashraw}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{bibnamehash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{authorbibnamehash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{authornamehash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{authorfullhash}{cf630862cd70124837828aa7e08bbf1f}
+      \strng{authorfullhashraw}{cf630862cd70124837828aa7e08bbf1f}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics}
+      \field{title}{{On the Einstein-Podolsky-Rosen paradox}}
+      \field{volume}{1}
+      \field{year}{1964}
+      \field{pages}{195\bibrangedash 200}
+      \range{pages}{6}
+      \keyw{ghz\_paper}
+    \endentry
+    \entry{bBennettWiesner}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e07e222475916c813dd37c28db7c325}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Charles\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9a02adc0b40ebdd5e79f3dc2fb8a6565}{%
+           family={Wiesner},
+           familyi={W\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{fullhash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{fullhashraw}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{bibnamehash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{authorbibnamehash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{authornamehash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{authorfullhash}{11f03a10d6a4bf47853a6afa45d3368b}
+      \strng{authorfullhashraw}{11f03a10d6a4bf47853a6afa45d3368b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{Physical Review Letters}}
+      \field{number}{{20}}
+      \field{title}{{Communication via one- and two-particle operators on Einstein-Podolsky-Rosen states}}
+      \field{volume}{{69}}
+      \field{year}{{1992}}
+      \field{pages}{2881\bibrangedash 2884}
+      \range{pages}{4}
+      \verb{doi}
+      \verb \%7B10.1103/PhysRevLett.69.2881\%7D
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/\%7B10.1103/PhysRevLett.69.2881\%7D
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/%5C%7B10.1103/PhysRevLett.69.2881%5C%7D
+      \endverb
+    \endentry
+    \entry{bBennettGroverOptimal}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=9e07e222475916c813dd37c28db7c325}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Charles\bibnamedelima H.},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=36f07714b3f63f9e6b17f2c96124e0f0}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=504bb784f2241f359d5030d2ca7f2bdd}{%
+           family={Brassard},
+           familyi={B\bibinitperiod},
+           given={Gilles},
+           giveni={G\bibinitperiod}}}%
+        {{hash=64b47afeffedcc077d514b035c0d652e}{%
+           family={Vazirani},
+           familyi={V\bibinitperiod},
+           given={Umesh},
+           giveni={U\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA, USA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{e54e4559135d21380be766731de8c597}
+      \strng{fullhash}{ae3e74811c3e1115e06b5d013d484a89}
+      \strng{fullhashraw}{ae3e74811c3e1115e06b5d013d484a89}
+      \strng{bibnamehash}{e54e4559135d21380be766731de8c597}
+      \strng{authorbibnamehash}{e54e4559135d21380be766731de8c597}
+      \strng{authornamehash}{e54e4559135d21380be766731de8c597}
+      \strng{authorfullhash}{ae3e74811c3e1115e06b5d013d484a89}
+      \strng{authorfullhashraw}{ae3e74811c3e1115e06b5d013d484a89}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0097-5397}
+      \field{journaltitle}{SIAM J. Comput.}
+      \field{month}{10}
+      \field{number}{5}
+      \field{title}{Strengths and Weaknesses of Quantum Computing}
+      \field{volume}{26}
+      \field{year}{1997}
+      \field{pages}{1510\bibrangedash 1523}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1137/S0097539796300933
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1137/S0097539796300933
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1137/S0097539796300933
+      \endverb
+      \keyw{oracle quantum Turing machines,quantum Turing machines,quantum polynomial time}
+    \endentry
+    \entry{bPseudoTelepathy2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4ac633bb8e307167e6a35d5f05706502}{%
+           family={{Brassard}},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e90c5181951c3af759bb68f8e579f932}{%
+           family={{Broadbent}},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8b825f17fc71debbb3603fab293cd727}{%
+           family={{Tapp}},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{fullhash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{fullhashraw}{a42611277fe71bb04a2aca1b56181928}
+      \strng{bibnamehash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{authorbibnamehash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{authornamehash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{authorfullhash}{a42611277fe71bb04a2aca1b56181928}
+      \strng{authorfullhashraw}{a42611277fe71bb04a2aca1b56181928}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{eprint arXiv:quant-ph/0306042}
+      \field{month}{6}
+      \field{title}{{Multi-Party Pseudo-Telepathy}}
+      \field{year}{2003}
+      \verb{eprint}
+      \verb quant-ph/0306042
+      \endverb
+      \keyw{Quantum Physics}
+    \endentry
+    \entry{bEPR}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=29a34a00e610eaed35baff40f473278f}{%
+           family={Einstein},
+           familyi={E\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d59186c1b85b3f8d68d260a37ffb83da}{%
+           family={Podolsky},
+           familyi={P\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=70e8d4071d8f81779da7f6d13af0e080}{%
+           family={Rosen},
+           familyi={R\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{fullhash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{fullhashraw}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{bibnamehash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{authorbibnamehash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{authornamehash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{authorfullhash}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \strng{authorfullhashraw}{7c687c5b5bd0ef7e260e21e9454985bd}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical review}
+      \field{number}{10}
+      \field{title}{Can quantum-mechanical description of physical reality be considered complete?}
+      \field{volume}{47}
+      \field{year}{1935}
+      \field{pages}{777\bibrangedash 780}
+      \range{pages}{4}
+    \endentry
+    \entry{PhysRevLett.28.938}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=30b6e93ef2f1a965b6441998747d78e0}{%
+           family={Freedman},
+           familyi={F\bibinitperiod},
+           given={Stuart\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=362395d3270883cd4f3570714653e154}{%
+           family={Clauser},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{fullhash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{fullhashraw}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{bibnamehash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{authorbibnamehash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{authornamehash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{authorfullhash}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \strng{authorfullhashraw}{9b1d2ca63b2f63d788e32bde66ae5ee0}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{14}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{4}
+      \field{title}{Experimental Test of Local Hidden-Variable Theories}
+      \field{volume}{28}
+      \field{year}{1972}
+      \field{pages}{938\bibrangedash 941}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.28.938
+      \endverb
+      \verb{urlraw}
+      \verb http://link.aps.org/doi/10.1103/PhysRevLett.28.938
+      \endverb
+      \verb{url}
+      \verb http://link.aps.org/doi/10.1103/PhysRevLett.28.938
+      \endverb
+    \endentry
+    \entry{bGordon93discretelogarithms}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4d89987d7b9d8a21a1c62c8d0d7bb998}{%
+           family={Gordon},
+           familyi={G\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{fullhash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{fullhashraw}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{bibnamehash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{authorbibnamehash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{authornamehash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{authorfullhash}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \strng{authorfullhashraw}{4d89987d7b9d8a21a1c62c8d0d7bb998}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM J. Discrete Math}
+      \field{title}{Discrete logarithms in gf(p) using the number field sieve}
+      \field{volume}{6}
+      \field{year}{1993}
+      \field{pages}{124\bibrangedash 138}
+      \range{pages}{15}
+    \endentry
+    \entry{Grover96afast}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=619ef89ee12058aba6b0df9b17b11ca3}{%
+           family={Grover},
+           familyi={G\bibinitperiod},
+           given={Lov\bibnamedelima K.},
+           giveni={L\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{fullhash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{fullhashraw}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{bibnamehash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{authorbibnamehash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{authornamehash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{authorfullhash}{619ef89ee12058aba6b0df9b17b11ca3}
+      \strng{authorfullhashraw}{619ef89ee12058aba6b0df9b17b11ca3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ANNUAL ACM SYMPOSIUM ON THEORY OF COMPUTING}
+      \field{title}{A Fast Quantum Mechanical Algorithm for Database Search}
+      \field{year}{1996}
+      \field{pages}{212\bibrangedash 219}
+      \range{pages}{8}
+    \endentry
+    \entry{PhysRevD.28.2960}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8bd660ae37ed5c0546669e986e1dafd7}{%
+           family={Hartle},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=2be8e4f9a1eec9e94013d9d674ce8962}{%
+           family={Hawking},
+           familyi={H\bibinitperiod},
+           given={S.\bibnamedelimi W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{fullhash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{fullhashraw}{95c291572a8845bce10d2b4086f10dca}
+      \strng{bibnamehash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{authorbibnamehash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{authornamehash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{authorfullhash}{95c291572a8845bce10d2b4086f10dca}
+      \strng{authorfullhashraw}{95c291572a8845bce10d2b4086f10dca}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{12}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{month}{12}
+      \field{title}{Wave function of the Universe}
+      \field{volume}{28}
+      \field{year}{1983}
+      \field{pages}{2960\bibrangedash 2975}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.28.2960
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.28.2960
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevD.28.2960
+      \endverb
+    \endentry
+    \entry{bUllman2006}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=3eb95b81adce8c445e8b11c4e0615664}{%
+           family={Hopcroft},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2f555526320a1c4028ad0f6328953999}{%
+           family={Motwani},
+           familyi={M\bibinitperiod},
+           given={Rajeev},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cafe1d770c56825ebccdb81e9f7c9b3b}{%
+           family={Ullman},
+           familyi={U\bibinitperiod},
+           given={Jeffrey\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Longman Publishing Co., Inc.}%
+      }
+      \strng{namehash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{fullhash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{fullhashraw}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{bibnamehash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{authorbibnamehash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{authornamehash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{authorfullhash}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \strng{authorfullhashraw}{85ae6fc6ff83320bf9d3b4f48400007f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0321455363}
+      \field{title}{Introduction to Automata Theory, Languages, and Computation (3rd Edition)}
+      \field{year}{2006}
+    \endentry
+    \entry{courseIntroQuantumOpticsCoursera}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=9762b57cc99c92ec8a2a7a17b8ac76c9}{%
+           family={{Immanuel Bloch}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=fa5982241130b5c3ac58df02bd890c49}{%
+           family={{Simon Fölling}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Coursera}%
+      }
+      \strng{namehash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{fullhash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{fullhashraw}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{bibnamehash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{authorbibnamehash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{authornamehash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{authorfullhash}{a11d65be69cd90d0cf4af21aa2639b81}
+      \strng{authorfullhashraw}{a11d65be69cd90d0cf4af21aa2639b81}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://class.coursera.org/qoptintro-001}}
+      \field{note}{[Online; accessed 23-February-2016]}
+      \field{title}{{Introduction to Quantum Optics}}
+      \field{year}{2016}
+    \endentry
+    \entry{DBLP:conf/new2an/2015}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=c23efbafad0510caf2c75cf38cc4ffa8}{%
+           family={{Ivan Murashko}},
+           familyi={I\bibinitperiod}}}%
+        {{hash=56bd59590ac8e010673f91810d756ad3}{%
+           family={{Constantine Korikov}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=4fcc8c8224e1787a8d638708e099a6a8}{%
+           family={{Sergey Balandin}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=6dc535af9ef038a1a6348dc90a105926}{%
+           family={{Sergey D. Andreev}},
+           familyi={S\bibinitperiod}}}%
+        {{hash=41ec1ed95e7da5a91c7862e1310543d8}{%
+           family={{Yevgeni Koucheryavy}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{fullhash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{fullhashraw}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{bibnamehash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{authorbibnamehash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{authornamehash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{authorfullhash}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{authorfullhashraw}{6861602a9dbc4f389d21cb8db5126802}
+      \strng{editorbibnamehash}{1a9503eebbc8f6ed77d0e95e80224d68}
+      \strng{editornamehash}{1a9503eebbc8f6ed77d0e95e80224d68}
+      \strng{editorfullhash}{1a9503eebbc8f6ed77d0e95e80224d68}
+      \strng{editorfullhashraw}{1a9503eebbc8f6ed77d0e95e80224d68}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Internet of Things, Smart Spaces, and Next Generation Networks and Systems - 15th International Conference, {NEW2AN} 2015, and 8th Conference, ruSMART 2015, St. Petersburg, Russia, August 26-28, 2015, Proceedings}
+      \field{isbn}{978-3-319-23125-9}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Analyze	of	Quantum	Fourier	Transform	Circuit	Implementation}
+      \field{volume}{9247}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1007/978-3-319-23126-6
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/978-3-319-23126-6
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/978-3-319-23126-6
+      \endverb
+    \endentry
+    \entry{bKulik}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=08d7dfd9cd878b536f110884a6ebe2e6}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Yoon-Ho},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=b12f7a432750338ad07b5a77e183ca76}{%
+           family={Kulik},
+           familyi={K\bibinitperiod},
+           given={Sergei\bibnamedelima P.\bibnamedelimi },
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=45c14c84032c8da2808168885d10d15b}{%
+           family={Shih},
+           familyi={S\bibinitperiod},
+           given={Yanhua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{025a74da2230932220865495a55d165a}
+      \strng{fullhash}{025a74da2230932220865495a55d165a}
+      \strng{fullhashraw}{025a74da2230932220865495a55d165a}
+      \strng{bibnamehash}{025a74da2230932220865495a55d165a}
+      \strng{authorbibnamehash}{025a74da2230932220865495a55d165a}
+      \strng{authornamehash}{025a74da2230932220865495a55d165a}
+      \strng{authorfullhash}{025a74da2230932220865495a55d165a}
+      \strng{authorfullhashraw}{025a74da2230932220865495a55d165a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{number}{7}
+      \field{title}{Quantum Teleportation with a Complete Bell State Measurement}
+      \field{volume}{86}
+      \field{year}{2001}
+      \field{pages}{1370\bibrangedash 1373}
+      \range{pages}{4}
+      \verb{urlraw}
+      \verb http://www.citebase.org/abstract?id=oai:arXiv.org:quant-ph/0010046
+      \endverb
+      \verb{url}
+      \verb http://www.citebase.org/abstract?id=oai:arXiv.org:quant-ph/0010046
+      \endverb
+    \endentry
+    \entry{Lamb1995}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9412d84f72e2903325cf3298e3daaf1a}{%
+           family={Lamb},
+           familyi={L\bibinitperiod},
+           given={W.\bibnamedelimi E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{fullhash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{fullhashraw}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{bibnamehash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{authorbibnamehash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{authornamehash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{authorfullhash}{9412d84f72e2903325cf3298e3daaf1a}
+      \strng{authorfullhashraw}{9412d84f72e2903325cf3298e3daaf1a}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{It should be apparent from the title of this article that the author does not like the use of the word ``photon'', which dates from 1926. In his view, there is no such thing as a photon. Only a comedy of errors and historical accidents led to its popularity among physicists and optical scientists. I admit that the word is short and convenient. Its use is also habit forming. Similarly, one might find it convenient to speak of the ``aether'' or ``vacuum'' to stand for empty space, even if no such thing existed. There are very good substitute words for ``photon'', (e.g., ``radiation'' or ``light''), and for ``photonics'' (e.g., ``optics'' or ``quantum optics''). Similar objections are possible to use of the word ``phonon'', which dates from 1932. Objects like electrons, neutrinos of finite rest mass, or helium atoms can, under suitable conditions, be considered to be particles, since their theories then have viable non-relativistic and non-quantum limits. This paper outlines the main features of the quantum theory of radiation and indicates how they can be used to treat problems in quantum optics.}
+      \field{issn}{1432-0649}
+      \field{journaltitle}{Applied Physics B}
+      \field{number}{2}
+      \field{title}{Anti-photon}
+      \field{volume}{60}
+      \field{year}{1995}
+      \field{pages}{77\bibrangedash 84}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1007/BF01135846
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/BF01135846
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/BF01135846
+      \endverb
+    \endentry
+    \entry{bDenseCodeExp}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=ba7fcc8a13ef8ae732c9964aa0b72833}{%
+           family={Mattle},
+           familyi={M\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ebdf6a8a3edc28cc9c608fabbd805369}{%
+           family={Weinfurter},
+           familyi={W\bibinitperiod},
+           given={Harald},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4bd79d972ae669e316feea3db72e9a3e}{%
+           family={Kwiat},
+           familyi={K\bibinitperiod},
+           given={Paul\bibnamedelima G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a961661d22885d8f3bcba104deec38f0}{%
+           family={Zeilinger},
+           familyi={Z\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0183301e67849c421c31d2f4d397e9b7}
+      \strng{fullhash}{3f922621a25a8d1ab0ae31791995b2c0}
+      \strng{fullhashraw}{3f922621a25a8d1ab0ae31791995b2c0}
+      \strng{bibnamehash}{0183301e67849c421c31d2f4d397e9b7}
+      \strng{authorbibnamehash}{0183301e67849c421c31d2f4d397e9b7}
+      \strng{authornamehash}{0183301e67849c421c31d2f4d397e9b7}
+      \strng{authorfullhash}{3f922621a25a8d1ab0ae31791995b2c0}
+      \strng{authorfullhashraw}{3f922621a25a8d1ab0ae31791995b2c0}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{Classically, sending more than one bit of information requires manipulation of more than one two-state particle. We demonstrate experimentally that one can transmit one of three messages, i.e., 1 " trit" = 1.58bit, by manipulating only one of two entangled particles. The increased channel capacity is proven by transmitting ASCII characters in five trits instead of the usual 8 bits.}}
+      \field{journaltitle}{Physical Review Letters}
+      \field{month}{6}
+      \field{number}{25}
+      \field{title}{{Dense Coding in Experimental Quantum Communication}}
+      \field{volume}{76}
+      \field{year}{1996}
+      \field{pages}{4656\bibrangedash 4659}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.76.4656
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.76.4656
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevLett.76.4656
+      \endverb
+    \endentry
+    \entry{nielsen2000quantum}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=17279793dcf098cfda8570111ee5cfd9}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={M.A.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8af57cd4248e7e6549aa291aa9bd3b56}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={I.L.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{fullhash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{fullhashraw}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{bibnamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorbibnamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authornamehash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorfullhash}{f41c5acd8ed5ba44574134c269bdca5a}
+      \strng{authorfullhashraw}{f41c5acd8ed5ba44574134c269bdca5a}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521635035}
+      \field{series}{Cambridge Series on Information and the Natural Sciences}
+      \field{title}{Quantum Computation and Quantum Information}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb http://books.google.ru/books?id=65FqEKQOfP8C
+      \endverb
+      \verb{url}
+      \verb http://books.google.ru/books?id=65FqEKQOfP8C
+      \endverb
+    \endentry
+    \entry{Nogues1999Nv400p239}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=096f7ce454cbfb6673272c96b9a5a747}{%
+           family={Nogues},
+           familyi={N\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=51fd20a80155bee78b1cc2f69071dcd7}{%
+           family={Rauschenbeutel},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dedd4971ca3b814c36d91c54024568bd}{%
+           family={Osnaghi},
+           familyi={O\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ac30a4e4024ddef6e309e1ebe5c27ca8}{%
+           family={Brune},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d3bd7504704fc8a6f433b58847ea4b4c}{%
+           family={Raimond},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b59d618f0da6b1ce662db72ad165eeb4}{%
+           family={Haroche},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ac2bf2d7b68f360879a975068ad542e}
+      \strng{fullhash}{c3e90767f270f3c844a54e00c2d369fa}
+      \strng{fullhashraw}{c3e90767f270f3c844a54e00c2d369fa}
+      \strng{bibnamehash}{3ac2bf2d7b68f360879a975068ad542e}
+      \strng{authorbibnamehash}{3ac2bf2d7b68f360879a975068ad542e}
+      \strng{authornamehash}{3ac2bf2d7b68f360879a975068ad542e}
+      \strng{authorfullhash}{c3e90767f270f3c844a54e00c2d369fa}
+      \strng{authorfullhashraw}{c3e90767f270f3c844a54e00c2d369fa}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{title}{{S}eeing a single photon without destroying it}
+      \field{volume}{400}
+      \field{year}{1999}
+      \field{pages}{239\bibrangedash 242}
+      \range{pages}{4}
+      \keyw{file-import-09-12-22,measurement,photon,qnd,single}
+    \endentry
+    \entry{Proos:2003:SDL:2011528.2011531}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=296e5c0b1581577952fa762df7cf5e9c}{%
+           family={Proos},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1a6e003ed74f06415ad65e08912ebb7f}{%
+           family={Zalka},
+           familyi={Z\bibinitperiod},
+           given={Christof},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paramus, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Rinton Press, Incorporated}%
+      }
+      \strng{namehash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{fullhash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{fullhashraw}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{bibnamehash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{authorbibnamehash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{authornamehash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{authorfullhash}{a1fa2ef4199c59535b2eac493176a4ab}
+      \strng{authorfullhashraw}{a1fa2ef4199c59535b2eac493176a4ab}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1533-7146}
+      \field{journaltitle}{Quantum Info. Comput.}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{Shor's Discrete Logarithm Quantum Algorithm for Elliptic Curves}
+      \field{volume}{3}
+      \field{year}{2003}
+      \field{pages}{317\bibrangedash 344}
+      \range{pages}{28}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/quant-ph/0301141
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/quant-ph/0301141
+      \endverb
+      \keyw{discrete logarithm,elliptic curves,quantum computation}
+    \endentry
+    \entry{ReneSchoof:1985}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=4221044d09b97c88692767c7b6ef16f0}{%
+           family={Schoof},
+           familyi={S\bibinitperiod},
+           given={René\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{fullhash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{fullhashraw}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{bibnamehash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{authorbibnamehash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{authornamehash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{authorfullhash}{4221044d09b97c88692767c7b6ef16f0}
+      \strng{authorfullhashraw}{4221044d09b97c88692767c7b6ef16f0}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025--5718}
+      \field{journaltitle}{Mathematics of Computation}
+      \field{note}{URL: {\tt http://cr.yp.to/\allowbreak bib/\allowbreak entries.html\#\allowbreak 1985/\allowbreak schoof}}
+      \field{title}{{Elliptic curves over finite fields and the computation of square roots mod $p$}}
+      \field{volume}{44}
+      \field{year}{1985}
+      \field{pages}{483\bibrangedash 494}
+      \range{pages}{12}
+    \endentry
+    \entry{bShenon}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=22e2130b8d96f93daba648ff62af869b}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{fullhash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{fullhashraw}{22e2130b8d96f93daba648ff62af869b}
+      \strng{bibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorbibnamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authornamehash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorfullhash}{22e2130b8d96f93daba648ff62af869b}
+      \strng{authorfullhashraw}{22e2130b8d96f93daba648ff62af869b}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bell system technical journal}
+      \field{title}{{A mathematical theory of communication}}
+      \field{volume}{27}
+      \field{year}{1948}
+      \field{pages}{379\bibrangedash 423\bibrangessep 623\bibrangedash 656}
+      \range{pages}{79}
+      \keyw{information-theory,work}
+    \endentry
+    \entry{bShenonCrypto}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=536c91678d1dde76c9acd47047556291}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={Claude\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{536c91678d1dde76c9acd47047556291}
+      \strng{fullhash}{536c91678d1dde76c9acd47047556291}
+      \strng{fullhashraw}{536c91678d1dde76c9acd47047556291}
+      \strng{bibnamehash}{536c91678d1dde76c9acd47047556291}
+      \strng{authorbibnamehash}{536c91678d1dde76c9acd47047556291}
+      \strng{authornamehash}{536c91678d1dde76c9acd47047556291}
+      \strng{authorfullhash}{536c91678d1dde76c9acd47047556291}
+      \strng{authorfullhashraw}{536c91678d1dde76c9acd47047556291}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bell Systems Technical Journal}
+      \field{title}{{Communication Theory of Secrecy Systems}}
+      \field{volume}{28}
+      \field{year}{1949}
+      \field{pages}{656\bibrangedash 715}
+      \range{pages}{60}
+      \keyw{master,secrecy\_systems,teoria-informacao,theory\_communication,theory\_cryptography}
+    \endentry
+    \entry{bShor94}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=7082a9c99d5d51479d4cfba6bbac2d30}{%
+           family={Shor},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{fullhash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{fullhashraw}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{bibnamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorbibnamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authornamehash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorfullhash}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \strng{authorfullhashraw}{7082a9c99d5d51479d4cfba6bbac2d30}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FOCS}
+      \field{title}{Algorithms for Quantum Computation: Discrete Logarithms and Factoring}
+      \field{year}{1994}
+      \field{pages}{124\bibrangedash 134}
+      \range{pages}{11}
+    \endentry
+    \entry{Washington:2008:ECN:1388394}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=69835b36275ec8c34f049b5bcea8cf76}{%
+           family={Washington},
+           familyi={W\bibinitperiod},
+           given={Lawrence\bibnamedelima C.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chapman \& Hall/CRC}%
+      }
+      \strng{namehash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{fullhash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{fullhashraw}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{bibnamehash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{authorbibnamehash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{authornamehash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{authorfullhash}{69835b36275ec8c34f049b5bcea8cf76}
+      \strng{authorfullhashraw}{69835b36275ec8c34f049b5bcea8cf76}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{9781420071467}
+      \field{title}{Elliptic Curves: Number Theory and Cryptography, Second Edition}
+      \field{year}{2008}
+    \endentry
+    \entry{wiki:autler_townes_effect}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 17-April-2017]}
+      \field{title}{Autler–Townes effect --- Wikipedia{,} The Free Encyclopedia}
+      \field{year}{"2017"}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Autler-Townes_effect&oldid=763887291
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Autler-Townes_effect&oldid=763887291
+      \endverb
+    \endentry
+    \entry{bWikiDiscretLog}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhashraw}{9c677286866aad38f8e9b660f5411814}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{http://ru.wikipedia.org/wiki/Дискретное\_логарифмирование}
+      \field{note}{[Online; accessed 29-October-2013]}
+      \field{title}{Дискретное логарифмирование --- {W}ikipedia, {T}he Free Encyclopedia}
+      \field{year}{2013}
+    \endentry
+    \entry{bNoClone}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=7c42dbdfa523f87633ee456f4fa13ee1}{%
+           family={Wootters},
+           familyi={W\bibinitperiod},
+           given={W.\bibnamedelimi K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=7870a9932e246b06d809182cc15a7840}{%
+           family={Zurek},
+           familyi={Z\bibinitperiod},
+           given={W.\bibnamedelimi H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{34515a74af2cc831bde694227c71205b}
+      \strng{fullhash}{34515a74af2cc831bde694227c71205b}
+      \strng{fullhashraw}{34515a74af2cc831bde694227c71205b}
+      \strng{bibnamehash}{34515a74af2cc831bde694227c71205b}
+      \strng{authorbibnamehash}{34515a74af2cc831bde694227c71205b}
+      \strng{authornamehash}{34515a74af2cc831bde694227c71205b}
+      \strng{authorfullhash}{34515a74af2cc831bde694227c71205b}
+      \strng{authorfullhashraw}{34515a74af2cc831bde694227c71205b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{month}{10}
+      \field{number}{5886}
+      \field{title}{{A single quantum cannot be cloned}}
+      \field{volume}{299}
+      \field{year}{1982}
+      \field{pages}{802\bibrangedash 803}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1038/299802a0
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1038/299802a0
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/299802a0
+      \endverb
+    \endentry
+    \entry{bNonclassSqueezedStateDetection}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a2dea02190dd3505b7481a8d5d835b4c}{%
+           family={Yamamoto},
+           familyi={Y\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=9237316a1620462fb07afa5864147af3}{%
+           family={Haus},
+           familyi={H\bibinitperiod},
+           given={H.\bibnamedelimi A.},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{fullhash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{fullhashraw}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{bibnamehash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{authorbibnamehash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{authornamehash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{authorfullhash}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \strng{authorfullhashraw}{bb6c6ed61af37a71c9c1ace8b4e01ae3}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Preparation, measurement and information capacity of optical quantum states}
+      \field{volume}{58}
+      \field{year}{1986}
+      \field{pages}{1001\bibrangedash 1020}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.58.1001
+      \endverb
+    \endentry
+    \entry{bZurek02}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7870a9932e246b06d809182cc15a7840}{%
+           family={Zurek},
+           familyi={Z\bibinitperiod},
+           given={W.\bibnamedelimi H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7870a9932e246b06d809182cc15a7840}
+      \strng{fullhash}{7870a9932e246b06d809182cc15a7840}
+      \strng{fullhashraw}{7870a9932e246b06d809182cc15a7840}
+      \strng{bibnamehash}{7870a9932e246b06d809182cc15a7840}
+      \strng{authorbibnamehash}{7870a9932e246b06d809182cc15a7840}
+      \strng{authornamehash}{7870a9932e246b06d809182cc15a7840}
+      \strng{authorfullhash}{7870a9932e246b06d809182cc15a7840}
+      \strng{authorfullhashraw}{7870a9932e246b06d809182cc15a7840}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Los Alamos Science}
+      \field{number}{27}
+      \field{title}{Decoherence and the Transition from Quantum to Classical---Revisited}
+      \field{year}{2002}
+      \field{pages}{2\bibrangedash 25}
+      \range{pages}{24}
+      \verb{urlraw}
+      \verb http://vvkuz.ru/books/zurek.pdf
+      \endverb
+      \verb{url}
+      \verb http://vvkuz.ru/books/zurek.pdf
+      \endverb
+      \keyw{QCT decoherence}
+    \endentry
+    \entry{bYaglom}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=7a06a1925636e02b2837ac27bf298c40}{%
+           family={{А. М. Яглом}},
+           familyi={А\bibinitperiod}}}%
+        {{hash=b8c8b851d255a57635180888749e82c4}{%
+           family={{И. М. Яглом}},
+           familyi={И\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{6f05053410016feb369092dac48a97e2}
+      \strng{fullhash}{6f05053410016feb369092dac48a97e2}
+      \strng{fullhashraw}{6f05053410016feb369092dac48a97e2}
+      \strng{bibnamehash}{6f05053410016feb369092dac48a97e2}
+      \strng{authorbibnamehash}{6f05053410016feb369092dac48a97e2}
+      \strng{authornamehash}{6f05053410016feb369092dac48a97e2}
+      \strng{authorfullhash}{6f05053410016feb369092dac48a97e2}
+      \strng{authorfullhashraw}{6f05053410016feb369092dac48a97e2}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Вероятность и информация}
+      \field{year}{1973}
+      \field{pages}{512}
+      \range{pages}{1}
+    \endentry
+    \entry{bKolmogorov74basic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=4f3ee3375d41bd180257e233d459e917}{%
+           family={{А. Н. Колмогоров}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{fullhash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{fullhashraw}{4f3ee3375d41bd180257e233d459e917}
+      \strng{bibnamehash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{authorbibnamehash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{authornamehash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{authorfullhash}{4f3ee3375d41bd180257e233d459e917}
+      \strng{authorfullhashraw}{4f3ee3375d41bd180257e233d459e917}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Основные понятия теории вероятностей}}
+      \field{year}{1974}
+    \endentry
+    \entry{bPhisQuantInfo}{book}{}{}
+      \name{editor}{1}{}{%
+        {{hash=0f05bc5b9c94fc83b8b9f95c16154bda}{%
+           family={{А. Цайлингера}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Постмаркет}%
+      }
+      \strng{namehash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{fullhash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{fullhashraw}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{bibnamehash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{editorbibnamehash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{editornamehash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{editorfullhash}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \strng{editorfullhashraw}{0f05bc5b9c94fc83b8b9f95c16154bda}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Физика квантовой информации}
+      \field{year}{2002}
+      \field{pages}{376}
+      \range{pages}{1}
+    \endentry
+    \entry{bHolevo2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=696e42fe9fdf937ab6813590ba7fb6a8}{%
+           family={{Александр Семенович Холево}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва, Ижевск}%
+      }
+      \list{publisher}{1}{%
+        {Институт компьютерных исследований}%
+      }
+      \strng{namehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{bibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorbibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authornamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \field{extraname}{1}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Вероятностные и статистические аспекты квантовой теории}}
+      \field{year}{2003}
+      \field{pages}{410}
+      \range{pages}{1}
+    \endentry
+    \entry{bHolevo2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=696e42fe9fdf937ab6813590ba7fb6a8}{%
+           family={{Александр Семенович Холево}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \strng{namehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{bibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorbibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authornamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \field{extraname}{2}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Математические основы квантовой информатики}}
+      \field{year}{2016}
+      \field{pages}{125}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.rqc.ru/education/lecture-courses/holevo-mathematical-fundamentals-of-quantum-informatics/Holevo22.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.rqc.ru/education/lecture-courses/holevo-mathematical-fundamentals-of-quantum-informatics/Holevo22.pdf
+      \endverb
+    \endentry
+    \entry{bHolevo2003add}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=696e42fe9fdf937ab6813590ba7fb6a8}{%
+           family={{Александр Семенович Холево}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва, Ижевск}%
+      }
+      \list{publisher}{1}{%
+        {Институт компьютерных исследований}%
+      }
+      \strng{namehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{fullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{bibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorbibnamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authornamehash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhash}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \strng{authorfullhashraw}{696e42fe9fdf937ab6813590ba7fb6a8}
+      \field{extraname}{3}
+      \field{sortinit}{А}
+      \field{sortinithash}{9db8541854f3671fde760253476fbbdb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Статистическая структура квантовой теории}}
+      \field{year}{2003}
+      \field{pages}{192}
+      \range{pages}{1}
+    \endentry
+    \entry{bSchneier}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8856474c1cd946eb049fc0a045b0a0f6}{%
+           family={{Брюс Шнайер}},
+           familyi={Б\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Триумф}%
+      }
+      \strng{namehash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{fullhash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{fullhashraw}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{bibnamehash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{authorbibnamehash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{authornamehash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{authorfullhash}{8856474c1cd946eb049fc0a045b0a0f6}
+      \strng{authorfullhashraw}{8856474c1cd946eb049fc0a045b0a0f6}
+      \field{sortinit}{Б}
+      \field{sortinithash}{5261f8dfa92113358b76bb09b8629977}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Прикладная криптография. Протоколы, алгоритмы, исходные тексты на языке Си}
+      \field{year}{2002}
+      \field{pages}{816}
+      \range{pages}{1}
+    \endentry
+    \entry{bTraceClassOperatorAdd1}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=ceb328c3c86279b0c4e9763eab843acf}{%
+           family={{В. А. Ильин}},
+           familyi={В\bibinitperiod}}}%
+        {{hash=c8bc1ab5e1e4e67f85841c8c8fcd3e00}{%
+           family={{Э. Г. Поздняк}},
+           familyi={Э\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Физматлит}%
+      }
+      \strng{namehash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{fullhash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{fullhashraw}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{bibnamehash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{authorbibnamehash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{authornamehash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{authorfullhash}{425ef36fcebf423ffc2ac9249226d4c9}
+      \strng{authorfullhashraw}{425ef36fcebf423ffc2ac9249226d4c9}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6}
+      \field{title}{Линейная алгебра}
+      \field{year}{2005}
+      \field{pages}{115}
+      \range{pages}{1}
+    \endentry
+    \entry{bBelokTimHrus}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=e6197dfab46c1cd8696b8c5f2430ab45}{%
+           family={{В. В. Белокуров}},
+           familyi={В\bibinitperiod}}}%
+        {{hash=bf5caaff18574130cd1b10bc436396de}{%
+           family={{О. Д. Тимофеевская}},
+           familyi={О\bibinitperiod}}}%
+        {{hash=e10591bd99ab437085be4b435ad947a1}{%
+           family={{О. А. Хрусталев}},
+           familyi={О\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Ижевск}%
+      }
+      \list{publisher}{1}{%
+        {НИЦ Регулярная и хаотическая динамика}%
+      }
+      \strng{namehash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{fullhash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{fullhashraw}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{bibnamehash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{authorbibnamehash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{authornamehash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{authorfullhash}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \strng{authorfullhashraw}{afcb36a83aaa3f7156c55d3ef40d6497}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовая телепортация - обыкновенное чудо}
+      \field{year}{2000}
+      \field{pages}{256}
+      \range{pages}{1}
+    \endentry
+    \entry{bCh1Quantel_Gin}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b5c2aabdbfffda803e71039019aed713}{%
+           family={{В. Л. Гинзбург}},
+           familyi={В\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{fullhash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{fullhashraw}{b5c2aabdbfffda803e71039019aed713}
+      \strng{bibnamehash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{authorbibnamehash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{authornamehash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{authorfullhash}{b5c2aabdbfffda803e71039019aed713}
+      \strng{authorfullhashraw}{b5c2aabdbfffda803e71039019aed713}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Теоретическая физика и астрофизика}
+      \field{year}{1981}
+    \endentry
+    \entry{bBykov}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=dd051aa0d658738da6666ff144b5abf3}{%
+           family={{В. П. Быков}},
+           familyi={В\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Физматлит}%
+      }
+      \strng{namehash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{fullhash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{fullhashraw}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{bibnamehash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{authorbibnamehash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{authornamehash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{authorfullhash}{dd051aa0d658738da6666ff144b5abf3}
+      \strng{authorfullhashraw}{dd051aa0d658738da6666ff144b5abf3}
+      \field{sortinit}{В}
+      \field{sortinithash}{769561dacf0468c568f33adb4926797c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Лазерная электродинамика}
+      \field{year}{2006}
+      \field{pages}{384}
+      \range{pages}{1}
+    \endentry
+    \entry{bDvait1973}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a6feadfd16182b3747eccae6293732d9}{%
+           family={{Г. Б. Двайт}},
+           familyi={Г\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{fullhash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{fullhashraw}{a6feadfd16182b3747eccae6293732d9}
+      \strng{bibnamehash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{authorbibnamehash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{authornamehash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{authorfullhash}{a6feadfd16182b3747eccae6293732d9}
+      \strng{authorfullhashraw}{a6feadfd16182b3747eccae6293732d9}
+      \field{sortinit}{Г}
+      \field{sortinithash}{c5a772f362f759c048c1f27b275f0dbf}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Таблицы интегралов и другие математические формулы}
+      \field{year}{1973}
+      \field{pages}{228}
+      \range{pages}{1}
+    \endentry
+    \entry{bHaken1988}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=04c1ef2de16fafc0ccc6a68d00e71e04}{%
+           family={{Г. Хакен}},
+           familyi={Г\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{fullhash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{fullhashraw}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{bibnamehash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{authorbibnamehash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{authornamehash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{authorfullhash}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \strng{authorfullhashraw}{04c1ef2de16fafc0ccc6a68d00e71e04}
+      \field{sortinit}{Г}
+      \field{sortinithash}{c5a772f362f759c048c1f27b275f0dbf}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Лазерная светодинамика}
+      \field{year}{1988}
+    \endentry
+    \entry{bEntangKlyshko}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ce29ec106238cf34ce35bb4708c6baed}{%
+           family={{Д. Н. Клышко}},
+           familyi={Д\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{fullhash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{fullhashraw}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{bibnamehash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{authorbibnamehash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{authornamehash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{authorfullhash}{ce29ec106238cf34ce35bb4708c6baed}
+      \strng{authorfullhashraw}{ce29ec106238cf34ce35bb4708c6baed}
+      \field{sortinit}{Д}
+      \field{sortinithash}{1acf1490327dfefb00e074ab043a2e03}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{УФН}
+      \field{number}{9}
+      \field{title}{Основные понятия квантовой физики с операциональной точки зрения}
+      \field{volume}{168}
+      \field{year}{1998}
+      \field{pages}{975\bibrangedash 1015}
+      \range{pages}{41}
+    \endentry
+    \entry{bNonclassSmirnovTroshin}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=47bae8408f5172f02bc8db99251aad59}{%
+           family={{Д. Ф. Смирнов}},
+           familyi={Д\bibinitperiod}}}%
+        {{hash=8ee847aacf294590c5907d0878f0d818}{%
+           family={{А. С. Трошин}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \strng{namehash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{fullhash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{fullhashraw}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{bibnamehash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{authorbibnamehash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{authornamehash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{authorfullhash}{c84b7270e7d48f67ac72c32dfa05de72}
+      \strng{authorfullhashraw}{c84b7270e7d48f67ac72c32dfa05de72}
+      \field{sortinit}{Д}
+      \field{sortinithash}{1acf1490327dfefb00e074ab043a2e03}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{УФН}
+      \field{number}{2}
+      \field{title}{Новые явления в квантовой оптике: антигруппировка и субпуассоновская статистика фотонов, сжатые состояния}
+      \field{volume}{153}
+      \field{year}{1987}
+    \endentry
+    \entry{bKaluderSudershan1970}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=98509646fad576fbed21298a3220d337}{%
+           family={{Дж. Клаудер}},
+           familyi={Д\bibinitperiod}}}%
+        {{hash=32be39ecbec3bf96578d6b90e4086eb3}{%
+           family={{Э. Судершан}},
+           familyi={Э\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{fullhash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{fullhashraw}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{bibnamehash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{authorbibnamehash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{authornamehash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{authorfullhash}{4eb30ecacc0dd2e904876fa017a889e2}
+      \strng{authorfullhashraw}{4eb30ecacc0dd2e904876fa017a889e2}
+      \field{sortinit}{Д}
+      \field{sortinithash}{1acf1490327dfefb00e074ab043a2e03}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Основы квантовой оптики}
+      \field{year}{1970}
+      \field{pages}{428}
+      \range{pages}{1}
+    \endentry
+    \entry{bKarlov2003}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=bece132b15fff45b2db808e3fcfca65c}{%
+           family={{Карлов, Н.В.}},
+           familyi={К\bibinitperiod}}}%
+        {{hash=f351235b99ffb566a1fa98ee0c511af8}{%
+           family={{Кириченко, Н.А.}},
+           familyi={К\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Физматлит}%
+      }
+      \strng{namehash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{fullhash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{fullhashraw}{775fa347e7005fae9fe1384231479c3d}
+      \strng{bibnamehash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{authorbibnamehash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{authornamehash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{authorfullhash}{775fa347e7005fae9fe1384231479c3d}
+      \strng{authorfullhashraw}{775fa347e7005fae9fe1384231479c3d}
+      \field{sortinit}{К}
+      \field{sortinithash}{007824ff2af181c6f6762379475efd5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Дается систематическое изложение современной теории колебаний и волн. Первая часть представляет собой элементарное введение в теорию колебаний. Во второй части излагаются наиболее существенные понятия и методы теории нелинейных динамических систем. Третья часть посвящена волновым процессам в линейных и нелинейных системах. В комментариях и приложениях рассмотрены некоторые задачи распространения волн, взаимодействия излучения с веществом и другие задачи нелинейной динамики, а также приведены сведения справочного характера. Основное содержание книги дополнено некоторым количеством задач с подробными их решениями. Книга предназначена студентам, аспирантам и научным работникам, интересующимся теорией колебаний и ее приложениям}
+      \field{isbn}{5-9221-0205-2}
+      \field{title}{Колебания, волны, структуры}
+      \field{year}{2003}
+      \field{pages}{496}
+      \range{pages}{1}
+    \endentry
+    \entry{bMandel2000}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=5761aa322748f68b2a50963e338f5885}{%
+           family={{Л. Мандель}},
+           familyi={Л\bibinitperiod}}}%
+        {{hash=3f1f612a2001defe6cd4c9540f9dbe19}{%
+           family={{Э. Вольф}},
+           familyi={Э\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука. ФИЗМАТЛИТ}%
+      }
+      \strng{namehash}{fadb44d9be92059422cb8b5996482576}
+      \strng{fullhash}{fadb44d9be92059422cb8b5996482576}
+      \strng{fullhashraw}{fadb44d9be92059422cb8b5996482576}
+      \strng{bibnamehash}{fadb44d9be92059422cb8b5996482576}
+      \strng{authorbibnamehash}{fadb44d9be92059422cb8b5996482576}
+      \strng{authornamehash}{fadb44d9be92059422cb8b5996482576}
+      \strng{authorfullhash}{fadb44d9be92059422cb8b5996482576}
+      \strng{authorfullhashraw}{fadb44d9be92059422cb8b5996482576}
+      \field{sortinit}{Л}
+      \field{sortinithash}{408c91708504c4d55e9c1a703c852f82}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Оптическая когерентность и квантовая оптика}
+      \field{year}{2000}
+      \field{pages}{896}
+      \range{pages}{1}
+    \endentry
+    \entry{bTarasovQuantumOpticsIntro2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=212c347b3c9de9ab2b1989aaeb703cf8}{%
+           family={{Лев Васильевич Тарасов}},
+           familyi={Л\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {ЛКИ}%
+      }
+      \strng{namehash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{fullhash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{fullhashraw}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{bibnamehash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{authorbibnamehash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{authornamehash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{authorfullhash}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \strng{authorfullhashraw}{212c347b3c9de9ab2b1989aaeb703cf8}
+      \field{sortinit}{Л}
+      \field{sortinithash}{408c91708504c4d55e9c1a703c852f82}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Введение в квантовую оптику}
+      \field{year}{2008}
+      \field{pages}{304}
+      \range{pages}{1}
+    \endentry
+    \entry{bLaks1974}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=74647a02fd9efef7c205214803e1cf3d}{%
+           family={{М. Лэкс}},
+           familyi={М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Мир}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{fullhash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{fullhashraw}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{bibnamehash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{authorbibnamehash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{authornamehash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{authorfullhash}{74647a02fd9efef7c205214803e1cf3d}
+      \strng{authorfullhashraw}{74647a02fd9efef7c205214803e1cf3d}
+      \field{sortinit}{М}
+      \field{sortinithash}{3750e8e5bcd54966a663076166442576}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Флуктуации и когерентные явления}
+      \field{year}{1974}
+    \endentry
+    \entry{bScullyQuantumOptics2003}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8ce6afae9a1268114b752f330b19c45d}{%
+           family={{М. О. Скалли}},
+           familyi={М\bibinitperiod}}}%
+        {{hash=3265afc999722b71b2fcd3acf0dad0d4}{%
+           family={{М. С. Зубайри}},
+           familyi={М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Физматлит}%
+      }
+      \strng{namehash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{fullhash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{fullhashraw}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{bibnamehash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{authorbibnamehash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{authornamehash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{authorfullhash}{86eeaf66aaba5f5d95fbdd2786753225}
+      \strng{authorfullhashraw}{86eeaf66aaba5f5d95fbdd2786753225}
+      \field{sortinit}{М}
+      \field{sortinithash}{3750e8e5bcd54966a663076166442576}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовая оптика}
+      \field{year}{2003}
+      \field{pages}{512}
+      \range{pages}{1}
+    \endentry
+    \entry{bMensky2001}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=22b48cfd0f9136e1d889f951aa1d2c8b}{%
+           family={{Михаил Борисович Менский}},
+           familyi={М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Физматлит}%
+      }
+      \strng{namehash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{fullhash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{fullhashraw}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{bibnamehash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{authorbibnamehash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{authornamehash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{authorfullhash}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \strng{authorfullhashraw}{22b48cfd0f9136e1d889f951aa1d2c8b}
+      \field{sortinit}{М}
+      \field{sortinithash}{3750e8e5bcd54966a663076166442576}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовые измерения и декогеренция. Модели и феноменология}
+      \field{year}{2001}
+      \field{pages}{228}
+      \range{pages}{1}
+    \endentry
+    \entry{bShenSet2012}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3d25c51c3652e7b6e5fe4dacfe12e786}{%
+           family={{Николай Константинович Верещагин}},
+           familyi={Н\bibinitperiod}}}%
+        {{hash=bdd4f1d9a56cec5aeeda9f8f2c15f57d}{%
+           family={{Александр Шень}},
+           familyi={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {МЦНМО}%
+      }
+      \strng{namehash}{400236bddbef253f96f1682763f04af1}
+      \strng{fullhash}{400236bddbef253f96f1682763f04af1}
+      \strng{fullhashraw}{400236bddbef253f96f1682763f04af1}
+      \strng{bibnamehash}{400236bddbef253f96f1682763f04af1}
+      \strng{authorbibnamehash}{400236bddbef253f96f1682763f04af1}
+      \strng{authornamehash}{400236bddbef253f96f1682763f04af1}
+      \strng{authorfullhash}{400236bddbef253f96f1682763f04af1}
+      \strng{authorfullhashraw}{400236bddbef253f96f1682763f04af1}
+      \field{sortinit}{Н}
+      \field{sortinithash}{38afed4b2dd7a2a56c8bd22996f23af0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-5-4439-0012-4}
+      \field{title}{{Лекции по математической логике и теории алгоритмов. Часть 1. Начала теории множеств}}
+      \field{year}{2012}
+      \field{pages}{112}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb ftp://ftp.mccme.ru/users/shen/logic/sets/part1.pdf
+      \endverb
+      \verb{url}
+      \verb ftp://ftp.mccme.ru/users/shen/logic/sets/part1.pdf
+      \endverb
+    \endentry
+    \entry{bDiracPrincipleQuantumMechanic}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=53e3e32e035c404c48f1c55bb5e7cb42}{%
+           family={{Поль Дирак}},
+           familyi={П\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{fullhash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{fullhashraw}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{bibnamehash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{authorbibnamehash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{authornamehash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{authorfullhash}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \strng{authorfullhashraw}{53e3e32e035c404c48f1c55bb5e7cb42}
+      \field{sortinit}{П}
+      \field{sortinithash}{b60c3989b0a91e15e157f5b4997c35c7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Принципы квантовой механики}
+      \field{year}{1979}
+    \endentry
+    \entry{bQuantumOpticsAndRadioPhisicsLecture1966}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=9728ca04f884f1495204e31a51960de4}{%
+           family={{Р. Глаубер}},
+           familyi={Р\bibinitperiod}}}%
+        {{hash=d097a9b638fb140d2169e855c03eacad}{%
+           family={{У. Лэмб}},
+           familyi={У\bibinitperiod}}}%
+        {{hash=3bc0cfc84cc3a0ea559c0c6e19811c35}{%
+           family={{Н. Кролль}},
+           familyi={Н\bibinitperiod}}}%
+        {{hash=9058e21817589be06ac19cac2f5262a1}{%
+           family={{Ж. Вантер}},
+           familyi={Ж\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{da6d694aac0b822b7ba3980ade169802}
+      \strng{fullhash}{c841de38799f59077d78efdfade5f1be}
+      \strng{fullhashraw}{c841de38799f59077d78efdfade5f1be}
+      \strng{bibnamehash}{da6d694aac0b822b7ba3980ade169802}
+      \strng{authorbibnamehash}{da6d694aac0b822b7ba3980ade169802}
+      \strng{authornamehash}{da6d694aac0b822b7ba3980ade169802}
+      \strng{authorfullhash}{c841de38799f59077d78efdfade5f1be}
+      \strng{authorfullhashraw}{c841de38799f59077d78efdfade5f1be}
+      \field{sortinit}{Р}
+      \field{sortinithash}{72653a62bb3cb54ced08865870aff9d6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовая оптика и квантовая радиофизика}
+      \field{year}{1966}
+      \field{pages}{452}
+      \range{pages}{1}
+    \endentry
+    \entry{bLoudon1976}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=69cd23fef8318d1bec8a5ae214749d65}{%
+           family={{Р. Лоудон}},
+           familyi={Р\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{fullhash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{fullhashraw}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{bibnamehash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{authorbibnamehash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{authornamehash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{authorfullhash}{69cd23fef8318d1bec8a5ae214749d65}
+      \strng{authorfullhashraw}{69cd23fef8318d1bec8a5ae214749d65}
+      \field{sortinit}{Р}
+      \field{sortinithash}{72653a62bb3cb54ced08865870aff9d6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовая теория света}
+      \field{year}{1976}
+    \endentry
+    \entry{bFeinman}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=3b14cea4ef34d496f21b4ecca6fd2774}{%
+           family={{Р. Фейнман}},
+           familyi={Р\bibinitperiod}}}%
+        {{hash=06bb6784a48392b558041aca37aca471}{%
+           family={{Р. Лейтон}},
+           familyi={Р\bibinitperiod}}}%
+        {{hash=9c53baf26bbeef94e86af472bff86351}{%
+           family={{М. Сэндс}},
+           familyi={М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{fullhash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{fullhashraw}{6480925da712bee97fa72eb515b19ae9}
+      \strng{bibnamehash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{authorbibnamehash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{authornamehash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{authorfullhash}{6480925da712bee97fa72eb515b19ae9}
+      \strng{authorfullhashraw}{6480925da712bee97fa72eb515b19ae9}
+      \field{sortinit}{Р}
+      \field{sortinithash}{72653a62bb3cb54ced08865870aff9d6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Феймановские лекции по физике (вып. 8, 9). Квантовая механика}
+      \field{year}{1978}
+      \field{pages}{525}
+      \range{pages}{1}
+    \endentry
+    \entry{bAhmanovNikitinPhysicalOptics2004}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=69d04b7435156e09d02ad2e6bea643ac}{%
+           family={{С. А. Ахманов}},
+           familyi={С\bibinitperiod}}}%
+        {{hash=7769e46b450036fff434edfc84c1c1e7}{%
+           family={{С. Ю. Никитин}},
+           familyi={С\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {МГУ, Наука}%
+      }
+      \strng{namehash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{fullhash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{fullhashraw}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{bibnamehash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{authorbibnamehash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{authornamehash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{authorfullhash}{bff5a13f58dfb6f80b03f91fa287531c}
+      \strng{authorfullhashraw}{bff5a13f58dfb6f80b03f91fa287531c}
+      \field{sortinit}{С}
+      \field{sortinithash}{e581ee5e052c6c8e9beb0cf2da905808}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Физическая оптика}
+      \field{year}{2004}
+      \field{pages}{656}
+      \range{pages}{1}
+    \endentry
+    \entry{bKilinQuantumOptics2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=e203f2ae31700153cf489bc3703225f5}{%
+           family={{С. Я. Килин}},
+           familyi={С\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Едиториал УРСС}%
+      }
+      \strng{namehash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{fullhash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{fullhashraw}{e203f2ae31700153cf489bc3703225f5}
+      \strng{bibnamehash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{authorbibnamehash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{authornamehash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{authorfullhash}{e203f2ae31700153cf489bc3703225f5}
+      \strng{authorfullhashraw}{e203f2ae31700153cf489bc3703225f5}
+      \field{sortinit}{С}
+      \field{sortinithash}{e581ee5e052c6c8e9beb0cf2da905808}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Квантовая оптика. Поля и их детектирование}
+      \field{year}{2003}
+      \field{pages}{176}
+      \range{pages}{1}
+    \endentry
+    \entry{bLuisell1972}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8f99ea70aaf426ae31aa195ae24742ec}{%
+           family={{Уильям Люиселл}},
+           familyi={У\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Наука}%
+      }
+      \strng{namehash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{fullhash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{fullhashraw}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{bibnamehash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{authorbibnamehash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{authornamehash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{authorfullhash}{8f99ea70aaf426ae31aa195ae24742ec}
+      \strng{authorfullhashraw}{8f99ea70aaf426ae31aa195ae24742ec}
+      \field{sortinit}{У}
+      \field{sortinithash}{85ef2e0bc852b026c471b7259f0eaf6b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Излучение и шумы в квантовой электронике}
+      \field{year}{1972}
+    \endentry
+    \entry{bScally1974}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=5b97e539c2d2b78f08cbf9547f16197d}{%
+           family={{Ф. Арекки}},
+           familyi={Ф\bibinitperiod}}}%
+        {{hash=79c8589e5c826b45b20a932dc8916491}{%
+           family={{М. Скалли}},
+           familyi={М\bibinitperiod}}}%
+        {{hash=04c1ef2de16fafc0ccc6a68d00e71e04}{%
+           family={{Г. Хакен}},
+           familyi={Г\bibinitperiod}}}%
+        {{hash=44096f34496a17573a6839b8b132277e}{%
+           family={{В. Вайдлих}},
+           familyi={В\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Москва}%
+      }
+      \list{publisher}{1}{%
+        {Мир}%
+      }
+      \strng{namehash}{1465074b5bcc1bca132e0ab14cf9d354}
+      \strng{fullhash}{df5d3e79dc51dce36729f3004224fab5}
+      \strng{fullhashraw}{df5d3e79dc51dce36729f3004224fab5}
+      \strng{bibnamehash}{1465074b5bcc1bca132e0ab14cf9d354}
+      \strng{authorbibnamehash}{1465074b5bcc1bca132e0ab14cf9d354}
+      \strng{authornamehash}{1465074b5bcc1bca132e0ab14cf9d354}
+      \strng{authorfullhash}{df5d3e79dc51dce36729f3004224fab5}
+      \strng{authorfullhashraw}{df5d3e79dc51dce36729f3004224fab5}
+      \field{sortinit}{Ф}
+      \field{sortinithash}{b428a16bb8d154b256b1e6c39440f4f9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Квантовая теория лазера - проблема неравновесной статистической механики. Квантовые флуктуации излучения лазера}
+      \field{year}{1974}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

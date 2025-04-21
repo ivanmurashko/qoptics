@@ -1,0 +1,414 @@
+%% -*- coding:utf-8 -*- 
+\section{Quantum Fourier Transform}
+For the analysis of periodic sequences (functions), the discrete Fourier transform
+(see \autoref{AddFourier}) can be used,
+which is defined by the following relation
+\eqref{eqAddFourierDiscretFourier}:
+\begin{equation}
+\tilde{X}_k = \sum^{M - 1}_{m = 0} x_m e^{-\frac{2 \pi}{M} k\cdot m},
+\label{eqPart4QuantCompShorFourierDiscretFourier}
+\end{equation}
+where the original sequence of numbers $\left\{x_m\right\}$ has $M$
+terms. 
+
+\subsection{Quantum Fourier Transform Circuit}
+The quantum Fourier transform
+\footnote{For the analysis of the quantum Fourier transform circuit,
+  the work \cite{DBLP:conf/new2an/2015} was used}
+deals with states of the form 
+\begin{equation}
+\ket{x} = \sum_{k = 0}^{M - 1}x_k \ket{k},
+\label{eqPart4QuantCompShorQuantFourierSeries}
+\end{equation}
+where there is a sequence of amplitudes $\left\{x_k\right\}$, which
+defines the original sequence for the Fourier transform 
+\eqref{eqPart4QuantCompShorFourierDiscretFourier}. In the basis vector
+$\ket{k}$ the index of this sequence element is recorded.   
+
+Obviously, the terms of the sequence
+\eqref{eqPart4QuantCompShorQuantFourierSeries} must satisfy
+the normalization condition 
+\[
+\sum_k\left|x_k\right|^2 = 1.
+\]
+
+Suppose that some operator $\hat{F}^{M}$ (the quantum
+Fourier transform operator) transforms the basis vector $\ket{k}$ according to
+the rule given by relation \eqref{eqAddFourierDiscretFourier}:
+\begin{equation}
+\hat{F}^{M}\ket{k} = \frac{1}{\sqrt{M}}\sum_{j = 0}^{M -1}
+e^{-i \omega k j}\ket{j}_{inv} 
+\label{eqPart4QuantCompShorQuantFourierBasis}
+\end{equation}
+The systems of basis vectors $\left\{\ket{k}\right\}$ and 
+$\left\{\ket{k}_{inv}\right\}$ represent the same
+set of vectors numbered in different ways.
+
+From \eqref{eqPart4QuantCompShorQuantFourierSeries} and
+\eqref{eqPart4QuantCompShorQuantFourierBasis} we obtain
+\begin{eqnarray}
+\hat{F}^{M}\ket{x} = \sum_{j = 0}^{M - 1}x_k \hat{F}^{M}
+\ket{k} = 
+\nonumber \\
+= \frac{1}{\sqrt{M}}\sum_{k = 0}^{M -1}\sum_{j = 0}^{M - 1}
+e^{-i \omega k j}x_k\ket{j}_{inv} = 
+\nonumber \\
+= \sum_{j = 0}^{M - 1} \left\{\frac{1}{\sqrt{M}}\left(
+\sum_{k = 0}^{M - 1}e^{-i \omega k j} x_k
+\right)\right\}\ket{j}_{inv} = 
+\nonumber \\
+= \sum_{j = 0}^{M - 1}\tilde{X}_j\ket{j}_{inv} = \left|\tilde{X}\right>_{inv},
+\nonumber
+\end{eqnarray}
+where 
+\begin{equation}
+\tilde{X}_j = \tilde{X}_j^{M} = 
+\frac{1}{\sqrt{M}}\sum_{k = 0}^{M - 1}e^{-i \omega k j} x_k.
+\label{eqPart4QuantCompShorQuantFourierEnd}
+\end{equation}
+The expression \eqref{eqPart4QuantCompShorQuantFourierEnd} repeats
+the classical analogue \eqref{eqAddFourierDiscretFourier}, i.e. we can write
+\[
+ \ket{x} \longleftrightarrow \left|\tilde{X}\right>_{inv}.
+\]
+
+\input ./part4/quantcomp/figquantfourier0.tex
+
+Now suppose that the input to our system is a state of the form
+\eqref{eqPart4QuantCompShorQuantFourierSeries} which represents
+a superposition of $M$ basis states
+$\left\{\ket{k}\right\}$ 
+(see \autoref{figQuantCompQuantFourier0}). 
+Assume that the number of basis
+states is a power of two, i.e. a basis state
+can be represented as a tensor product of $n = \log_2{M}$ qubits:
+\begin{equation}
+\ket{k} = \ket{a^{(k)}_0} \otimes  \ket{a^{(k)}_1}
+\otimes \cdots \otimes \ket{a^{(k)}_{n-1}}, 
+\nonumber
+\end{equation}
+where
+\begin{eqnarray}
+k = a^{(k)}_0 + 2^1 a^{(k)}_1 + \dots + 2^{n-1} a^{(k)}_{n-1},
+\nonumber \\
+a^{(k)}_i \in \left\{0, 1\right\}.
+\nonumber
+\end{eqnarray}
+
+At the output
+(see \autoref{figQuantCompQuantFourier0})
+we have a superposition of $M$ basis states
+$\left\{\ket{j}_{inv}\right\}$, where for the state
+$\ket{j}_{inv}$ we have 
+\begin{equation}
+\ket{j}_{inv} = \ket{b^{(j)}_{n-1}} \otimes
+\ket{b^{(j)}_{n-2}} 
+\otimes \cdots \otimes \ket{b^{(j)}_{0}}, 
+\nonumber
+\end{equation}
+where
+\begin{eqnarray}
+j = b^{(j)}_0 + 2^1 b^{(j)}_1 + \dots + 2^{n-1} b^{(j)}_{n-1},
+\nonumber \\
+b^{(j)}_i \in \left\{0, 1\right\}.
+\nonumber
+\end{eqnarray}
+
+From the formula \eqref{eqAddFourierDiscretFourierFFT} one can
+notice that if we have an input signal $x$ consisting of $n =
+\log_2{M}$ 
+bits, then the bit $a^{(k)}_0$ can be used to select even
+(the first term of the sum \eqref{eqAddFourierDiscretFourierFFT})
+or odd 
+(the second term of the sum \eqref{eqAddFourierDiscretFourierFFT}) elements.
+
+Indeed, excluding $a^{(k)}_0$, the state
+\eqref{eqPart4QuantCompShorQuantFourierSeries} can be represented as
+a sum of even and odd components: 
+\begin{eqnarray}
+\ket{x} = \sum_{k = 0}^{M - 1}x_k \ket{k} = 
+\sum_{k = 0}^{M - 1}x_k \ket{a^{(k)}_0} \otimes  \ket{a^{(k)}_1}
+\otimes \cdots \otimes \ket{a^{(k)}_{n-1}} = 
+\nonumber \\
+ = \sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m} \ket{0} \otimes  \ket{a^{(k)}_1}
+\otimes \cdots \otimes \ket{a^{(k)}_{n-1}} +
+\nonumber \\
++
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m + 1} \ket{1} \otimes  \ket{a^{(k)}_1}
+\otimes \cdots \otimes \ket{a^{(k)}_{n-1}} = 
+\nonumber \\
+ = \sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m} \ket{0} \otimes  \ket{m} +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{k=2m + 1} \ket{1} \otimes  \ket{m} = 
+\nonumber \\
+= \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \ket{2m} +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1} \ket{2m+1},
+\nonumber
+\end{eqnarray}
+where
+\begin{equation}
+m = a^{(k)}_1 + 2^1 a^{(k)}_2 + \dots + 2^{n-2} a^{(k)}_{n-1}.
+\nonumber
+\end{equation}
+
+\input ./part4/quantcomp/figquantfourier1.tex
+
+Applying the Fourier transform only to the higher bits $\hat{F}^{\frac{M}{2}}$,
+i.e. excluding $a^{(k)}_0$, we get (see \autoref{figQuantCompQuantFourier1}):
+\begin{eqnarray}
+\ket{x} \rightarrow
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \ket{2m} +
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\ket{2m+1} = 
+\nonumber \\
+=
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\ket{0} \otimes  \ket{m} +
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\ket{1} \otimes  \ket{m}
+=
+\nonumber \\
+=
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\ket{0} \otimes \hat{F}^{\frac{M}{2}} \ket{m} +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\ket{1} \otimes \hat{F}^{\frac{M}{2}} \ket{m}.
+\label{eqPart4QuantCompShorQuantFourierStep1}
+\end{eqnarray}
+Taking into account expression \eqref{eqPart4QuantCompShorQuantFourierBasis} we get
+\begin{equation}
+\hat{F}^{\frac{M}{2}} \ket{m} = \sqrt{\frac{2}{M}}
+\sum_{j= 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j}\ket{j}_{inv}.
+\nonumber
+\end{equation}
+Thus, for \eqref{eqPart4QuantCompShorQuantFourierStep1} we have
+\begin{eqnarray}
+\ket{x} \rightarrow
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} 
+\ket{0} \otimes \hat{F}^{\frac{M}{2}} \ket{m} +
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m + 1}
+\ket{1} \otimes \hat{F}^{\frac{M}{2}} \ket{m} = 
+\nonumber \\
+=
+\sqrt{\frac{2}{M}} \sum_{j = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} 
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \ket{0} \otimes
+\ket{j}_{inv}
++
+\nonumber \\
++
+\sqrt{\frac{2}{M}} \sum_{j = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} 
+\sum_{m = 0}^{\frac{M}{2} - 1}x_{2m+1} \ket{1} \otimes
+\ket{j}_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}  
+\left( \sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m} 
+\right) \ket{j}_{inv}
++
+\nonumber \\
++
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\left( \sqrt{\frac{2}{M}}  
+\sum_{m = 0}^{\frac{M}{2} - 1}e^{-i \frac{4 \pi}{M} m j} x_{2m+1} 
+\right)
+\left|\frac{M}{2} + j\right>_{inv}
+=
+\nonumber \\
+= \sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{A}_{j} \ket{j}_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{B}_{j} \left|\frac{M}{2} + j\right>_{inv},
+\nonumber
+\end{eqnarray}
+where
+\begin{eqnarray}
+\tilde{A}_{j} = 
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m} 
+\nonumber \\
+\tilde{B}_{j} =
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m+1} 
+\label{eqPart4QuantCompShorAB}
+\end{eqnarray}
+
+\input ./part4/quantcomp/figquantfourier2.tex
+
+If we now add a phase shift for odd elements, i.e. for
+those where $a_0^k = 1$, then we obtain the circuit shown in
+\autoref{figQuantCompQuantFourier2}: 
+\begin{eqnarray}
+\ket{x} \rightarrow
+\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \ket{2m} +
+\hat{R}\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1} x_{2m + 1}
+\ket{2m+1} =
+\nonumber \\
+= 
+\sum^{\frac{M}{2} - 1}_{j = 0} \tilde{A}_{j} \ket{j}_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  
+\tilde{B}_{j} \hat{R}\left|\frac{M}{2} + j\right>_{inv},
+\nonumber \\
+= 
+\sum^{\frac{M}{2} - 1}_{j = 0}  \tilde{A}_{j} \ket{j}_{inv} +
+\sum^{\frac{M}{2} - 1}_{j = 0}  
+\tilde{C}_{j} \left|\frac{M}{2} + j\right>_{inv}.
+\label{eqPart4QuantCompShorFourierStep2}
+\end{eqnarray}
+Using the expression
+\begin{equation}
+\hat{R}_l \ket{b^{(j)}_l} = 
+\exp{\left(- 2 \pi i \frac{b^{(j)}_l}{2^{n-l}}\right)}
+\ket{b^{(j)}_l}
+\nonumber
+\end{equation}
+we get that the operator $\hat{R}$ acts on the state 
+$\left|\frac{M}{2} + j\right>_{inv}$ in the following way:
+\begin{eqnarray}
+\hat{R}\left|\frac{M}{2} + j\right>_{inv} = 
+\hat{R}\ket{1} \otimes  \ket{j}_{inv} = 
+\nonumber \\
+= 
+\ket{1} \otimes \hat{R}_0 \ket{b^{(j)}_0}
+\otimes \cdots \otimes \hat{R}_{n-2} \ket{b^{(j)}_{n-2}} = 
+\nonumber \\
+= 
+\prod_{l = 0}^{n-2}\exp{\left(- 2 \pi i \frac{2^lb^{(j)}_l}{2^n}\right)}
+\ket{1} \otimes \ket{j}_{inv} = 
+\nonumber \\
+=
+\exp{\left(-2 \pi i \frac{j}{M}\right)}
+\left|\frac{M}{2} + j\right>_{inv} 
+\label{eqPart4QuantCompShorFourierStep2Pre}
+\end{eqnarray}
+In the derivation of \eqref{eqPart4QuantCompShorFourierStep2Pre}, it was taken into account that $j = b^{(j)}_0 + 2^1 b^{(j)}_1 + \dots + 2^{n-2} b^{(j)}_{n-2}$. 
+
+Thus, for $\tilde{C}_{j}$ in 
+\eqref{eqPart4QuantCompShorFourierStep2} we have
+\begin{eqnarray}
+\tilde{C}_{j} = 
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{- 2 \pi i \frac{j}{M}}
+e^{-i \frac{4 \pi}{M} m j} x_{2m+1} =
+\nonumber \\
+=
+\sqrt{\frac{2}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1}
+\label{eqPart4QuantCompShorC}
+\end{eqnarray}
+
+\input ./part4/quantcomp/figquantfourier.tex
+
+If we now apply the Hadamard transform 
+\rindex{Hadamard Transform}
+to the qubit
+$\ket{a_0}$, we obtain the circuit shown in
+\autoref{figQuantCompQuantFourier}. In this case the original state
+is transformed according to the following rule:
+\begin{eqnarray}
+\ket{x} \rightarrow
+\hat{H}_0\hat{F}^{\frac{M}{2}} \sum_{m = 0}^{\frac{M}{2} - 1}x_{2m} \ket{2m} +
+\hat{H}_0\hat{R}\hat{F}^{\frac{M}{2}}\sum_{m = 0}^{\frac{M}{2} - 1} x_{2m + 1} =
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{A}_{j}
+\hat{H}\ket{0} \otimes \ket{j}_{inv}
++
+\sum_{j = 0}^{\frac{M}{2} - 1} 
+\tilde{C}_{j}
+\hat{H}\ket{1} \otimes \ket{j}_{inv} 
+=
+\nonumber \\
+= 
+\frac{1}{\sqrt{2}}\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{A}_{j} 
+\left(\ket{0} + \ket{1} \right) \otimes  
+\ket{j}_{inv}
++
+\frac{1}{\sqrt{2}}\sum_{j = 0}^{\frac{M}{2} - 1}
+\tilde{C}_{j} 
+\left(\ket{0} - \ket{1} \right) \otimes  
+\ket{j}_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} 
+\ket{0} \otimes \ket{j}_{inv} +
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{ \tilde{A}_{j} - \tilde{C}_{j}}{\sqrt{2}} 
+\ket{1} \otimes \ket{j}_{inv}
+=
+\nonumber \\
+=
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} \ket{j}_{inv} +
+\sum_{j = 0}^{\frac{M}{2} - 1}
+\frac{ \tilde{A}_{j} - \tilde{C}_{j}}{\sqrt{2}} 
+\left|\frac{M}{2} + j \right>_{inv}.
+\label{eqPart4QuantCompShorFourierStep3}
+\end{eqnarray}
+For the terms in \eqref{eqPart4QuantCompShorFourierStep3} taking into account the equalities
+\eqref{eqPart4QuantCompShorAB} and \eqref{eqPart4QuantCompShorC} we have:
+\begin{eqnarray}
+\frac{\tilde{A}_{j} + \tilde{C}_{j} }{\sqrt{2}} = 
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m}  +
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1} = 
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m}
+\label{eqPart4QuantCompShorFourierStep3_1}
+\end{eqnarray}
+and
+\begin{eqnarray}
+\frac{\tilde{A}_{j} - \tilde{C}_{j} }{\sqrt{2}} = 
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} e^{-i \frac{4 \pi}{M} m j} x_{2m}  -
+\sqrt{\frac{1}{M}} 
+\sum_{m = 0}^{\frac{M}{2} - 1} 
+e^{-i \frac{2 \pi}{M} \left(2m+1\right) j} x_{2m+1}
+= 
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \frac{1 + e^{-i \pi m}}{2}
+-
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \frac{1 - e^{-i \pi m}}{2} 
+=
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} e^{-i \pi m } x_{m} 
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} e^{-i \frac{2 \pi}{M} m \frac{M}{2} } x_{m} 
+=
+\nonumber \\
+=
+\sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m \left(\frac{M}{2} + j\right)} x_{m}
+\label{eqPart4QuantCompShorFourierStep3_2}
+\end{eqnarray}
+
+Combining \eqref{eqPart4QuantCompShorFourierStep3}, 
+\eqref{eqPart4QuantCompShorFourierStep3_1} and
+\eqref{eqPart4QuantCompShorFourierStep3_2} finally gives 
+\begin{eqnarray}
+\ket{x} \rightarrow
+\sum_{j = 0}^{\frac{M}{2} - 1} \sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m j} x_{m} \ket{j}_{inv} +
+\nonumber \\
++
+\sum_{j = 0}^{\frac{M}{2} - 1} \sqrt{\frac{1}{M}} \sum_{m = 0}^{M - 1}
+e^{-i \frac{2 \pi}{M} m \left(\frac{M}{2} + j\right)} x_{m} 
+\left|\frac{M}{2} + j\right>_{inv} =
+\nonumber \\
+= \sum_{j = 0}^{M - 1} \tilde{X}_j^{M} \ket{j}_{inv}
+\nonumber
+\end{eqnarray}

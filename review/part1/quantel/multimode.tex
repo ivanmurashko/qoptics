@@ -1,0 +1,133 @@
+%% -*- coding:utf-8 -*- 
+\section{Multimode States}
+So far we have considered single-mode fields. The results are easily
+generalized to multimode states. For the electromagnetic field in
+some volume, we have the decomposition \eqref{eqCh1_sep1}:
+\begin{equation}
+\vec{E}\left(r, t\right) = \sum_{(s)}
+\frac{q_s\left(t\right) \omega_s}{\sqrt{\varepsilon_0}} \vec{E}_s\left(r\right),
+\quad
+\vec{H}\left(r, t\right) = \sum_{(s)}
+\frac{p_s\left(t\right)}{\sqrt{\mu_0}} \vec{H}_s\left(r\right),
+\end{equation}
+The Hamiltonian function is equal to the sum of the Hamiltonian functions of all modes, since
+modes correspond to independent oscillators:
+\begin{equation}
+\mathcal{H} = \frac{1}{2} 
+\sum_{(s)} \left(\omega_s^2 q_s^2 + p_s^2 \right)
+\end{equation}
+Quantization reduces to replacing $q_s$ and $p_s$ with operators $\hat{q}_s$
+and $\hat{p}_s$ with commutation relations:
+\begin{equation}
+\left[\hat{q}_s, \hat{p}_{s'}\right] = i\hbar \delta_{ss'},
+\quad 
+\left[\hat{q}_s, \hat{q}_{s'}\right] = \left[\hat{p}_s,
+  \hat{p}_{s'}\right] = 0.
+\end{equation}
+The Hamiltonian function thus becomes a Hamiltonian operator:
+\begin{equation}
+\hat{\mathcal{H}} = \frac{1}{2} \sum_{(s)} \left(\omega_s^2 \hat{q}_s^2 + \hat{p}_s^2 \right)
+\end{equation}
+As in section \ref{Ch1_quantumemf}, we introduce creation and
+annihilation operators for each mode \eqref{eqCh1_aadef}:
+\begin{equation}
+\hat{a}_s = \frac{1}{\sqrt{2 \hbar \omega_s}}
+\left( \omega_s \hat{q}_s + i \hat{p}_s\right),
+\quad
+\hat{a}_s^{\dag} = \frac{1}{\sqrt{2 \hbar \omega_s}}
+\left( \omega_s \hat{q}_s - i \hat{p}_s\right),
+\end{equation}
+\rindex{Hamiltonian}
+Using these, the Hamiltonian can be expressed as
+\begin{equation}
+\hat{\mathcal{H}_s} = \omega_n \hbar 
+\left(\hat{a}_s^{\dag} \hat{a}_s + \frac{1}{2}\right)
+\nonumber
+\end{equation}
+The general state, where in the first mode there are $n_1$ photons, in the second $n_2$
+photons, in the $s$-th mode there are $n_s$ photons, etc., can be represented as
+a product of state vectors of each mode (see
+\autoref{sec:add:quantum:composite}):
+\rindex{photon}
+\begin{equation}
+\left|\left\{n_s\right\}\right> = 
+\left|n_1, n_2, \dots, n_s, \dots\right> =
+\ket{n_1} \otimes
+\ket{n_2} \otimes
+\dots
+\otimes
+\ket{n_s} \otimes
+\dots, 
+\nonumber
+\end{equation}
+where $\left\{n_s\right\}$ denotes the set of occupation numbers of the modes.
+
+The action of operators $\hat{a}_s^{\dag}$ and $\hat{a}_s$, related to the $s$-th
+mode, on the state vector is described by the equalities
+\begin{eqnarray}
+\hat{a}_s \left| n_1, n_2, \dots, n_s, \dots\right> = \sqrt{n_s} \left|
+n_1, n_2, \dots, n_s - 1, \dots\right>,
+\nonumber \\
+\hat{a}_s^{\dag} \left| n_1, n_2, \dots, n_s, \dots\right> = \sqrt{n_s + 1} \left|
+n_1, n_2, \dots, n_s + 1, \dots\right>.
+\end{eqnarray} 
+
+The state vector in the general case can be represented as a linear
+superposition of states  $\left| \left\{n_s\right\}\right>$:
+\begin{equation}
+\left|\Psi\right> = \sum_{n_1}\sum_{n_2}\dots\sum_{n_s}\dots
+C_{n_1, n_2, \dots, n_s, \dots} \left| n_1, n_2, \dots, n_s,
+\dots\right>= 
+\sum_{\left\{n_s\right\}} C_{\left\{n_s\right\}} \left| \left\{n_s\right\}\right>
+\end{equation}
+
+When expanding the field in plane waves, the electric field operator has the form
+\begin{equation}
+\hat{\vec{E}} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \left( 
+\hat{a}_k\left(t\right) \vec{e}_k e^{i \left(\vec{k}\vec{r} \right)} +
+\hat{a}_k^{\dag}\left(t\right) \vec{e}_k^{*} e^{-i \left(\vec{k}\vec{r} \right)}
+\right)
+\label{eqCh1_multiE}
+\end{equation}
+This expression is written in the Heisenberg picture (operator depends
+on time). In this picture
+\[
+\hat{a}_k\left(t\right) = \hat{a}_k\left(0\right) e^{-i \omega_k t},
+\quad
+\hat{a}_k^{\dag}\left(t\right) = \hat{a}_k^{\dag}\left(0\right) e^{i \omega_k t},
+\]
+where $\hat{a}_k\left(0\right)$, $\hat{a}_k^{\dag}\left(0\right)$ are
+operators in the Schrödinger picture. In the Schrödinger picture,
+operators in expression \eqref{eqCh1_multiE} do not depend on time.
+For each mode we have the equalities \eqref{eqCh1_E_middle}, \eqref{eqCh1_E2_middle}:
+\[
+\bra{n_k}\hat{a}_k\ket{n_k} = 
+\bra{n_k}\hat{a}^{\dag}_k\ket{n_k} = 0
+\]
+From this, for the full field we obtain
+\begin{equation}
+\left<\left\{n_k\right\}\right|\hat{\vec{E}}\left|\left\{n_k\right\}\right>
+= 0, \quad
+\left<\left\{n_k\right\}\right|\hat{\vec{E}}^2\left|\left\{n_k\right\}\right>
+= \sum_{(k)}\frac{\hbar \omega_k}{\varepsilon_0 V}
+\left(n + \frac{1}{2} \right)
+\end{equation}
+
+Expression \eqref{eqCh1_multiE} can be split into two terms:
+the positive-frequency part, which includes annihilation operators,
+and the negative-frequency part, which includes creation operators:
+\begin{eqnarray}
+\hat{\vec{E}} = \hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)},
+\nonumber \\
+\hat{\vec{E}}^{(+)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k\left(t\right) \vec{e}_k e^{i \left(\vec{k}\vec{r}
+  \right)}, 
+\nonumber \\
+\hat{\vec{E}}^{(-)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}}
+\hat{a}_k^{\dag}\left(t\right) \vec{e}_k^{*} e^{-i \left(\vec{k}\vec{r} \right)}
+\label{eqCh1_79}
+\end{eqnarray} 
+$\hat{\vec{E}}^{(+)}$ corresponds to the analytic signal in the 
+classical case. 

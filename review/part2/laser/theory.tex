@@ -1,0 +1,67 @@
+%% -*- coding:utf-8 -*- 
+\section{Theory of Laser Generation}
+Using equation \eqref{eqCh3_6}, one can obtain the equation for
+the average number of photons in the mode 
+\[
+\left<n\left(t\right)\right> =\sum_{(n)}n\rho_{nn}.
+\]
+To do this, multiply equation \eqref{eqCh3_6} by $n$ and
+sum over all $n$. We have
+\[
+\frac{d}{dt}\left<n\right> = \frac{d}{dt}\sum_n\rho_{nn}n = 
+\sum_n\dot{\rho}_{nn}n.
+\]
+Thus from \eqref{eqCh3_6}
+\begin{eqnarray}
+\frac{d}{dt}\left<n\right> = 
+-\sum_n n \left[A - \left(n + 1\right)B\right]\left(n + 1\right)\rho_{nn} +
+\nonumber \\
++ \sum_n n\left(A - n B\right)n \rho_{n - 1, n - 1} 
+- \sum_n n\frac{\omega}{Q}n \rho_{nn} + 
+\nonumber \\
++ \sum_n n \frac{\omega}{Q} \left(n + 1\right)\rho_{n + 1, n + 1}.
+\label{eqCh3_add78_2_1}
+\end{eqnarray}
+Replace the summation indices in \eqref{eqCh3_add78_2_1}. In the second
+sum, let $n - 1 = m$, i.e. $n = m + 1$. In the last sum 
+let $n + 1 = m$, i.e. $n = m - 1$. Substituting this into
+\eqref{eqCh3_add78_2_1} gives
+\begin{eqnarray}
+\frac{d}{dt}\left<n\right>  = 
+-\sum_n n \left[A - \left(n + 1\right)B\right]\left(n + 1\right)\rho_{nn} +
+\nonumber \\
++ \sum_m \left(m + 1\right)\left(A - \left(m + 1\right)B\right)\left(m + 1\right) \rho_{m, m} 
+- \sum_n n\frac{\omega}{Q}n \rho_{nn} + 
+\nonumber \\
++ \sum_m \left(m - 1\right) \frac{\omega}{Q} m\rho_{m, m} = 
+\sum_m \left(A - \left(m + 1\right) B\right)\left(m + 1\right) \rho_{m, m} - 
+\sum_m \frac{\omega}{Q} m\rho_{m, m} = 
+\nonumber \\
+= \sum_n \left(A - \left(n + 1\right) B\right)\left(n + 1\right) \rho_{n, n} - 
+\sum_n \frac{\omega}{Q} n\rho_{n, n}.
+\nonumber
+\end{eqnarray}
+Here, we changed the summation index back from $m$ to $n$ and combined the sums.
+From this, we have
+\begin{equation}
+\frac{d}{d t}\left<n\left(t\right)\right> = 
+\left(A - \frac{\omega}{Q}\right)\left<n\left(t\right)\right>
++ A - B \left<\left(n + 1\right)^2\right>
+\label{eqCh3_8}
+\end{equation}
+
+Here, the first term $\left(A - \frac{\omega}{Q}\right)$ corresponds to
+unsaturated gain minus 
+losses. The term 
+$B\left<\left(n + 1\right)^2\right> = B \left[\left<n^2\right> + 2
+  \left<n\right> + 1\right]$
+characterizes gain reduction due to saturation. The term $A$
+accounts for spontaneous emission, which is absent in the semiclassical
+treatment. Apart from that, \eqref{eqCh3_8} resembles the classical
+laser equation \cite{bQuantumOpticsAndRadioPhisicsLecture1966}:
+%FIXME!!! check reference 
+% 6 Feb 2011 Needs verification - book found page 281
+% formula not found :(
+\[
+\dot{I}_n = 2 I_n\left(\alpha_n - \beta_n I_n\right).
+\]

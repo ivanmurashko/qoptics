@@ -1,0 +1,314 @@
+%% -*- coding:utf-8 -*- 
+\section{Quantum expression for the photocount distribution}
+The expression for the photocount distribution obtained above is based on
+the semiclassical approach. A fully quantum expression is given by \cite{bLoudon1976}:
+\begin{equation}
+P_m\left(T\right) = Sp \left\{
+\hat{\rho}\hat{N}
+\left[
+\frac{\left(\beta \hat{\bar{I}}\left(t\right) T\right)^m}{m!}
+e^{- \beta \hat{\bar{I}}\left(t\right) T}
+\right]
+\right\} 
+\label{eqCh4_59}
+\end{equation}
+where
+\begin{eqnarray}
+\hat{\bar{I}}\left(t\right) = \frac{1}{T}\int_t^{t + T}2
+\varepsilon_0 c \hat{\bar{E}}^{(-)}\left(t'\right)
+\hat{\bar{E}}^{(+)}\left(t'\right)dt' =
+\nonumber \\
+= \frac{2}{T}\int_t^{t + T}
+\sqrt{\frac{\varepsilon_0}{\mu_0}} \hat{\bar{E}}^{(-)}\left(t'\right)
+\hat{\bar{E}}^{(+)}\left(t'\right)dt'
+\nonumber
+\end{eqnarray}
+corresponds to the operator of the energy flux averaged over the counting period,
+$\beta$ is the quantum efficiency of the photodetector. Formula
+\eqref{eqCh4_59} looks very 
+similar to Mandel's formula. The difference is that here the classical
+fields are replaced by their operators, averaging is performed quantum mechanically
+using the statistical operator, and there is the normal ordering operator
+$\hat{N}$. The action of this operator reduces to rearranging the operators
+so that annihilation operators stand to the right of creation operators.
+When expanding
+the operator inside \eqref{eqCh4_59} in a power series, terms of the form
+$\left(\hat{\bar{E}}^{(-)}\hat{\bar{E}}^{(+)}\right)^n$ appear.  
+The action of $\hat{N}$ on them is given by the expression 
+\[
+\hat{N}\left(\hat{\bar{E}}^{(-)}\hat{\bar{E}}^{(+)}\right)^n = 
+\left(\hat{\bar{E}}^{(-)}\right)^n\left(\hat{\bar{E}}^{(+)}\right)^n.
+\]
+Such terms correspond to higher-order coherences, meaning
+the photocount distribution depends on coherences of all orders. Formula \eqref{eqCh4_59} can be justified as follows:
+Assume that the field is in a coherent state
+$\left|\left\{\alpha_k\right\}\right>$. Then 
+the probability of electron emission in the time interval $dt$ is 
+\[
+Pdt = \sigma
+\left<\left\{\alpha_k\right\}\right|
+\hat{E}^{(-)} \hat{E}^{(+)}
+\left|\left\{\alpha_k\right\}\right> dt = 
+\sigma \left(E^{*} E\right)dt,
+\]
+where $\sigma$ characterizes the efficiency of the photocathode, and $E$ is the classical field corresponding to the state $\left|\left\{\alpha_k\right\}\right>$
+\begin{eqnarray}
+\hat{E}^{(+)} \left|\left\{\alpha_k\right\}\right> = E \left|\left\{\alpha_k\right\}\right>,
+\nonumber \\
+\left<\left\{\alpha_k\right\}\right|\hat{E}^{(-)} = E^{*} \left<\left\{\alpha_k\right\}\right|.
+\nonumber
+\end{eqnarray}
+
+Further consideration proceeds in the same way as in
+the semiclassical approach. One obtains a similar formula:
+\begin{equation}
+P_m\left(\left.T\right|\left\{\alpha_k\right\}\right) = 
+\frac{\left(\sigma \overline{E^\ast E} T\right)^m}{m!}
+e^{- \sigma T \overline{E^\ast E}}
+\label{eqCh4_60}
+\end{equation}
+where
+\[
+\overline{E^\ast E} = \frac{1}{T} \int_t^{t + T}E^\ast\left(t'\right)
+E\left(t'\right)dt'.
+\]
+This expression can be written in operator form:
+\begin{equation}
+P_m\left(\left.T\right|\left\{\alpha_k\right\}\right) = 
+\left<\left\{\alpha_k\right\}\right|
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\right\}
+\left|\left\{\alpha_k\right\}\right>,
+\label{eqCh4_61}
+\end{equation}
+where $P_m\left(\left.T\right|\left\{\alpha_k\right\}\right)$ is the probability of counting $m$ photoelectrons in time $T$ if the field
+is in the state $\left|\left\{\alpha_k\right\}\right>$.
+The operator inside the curly braces can  
+be considered as the operator counting $m$ photoelectrons in time $T$. If
+the field is in a statistically mixed state with statistical
+operator, defined in the diagonal representation by the function 
+$P_m\left(\left.T\right|\left\{\alpha_k\right\}\right)$,
+\[
+\hat{\rho} = \int_{\left\{\alpha_k\right\}}
+P\left(\left\{\alpha_k\right\}\right)
+\left|\left\{\alpha_k\right\}\right>
+\left<\left\{\alpha_k\right\}\right|
+\prod_k d^2\alpha_k,
+\]
+the average value of the operator in expression \eqref{eqCh4_61},
+according to \eqref{eqCh1_middleO}, will be 
+\begin{eqnarray}
+P_m\left(T\right) =
+\int_{\left\{\alpha_k\right\}}
+P\left(\left\{\alpha_k\right\}\right)
+\left<\left\{\alpha_k\right\}\right|
+\cdot
+\nonumber \\
+\cdot 
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\left|\left\{\alpha_k\right\}\right>
+\right\}
+\prod_k d^2\alpha_k
+\label{eqCh4_62}
+\end{eqnarray}
+The obtained formula can be written in any representation, since the operation $Sp$ does not depend on the representation. We have
+\begin{equation}
+P_m = Sp\left(
+\hat{\rho}
+\hat{N}
+\left\{
+\frac{\left(\sigma \overline{\hat{E}^{(-)} \hat{E}^{(+)}} T\right)^m}{m!}
+e^{- \sigma T \overline{\hat{E}^{(-)} \hat{E}^{(+)}}}
+\right\}
+\right),
+\label{eqCh4_63}
+\end{equation}
+where
+\[
+\overline{\hat{E}^{(-)} \hat{E}^{(+)}} = \frac{1}{T} \int_t^{t + T}\hat{E}^{(-)}\left(t'\right)
+\hat{E}^{(+)}\left(t'\right)dt'.
+\]
+
+Formula \eqref{eqCh4_63} fully corresponds to formula
+\eqref{eqCh4_59} taken from \cite{bLoudon1976}. Calculations using
+formula \eqref{eqCh4_63} are somewhat 
+more complicated than using Mandel's formula. As an example, let's consider a few
+simple cases. First, consider single-mode states. Then
+\eqref{eqCh4_63} can be written as 
+\[
+P_m = Sp\left(
+\hat{\rho}
+\hat{N}
+\left\{
+\frac{\left(\gamma \overline{\hat{a}^{\dag} \hat{a}} T\right)^m}{m!}
+e^{- \gamma T \overline{\hat{a}^{\dag} \hat{a}}}
+\right\}
+\right)
+\]
+where $\gamma$ is a coefficient characterizing the photocathode
+efficiency in this notation. The operator 
+\[
+\hat{N}
+\left\{
+\frac{\left(\gamma \overline{\hat{a}^{\dag} \hat{a}} T\right)^m}{m!}
+e^{- \gamma T \overline{\hat{a}^{\dag} \hat{a}}}
+\right\}
+\]
+has only diagonal elements in the number representation (photon number). Then $Sp\left(\dots\right)$ will be determined
+only by the diagonal elements of the density matrix, which we denote as $P_n = \bra{n}\hat{\rho}\ket{n}$.
+
+Then \eqref{eqCh4_63} can be represented as:
+\begin{eqnarray}
+P_m = \sum_n P_n 
+\bra{n}
+\hat{N}
+\frac{\left(\gamma \hat{a}^{\dag} \hat{a} T\right)^m}{m!}
+e^{- \gamma T \hat{a}^{\dag} \hat{a}}
+\ket{n} = 
+\nonumber \\
+=
+\sum_n P_n 
+\frac{\left(\gamma T\right)^m}{m!}
+\bra{n}
+\sum_l\left(-1\right)^l
+\frac{\left(\gamma T\right)^l}{l!}
+\left(\hat{a}^{\dag}\right)^{l + m}
+\left(\hat{a}\right)^{l + m}
+\ket{n} = 
+\nonumber \\
+=
+\sum_{n = m}
+P_n 
+\frac{\left(\gamma T\right)^m}{m!}
+\sum_{l = 0}^{n - m}\left(-1\right)^l
+\frac{\left(\gamma T\right)^l}{l!}
+\frac{n!}{\left(n - m - l\right)!},
+\label{eqCh4_64}
+\end{eqnarray}
+which follows from the relation:
+\begin{eqnarray}
+\bra{n}
+\left(\hat{a}^{\dag}\right)^{l + m}
+\left(\hat{a}\right)^{l + m}
+\ket{n} = 
+\nonumber \\
+= \left\{
+n \left(n - 1\right)\left(n - 2\right) \dotsc
+\left(n - m - l + 1\right)
+\right\} = 
+\frac{n!}{\left(n - m - l\right)!}.
+\nonumber
+\end{eqnarray}
+Expression \eqref{eqCh4_64} can be further transformed. The known expansion (Newton's binomial) is:
+\[
+\left(1 - \gamma T\right)^{n - m} = 
+\sum_{l = 0}^{n -m}
+\left(-1\right)^l
+\left(\gamma T\right)^l
+\frac{\left(n - m\right)!}{l!\left(n - m - l\right)!}.
+\]
+From here we have:
+\begin{equation}
+P_m\left(T\right) = 
+\sum_{n = m}^{\infty}
+P_n 
+\frac{n!}{m!\left(n - m\right)!}
+\left(\gamma T\right)^m
+\left(1 - \gamma T\right)^{n - m}.
+\label{eqCh4_64a}
+\end{equation}
+Note that, as known from probability theory (see Bernoulli distribution), the general term of the sum gives the probability that out of $n$
+photons $m$ are registered, and $n - m$ remain
+unregistered. Let's apply the general formula \eqref{eqCh4_64} to the case of
+chaotic light. Then  
+\[
+P_n = \frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}},
+\]
+and from \eqref{eqCh4_64} we get 
+\begin{eqnarray}
+P_m\left(T\right) = 
+\sum_{n = m}^{\infty}
+\frac{\bar{n}^n}{\left(\bar{n} + 1\right)^{n + 1}}
+\left(\gamma T\right)^m
+\left(1 - \gamma T\right)^{n - m} 
+\frac{n!}{m!\left(n - m\right)!}
+=
+\nonumber \\
+=
+\left(\gamma T\right)^m
+\sum_{l = 0}^{\infty}
+\frac{\bar{n}^{l + m}}{\left(\bar{n} + 1\right)^{l + m + 1}}
+\left(1 - \gamma T\right)^{l}
+\frac{\left(l + m\right)!}{m! l!}. 
+\label{eqCh4_65}
+\end{eqnarray}
+
+In the transformation, the summation index substitution is made: $l = n - m$,
+$n = l + m$.
+
+The known expansion \cite{bDvait1973} is:
+\[
+\left(1 - x\right)^{-\left(m + 1\right)} = 
+\sum_{l = 0}^\infty
+\frac{x^l \left(m + l\right)!}{m! l!}.
+\]
+Using it, we get:
+\begin{eqnarray}
+P_m\left(T\right) = 
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \bar{n}\right)^{m +
+    1}}
+\left(
+1 - \frac{\bar{n}}{1 + \bar{n}}\left(1 - \gamma T\right)
+\right)^{-\left(m + 1\right)} = 
+\nonumber \\
+=
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \bar{n}\right)^{m +
+    1}} 
+\left\{
+\frac{1 - \gamma T \bar{n}}{1 + \bar{n}} 
+\right\}^{-\left(m + 1\right)} = 
+\frac{\left(\gamma T \bar{n}\right)^m}{\left(1 + \gamma T \bar{n}\right)^{m +
+    1}} =
+\frac{\bar{m}^m}{\left(\bar{m} + 1\right)^{m + 1}},
+\label{eqCh4_66}
+\end{eqnarray}
+where $\bar{m} = \gamma T \bar{n}$.  We obtained the same result as
+in the semiclassical 
+consideration. The distribution $P_m\left(T\right)$ mirrors $P_n$, but at a different 
+scale. Instead of $\bar{n}$, there is $\bar{m} = \gamma T \bar{n}$. Now consider another limiting case: the field is in a
+coherent state. It is convenient to consider it in the representation
+of coherent states. We have  
+\begin{eqnarray}
+P_m\left(T\right) = 
+\left<\alpha\right|
+\hat{N}
+\frac{\left(\gamma \hat{a}^{\dag} \hat{a} T\right)^m}{m!}
+e^{- \gamma T \hat{a}^{\dag} \hat{a}}
+\left|\alpha\right> = 
+\nonumber \\
+=
+\frac{\left(\gamma \left|\alpha\right|^2 T\right)^m e^{-\gamma
+    \left|\alpha\right|^2 T}}{m!} = 
+\frac{\bar{m}^m}{m!}e^{-\bar{m}},
+\label{eqCh4_67}
+\end{eqnarray}
+where $\bar{m} = \gamma \left|\alpha\right|^2 T = \gamma \bar{n} T$.
+
+The photon number distribution for a coherent state is known
+\eqref{eqCh1_PuassonCoh}:
+\[
+P_n = \frac{\bar{n}^n e^{-\bar{n}}}{n!}.
+\]
+Thus, in this case as well, the photocount distribution
+mirrors the photon distribution but at a different scale. Instead of
+$\bar{n}$, there is $\bar{m}$.  In the general case, such a simple relation does not hold. From the derivation of the quantum photocount formula
+it follows that as long as $P\left(\left\{\alpha_k\right\}\right)$ in the expression 
+for the statistical operator can be interpreted as a probability distribution, there is no discrepancy between semiclassical results
+(Mandel's formula) and the fully quantum treatment. However, if
+$P\left(\left\{\alpha_k\right\}\right)$ is negative in some regions, the results will differ.  

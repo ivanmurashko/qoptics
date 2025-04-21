@@ -1,0 +1,44 @@
+%% -*- coding:utf-8 -*- 
+\chapter{Quantum Theory of the Laser in the Heisenberg Representation}
+\label{chLaser2}
+
+So far we have considered the quantum theory of the laser using
+the Schrödinger representation, in which the density matrix depends on time,
+while operators do not depend on time. As we have seen from the example
+of the problem of the decay of the resonator mode, another approach is possible,
+using the Heisenberg representation
+\cite{bScullyQuantumOptics2003}, 
+in which
+operators depend on time, while the density matrix \rindex{Density matrix}
+does not depend on time. In some cases,
+this approach can be more convenient for investigating subtle
+questions of the quantum theory of lasers, such as laser generation
+of the field in a squeezed state.
+
+\input ./part2/laser2/model.tex
+\input ./part2/laser2/equation.tex
+\input ./part2/laser2/system.tex
+\input ./part2/laser2/bandwidth.tex
+
+\section{Exercises}
+\begin{enumerate}
+\item Prove the commutation relations
+  \eqref{eqLaserHaizenbergTaskKommutator} and \eqref{eqLaserHaizenbergTaskKommutator2}.
+\item Derive the equations of motion for the operator $\hat{\sigma}_b^j$: \eqref{eqLaserHaizenbergSigmaBJ} and 
+\eqref{eqLaserHaizenbergFBJ}.
+\item Derive the relations \eqref{eqLaserHaizenberNB_AB} for
+  the operators $\hat{N}_b$ and $\hat{N}_{ab}$.
+\item Prove the second relation \eqref{eqLaserHaizenbergFABJCorrel}.
+\item Prove \eqref{eqLaserHaizenbergTaskMiddle}.
+\item Prove \eqref{eqLaserHaizenbergTaskDelta}.
+\end{enumerate}
+
+%% \begin{thebibliography}{99}
+%% \bibitem{bCh1LaserLangevinSkalliZubari} M. O. Scully,
+%%   M. S. Zubairy. Quantum 
+%%   Optics. Moscow, Fizmatlit, 2003.
+%% \bibitem{bCh1LaserLangevinYamamoto} Y. Yamamoto, A. Imamoglu.  Mesoscopic quantum
+%%   optics. 1999, USA, J.Wiley \& Son.
+%% \bibitem{bCh1LaserLangevinHaken} G. Haken. Laser light dynamics. Moscow: Mir,
+%%   1988.
+%% \end{thebibliography}

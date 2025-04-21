@@ -1,0 +1,144 @@
+%% -*- coding:utf-8 -*- 
+\section{Bell Basis States}
+
+\rindex{Bell Basis States}
+Any two-photon entangled state of the form \eqref{eqEntang2Common}:
+\begin{eqnarray}
+\left|\psi\right> =  
+c_{xx} \ket{x}_1\ket{x}_2 +
+c_{xy} \ket{x}_1\ket{y}_2 +
+\nonumber \\
++
+c_{yx} \ket{y}_1\ket{x}_2 +
+c_{yy} \ket{y}_1\ket{y}_2
+\nonumber
+\end{eqnarray}
+can be decomposed into the following Bell basis states:
+\begin{eqnarray}
+  \left|\psi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{y}_2 + 
+  \ket{y}_1\ket{x}_2
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{y}_2 - 
+  \ket{y}_1\ket{x}_2
+  \right),
+  \nonumber \\
+  \left|\phi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{x}_2 + 
+  \ket{y}_1\ket{y}_2
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}\left(
+  \ket{x}_1\ket{x}_2 - 
+  \ket{y}_1\ket{y}_2
+  \right).
+  \label{eqEntangBellBase}
+\end{eqnarray}
+ 
+To prove the decomposability, it is sufficient to show that the wavefunctions \eqref{eqEntangBellBase} are orthogonal. For this, we write each of these functions in matrix form in the basis formed by
+$\ket{x}_1\ket{x}_2$, $\ket{x}_1\ket{y}_2$,
+$\ket{y}_1\ket{x}_2$, and
+$\ket{y}_1\ket{y}_2$, resulting in 
+\begin{eqnarray}
+  \left|\psi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    1 \\
+    0
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\psi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    -1 \\
+    0
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\phi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    1 \\
+    0 \\
+    0 \\
+    1
+  \end{array}
+  \right),
+  \nonumber \\
+  \left|\phi^{-}\right>_{12} = 
+  \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{c}
+    1 \\
+    0 \\
+    0 \\
+    -1
+  \end{array}
+  \right).
+  \label{eqEntangBellBaseMatrix}
+\end{eqnarray}
+
+When checking the orthogonality of $\left|\psi^{\dag}\right>_{12}$ and 
+$\left|\psi^{-}\right>_{12}$, we have
+\begin{eqnarray}
+\left<\psi^{\dag}\right|_{12}\left.\psi^{-}\right>_{12} = 
+  \left|\psi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{cccc}
+    0 & 1 & 1 & 0
+  \end{array}
+  \right)   
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    -1 \\
+    0
+  \end{array}
+  \right) = 
+\nonumber \\
+=
+  \frac{1}{2}\left(1 - 1\right) = 0.
+\nonumber 
+\end{eqnarray}
+Similarly, the orthogonality of the other states
+\eqref{eqEntangBellBase} can be shown. 
+
+Moreover, using \eqref{eqEntangBellBaseMatrix}, it can be shown that the states \eqref{eqEntangBellBase} are normalized; for example, for $\left|\psi^{\dag}\right>_{12}$ we get 
+\begin{eqnarray}
+\left<\psi^{\dag}\right|_{12}\left.\psi^{\dag}\right>_{12} = 
+  \left|\psi^{\dag}\right>_{12} = 
+  \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}}
+  \left(
+  \begin{array}{cccc}
+    0 & 1 & 1 & 0
+  \end{array}
+  \right)   
+  \left(
+  \begin{array}{c}
+    0 \\
+    1 \\
+    1 \\
+    0
+  \end{array}
+  \right) = 
+\nonumber \\
+=
+  \frac{1}{2}\left(1 + 1\right) = 1.
+\nonumber 
+\end{eqnarray}

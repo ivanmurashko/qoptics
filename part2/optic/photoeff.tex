@@ -1,0 +1,122 @@
+%% -*- coding:utf-8 -*- 
+\section{Photoeffect}
+The photoeffect is used for photon detection, in which, as is known, upon absorption of a photon a bound electron transitions to a free state and is registered accordingly. One of the devices used for these purposes is the photomultiplier, schematically shown in \autoref{figPart4Ch2_1}. Its principle of operation is well known. Semiconductor avalanche photodiodes with an amplifier may also be used. Let us consider the relationship between the rate of photoelectron transitions and the light field. The electric field operator can be decomposed into frequency-positive and frequency-negative parts \eqref{eqCh1_79}:
+\begin{equation}
+\hat{\vec{E}}\left(\vec{r}, t\right) = 
+\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right) +
+\hat{\vec{E}}^{(-)}\left(\vec{r}, t\right),
+\label{eqCh4_1}
+\end{equation}
+where the frequency-positive part includes annihilation operators, and the frequency-negative part includes creation operators.
+
+\input ./part2/optic/fig1.tex
+
+When decomposing the field into plane waves, we have:
+\begin{eqnarray}
+\hat{\vec{E}}^{(+)}\left(\vec{r}, t\right) = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
+  \right)},
+\nonumber \\
+\hat{\vec{E}}^{(-)}\left(\vec{r}, t\right) = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
+V}} \hat{a}_k^{\dag} \vec{e}_k^{*} e^{i \omega_k t - i \left(\vec{k}\vec{r}
+  \right)}.
+\label{eqCh4_2}
+\end{eqnarray}
+
+We consider the electric dipole interaction approximation, that is, we assume that the size of the atom (or other electronic system) interacting with the light is much smaller than the wavelength. The interaction Hamiltonian in this case has the form:
+\begin{equation}
+\hat{\mathcal{H}}_{ED} = - \left(\hat{\vec{p}}\hat{\vec{E}}\right),
+\label{eqCh4_3pre}
+\end{equation}
+where $\hat{\vec{p}}$ is the dipole moment operator of the system. 
+Furthermore, we assume that only processes accompanied by photon annihilation are considered. Thus, in \eqref{eqCh4_3pre}, one must retain only the annihilation operators $\hat{a}$, i.e., replace $\hat{\vec{E}}$ by $\hat{\vec{E}}^{(+)}$:
+\begin{equation}
+\hat{\mathcal{H}}_{ED} = - \left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right).
+\label{eqCh4_3}
+\end{equation}
+
+Assume that initially the atom is in the ground state, and the multimode field contains $\left\{n_k\right\}$ photons, so that the initial state vector is
+\begin{equation}
+\ket{i} = \left|\left\{n_k\right\}\right> \ket{b}
+\label{eqCh4_4}
+\end{equation}
+
+After the interaction, the atom-field system will be in state $\ket{f}$ (we will not detail it). The probability of transition per unit time in first-order perturbation theory according to \myref{addQuantGoldenRuleFermi}{Fermi's golden rule} is given by the square modulus of the matrix element of the transition:
+\begin{eqnarray}
+\left|\bra{f}\hat{\mathcal{H}}_{ED}\ket{i}\right|^2 =
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}^{*}
+= 
+\nonumber \\
+=
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
+=
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+\label{eqCh4_5}
+\end{eqnarray}
+The final state is unknown. It can be any state, and it is necessary to sum \eqref{eqCh4_5} over all final states (sum the probabilities). We consider the system of final states complete, i.e.,  
+$\sum_{(f)} \ket{f}\bra{f} = \hat{I}$.
+From this we have:
+\begin{eqnarray}
+\sum_{(f)}
+\bra{i}\left(\hat{\vec{p}}\hat{\vec{E}}^{(-)}\right)\ket{f}
+\bra{f}\left(\hat{\vec{p}}\hat{\vec{E}}^{(+)}\right)\ket{i}
+= 
+\bra{i}\hat{p}_E^2\hat{E}^{(-)}\hat{E}^{(+)}\ket{i} = 
+\nonumber \\
+=
+\left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right>\bra{b}\hat{p}_E^2\ket{b}
+= 
+\alpha \left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right>,
+\label{eqCh4_6}
+\end{eqnarray}
+where $\hat{p}_E$ is the projection of the dipole moment onto the direction of the field, and $\alpha$ is some interaction constant that does not depend on the field magnitude. Now let us generalize \eqref{eqCh4_6} to the case of a mixed initial state. Suppose we know the probability $P_{\left\{n_k\right\}}$ of the state $\left|\left\{n_k\right\}\right>$.
+The density matrix \rindex{Density matrix}
+of this state can be represented as
+\begin{equation}
+\hat{\rho} = \sum_{\left\{n_k\right\}}P_{\left\{n_k\right\}}
+\left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|.
+\label{eqCh4_7}
+\end{equation}
+
+To obtain the result in the mixed state case, it is necessary to average \eqref{eqCh4_6} using the probabilities  $P_{\left\{n_k\right\}}$. For the photo-count rate, we have:
+\begin{eqnarray}
+W = \alpha \sum_{\left\{n_k\right\}}P_{\left\{n_k\right\}}
+\left<\left\{n_k\right\}\right|\hat{E}^{(-)}\hat{E}^{(+)}\left|\left\{n_k\right\}\right> =
+\nonumber \\
+=
+\alpha Sp\left(\hat{\rho}\hat{E}^{(-)}\hat{E}^{(+)}\right)
+\label{eqCh4_8}
+\end{eqnarray}
+- in an arbitrary representation, since $Sp$ does not depend on the representation.
+
+Thus, in the general case of a statistically mixed state, the average photon count rate is proportional to the expectation value of the operators $\hat{E}^{(-)}\hat{E}^{(+)}$ in the initial field state, where $\hat{\rho}$ is the statistical operator of the initial field state.  
+
+We considered an atom or a similar microsystem as a photodetector. A real photodetector contains many atoms. If we assume that the detector contains $N$ non-interacting atoms, and its size is small enough so that all atoms can be regarded as being in identical conditions with good accuracy, then the probability \eqref{eqCh4_8} can simply be increased by a factor of $N$. 
+
+Let us determine the meaning of the operator $\hat{E}^{(-)}\hat{E}^{(+)}$.
+Introduce the operator
+\begin{equation}
+\hat{\vec{J}} = 2 \varepsilon_0
+\left(\hat{E}^{(-)}\hat{E}^{(+)}\right) c \vec{k}_0,
+\label{eqCh4_9}
+\end{equation}
+where $\vec{k}_0$ is the unit vector in the propagation direction of the wave; the vector operator
+$\hat{\vec{J}}$ can be considered as the operator of energy flux in the direction $\vec{k}_0$. For example, for a single-mode field, this operator equals
+\begin{equation}
+\hat{\vec{J}} = \frac{c \hbar \omega_k}{V} \vec{k}_0 \hat{n}_k,
+\label{eqCh4_10}
+\end{equation}
+where $\vec{k}_0$ is the unit vector in the direction $\vec{k}$. The mean
+value of the operator $\hat{\vec{J}}$ in a state with a definite photon number is
+\[
+\left<\hat{\vec{J}}\right> = \frac{c \hbar \omega_k}{V} n_k \vec{k}_0,
+\]
+In a single-mode mixed state, we have
+\[
+\left<\hat{\vec{J}}\right> = \frac{c \hbar \omega_k}{V} \bar{n} \vec{k}_0,   \mbox{ where }   \bar{n} = \sum_{(n_k)}P_{n_k} n_k.
+\]
+
+From the examples given, it is clear that $\hat{\vec{J}}$ indeed has the meaning of the energy flux operator. In the single-mode case, the intensity does not depend on time. In the multimode case, the intensity can vary in time and space. From all the above, it can be concluded that the photoemission rate is proportional to the average photon flux, i.e., the light intensity. In a semiclassical treatment, this corresponds to the average energy flux over a period. 

@@ -1,0 +1,59 @@
+%% -*- coding:utf-8 -*- 
+Algorithms play a significant role in computer science. An algorithm
+is a sequence of steps necessary to obtain
+the solution to a certain problem. Each problem is characterized by a certain
+number that defines its size. The complexity of an algorithm is evaluated
+as the number of 
+elementary operations needed to solve the given
+problem. Obviously, in most cases (but not always), this number
+grows with the size of the problem. 
+
+\begin{example}
+\emph{Finding an element in an array}
+\label{exFind}
+The task is to find an element in an array that satisfies certain
+conditions. The size of the problem is the number of elements in the array $N$. 
+
+In the general case (an unstructured data array), the search is performed
+by simple enumeration. This search requires a number of operations (comparisons) that
+grows linearly with the size of the array $O\left( N \right)$.
+
+In the case of structured data, the number of operations required for the search
+can be reduced. For example, in the case of a sorted array,
+the complexity of the problem grows as $O\left(\log N\right)$.
+\end{example}
+
+At the same time, the existence of an algorithm does not yet
+guarantee its practical feasibility. In particular, algorithms
+requiring an exponential number of steps relative to the size of the original problem
+are considered practically unrealizable despite the fact that,
+from a theoretical point of view, a solution exists.
+
+One example is the problem of factorizing a natural number,
+i.e., the problem of decomposing it into prime factors (see example
+\ref{exFactor}).  
+
+\begin{example}
+\emph{Factorization of natural numbers}
+\label{exFactor}
+The task is to find the decomposition of a number into prime factors.
+The size of the problem
+is the number of digits of the original number. For example, in the case of digit length
+$r = 4$: $1 \le N = 15 \le 2^r = 2^4 = 16$. The result can be
+found easily and quickly: $15 = 3 \cdot 5$. 
+
+As the number of digits $r$ grows, the number of operations needed for
+factorization in classical algorithms grows as
+$O\left(2^r\right)$, which for $r = 1000 - 2000$ means the practical
+impossibility of factorizing such numbers. 
+\end{example}
+
+Quantum objects possess properties differing from classical
+objects, accordingly algorithms built on the basis of quantum
+objects can, in some cases, have characteristics unavailable
+to classical algorithms. For example, Grover's quantum algorithm
+\cite{Grover96afast} solves the problem of search in an unstructured
+data array (see example \ref{exFind}) using
+$O\left(\sqrt{N}\right)$ operations. Shor's algorithm \cite{bShor94}
+allows solving the problem of number factorization (see example
+\ref{exFactor}) using a linear number of operations $O\left(r\right)$. 

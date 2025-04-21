@@ -1,0 +1,134 @@
+%% -*- coding:utf-8 -*- 
+\section{Mixed States of the Electromagnetic Field}
+So far, we have considered only pure states of the electromagnetic
+field, described by state vectors. 
+One of the most distinctive features of pure states is
+the principle of superposition. 
+
+Only isolated systems can be pure, whereas
+mixed systems are not isolated from their environment. To describe
+mixed states, the density matrix formalism is used. The density operator can be introduced as follows.  
+
+Consider a mixed state, 
+\rindex{Mixed state}
+for which the probabilities
+$P_M$
+of the field being in each of the states 
+$\ket{M}$ are known.  Let us calculate the average value
+of the operator $\hat{O}$ corresponding to the observable $O$ in this statistically
+mixed state. The average for a statistical mixture of states  
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(M)} P_M\bra{M}\hat{O}\ket{M},
+\end{equation}
+where, evidently, 
+\[
+\sum_{(M)} P_M = 1.
+\]
+
+This expression can be represented differently. Using some
+complete set of states $\ket{S}$ and the completeness condition
+\[
+\sum_{(S)}\ket{S}\bra{S} = \hat{I},
+\]
+we obtain
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(M)}
+P_M\sum_{(S)}\bra{M}\hat{O}\ket{S}\bra{S}\ket{M}
+= \sum_{(M)}\sum_{(S)}P_M\bra{S}\ket{M}\bra{M}\hat{O}\ket{S}.
+\label{eqCh1_middle}
+\end{equation}
+
+Based on \eqref{eqCh1_middle}, one can introduce the statistical operator $\hat{\rho}$ by means of the expression
+\begin{equation}
+\hat{\rho} = \sum_{(M)}
+P_M\ket{M}\bra{M}.
+\end{equation}
+
+Then the equality \eqref{eqCh1_middle} can be written as
+\begin{equation}
+\left<\hat{O}\right> = \sum_{(S)}
+\bra{S}\hat{\rho}\hat{O}\ket{S} = Sp \left(\hat{\rho}\hat{O}\right),
+\end{equation}
+This relation does not depend on the choice of $\ket{S}$, since the trace
+of an operator does not depend on the representation. Note that 
+\begin{equation}
+Sp \left(\hat{\rho}\right) = \sum_{(M)}
+\bra{M}\hat{\rho}\ket{M} = \sum_{(M)} P_M = 1
+\label{eqCh1_spequal1}
+\end{equation}
+
+As an example, consider the thermal excitation of photons in a single
+mode:
+\begin{equation}
+\hat{\rho} = \sum_{(n)}
+P_n\ket{n}\bra{n},
+\label{eqCh1_teplovvozb}
+\end{equation}
+where $P_n$ is defined by the Boltzmann distribution
+\[
+P_n = e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right),
+\]
+here  $\beta = \frac{1}{k_b T}$, and $\left(1  -  e^{-\beta \hbar
+  \omega}\right)$ is the normalization factor. 
+
+The average number of photons in the mode under thermal excitation is:
+\begin{eqnarray}
+\bar{n} = \left<\hat{n}\right> =  Sp \left(\hat{\rho}\hat{n}\right) = 
+Sp \left(\hat{\rho}\hat{a}^{\dag}\hat{a}\right) = 
+\nonumber \\
+=\sum_{(m)}\sum_{(n)}
+P_n\bra{m}\ket{n}\bra{n}\hat{a}^{\dag}\hat{a}\ket{m}
+= 
+\nonumber \\
+= \sum_{(n)}
+P_n\bra{n}\hat{n}\ket{n} = \sum_{(n)} n
+e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right) = 
+\frac{1}{e^{\beta \hbar \omega} - 1}
+\label{eqCh1_plank}
+\end{eqnarray}
+This is the well-known expression obtained by Planck. In this case, we
+used the following expression:
+\[
+\sum_{n=0}^{\infty} n r^{n -1} = \frac{d}{d r} \sum_{n=0}^{\infty}
+r^{n} = \frac{1}{\left(1 - r\right)^2},
+\]
+valid for $\left|r\right| < 1$.
+
+The equalities \eqref{eqCh1_teplovvozb}, \eqref{eqCh1_plank} can be written in
+another form. From \eqref{eqCh1_plank} we get 
+\[
+e^{-\beta \hbar \omega} = \frac{\bar{n}}{1 + \bar{n}},
+\]
+therefore, 
+\begin{equation}
+P_n = e^{-\beta \hbar \omega n} \left(1  -  e^{-\beta \hbar
+  \omega}\right) = \frac{\bar{n}^n}{\left(1 + \bar{n}\right)^{n+1}}.
+\label{eqCh1_plank2}
+\end{equation}
+At the same time, the density matrix \rindex{Density matrix}
+takes the form:
+\[
+\hat{\rho} = \sum_{(n)}\frac{\bar{n}^n}{\left(1 + \bar{n}\right)^{n+1}}\ket{n}\bra{n}.
+\]
+This formula describes the density matrix of chaotic light through
+$\bar{n}$ — the average number of photons in the mode. Moreover,
+$\bar{n}$ does not necessarily depend on frequency according to Planck's formula \eqref{eqCh1_plank2}. The dependence of $\bar{n}$ on frequency
+determines the line shape of chaotic light (different frequencies
+correspond to different modes). Generalizing the obtained result, we can
+write the expression for the statistical operator of chaotic light as:  
+\begin{equation}
+\hat{\rho} = \sum_{\left\{n_k\right\}} P_{\left\{n_k\right\}} \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right| = 
+\sum_{\left\{n_k\right\}} 
+ \left|\left\{n_k\right\}\right>\left<\left\{n_k\right\}\right|
+\prod_{\left\{k\right\}} 
+\frac{\bar{n}_k^{n_k}}{\left(1 + \bar{n}_k\right)^{n_k+1}},
+\label{eqCh1_102}
+\end{equation}
+where $\bar{n}_k$ depend on frequency. For example, for chaotic light
+having a Lorentzian line, 
+\[
+\bar{n}_k = \frac{I S}{\hbar \omega_{k_0}}
+\frac{\gamma}{\left(\omega_{k_0} - \omega_{k}\right)^2 + \gamma^2},
+\]
+where $\frac{I S}{\hbar \omega_{k_0}}$ is the average number of photons in
+the beam;  $I$ is the beam intensity (energy flux);  $S$ is the beam cross-section.  

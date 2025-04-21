@@ -1,0 +1,83 @@
+%% -*- coding:utf-8 -*- 
+\section{Connection of photon statistics with photoelectron count statistics}
+Let us start with a semiclassical consideration and then generalize the results to a fully quantum treatment. We have seen that the photoemission rate is proportional to the intensity of the light flux, which is determined by the mean value of the operator $\left<\hat{E}^{(-)}\hat{E}^{(+)}\right>$. Since the quantum-mechanical intensity is analogous, in the classical case, to the intensity $I\left(t\right)$ averaged over a period, the electron emission rate can be considered proportional to $I\left(t\right)$ in the semiclassical approximation. Let $P\left(t\right)dt$ denote the probability of the appearance of a photoelectron in the time interval $t$ to $t + dt$. Then, $P\left(t\right)dt = \xi I\left(t\right)dt$, where $\xi$ characterizes the efficiency of the photocathode. Denote the probability of registering $m$ photo counts in the time interval $t$ to $t' + dt'$ by $P_m\left(t, t' + dt'\right)$. There are two possibilities to obtain $m$ counts in the given time interval, shown in \autoref{figPart4Ch2_5}:
+
+\input ./part2/optic/fig5.tex
+
+\begin{enumerate}
+\item In the interval $t$ to $t'$, $m$ counts were made, and in the interval $dt$ - none.
+\item In the interval $t$ to $t'$, $m - 1$ counts were made, and in the interval $dt'$ - one count.
+\end{enumerate}
+Note: the interval is so small that the probabilities of two or more counts are negligibly small. For these two cases, we can write
+\begin{eqnarray}
+P_m^{(1)}\left(t, t' + dt'\right) = 
+P_m\left(t, t'\right)\left(1 - P\left(t'\right)dt'\right),
+\nonumber \\
+P_m^{(2)}\left(t, t' + dt'\right) = 
+P_{m - 1}\left(t, t'\right)P\left(t'\right)dt',
+\label{eqCh4_41}
+\end{eqnarray}
+where $P\left(t\right)dt = \xi I\left(t\right)dt$.  
+The total probability will be the sum of the probabilities of these two events:
+\begin{eqnarray}
+P_m\left(t, t' + dt'\right) = 
+P_m\left(t, t'\right)\left(1 - P\left(t'\right)dt'\right) +
+\nonumber \\
++
+P_{m - 1}\left(t, t'\right)P\left(t'\right)dt'.
+\label{eqCh4_42}
+\end{eqnarray}
+From this, we get a chain of differential recurrence equations
+\begin{equation}
+\frac{dP_m}{dt'} = \xi I\left(t'\right)\left\{P_{m - 1}\left(t'\right)
+- P_m\left(t'\right)\right\},
+\label{eqCh4_43}
+\end{equation}
+which can be solved by sequentially integrating, starting with $m = 0$. The initial equation has the form:
+\begin{equation}
+\frac{dP_0}{dt'} = - \xi I\left(t'\right) P_0\left(t'\right),
+\label{eqCh4_44}
+\end{equation}
+with obvious initial conditions $P_0\left(t'\right) = 1$ at $t' = t$. The solution of the equation under these initial conditions is
+\begin{equation}
+P_0\left(t, T\right) = e^{- \xi \int_t^{t + T} I\left(t'\right) d t'}, 
+\label{eqCh4_45}
+\end{equation}
+where $T$ is the counting time. If we introduce the intensity averaged over the counting time
+\[
+\bar{I}\left(t, T\right) = \frac{1}{T}
+\int_t^{t + T}I\left(t'\right)dt',
+\]
+then equation \eqref{eqCh4_45} can be rewritten as
+\begin{equation}
+P_0\left(t, T\right) = e^{- \xi \bar{I} T}
+\label{eqCh4_46}
+\end{equation}
+The other probabilities can be successively expressed through $P_0\left(t, T\right)$. By induction it is easy to show that
+\begin{equation}
+P_m\left(t, T\right) = \frac{\left(\xi \bar{I} T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+\label{eqCh4_47}
+\end{equation}
+One can verify the validity of this solution by substituting it into the original equation \eqref{eqCh4_43}. Generally, the intensity $\bar{I}\left(t, T\right)$ fluctuates from one counting interval to another. To account for this, an averaging over the ensemble of measurements needs to be done. The result is Mandel's formula:
+\begin{equation}
+P_m\left(T\right) = 
+\left<P_m\left(t, T\right)\right> = 
+\left<
+\frac{\left(\xi \bar{I}\left(t, T\right) T\right)^m}{m!} e^{-
+  \xi \bar{I}\left(t, T\right) T} 
+\right>.
+\label{eqCh4_48}
+\end{equation}
+Alternatively, this formula can be written as
+\begin{equation}
+P_m\left(T\right) = 
+\left<P_m\left(t, T\right)\right> = 
+\int_0^{\infty}
+P\left(\bar{I}\right)
+\frac{\left(\xi \bar{I}T\right)^m}{m!} e^{-
+  \xi \bar{I} T} 
+d \bar{I},
+\label{eqCh4_49}
+\end{equation}
+where $P\left(\bar{I}\right)$ is the probability density for $\bar{I}$.

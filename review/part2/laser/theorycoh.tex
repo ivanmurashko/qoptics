@@ -1,0 +1,442 @@
+%% -*- coding:utf-8 -*- 
+\section{Laser theory. Representation of coherent states}
+It is necessary to use the equation for the quasiprobability function
+$P\left(\alpha, t\right)$ \eqref{eqCh3_7}:
+\begin{equation}
+\frac{\partial}{\partial t} P\left(\alpha, t\right) = 
+- \frac{1}{2}\left\{ 
+\frac{\partial}{\partial \alpha}
+\left[
+A - \frac{\omega}{Q} - B \left|\alpha\right|^2
+\right] \alpha P + \mbox{c.c.}
+\right\} + 
+A \frac{\partial^2 P}{\partial \alpha \partial \alpha^{*}}.
+\nonumber
+\end{equation} 
+
+For our purposes, it is convenient to represent this equation in polar
+coordinates $\alpha = r e^{i\theta}$. We have
+\begin{eqnarray}
+\frac{\partial}{\partial t} P\left(r, \theta, t\right) =
+- \frac{1}{2 r} \cdot \frac{\partial}{\partial r}\left[
+r^2\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r, \theta,
+t\right) 
+\right] +
+\nonumber \\
++ \frac{A}{4 r^2}
+\left(
+r \frac{\partial}{\partial r} r \frac{\partial}{\partial r} + 
+\frac{\partial^2}{\partial \theta^2}
+\right)
+P\left(r, \theta, t\right)
+\label{eqCh3_12}
+\end{eqnarray}
+
+Suppose we are interested in the steady state. Then $\frac{\partial
+  P}{\partial t} = 0$, and the phase $\theta$ is uniformly distributed from $0$ to $2
+\pi$. It follows that $\frac{\partial^2 P}{\partial
+  \theta^2} = 0$ and the quasiprobability $P\left(r, \theta, t\right)$ does not depend on $t$ or
+$\theta$. Equation \eqref{eqCh3_12} then takes the form   
+\begin{equation}
+0 = - \frac{\partial}{\partial r}
+\left[
+r^2\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r\right) 
+\right] + 
+\frac{1}{2} A \frac{\partial}{\partial r} r \frac{\partial}{\partial
+  r} P\left(r\right).
+\label{eqCh3_13}
+\end{equation}
+
+This equation is easily integrated. The first integration gives
+\begin{equation}
+r\left(A - \frac{\omega}{Q} - B r^2\right)P\left(r\right) 
+=
+\frac{1}{2} A \frac{\partial}{\partial
+  r} P\left(r\right) + C.
+\label{eqCh3_14}
+\end{equation}
+The constant $C = 0$, since $P$ and $\frac{\partial P}{\partial r}$
+must tend sufficiently quickly to zero as $r \rightarrow
+\infty$. 
+ 
+From here follows the equation
+\begin{equation}
+\frac{d P}{P} = 
+\frac{2}{A} r \left(A - \frac{\omega}{Q} - B r^2\right)d r. 
+\label{eqCh3_15}
+\end{equation}
+
+Its solution is
+\begin{eqnarray}
+P = N \exp \left(\frac{1}{A}
+\left[
+r^2 \left(A - \frac{\omega}{Q}\right)
+ - 
+\frac{B r^4}{2}
+\right]
+\right) = 
+\nonumber \\
+= 
+N \exp \left(\frac{1}{A}
+\left[
+r^2 G
+ - 
+\frac{B r^4}{2}
+\right]
+\right),
+\label{eqCh3_16}
+\end{eqnarray}
+where $N$ is the normalization factor, equal to
+\[
+\frac{1}{N} = 2 \pi \int_0^{\infty}
+\exp\left(
+\frac{1}{A}\left[
+r^2 G - \frac{B}{2}r^4
+\right]
+\right)
+r dr.
+\]
+Distribution \eqref{eqCh3_16}
+is a function of $r^2 = \left|\alpha\right|^2 = \bar{n}$. When
+threshold is exceeded $A > \frac{\omega}{Q}$, i.e. when $G > 0$,
+$P\left(r\right)$ first increases with increasing $r^2$, reaching a maximum at
+$r^2 = \frac{A - \omega/Q}{B} = \frac{G}{B}$, and then decreases.  
+
+This same result was obtained earlier. The obtained value $r =
+\sqrt{\frac{G}{B}}$ corresponds, at $G > 0$, to the most probable
+value of $\left|\alpha\right|$.
+  
+For $A < \frac{\omega}{Q}$, $G < 0$, the laser is below threshold. With
+increasing $r^2$ the curve monotonically decreases. At threshold $A =
+\frac{\omega}{Q}$, $G = 0$, the curve also decreases, but at $r^2 = 0$
+we have an extremum.   
+
+\input ./part2/laser/fig6.tex
+
+On \autoref{figPart2Ch1_6} are shown dependencies of the quasiprobability on $r^2 =
+\left|\alpha\right|^2$, for different values of parameter $G$,
+corresponding to below-threshold, threshold, and above-threshold regimes. 
+
+On the complex plane $\alpha = r e^{i \theta}$, when the threshold is substantially
+exceeded, the region occupied by the generated field can be visually
+represented as shown on
+\autoref{figPart2Ch1_7}. The broken curve characterizes the
+distribution of the oscillation amplitude, i.e., corresponds to amplitude
+noise. The phase $\theta$ is uniformly distributed in the interval $0 - 2\pi$,
+therefore the broken curve lies close to the circle $r =
+\sqrt{\bar{n}_{st}}$ with the radius corresponding to the most probable
+value of $\left|\alpha\right|$. 
+
+\input ./part2/laser/fig7.tex
+
+From \autoref{figPart2Ch1_7} it is seen that the amplitude fluctuates in a narrow region around the circle of radius $r = \sqrt{\bar{n}_{st}}$, while the phase
+freely diffuses (wanders) along this circle. 
+
+Phase diffusion in the laser occurs slowly, therefore, if
+we consider not too long time intervals, it can be assumed
+that the laser generates radiation with a well-defined phase. When
+averaged over a long time interval, during which the phase can assume any value
+in the range $0 - 2\pi$ with equal probability, the mean value of the laser field over this interval
+will be zero.  
+
+Let us consider the phase diffusion process more carefully. Suppose
+the amplitude distribution is established and $P\left(r\right)$
+corresponds to the stationary amplitude distribution. Then
+\[
+P\left(r, \theta, t\right) = P\left(r\right) P\left(\theta, t\right).
+\]
+In this case, equation \eqref{eqCh3_12} takes the form 
+\begin{equation}
+\frac{\partial P \left(\theta, t\right)}{\partial t} = 
+\frac{A}{4 r^2}
+\frac{\partial^2}{\partial \theta^2}
+P \left(\theta, t\right)
+\label{eqCh3_17}
+\end{equation}
+The function $P\left(r\right)$ cancels out because it satisfies the stationary equation \eqref{eqCh3_15}. 
+
+Equation \eqref{eqCh3_17} can be used to obtain the equation satisfied by the average field. The average electric field of the laser mode,
+expressed through $P$, has the form  
+\[
+\left<\hat{E}\right> = E_1 \int P\left(\alpha, t\right) \alpha d^2
+\alpha.
+\]
+In polar coordinates this looks like:
+\[
+\left<\hat{E}\right> = E_1 \int_{0}^{\infty}r dr \int_0^{2 \pi}r e^{i
+  \theta} P\left(r, \theta, t\right) d \theta.
+\]
+Using now equation \eqref{eqCh3_17}:
+\begin{eqnarray}
+\frac{\partial \left<\hat{E}\right>}{\partial t}
+= E_1 \frac{\partial}{\partial t} \int_{0}^{\infty}r^2 dr \int_0^{2
+  \pi} e^{i
+  \theta} P\left(r, \theta, t\right) d \theta = 
+\nonumber \\
+= E_1 \int_0^{\infty}r^2 dr \int_0^{2\pi}e^{i\theta}\frac{\partial
+  P}{\partial t} d \theta
+=
+\nonumber \\
+= \frac{E_1}{\bar{n}_{st}} \frac{A}{4}
+\int_{0}^{\infty}r^2 dr \int_0^{2 \pi}e^{i
+  \theta} \frac{\partial^2}{\partial \theta^2} P\left(r, \theta,
+t\right) d \theta. 
+\label{eqCh3_18}
+\end{eqnarray}
+Here we approximately replaced $\frac{1}{r^2} \approx
+\frac{1}{\bar{n}_{st}}$, assuming the amplitude distribution is sufficiently
+narrow. 
+
+We integrate the inner integral twice by parts. We have
+\begin{eqnarray}
+\int_0^{2 \pi} e^{i \theta}
+\frac{\partial^2 P}{\partial \theta^2} d \theta = 
+e^{i \theta} \left.\frac{\partial P}{\partial \theta}\right|_0^{2 \pi}
+- i \int_0^{2 \pi} e^{i \theta}
+\frac{\partial P}{\partial \theta} d \theta = 
+\nonumber \\
+= -i e^{i \theta} \left. P \right|_0^{2 \pi} - 
+\int_0^{2 \pi} e^{i \theta} P d \theta.
+\label{eqCh3_19}
+\end{eqnarray}
+
+The first terms in \eqref{eqCh3_19} equal zero due to periodicity of $P$ and $\frac{\partial P}{\partial \theta}$. Using \eqref{eqCh3_19},
+equation \eqref{eqCh3_18} can be written as 
+\begin{eqnarray}
+  \frac{\partial \left<E\right>}{\partial t} =
+  E_1 \int_0^{\infty}r^2 dr \int_0^{2\pi}e^{i\theta}\frac{\partial
+    P}{\partial t} d \theta
+  =
+  \nonumber \\
+  = 
+- \frac{A E_1}{4 \bar{n}_{st}}
+\int_0^{\infty}r dr\int_0^{2 \pi}r e^{i \theta} P d \theta = 
+- \frac{A}{4 \bar{n}_{st}} \left<E\right>.
+\label{eqCh3_20}
+\end{eqnarray}
+The solution of this equation is 
+\begin{equation}
+\left<E\left(t\right)\right> = 
+\left<E\left(0\right)\right> e^{- \frac{D}{2}t},
+\label{eqCh3_21}
+\end{equation}
+where 
+\begin{equation}
+D = \frac{A}{2 \bar{n}_{st}}.
+\label{eqCh3_21a}
+\end{equation}
+
+Thus, we have obtained that the mean field indeed tends to
+zero with the characteristic time $\tau = \frac{1}{D}$. In lasers this
+interval can be quite long compared to the oscillation period.
+
+To determine the natural linewidth of the laser emission
+it is necessary to find the correlation function of laser radiation; its spectrum by
+\myref{thm:khinchin_wiener}{the Wiener-Khinchin theorem} will be
+the energy spectrum of laser radiation. We have
+\begin{equation}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= E_1^2\int d^2\alpha P\left(\alpha\right) \alpha^{*}\left(0\right)\alpha\left(t\right) e^{-i
+  \omega_0 t},
+\nonumber
+\end{equation}
+where $P\left(\alpha\right)$ is the quasiprobability of the laser state,
+defined by formula \eqref{eqCh3_12}. 
+When switching to polar coordinates
+(amplitude-phase) $\alpha = r e^{i \theta}$
+we assume that the amplitude is already
+established and does not change, while the phase changes slowly, so that 
+\begin{eqnarray}
+\alpha^{*}\left(0\right) = r e^{i\theta\left(0\right)} = r e^{i 0} = r,
+\nonumber \\
+\alpha\left(t\right) = r e^{i\theta\left(t\right)} = r e^{i \theta},
+\label{eqCh3_addon1}
+\end{eqnarray}
+In \eqref{eqCh3_addon1} it is assumed that at the initial time 
+$\theta\left(0\right) = 0$ and at time $t$ - $\theta\left(t\right) = \theta$.
+Thus we have:
+\begin{equation}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= E_1^2 e^{-i
+  \omega_0 t}\int_0^{\infty}r^3 d r \int_0^{2 \pi}d \theta P\left(r
+e^{i \theta}, t\right) e^{i \theta}.
+\nonumber
+\end{equation}
+Let us derive an equation satisfied by 
+$\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>$. 
+From equation \eqref{eqCh3_17}
+\(
+\frac{\partial P \left(\theta, t\right)}{\partial t} = 
+\frac{A}{4 \bar{n}_{st}}
+\frac{\partial^2}{\partial \theta^2}
+P \left(\theta, t\right)
+\),
+therefore
+\begin{eqnarray}
+\frac{d}{dt}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+= -i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>+
+\nonumber \\
++ E_1^2 e^{-i
+  \omega_0 t}\int_0^{\infty}r^3 d r \int_0^{2 \pi}d \theta
+\frac{\partial}{\partial t}P\left(r
+e^{i \theta}, t\right) e^{i \theta}
+=
+\nonumber \\
+=
+-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>+
+\nonumber \\ 
++
+\frac{E_1^2 A}{4 \bar{n}_{st}} 
+\int_0^{\infty}r^3 d r 
+\int_0^{2 \pi}
+d \theta
+\frac{\partial^2}{\partial \theta^2}P\left(r
+e^{i \theta}, t\right) e^{i \theta}.
+\label{eqPart2Ch1_add84_1}
+\end{eqnarray}
+Performing two integrations by parts by $\theta$ in \eqref{eqPart2Ch1_add84_1}, we obtain:
+\begin{eqnarray}
+\int_0^{2 \pi}
+d \theta
+\frac{\partial^2}{\partial \theta^2}P e^{i \theta} = 
+\left.\frac{\partial}{\partial \theta}P e^{i \theta}\right|_0^{2 \pi}
+- 
+i \int_0^{2 \pi}
+d \theta
+\frac{\partial}{\partial \theta}P e^{i \theta} = 
+\nonumber \\
+= - i \int_0^{2 \pi}
+d \theta
+\frac{\partial}{\partial \theta}P e^{i \theta}  
+= 
+- i \left.P e^{i \theta}\right|_0^{2 \pi}
+-
+\int_0^{2 \pi}
+d \theta
+P e^{i \theta} = 
+- \int_0^{2 \pi}
+d \theta
+P e^{i \theta}.
+\nonumber
+\end{eqnarray}
+Substituting the obtained result into the original expression
+\eqref{eqPart2Ch1_add84_1}, we get:
+\begin{eqnarray}
+\frac{d}{dt}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>
+=
+-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>-
+\nonumber \\
+-
+\frac{E_1^2 A}{4 \bar{n}_{st}} 
+\int_0^{\infty}r^3 d r 
+\int_0^{2 \pi}
+d \theta
+P\left(r
+e^{i \theta}, t\right) e^{i \theta} = 
+\nonumber \\
+=-i \omega_0
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> -
+\frac{A}{4 \bar{n}_{st}}\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right>.
+\nonumber
+\end{eqnarray}
+The solution of this equation is
+\begin{equation}
+r_{+}\left(t\right) = \left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> =
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>
+e^{-i \omega_0 t - \frac{D}{2}t},
+\label{eqPart2LaserCorr1}
+\end{equation}
+where
+\[
+\frac{D}{2} = \frac{A}{4 \bar{n}_{st}}.
+\]
+Expression \eqref{eqPart2LaserCorr1} defines the correlation function
+$r\left(t\right)$ in the domain $t \ge 0$. For $t \le 0$, taking into account
+\eqref{eqAddHinchinStatWide3}, the correlation function can be written as  
+\begin{equation}
+r_{-}\left(t\right) = r_{-}\left(-\left|t\right|\right) =
+r_{+}^{*}\left(\left|t\right|\right). 
+\label{eqPart2LaserCorr2}
+\end{equation}
+Using expressions \eqref{eqPart2LaserCorr1} and
+\eqref{eqPart2LaserCorr2}, one can write the following expression for the Fourier transform of the correlation function, which according to 
+\myref{thm:khinchin_wiener}{the Wiener-Khinchin theorem}
+defines the energy spectrum $S\left(\omega\right)$:  
+\begin{eqnarray}
+S\left(\omega\right) = \tilde{r}\left(\omega\right) = 
+\frac{1}{2\pi}
+\int_{-\infty}^{+\infty}e^{i \omega t} r\left(t\right) dt =
+\nonumber \\
+=
+\frac{1}{2\pi}
+\int_{-\infty}^0e^{i \omega t} r_{-}\left(t\right) dt +
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+=
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{- i \omega t} r_{+}^{*}\left(t\right) dt +
+\frac{1}{2\pi}
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+=
+\frac{1}{\pi} \mathrm{Re}
+\int_0^{+\infty}e^{i \omega t} r_{+}\left(t\right) dt = 
+\nonumber \\
+= \frac{1}{\pi}\mathrm{Re}
+\int_0^{+\infty}e^{i \omega t}
+\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(t\right)\right> dt
+=
+\nonumber \\
+= \frac{\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>}{\pi} \mathrm{Re}
+\int_0^{+\infty}e^{\left(i \left(\omega - \omega_0\right) - \frac{D}{2} \right) t} dt
+=
+\nonumber \\
+=
+\frac{\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>}{\pi} \mathrm{Re}
+\frac{1}{\frac{D}{2} - i \left(\omega - \omega_0\right)}
+=
+\nonumber \\
+=
+\frac{\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>}{\pi} \mathrm{Re}
+\frac{\frac{D}{2} + i \left(\omega - \omega_0\right)}
+{\left(\omega - \omega_0\right)^2 + \left(D/2\right)^2}
+=
+\nonumber \\
+=
+\frac{\left<\hat{E}^{(-)}\left(0\right)\hat{E}^{(+)}\left(0\right)\right>}{\pi}
+\frac{D/2}{\left(\omega - \omega_0\right)^2 + \left(D/2\right)^2}. 
+\label{eqCh3_22}
+\end{eqnarray}
+In the derivation of \eqref{eqCh3_22}, the definition of the Fourier transform \eqref{eq:direct_fourier} from \autoref{sec:cont_fourier} was used.
+
+%% From \eqref{eqCh3_21} we have
+%% \begin{eqnarray}
+%% \left|E\left(\omega\right)\right|^2 = 
+%% \left|\int_{-\infty}^{+\infty}e^{i \omega t}\left<E\left(0\right)\right>
+%% e^{i \omega_0 t} e^{-\frac{1}{2}D t}
+%% dt\right|^2  = 
+%% \nonumber \\
+%% = 
+%% \left|\left<E\left(0\right)\right>\right|^2 
+%% \frac{D}{\left(\omega - \omega_0\right)^2 + \left(D/2\right)^2}. 
+%% \label{eqCh3_22}
+%% \end{eqnarray}
+
+\input ./part2/laser/fig8.tex
+
+It follows that the generation line is Lorentzian, and the linewidth equals $D$ 
+(\autoref{figPart2Ch1_8}). Since we considered only the "natural",
+fundamentally unavoidable cause of line broadening,
+associated with quantum fluctuations, and neglected fundamentally
+removable technical causes, the obtained linewidth is
+extremely narrow.  
+
+Here we considered the simplest laser model. A more
+realistic model of a three-level system is considered in
+\cite{bHaken1988}. Results obtained for various laser models
+are in good agreement with each other and correspond to the results 
+obtained with the simple model used here. 

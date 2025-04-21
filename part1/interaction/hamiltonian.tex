@@ -1,0 +1,259 @@
+%% -*- coding:utf-8 -*- 
+\section{Hamiltonian of the atom-field system}
+\rindex{Hamiltonian!atom-field system}
+The Hamiltonian of the atom-field system can be represented as
+\begin{equation}
+\hat{\mathcal{H}} = \hat{\mathcal{H}}^{(A)} +
+\hat{\mathcal{H}}^{(F)} + \hat{V}
+\nonumber
+\end{equation}
+where
+$\hat{\mathcal{H}}^{(A)}$ is the Hamiltonian of the two-level atom,
+$\hat{\mathcal{H}}^{(F)}$ is the Hamiltonian of the electromagnetic field, and
+$\hat{V}$ is the interaction Hamiltonian.
+
+For the Hamiltonian of the electromagnetic field, we have the expression
+\eqref{eqCh1_quant_stoyachie_volny}:
+\begin{equation}
+\hat{\mathcal{H}}^{(F)} = \hbar \omega 
+\left(\hat{a}^{\dag}\hat{a} + \frac{1}{2}\right).
+\nonumber
+\end{equation}
+
+In the case of the Hamiltonian of the two-level atom, we use the following
+relations:
+\begin{eqnarray}
+\hat{\mathcal{H}}^{(A)}\ket{a} = \hbar \omega_a \ket{a},
+\nonumber \\
+\hat{\mathcal{H}}^{(A)}\ket{b} = \hbar \omega_b \ket{b},
+\nonumber \\
+\ket{a}\bra{a} + \ket{b}\bra{b} = \hat{I},
+\nonumber
+\end{eqnarray}
+from which we obtain
+\begin{eqnarray}
+\hat{\mathcal{H}}^{(A)} = \hat{\mathcal{H}}^{(A)}\hat{I} = 
+\hat{\mathcal{H}}^{(A)}
+\ket{a}\bra{a} + \hat{\mathcal{H}}^{(A)}
+\ket{b}\bra{b} =
+\nonumber \\
+ = 
+\hbar\omega_a
+\ket{a}\bra{a} + \hbar\omega_b
+\ket{b}\bra{b} =
+\nonumber \\
+= \hbar \omega_a \hat{\sigma}_a +
+\hbar \omega_b \hat{\sigma}_b,
+\label{eqCh2HamiltonianAOperator}
+\end{eqnarray}
+where the following notations are introduced
+\begin{equation}
+\hat{\sigma}_a = \ket{a}\bra{a},
+\quad
+\hat{\sigma}_b = \ket{b}\bra{b}.
+\nonumber
+\end{equation}
+The expression \eqref{eqCh2HamiltonianAOperator} can be rewritten in
+matrix form:
+\begin{equation}
+\hat{\mathcal{H}}^{(A)} = \hbar 
+\left(
+\begin{array} {cc}
+\omega_a & 0  
+\\
+0 & \omega_b 
+\end{array}
+\right).
+\label{eqCh2HamiltonianA}
+\end{equation}
+
+For the interaction Hamiltonian $\hat{V}$ within the semiclassical
+approach in the dipole approximation, we have:
+\begin{equation}
+\hat{V} = - e \left(\hat{\vec{r}} \vec{E}\left(t\right)\right).
+\label{eqCh2HamiltonianVsemiclass}
+\end{equation}
+Applying the completeness condition twice to \eqref{eqCh2HamiltonianVsemiclass}, we obtain
+\begin{eqnarray}
+\hat{V} = \hat{I}\hat{V}\hat{I} = - e \left(\vec{E}\left(t\right)
+\hat{I}\hat{\vec{r}}\hat{I}\right) = 
+\nonumber \\
+= - e \left(\vec{E}\left(t\right) 
+\left(\ket{a}\bra{a} +
+  \ket{b}\bra{b}\right)\hat{\vec{r}}
+\left(\ket{a}\bra{a} +
+  \ket{b}\bra{b}\right)\right) = 
+\nonumber \\
+= - \left(\vec{E}\left(t\right)
+  \left(\vec{P}_{ab}\ket{a}\bra{b} +
+    \vec{P}_{ba}\ket{b}\bra{a}\right)\right),
+\label{eqCh2HamiltonianVsemiclass2}
+\end{eqnarray}
+where
+\[
+\vec{P}_{ab} = \vec{P}_{ba}^{*} = e \bra{a}\hat{\vec{r}}\ket{b}
+\]
+is the matrix element of the electric dipole moment.
+For simplicity, we assume $\vec{P}_{ab} = \vec{P}_{ba} = \vec{p}$ to be a real quantity. As a result, expression
+\eqref{eqCh2HamiltonianVsemiclass2} can be written as
+\begin{eqnarray}
+\hat{V} 
+= - \left(\vec{E}\left(t\right)\vec{p}\right)
+\left(
+  \ket{a}\bra{b} +
+  \ket{b}\bra{a}\right) = 
+\nonumber \\
+= - \left(\vec{E}\left(t\right)\vec{p}\right) \left(\hat{\sigma}^{\dag} + \hat{\sigma}\right),
+\label{eqCh2HamiltonianVsemiclass3}
+\end{eqnarray}
+where  $\hat{\sigma}^{\dag} = \ket{a}\bra{b}$ and 
+$\hat{\sigma} = \ket{b}\bra{a}$ 
+are the transition operators. 
+$\hat{\sigma}^{\dag}$ is the raising operator corresponding to the transition from the lower to the upper state:
+\[
+\hat{\sigma}^{\dag} \ket{b} = 
+\ket{a}\bra{b}\ket{b} = 
+\ket{a},
+\]
+$\hat{\sigma}$
+is the lowering operator corresponding to the transition from the upper to the lower state:
+\[
+\hat{\sigma}
+\ket{a} = 
+\ket{b}\bra{a}\ket{a} = 
+\ket{b}.
+\]
+In addition, the following equalities hold:
+\[
+\hat{\sigma}^{\dag} \ket{a} = 
+\ket{a}\bra{b}\ket{a} = 
+0
+\]
+and
+\[
+\hat{\sigma}
+\ket{b} = 
+\ket{b}\bra{a}\ket{b} = 
+0.
+\]
+For the operators $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$, the following relation can be written: 
+\begin{eqnarray}
+\hat{\sigma}\hat{\sigma}^{\dag} + \hat{\sigma}^{\dag}\hat{\sigma} =
+\nonumber \\
+= \ket{b}\bra{a}\ket{a}\bra{b} + 
+ \ket{a}\bra{b}\ket{b}\bra{a} = 
+\nonumber \\
+= \ket{b}\bra{b} + \ket{a}\bra{a} = \hat{I}, 
+\label{eqCh2_task1}
+\end{eqnarray}
+where $\hat{I}$ is the identity operator.
+
+Expression \eqref{eqCh2HamiltonianVsemiclass3} can also be
+written in matrix form:
+\begin{equation}
+\hat{V} = - \left(\vec{p} \vec{E}\right)
+\left(
+\begin{array} {cc}
+0 & 1  
+\\
+1 & 0 
+\end{array}
+\right).
+\label{eqCh2_8}
+\end{equation}
+
+Transition from the semiclassical interaction Hamiltonian to the fully
+quantum expression is made by replacing the classical
+electric field with the operator of the electric field. Thus, we obtain 
+\begin{equation}
+\hat{V} = - p E_1 \sin k z \left(\hat{a} + \hat{a}^{\dag}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{\dag}\right)
+\label{eqCh2_8_add1}
+\end{equation}
+Here, the simplest expression for the mode electric field operator \eqref{eqCh1_EH_simple} is used.
+
+The total Hamiltonian of the atom-field system has the form
+\begin{equation}
+\hat{\mathcal{H}}_{AF} = 
+\hbar \omega_a \sigma_a + \hbar \omega_b \sigma_b +
+\hbar \omega 
+\left(\hat{a}^{\dag}\hat{a} + \frac{1}{2}\right)
++ \hbar g \left(\hat{a} + \hat{a}^{\dag}\right)
+\left(\hat{\sigma} + \hat{\sigma}^{\dag}\right)
+\nonumber
+\end{equation}
+where $g = -\frac{p}{\hbar}E_1 \sin k z$ is the interaction constant,
+depending on the spatial distribution of the mode field.  
+
+\input ./part1/interaction/fig2_1.tex
+
+\input ./part1/interaction/fig2_2.tex
+
+\input ./part1/interaction/fig2_3.tex
+
+\input ./part1/interaction/fig2_4.tex
+
+
+Not all terms entering the interaction Hamiltonian
+\eqref{eqCh2_8_add1} are equivalent. When multiplying the brackets, we obtain
+terms: 
+\begin{enumerate}
+\item $\hat{a}\hat{\sigma}$ - this term corresponds to the absorption of
+  a photon and the transition of the atom from the upper state to the lower state. This process is conditionally depicted in \autoref{figPart1Ch2_2_1};  
+\item $\hat{a}\hat{\sigma}^{\dag}$ - this term corresponds to the absorption
+  of a photon and the transition of the atom from the lower state to the upper state (see \autoref{figPart1Ch2_2_2});  
+\item $\hat{a}^{\dag}\hat{\sigma}$ - this term corresponds to the emission
+  of a photon and the transition of the atom from the upper state to the lower state (see \autoref{figPart1Ch2_2_3}); 
+\item $\hat{a}^{\dag}\hat{\sigma}^{\dag}$ - this term corresponds to
+  the emission of a photon and the transition of the atom from the lower state to the upper state (see \autoref{figPart1Ch2_2_4}). 
+\end{enumerate}
+
+
+Cases 1 and 4 correspond to processes (see \autoref{figPart1Ch2_2_1} and
+\ref{figPart1Ch2_2_4}) where the energy conservation law is violated.
+These processes can be classified as so-called virtual processes. Their
+probability tends to zero as time increases, and
+their contribution to the interaction Hamiltonian can be
+neglected. Remaining are terms 2 and 3 (see \autoref{figPart1Ch2_2_2} and
+\ref{figPart1Ch2_2_3}), corresponding to processes
+that occur without violation of the energy conservation law. Considering all the above, the interaction Hamiltonian takes the form: 
+\begin{equation}
+\hat{V} = g \hbar \left(
+\hat{a}\hat{\sigma}^{\dag} + 
+\hat{a}^{\dag}\hat{\sigma}
+\right)
+\end{equation}
+
+It is convenient to switch to the interaction picture (see \autoref{AddWaveFuncInter}),
+using the well-known 
+formula \eqref{eqAddWaveFunc_VInter}
+\begin{equation}
+\hat{V}_I = 
+e^{i \frac{\hat{\mathcal{H}}_0 t}{\hbar}}
+\hat{V}
+e^{- i \frac{\hat{\mathcal{H}}_0 t}{\hbar}}
+\label{eqCh2_task21}
+\end{equation}
+where 
+\(
+\hat{\mathcal{H}}_0 = 
+\hat{\mathcal{H}}^{\left(A\right)} +
+\hat{\mathcal{H}}^{\left(F\right)}
+\)
+is the unperturbed Hamiltonian of the atom-field system. It can be shown that in
+the interaction picture, the interaction Hamiltonian has the form 
+\begin{equation}
+\hat{V}_I = 
+g \hbar \left(
+\hat{a}^{\dag}\hat{\sigma} e^{i \left(\omega - \omega_{ab}\right)t} +
+\hat{\sigma}^{\dag} \hat{a} e^{-i \left(\omega - \omega_{ab}\right)t}
+\right).
+\label{eqCh2_task22}
+\end{equation}
+This is most easily done by calculating the matrix elements 
+$\left<n +
+1\right|\bra{b}\hat{V}_I\ket{a}\ket{n}$ and
+$\bra{n}\bra{a}\hat{V}_I\ket{b}\left|n +
+1\right>$ for the operator $\hat{V}_I$, which can be represented in
+the form \eqref{eqCh2_task21} and \eqref{eqCh2_task22}, and verifying that they
+are the same in both cases.

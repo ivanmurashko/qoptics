@@ -1,0 +1,33 @@
+%% -*- coding:utf-8 -*-
+\section{Set algebra and basic concepts of probability theory}
+
+\begin{definition}[$\sigma$-algebra]
+\label{def:sigma_algebra}
+Suppose that $\Omega$ is some set, then a family
+$\mathcal{F}$ of subsets of the set $\Omega$ is called
+a $\sigma$-algebra if the following conditions are satisfied:
+\begin{itemize}
+\item $\mathcal{F}$ contains $\Omega$: $\Omega \in \mathcal{F}$
+\item if $\Upsilon  \in \mathcal{F}$ then $\Omega \setminus \Upsilon
+  \in \mathcal{F}$
+\item the union or intersection of a countable subfamily of $\mathcal{F}$
+  belongs to $\mathcal{F}$
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Measure]
+\label{def:measure} 
+If $\mathcal{F}$ is some $\sigma$-algebra then
+the following function 
+\[
+\mu: \mathcal{F} \to \left[0, \infty\right]
+\]
+is called a measure if 
+\begin{itemize}
+\item $\mu\left(\emptyset\right) = 0$
+\item $\forall A, B \in \mathcal{F}, A \cap B = \emptyset$ we have
+$\mu\left(A \cup B\right) = \mu\left(A\right) +
+  \mu\left(B\right)$ 
+\end{itemize}
+\end{definition}
+
