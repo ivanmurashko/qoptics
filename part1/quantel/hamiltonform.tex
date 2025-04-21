@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*- 
-\section{Hamiltonian form of the field equations when decomposed into plane waves}
-The eigenfunctions \eqref{eqCh1_EHmode} are orthogonal, i.e.
+\section{Hamiltonian Form of Field Equations with Plane Wave Expansion}
+Eigenfunctions \eqref{eqCh1_EHmode} are orthogonal, i.e.
 \begin{eqnarray}
 \int_{\nu} \left( \vec{E}_k \vec{E}_{k'}^{*} \right) d \nu =
 C \int_{\nu} e^{i \left(\vec{k}\vec{r}\right)} e^{- i
@@ -20,7 +20,7 @@ $k_y \ne k'_y$,
 $k_z \ne k'_z$,
 (or 
 $\vec{k} - \vec{k'} \ne 0$
-).  This follows from the periodicity of the integrand functions. 
+). This follows from the periodicity of the integrand functions. 
 
 Similarly, we obtain:
 \begin{equation}
@@ -33,20 +33,18 @@ The eigenfunctions $\vec{E}_k$ can be normalized by setting
 \begin{equation}
 \int_{\nu} \left( \vec{E}_k \vec{E}_{k}^{*} \right) d \nu = 1.
 \end{equation}
-Then the eigenfunctions take the form
+Then the eigenfunctions have the form
 \[
 \vec{E}_k\left(r\right) = \frac{1}{\sqrt{\nu}}\vec{e}_k e^{i \left( \vec{k}\vec{r}\right)},
 \quad
 \vec{H}_k\left(r\right) = 
 \frac{1}{k}
-\left[\vec{k}\times\vec{e}_k\left(r\right)\right] 
+\left[\vec{k}\vec{e}_k\left(r\right)\right] 
 \sqrt{\frac{\varepsilon_0}{\nu \mu_0}}
 e^{i \left( \vec{k}\vec{r}\right)}.
 \]
-Note that the subscript $k$ implicitly means $k_j$, where $j = 1,
-2$ correspond to two different polarizations.  
-The functions $\vec{E}_k$ and $\vec{H}_k$, written in this form,
-satisfy the following orthogonality and normalization conditions: 
+Note that the index $k$ refers to $k_j$, where $j = 1, 2$ correspond to two different polarizations.  
+The functions $\vec{E}_k$ and $\vec{H}_k$ written in this form satisfy the following orthogonality and normalization conditions: 
 \begin{eqnarray}
 \int_{\nu} \left( \vec{E}_k \vec{E}_{k'}^{*} \right) d \nu = 0
 \quad
@@ -73,38 +71,37 @@ satisfy the following orthogonality and normalization conditions:
 \int_{\nu} \left( \vec{H}_k \vec{H}_{-k} \right) d \nu = - \frac{\varepsilon_0}{\mu_0}.
 \label{eqCh1_task2}
 \end{eqnarray}
-Orthogonality of modes with the same $k$ value but different
-polarizations follows from the equalities:  
+Orthogonality of modes with the same $k$ value, but different polarizations, follows from the equalities:  
 \[
 \left(\vec{e}_{k_1} \vec{e}_{k_2}^{*}\right) = 0, \quad
 \left(\vec{e}_{k_1} \vec{e}_{- k_2}\right) = 0.
 \]
 
-The electric and magnetic fields are expressed through these functions via the expansion:
+The electric and magnetic fields are expressed through these functions using the expansion:
 \begin{eqnarray}
 \vec{E}\left(r, t\right) = 
 \sum_{(k)} 
 A_k\left(t\right) \vec{E}_k\left(r\right) +
-\mbox{c.c.},
+\text{c.c.},
 \nonumber \\
 \vec{H}\left(r, t\right) = 
 \sum_{(k)} 
 A_k\left(t\right) \vec{H}_k\left(r\right) +
-\mbox{c.c.}
+\text{c.c.}
 \label{eqCh1_separation4six}
 \end{eqnarray}
-Summation over $k = k_j$ implies summation over all values
-of $k$ and two polarizations  ($j = 1,2$): 
-$\sum_{(k)} \equiv \sum_{j = 1,2} \sum_{(k_j)}$.
+Summation over $k = k_j$ implies summation over all values of
+$k$ and two polarizations ($j = 1,2$): 
+$\sum_{(k)} \equiv \sum_{j = 1,2} \sum_{(k_j)}$ .
   
-The Hamiltonian function of the electromagnetic field has the form:
+The Hamiltonian function of the electromagnetic field is given by:
 \begin{equation}
 \mathcal{H} = \frac{1}{2}
 \int_{\nu}\left( \varepsilon_0\left(\vec{E}\left(r,t\right)\right)^2 + \mu_0
 \left(\vec{H}\left(r,t\right)\right)^2\right) d\nu
 \label{eqCh1_hamilton4six}
 \end{equation}
-Substituting the series \eqref{eqCh1_separation4six} into \eqref{eqCh1_hamilton4six}, multiplying them out, and accounting for orthogonality and normalization conditions, we obtain
+Substituting the series in \eqref{eqCh1_hamilton4six}, multiplying them and considering the conditions of orthogonality and normalization, we obtain 
 \begin{eqnarray}
 \mathcal{H} = \frac{1}{2} \varepsilon_0
 \int_{(\nu)}\left\{

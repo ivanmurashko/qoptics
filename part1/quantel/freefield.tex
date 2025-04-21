@@ -1,14 +1,12 @@
-%% -*- coding:utf-8 -*- 
-\section{Decomposition of the field into plane waves in free space}
+\section{Expansion of the Field into Plane Waves in Free Space}
 So far, we have considered the electromagnetic field in a physically
-distinct volume - in a resonator. If we are dealing with free
-space, we can artificially select a sufficiently large volume
-containing the region of space of interest, define for it
-modes (types of oscillations) under appropriate boundary conditions,
-and then proceed using the previously considered method. If necessary,
-the volume can be taken to infinity in the final result. Usually,
-a sufficiently large cubic volume with side length $L$ is used
-(\autoref{figCh1_Vfree}). In this case, periodic boundary conditions are adopted:
+distinguished volume—in a resonator. If we are dealing with free
+space, we can artificially distinguish a sufficiently large volume
+containing the region of space of interest, define modes (types of oscillations) for it with appropriate boundary conditions, and then
+proceed in the manner already considered. If necessary, the volume in
+the final result can be extended to infinity. Usually, a sufficiently large cubic volume with a side $L$ 
+(\autoref{figCh1_Vfree}) is used. In this case, it is customary to use
+periodic boundary conditions:  
 \begin{eqnarray}
 \vec{E}\left(0, y, z \right) = \vec{E}\left(L, y, z \right),
 \nonumber \\
@@ -20,43 +18,45 @@ a sufficiently large cubic volume with side length $L$ is used
 
 \input ./part1/quantel/fig2.tex
 
-It is convenient to expand in plane waves. As is known from the course
-on electromagnetic oscillations, the solution corresponding to a plane wave
+It is convenient to decompose into plane waves. As known from the course
+of electromagnetic oscillations, the solution corresponding to a plane wave
 has the form 
 \begin{equation}
 \vec{E}_k\left(r, t\right) = 
-A_k\left(t\right)\vec{e}_k e^{i\left(\vec{k}\cdot\vec{r}\right)} +
-\mbox{(c. c.)},
+A_k\left(t\right)\vec{e}_k e^{i\left(\vec{k}\vec{r}\right)} +
+\text{(c. c.)},
 \label{eqCh1_Emode}
 \end{equation}
-where $\vec{e}_k$ is the unit polarization vector of the wave;  
-$k$ is the wavenumber; $\vec{k}$ is the wavevector;  
+where $\vec{e}_k$ is the unit vector of wave polarization;  
+$k$ is the wave number; $\vec{k}$ is the wave vector;  
 $A_k\left(t\right) = A_k\left(0\right) e^{-i \omega_k t}$.
 
 The magnetic field is related to the electric field by the relation
 \begin{equation}
 \vec{H}_k\left(r, t\right) =
 \sqrt{\frac{\varepsilon_0}{\mu_0}}
-\frac{1}{k}\left[\vec{k} \times \vec{e}_k\right] A_k\left(t\right) 
-e^{i\left(\vec{k}\cdot\vec{r}\right)} + \mbox{(c. c.)}
+\frac{1}{k}\left[\vec{k} \vec{e}_k\right] A_k\left(t\right) 
+e^{i\left(\vec{k}\vec{r}\right)} + \text{(c. c.)}
 .
 \label{eqCh1_Hmode}
 \end{equation}
 
-The following equalities hold:
+The following equalities are valid:
 \begin{equation}
-\left(\vec{k}\cdot\vec{E}_k\right) = 
-\left(\vec{k}\cdot\vec{H}_k\right) = 
-\left(\vec{E}_k \cdot \vec{H}_k\right) = 0,
+\left(\vec{k}\vec{E}_k\right) = 
+\left(\vec{k}\vec{H}_k\right) = 
+\left(\vec{E}_k\vec{H}_k\right) = 0,
 \quad
-k^2 = \left(\vec{k}\cdot\vec{k}\right) = 
+k^2 = \left(\vec{k}\vec{k}\right) = 
 \frac{\omega_k^2}{c^2} 
 \end{equation}
 indicating that 
 $\vec{E}_k$
-and $\vec{H}_k$ are perpendicular to the direction of wave propagation and to each other (the wave is transverse). 
+and $\vec{H}_k$ are perpendicular to the direction of wave propagation and to each
+other (the wave is transverse). 
 
-The periodicity condition \eqref{eqCh1_period_def} will be satisfied if 
+The periodicity condition \eqref{eqCh1_period_def} will be satisfied
+if 
 \begin{equation}
 \vec{k} = \frac{2 \pi}{L}\left(n_x \vec{x}_0
 + n_y \vec{y}_0
@@ -66,61 +66,61 @@ The periodicity condition \eqref{eqCh1_period_def} will be satisfied if
 n_x, n_y, n_z = 0, \pm 1, \pm 2, \dots .
 \label{eqCh1_period}
 \end{equation}
-Then we obtain
+Then we get
 \begin{eqnarray}
-\left(\vec{k}\cdot\vec{r}\right) = \frac{2 \pi}{L}\left(n_x x
+\left(\vec{k}\vec{r}\right) = \frac{2 \pi}{L}\left(n_x x
 + n_y y
 + n_z z
 \right),
 \nonumber \\
-\left.\left(\vec{k}\cdot\vec{r}\right)\right|_{x = L} = 2 \pi n_x + \frac{2 \pi}{L}\left(n_y y
+\left.\left(\vec{k}\vec{r}\right)\right|_{x = L} = 2 \pi n_x + \frac{2 \pi}{L}\left(n_y y
 + n_z z
 \right) = 
-2 \pi n_x + \left.\left(\vec{k}\cdot\vec{r}\right)\right|_{x = 0}.
+2 \pi n_x + \left.\left(\vec{k}\vec{r}\right)\right|_{x = 0}.
 \end{eqnarray}
-Therefore,    
-$e^{i\left(\vec{k}\cdot\vec{r}\right)}$
-is periodic in $x$. In a similar way, periodicity in $y$ and $z$ is shown.
- 
-In what follows, instead of the real functions \eqref{eqCh1_Emode}, 
-\eqref{eqCh1_Hmode}, we will use
+Consequently,    
+$e^{i\left(\vec{k}\vec{r}\right)}$
+is periodic in $x$. In the same way, periodicity in $y$ and $z$ is shown.
+
+In the future, instead of the real functions \eqref{eqCh1_Emode}, 
+\eqref{eqCh1_Hmode} we will use
 complex eigenfunctions 
 \begin{equation}
-\vec{E}_k\left(r\right) = \vec{e}_k e^{i \left( \vec{k}\cdot\vec{r}\right)},
+\vec{E}_k\left(r\right) = \vec{e}_k e^{i \left( \vec{k}\vec{r}\right)},
 \quad
 \vec{H}_k\left(r\right) = \sqrt{\frac{\varepsilon_0}{\mu_0}}\frac{1}{k}
-\left[\vec{k} \times \vec{E}_k\left(r\right)\right].
+\left[\vec{k}\vec{E}_k\left(r\right)\right].
 \label{eqCh1_EHmode}
 \end{equation}
-The following relations hold:
+The relations are valid:
 \[
-\left(\vec{k}\cdot\vec{E}_k\right) = 
-\left(\vec{k}\cdot\vec{H}_k\right) = 
-\left(\vec{E}_k \cdot \vec{H}_k\right) = 0,
+\left(\vec{k}\vec{E}_k\right) = 
+\left(\vec{k}\vec{H}_k\right) = 
+\left(\vec{E}_k\vec{H}_k\right) = 0,
 \quad
-k^2 = \left(\vec{k}\cdot\vec{k}\right) = 
+k^2 = \left(\vec{k}\vec{k}\right) = 
 \frac{\omega_k^2}{c^2}.
 \]
 The eigenfrequencies $\omega_k$ are determined by the equation
-\eqref{eqCh1_period}. Indeed, from \eqref{eqCh1_period} and taking into account
+\eqref{eqCh1_period}. Indeed, from \eqref{eqCh1_period} taking into account
 $k^2 = \frac{\omega_k^2}{c^2}$ we have 
 \begin{equation}
 \omega_k = c \sqrt{k_x^2 + k_y^2 + k_z^2} = 
 \frac{2 \pi c}{L} \sqrt{n_x^2 + n_y^2 + n_z^2}.
 \end{equation}
 
-For linear polarization, the polarization vectors $\vec{e}_k$ are:
+With linear polarization, the polarization vectors $\vec{e}_k$ are:
 \[
 \vec{e}_{k_1} = \vec{\xi}_0,
 \quad
 \vec{e}_{k_2} = \vec{\eta}_0,
 \]
-where $\vec{\xi}_0$, $\vec{\eta}_0$ are basis directions forming, together with
-the vector $\vec{k}$, a rectangular coordinate system; therefore, 
+where $\vec{\xi}_0$, $\vec{\eta}_0$, are the unit vectors of directions, forming a 
+rectangular system of directions with the vector $\vec{k}$, consequently, 
 \[
-\left(\vec{\xi}_0 \cdot \vec{k}\right) =
-\left(\vec{\eta}_0 \cdot \vec{k}\right) =
-\left(\vec{e}_{k_1} \cdot \vec{e}_{k_2}\right) = 0.
+\left(\vec{\xi}_0\vec{k}\right) =
+\left(\vec{\eta}_0\vec{k}\right) =
+\left(\vec{e}_{k_1}\vec{e}_{k_2}\right) = 0.
 \]
 
 For circular polarization
@@ -131,20 +131,20 @@ For circular polarization
 \]
 
 In this case, the orthogonality condition holds:
-$\left(\vec{e}_{k_1} \cdot \vec{e}_{k_2}^{*}\right) = 0$
-and the normalization conditions:
-$\left(\vec{e}_{k_1} \cdot \vec{e}_{k_1}^{*}\right) = \left(\vec{e}_{k_2}
-\cdot \vec{e}_{k_2}^{*}\right) = 1$.
+$\left(\vec{e}_{k_1} \vec{e}_{k_2}^{*}\right)$
+and normalization conditions:
+$\left(\vec{e}_{k_1} \vec{e}_{k_1}^{*}\right) = \left(\vec{e}_{k_2}
+\vec{e}_{k_2}^{*}\right) = 1$.
 
-An arbitrary electromagnetic field using the complex functions 
-\eqref{eqCh1_EHmode} can be represented by expansions 
+An arbitrary electromagnetic field using complex functions 
+\eqref{eqCh1_EHmode} can be represented by decompositions 
 \begin{eqnarray}
 \vec{E}\left(r, t\right) = 
 \sum_{(k)} 
-A_k\left(t\right) \vec{E}_k\left(r\right) + \mbox{(c. c.)},
+A_k\left(t\right) \vec{E}_k\left(r\right) + \text{(c. c.)},
 \nonumber \\
 \vec{H}\left(r, t\right) = 
 \sum_{(k)} 
 A_k\left(t\right) \vec{H}_k\left(r\right) +
-\mbox{(c. c.)}
+\text{(c. c.)}
 \end{eqnarray}

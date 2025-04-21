@@ -1,22 +1,20 @@
-%% -*- coding:utf-8 -*- 
 \section{Density of States}
-If the quantization volume $L^3$ is large, the density of states (the number of modes per unit frequency interval) will be quite large. The wave vector of a mode is determined by the relation
-\eqref{eqCh1_period}
+If the quantization volume $L^3$ is large, the density of states (the number of modes per unit frequency interval) will be quite large. The wave vector of the mode is determined by the relation \eqref{eqCh1_period}
 \begin{equation}
 \vec{k}_{n_x, n_y, n_z} = \frac{2 \pi}{L}\left(n_x \vec{x}_0
 + n_y \vec{y}_0
 + n_z \vec{z}_0
 \right)
 \end{equation}
-Each set of integers corresponds to two waves differing in polarization. The modes can be visually represented as points in a Cartesian coordinate system, with $n_x$, $n_y$, $n_z$ plotted along the axes (\autoref{figCh1_pic3}). The number of oscillations in the volume  
+Each set of integers corresponds to two waves differing in polarization. The modes can be visually represented as points in a Cartesian coordinate system, with $n_x$, $n_y$, $n_z$ as axes (\autoref{figCh1_pic3}). The number of oscillations in the volume  
 \(
 \Delta n_x \Delta n_y \Delta n_z
 \)
-is obviously 
+will obviously be  
 \(
 \Delta N = 2 \Delta n_x \Delta n_y \Delta n_z,
 \)
-or, taking into account the relation  
+or, considering the relationship  
 between $k$ and $n$ \eqref{eqCh1_period},
 \begin{equation}
 \Delta N = 2 \left(\frac{L}{2 \pi} \right)^3 \Delta k_x \Delta k_y \Delta k_z.
@@ -27,14 +25,13 @@ between $k$ and $n$ \eqref{eqCh1_period},
 
 \input ./part1/quantel/fig4.tex
 
-The factor two in the formula \eqref{eqCh1_modenumber} appears because each value of $k$ corresponds to two modes with different polarizations. For large $L$ ($L \rightarrow \infty$), the distribution is quasi-continuous, and summation over modes, which is almost always required when solving problems in quantum optics, can be replaced by integration over $k$: 
+The factor of two in formula \eqref{eqCh1_modenumber} appears because two modes with different polarizations correspond to one value of $k$. For large $L$ ($L\rightarrow \infty$), the distribution becomes quasi-continuous, and summation over modes, which is almost always required in solving quantum optics problems, can be replaced by integrating over $k$: 
 \begin{equation}
 2 \sum_{(n)} \left( \dots \right) = 2 \left(\frac{L}{2 \pi} \right)^3
 \iiint\limits_{-\infty}^{+\infty} \left( \dots \right) d k_x d k_y d k_z.
 \label{eqCh1_modenumber_kvazy_contig}
 \end{equation}
-Changing from rectangular coordinates $k_x$, $k_y$, $k_z$ to spherical coordinates  
-$k$, $\theta$, $\varphi$ (\autoref{figCh1_pic4}), yields
+The transition from rectangular coordinates $k_x$, $k_y$, $k_z$ to spherical coordinates $k$, $\theta$, $\varphi$ (\autoref{figCh1_pic4}), gives
 \begin{eqnarray}
 k_x = k \sin \theta \cos \varphi,
 \quad 
@@ -45,18 +42,17 @@ k_z  = k \cos \theta,
 d k_x d k_y d k_z = k^2 \sin \theta d k d \theta d \varphi = k^2 d k
 d \Omega,
 \end{eqnarray}
-where $d \Omega = \sin \theta d \theta d \varphi$ is the element of solid angle in the direction $\vec{k}$. Thus, we get
+where $d \Omega = \sin \theta d \theta d \varphi$ is the solid angle element in the direction of $\vec{k}$. Thus, we obtain
 \begin{equation}
 d N = 2 \left(\frac{L}{2 \pi} \right)^3 k^2 d k d \Omega
 \label{eqCh1_modenumber_1pre}
 \end{equation}
-or, noting that $k^2 c^2 = \omega^2$, i.e. $k^2 d k =
-\frac{\omega^2 d \omega}{c^3}$: 
+or, considering that $k^2 c^2 = \omega^2$, i.e., $k^2 d k = \frac{\omega^2 d \omega}{c^3}$: 
 \begin{equation}
 d N = 2 \left(\frac{L}{2 \pi c} \right)^3 \omega^2 d \omega d \Omega
 \label{eqCh1_modenumber_1}
 \end{equation}
-i.e., the number of states per unit volume, per unit frequency, and per unit solid angle is
+i.e., the number of states per unit volume, unit frequency, and unit solid angle
 \begin{equation}
 g\left(\omega\right)  = \frac{2 \omega^2}{\left(2 \pi c\right)^3}
 \end{equation}

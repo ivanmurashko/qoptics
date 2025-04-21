@@ -1,53 +1,37 @@
-%% -*- coding:utf-8 -*- 
-\section{Quantum state of the electromagnetic field with a definite
-  energy (with a definite number of photons)}
-First, consider a single mode of the electromagnetic field (a simple
-harmonic oscillator). The state vector with a definite energy
-$\ket{E_n}$ satisfies the following equation
+\section{Quantum state of the electromagnetic field with a definite energy (with a definite number of photons)}
+
+First, let's consider a single mode of the electromagnetic field (a simple harmonic oscillator). The state vector with a definite energy $\ket{E_n}$ satisfies the following equation
 \begin{equation}
 \hat{\mathcal{H}} \ket{E_n} = E_n \ket{E_n}
 \end{equation}
-Here and below we will use the Dirac formalism (see 
-\autoref{AddDirac}). Using the relation \eqref{eqCh1_mainpropertyaa},
-we obtain 
+Here and henceforth, we will use Dirac's formalism (see \autoref{AddDirac}). Using relation \eqref{eqCh1_mainpropertyaa}, we obtain
 \begin{equation}
 \hat{\mathcal{H}} \hat{a}\ket{E_n} = 
 \left(\hat{a}\hat{\mathcal{H}} -
 \hbar\omega\hat{a}\right)\ket{E_n} =
 \left(E_n - \hbar \omega\right)\hat{a}\ket{E_n}
 \end{equation}
-i.e. $\hat{a}\ket{E_n}$ is also a state vector with
-energy $E_n - \hbar \omega$. From this it follows that
+i.e., $\hat{a}\ket{E_n}$ is also a state vector with energy $E_n - \hbar \omega$. From this, it follows that
 \[
 \hat{a}\ket{E_n} = \left|E_n - \hbar \omega \right>
 \] 
-Therefore, the operator $\hat{a}$ lowers the energy of the state by $\hbar
-\omega$,  where $\omega$ is the frequency of the mode (oscillator). Often $\hat{a}$
-is called the lowering operator, or annihilation operator. The lowest
-energy must be positive, and the lowering of energy cannot
-continue indefinitely. For an arbitrary state vector,
-the expected value of energy is
+Thus, the operator $\hat{a}$ lowers the energy of the state by $\hbar \omega$, where $\omega$ is the frequency of the mode (oscillator). The operator $\hat{a}$ is often called the lowering operator, or the annihilation operator. The lowest energy must be positive, and reducing the energy cannot continue indefinitely. For an arbitrary state vector, the expected energy value
 \begin{equation}
 \left< \Phi \right| \hbar \omega \left({a}^{\dag} {a}  +
 \frac{1}{2}\right)\left| \Phi \right> = 
 \hbar \omega \left< \Phi' \right. \left| \Phi' \right> + \frac{1}{2}
 \hbar \omega,
 \end{equation}
-where  $\hat{a} \left| \Phi \right> = \left| \Phi' \right>$,  
-$\left< \Phi \right| \hat{a}^{\dag}  = \left< \Phi' \right|$.  Since
-the norm of the state vector must be positive, 
-the lowest value of energy will be at  
+where $\hat{a} \left| \Phi \right> = \left| \Phi' \right>$,  
+$\left< \Phi \right| \hat{a}^{\dag}  = \left< \Phi' \right|$. Since the norm of the state vector must be positive, the minimum energy value will be at
 \(
 \left< \Phi' \right. \left| \Phi' \right> = 0.
 \)
-This means that $\hat{a}\ket{0} = 0$,  where
-$\left|\Phi\right> = \ket{0}$ is the state vector with the lowest
-energy. The lowest energy is  
+This means $\hat{a}\ket{0} = 0$, where $\left|\Phi\right> = \ket{0}$ is the state vector with the lowest energy. The lowest energy
 \begin{equation}
 E_0 = \frac{\hbar \omega}{2}
 \end{equation}
-called the zero-point energy. To verify this claim,
-one can write
+is called the zero-point energy. To verify this claim, we can write
 \begin{eqnarray}
 \hat{\mathcal{H}} \ket{0} = 
 \hbar \omega \left(\hat{a}^{\dag} \hat{a} +
@@ -62,8 +46,7 @@ E_0 \ket{0}.
 \label{eqProper0state}
 \end{eqnarray}
 
-
-Using \eqref{eqCh1_mainpropertyaa}, one can obtain
+Using \eqref{eqCh1_mainpropertyaa}, we can obtain
 \begin{eqnarray}
 \hat{\mathcal{H}} \hat{a}^{\dag}\ket{0} = 
 \hat{\mathcal{H}} \ket{1} =
@@ -75,8 +58,7 @@ Using \eqref{eqCh1_mainpropertyaa}, one can obtain
 \hbar \omega \left(1 + \frac{1}{2}\right)
 \ket{1}
 \end{eqnarray}
-where $\ket{1} = \hat{a}^{\dag} \ket{0}$ denotes the
-state with energy $\hbar \omega \left(1 + \frac{1}{2}\right)$.
+where $\ket{1} = \hat{a}^{\dag} \ket{0}$ denotes the state with energy $\hbar \omega \left(1 + \frac{1}{2}\right)$.
 
 By induction, we have
 \begin{equation}
@@ -90,26 +72,19 @@ By induction, we have
 \end{equation}
 where
 $\ket{n} = \left(\hat{a}^{\dag}\right)^n\ket{0}$   
-without normalization, which we will perform later - a state with energy  
-$\hbar \omega \left(n + \frac{1}{2}\right)$,  $n$  is an integer
-positive number.
+without normalization, which we will perform later - the state with energy  
+$\hbar \omega \left(n + \frac{1}{2}\right)$, $n$ is a positive integer.
 
-We see that the operator  $\hat{a}^{\dag}$  raises the energy of the state by
-$\hbar \omega$.  It can be considered as the creation operator of a
-particle - a photon \rindex{photon} with energy  $\hbar \omega$.  It is better
-to talk about a photon as a particle in the case of expansion of the field in plane waves. Then it will be
-a particle with energy $\hbar \omega$ and momentum $\hbar \vec{k}$, as
-follows from \eqref{eqCh1_task3_2}. 
+We see that the operator $\hat{a}^{\dag}$ raises the energy of the state by $\hbar \omega$. It can be considered as the creation operator of a photon \rindex{photon} with energy $\hbar \omega$. The photon is better understood as a particle with energy $\hbar \omega$ and momentum $\hbar \vec{k}$ when considering field decomposition into plane waves, as follows from \eqref{eqCh1_task3_2}. 
   
-Relations 
+The relations 
 $\hat{a} \ket{n} = \ket{n - 1}$
 and
 $\hat{a}^{\dag} \ket{n} = \ket{n + 1}$
-define unnormalized state vectors. Let us define the normalization
-factor. Suppose that  
-$\hat{a} \ket{n} = S_n \ket{n - 1}$,  where 
-$\ket{n}$ and $\ket{n - 1}$ are normalized to  1,  and $S_n$
-is the normalization factor. From this we get 
+define unnormalized state vectors. Let's define the normalization factor. Assume that  
+$\hat{a} \ket{n} = S_n \ket{n - 1}$, where 
+$\ket{n}$ and $\ket{n - 1}$ are normalized to 1, and $S_n$
+is the normalization factor. From this, we find 
 \[
 S_n^2\bra{n - 1}\ket{n - 1} =
 \bra{n}\hat{a}^{\dag}\hat{a}\ket{n} = 
@@ -117,8 +92,7 @@ n  \bra{n}\ket{n}
 \]
 since the operator    
 $\hat{a}^{\dag}\hat{a} = \hat{n}$
-is the photon number operator, whose eigenvalue
-is the number of photons. This can be seen from the formula
+is the photon number operator, whose eigenvalue is the photon number. This is evident from the formula
 \eqref{eqCh1_aplusinduction}. Indeed, from the equality
 \[
 \hat{\mathcal{H}} \ket{n} =
@@ -129,20 +103,20 @@ is the number of photons. This can be seen from the formula
 \hbar \omega \left(n + \frac{1}{2}\right)
 \ket{n},
 \]
-we get:
+we obtain:
 \[
 \hat{n}\ket{n} = \hat{a}^{\dag}\hat{a} \ket{n} = n
 \ket{n}. 
 \]
-From the normalization condition: $\bra{n}\ket{n} = 1$   and
-$S_n^2 = n$,  hence $S_n = \sqrt{n}$ and, therefore, we have: 
+From the normalization condition, it follows: $\bra{n}\ket{n} = 1$   and
+$S_n^2 = n$, thus $S_n = \sqrt{n}$ and hence: 
 \begin{equation}
 \hat{a}\ket{n} = \sqrt{n}\ket{n - 1}
 \end{equation}
-Similarly, using commutation relations
-\eqref{eqCh1_aacomutation}, as well as \ref{eqAddDirac_operator_property1} and
+Similarly, using the commutation relations
+\eqref{eqCh1_aacomutation}, and \ref{eqAddDirac_operator_property1} and
   \ref{eqAddDirac_operator_property2} from \autoref{AddDirac},
-  we obtain 
+  we find 
 \begin{eqnarray}
 \hat{a}^{\dag}\ket{n} = S_{n+1}\ket{n + 1},
 \quad 
@@ -174,7 +148,7 @@ corresponding to different eigenvalues, are orthogonal, i.e.
 \label{eqOrtoN}
 \end{equation}
 
-We give a summary of the relations involving the operators $\hat{a}$ and $\hat{a}^{\dag}$:
+Let's summarize the relations involving the operators $\hat{a}$ and $\hat{a}^{\dag}$:
 \begin{eqnarray}
 \hat{\mathcal{H}} = \hbar \omega \left(\hat{a}^{\dag}\hat{a} +
 \frac{1}{2} \right),
@@ -206,17 +180,17 @@ and the conjugate equalities
 \bra{n} =  \frac{1}{\sqrt{n!}} \bra{0}\left(\hat{a}^{\dag}\right)^n.
 \end{eqnarray}
 
-For the simplest model of a resonator, we have
+For the simplest resonator model, we have
 \[
 \hat{E}\left(z, t\right) = E_1\left( \hat{a} +
 \hat{a}^{\dag}\right) \sin k_n z
 \]
-where $E_1 = \sqrt{\frac{\hbar \omega}{\varepsilon_0 V}}$ is the field
+where $E_1 = \sqrt{\frac{\hbar \omega}{\varepsilon_0 V}}$ is the field,
 corresponding to one photon in the mode.  
 
-Let us consider some properties of energy states, i.e. states
-with a definite number of photons. We show that the average value
-of the electric field in this state is zero: 
+Consider some properties of energy states, i.e., states
+with a definite number of photons. We will show that the average
+value of the electric field in this state is zero: 
 \begin{eqnarray}
 \bra{n}\hat{E}\ket{n} = 
 E_1 \sin k_n z \left( \bra{n}\hat{a}\ket{n} +
@@ -230,7 +204,7 @@ E_1 \sin k_n z \left( \bra{n}\hat{a}\ket{n} +
 which follows from the orthogonality of states \eqref{eqOrtoN}
 $\bra{n}\ket{n'} = 0$.
 
-The average value of the square of the electric field operator is nonzero:
+The average value of the square of the electric field operator is non-zero:
 \begin{eqnarray}
 \bra{n}\hat{E}^2\ket{n} = 
 E_1^2 \sin^2 k_n z \bra{n}
@@ -245,16 +219,16 @@ E_1^2 \sin^2 k_n z \bra{n}
 \label{eqCh1_E2_middle}
 \end{eqnarray}
 
-Usually, the fields considered in quantum optics are not
-in a stationary state with a definite energy (with a definite number of
-photons). However, an arbitrary state can be represented as
+The fields usually considered in quantum optics are not in a
+stationary state with a definite energy (with a definite number
+of photons). However, an arbitrary state can be represented as
 a superposition of states $\ket{n}$: 
 \begin{equation}
 \left|\psi\right> = \sum_{(n)} C_n \ket{n}
 \end{equation}
-where $\left|C_n\right|^2$ is the probability of detecting $n$
-photons in the mode upon measurement; $\sum_{(n)} \left|C_n\right|^2 = 1$. 
-In \autoref{AddDirac} it is shown that
+where $\left|C_n\right|^2$ is the probability of finding $n$ photons in the mode
+upon measurement; $\sum_{(n)} \left|C_n\right|^2 = 1$. 
+In \autoref{AddDirac}, it is shown that
 \[
 C_n = \bra{ n }\left| \psi \right>, \quad
 \left| \psi \right> = \sum_{(n)} \bra{ n }\left| \psi \right>
@@ -265,24 +239,23 @@ C_n = \bra{ n }\left| \psi \right>, \quad
 \]
 where $\hat{I}$ is the identity operator.
 
-\begin{remark}[About the states with definite energy in quantum
-    mechanics]
+\begin{remark}[On states with definite energy in quantum mechanics]
   It is worth noting that states with definite energy do not violate 
-  the Heisenberg uncertainty relation for the energy-time pair
+  Heisenberg's uncertainty relation for the pair
+  energy - time
   \[
   \Delta E \Delta t \ge \frac{\hbar}{2},
   \]
-  (see more details in \autoref{AddHeisenbergUncertaintyPrincipleEnergyTime}). 
+  (see \autoref{AddHeisenbergUncertaintyPrincipleEnergyTime} for more details). 
 
-  At the same time, if one looks at the energy operator of the harmonic
+  Meanwhile, if we look at the energy operator of the harmonic
   oscillator, written as
   \[
   \hat{\mathcal{H}} =\frac{1}{2} \left(\hat{p}^2 +
   \omega^2\hat{q}^2\right)
   \]
-  and uses the expressions \eqref{eqCh1_qpdef}, one can obtain
-  that $\bra{n}\hat{q}\ket{n} =
-  \bra{n}\hat{p}\ket{n} = 0$. Moreover,
+  and use expressions \eqref{eqCh1_qpdef}, we find that $\bra{n}\hat{q}\ket{n} =
+  \bra{n}\hat{p}\ket{n} = 0$. Meanwhile,
   \begin{eqnarray}
     \bra{n}\hat{q}^2\ket{n} = \frac{\hbar}{2 \omega}
     \left[
@@ -333,54 +306,52 @@ where $\hat{I}$ is the identity operator.
   \[
   \Delta p \Delta q = \frac{\hbar}{2}\left(2n + 1\right) \ge \frac{\hbar}{2},
   \]
-  which is consistent with the Heisenberg uncertainty relations
-  \eqref{eqAddHeisenbergUncertaintyPrinciple}.
+  which is consistent with Heisenberg's uncertainty relations \eqref{eqAddHeisenbergUncertaintyPrinciple}.
 
-  Thus, states with definite energy are such states,
-  where despite the impossibility of precisely determining $p$
-  and $q$, it is possible to determine the quantity 
+  Thus, states with definite energy are states
+  in which, despite the impossibility of precisely determining $p$
+  and $q$, it is possible to determine the value of 
   \(
   \frac{1}{2} \left(p^2 +
   \omega^2q^2\right)
-  \). This reflects the fact that for quantum systems there exist
-  situations where compound events exist in the absence
+  \). This reflects the fact that for quantum systems, situations are possible
+  where composite events exist in the absence
   of elementary ones (see \autoref{sec:add:quantprobability}). 
-  In particular, such a situation exists for the photon
-  - a state with definite energy $\ket{1}$.
+  In particular, such a situation occurs for the photon
+  - states with definite energy $\ket{1}$.
 
-  This can lead us to the reasoning that the photon is a
-  virtual particle, which does not exist in the real physical world
-  \cite{Lamb1995}.\rindex{photon} At the same time, the mathematical apparatus related to
-  the concept of the photon, such as creation operators $\hat{a}^\dag$ and
-  annihilation operators $\hat{a}$, states of the electromagnetic field with
+  This may lead us to consider that a photon is
+  a virtual particle, which does not exist in the real physical world
+  \cite{Lamb1995}.\rindex{photon} Meanwhile, the mathematical apparatus related to
+  the concept of the photon such as creation operators $\hat{a}^\dag$ and
+  annihilation $\hat{a}$, electromagnetic field states with
   definite energy $\{\ket{n}\}$ (which can be
-  used as basis states), appears convenient
-  for theoretical description.
+  used as basis states), is convenient for theoretical descriptions.
 
-  It is also worth noting that from the formal definition
-  of a nonclassical state \eqref{eqPart3_Nonclass_Nonclass7},
-  $\ket{n}$ is a nonclassical 
-  state of light since from \eqref{eqCh4_26} it follows that $G^{(2)} <
+  It is also worth noting that from the perspective of the formal definition of
+  a non-classical state \eqref{eqPart3_Nonclass_Nonclass7},
+  $\ket{n}$ is a non-classical 
+  state of light since from \eqref{eqCh4_26} it follows $G^{(2)} <
   1$.
 
-  On the other hand, if one looks at the minimal possible energy
-  of a mode of the electromagnetic field, from the relation
-  \eqref{eqCh1_hamilton_one_mode}, 
+  On the other hand, if we consider the minimum possible energy
+  of the electromagnetic field mode, from the relation
+  \eqref{eqCh1_hamilton_one_mode} 
   \[
   \mathcal{H} = \frac{1}{2}\left(\omega^2 q^2 + p^2\right)
   \]
-  it follows that in the classical case the minimal possible zero
-  energy is achieved at $p = 0, q=0$, but due to
-  \eqref{eqAddHeisenbergUncertaintyPrinciple} zero values
-  are impossible in the quantum case, and taking into account measurement uncertainties
-  we obtain 
+  it follows that in the classical case, the minimum possible zero
+  energy is reached at $p = 0, q=0$, but due to
+  \eqref{eqAddHeisenbergUncertaintyPrinciple}, zero values
+  are impossible in the quantum case, and considering measurement uncertainties
+  we find
   \begin{eqnarray}
     \frac{1}{2}\left(\omega^2 (\Delta q)^2 + (\Delta p)^2\right) \ge
     \nonumber \\
     \ge \omega \Delta q \Delta p \ge \frac{\hbar \omega}{2}
     \nonumber
   \end{eqnarray}
-  i.e. the minimal possible energy (vacuum energy) is determined
-  by the Heisenberg inequalities for the coordinate-momentum pair.  
+  that is, the minimum possible energy (vacuum energy) is determined
+  by Heisenberg's inequalities for the coordinate - momentum pair.  
   \label{rem:antiphoton}
 \end{remark}
