@@ -3,18 +3,12 @@
 
 \subsection{Definition}
 \begin{definition}[Euler's Function]
-Euler's function $\phi\left(n\right)$ shows how many numbers $k \in
-\{1, ... n-1\}$ are coprime with $n$, i.e. $\mbox{GCD}\left(k,
-n\right) = 1$.
+Euler's function $\phi\left(n\right)$ shows how many numbers $k \in \{1, ... n-1\}$ are coprime with $n$, i.e. $\gcd\left(k, n\right) = 1$.
 \label{def:add:discretmath:eulerfun}
 \end{definition}
 
 \begin{example}[Euler's Function]
-  If we take the number $n=15$, there are 8 numbers coprime with $15$: 
-  $1, 2, 4, 7, 8, 11, 13, 14$. The remaining 7 numbers are not coprime
-  with $n$ since they have a greatest common divisor different
-  from 1, for example $\mbox{GCD}\left(6, 15\right) = 3$.
-  Thus, $\phi\left(15\right) = 8$. 
+  If we take the number $n=15$, there are 8 numbers coprime with $15$: $1, 2, 4, 7, 8, 11, 13, 14$. The remaining 7 numbers are not coprime with $n$ because they have a greatest common divisor other than 1, for example $\gcd\left(6, 15\right) = 3$. Thus, $\phi\left(15\right) = 8$. 
 \end{example}
 
 \subsection{Properties}
@@ -22,27 +16,20 @@ n\right) = 1$.
 \begin{property}[Euler's Function of a Prime Number]
 If $p$ is a prime number, then $\phi(p) = p - 1$
 \begin{proof}
-Follows from definition \ref{def:add:discretmath:eulerfun}.
+This follows from definition \ref{def:add:discretmath:eulerfun}.
 \end{proof}
 \label{prop:add:discretmath:eulerfun1}
 \end{property}
 
-
 \begin{property}[Euler's Function of a Product (Generalized Multiplicativity)]
-If $\mbox{GCD}\left(n, m\right) = 1$, then
-$\phi\left(n \cdot m\right) = \phi\left(n\right) \phi\left( m\right)$
+If $\gcd\left(n, m\right) = 1$, then $\phi\left(n \cdot m\right) = \phi\left(n\right) \phi\left(m\right)$
 \begin{proof}
 TBD
 \end{proof}
 \label{prop:add:discretmath:eulerfun2}
 \end{property}
 
-\begin{remark}[On the Complexity of Computing Euler's Function]
+\begin{remark}[On the Complexity of Calculating Euler's Function]
 \label{rem:add:discretmath:eulerfuncomplex}
-Computing Euler's function for large numbers is a very complex
-task. Most often, property
-\ref{prop:add:discretmath:eulerfun1} is used in combination with
-\ref{prop:add:discretmath:eulerfun2} for computation. Applying these properties to
-an arbitrary number requires its factorization, so the complexity
-of computing Euler's function is comparable to the complexity of the factorization problem. 
+Calculating Euler's function for large numbers is a very complex task. It is often computed using property \ref{prop:add:discretmath:eulerfun1} in combination with \ref{prop:add:discretmath:eulerfun2}. Applying these properties to an arbitrary number requires its factorization, so the complexity of calculating Euler's function is comparable to the complexity of the factorization problem.
 \end{remark}

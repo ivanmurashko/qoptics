@@ -1,23 +1,23 @@
 %% -*- coding:utf-8 -*-
-\section{Diffie-Hellman Protocol (Diffie-Hellman, DH)}
+\section{Diffie-Hellman Protocol (DH)}
 \label{sec:add:dm:dh}
-Suppose there are two participants Alice and Bob. They know two numbers
+Suppose there are two parties, Alice and Bob. They are aware of two numbers
 $g$ and $p$, which are not secret.
 
-Alice chooses a random number $a$ and sends Bob the following value
+Alice chooses a random number $a$ and sends the following value to Bob
 \begin{equation}
 A \equiv g^a \mod{p}.
 \label{eqAddDiscretIndDHA}
 \end{equation}
 
-Bob computes the following number (using a secret random value
+Bob calculates the following number (using a secret random variable
 $b$)
 \begin{equation}
 B \equiv g^b \mod{p}.
 \label{eqAddDiscretIndDHB}
 \end{equation}
 
-Alice, using only the number $a$ known to her, computes the key
+Alice, using only the number $a$ known to her, calculates the key
 \begin{equation}
 K \equiv B^a\mod{p} \equiv g^{ab} \mod{p}.
 \label{eqAddDiscretIndDHKey}
@@ -30,36 +30,35 @@ K \equiv A^b\mod{p} \equiv g^{ab} \mod{p}.
 \label{eqAddDiscretIndDHKeyB}
 \end{equation}
 
-Thus Alice and Bob obtain the same key, which can
-later be used to transmit messages using
-symmetric encryption algorithms (for example AES). \rindex{AES}
+Thus, Alice and Bob obtain the same key, which can later be used for message transfer using
+symmetric encryption algorithms (for example, AES). \rindex{AES}
 
 \begin{example}
 \emph{(Diffie-Hellman)}
 Initial data (public information): $g = 2$, $p = 23$. Alice
-chooses a random number $a = 6$ and computes by formula
-\eqref{eqAddDiscretIndDHA} the number 
+chooses a random number $a = 6$ and calculates the number
+\eqref{eqAddDiscretIndDHA} 
 %power_mod(2, 6, 23);
 $A = 18$ and sends it to Bob.
-Bob chooses a random number $b=9$ and, using formula 
-\eqref{eqAddDiscretIndDHB}, obtains
+Bob chooses a random number $b=9$ and, using the formula 
+\eqref{eqAddDiscretIndDHB}, gets
 %power_mod(2, 9, 23);
 $B = 6$ and sends this number to Alice.
 
 Alice calculates the key 
 % power_mod(6, 6, 23);
-$K = 12$ by formula \eqref{eqAddDiscretIndDHKey}. Bob can also obtain
+$K = 12$ using the formula \eqref{eqAddDiscretIndDHKey}. Bob can obtain
 the same key value 
 % power_mod(18, 9, 23);
 $K = 12$ using \eqref{eqAddDiscretIndDHKeyB}
 \nonumber
 \end{example}
 
-An adversary Eve knows the numbers $g$, $p$, $A$ and $B$. To obtain
-the key $K$, Eve needs to obtain one of the secret numbers $a$ or $b$:
+The eavesdropper Eve knows the numbers $g$, $p$, $A$, and $B$. To obtain
+the key $K$, Eve needs to get one of the secret numbers $a$ or $b$:
 \begin{equation}
 a \equiv ind_g\left( A \right) \mod{p},
 \nonumber
 \end{equation}
-from which, using \eqref{eqAddDiscretIndDHKey}, the sought
+from which, using \eqref{eqAddDiscretIndDHKey}, the desired
 value $K$ is obtained.

@@ -1,3 +1,4 @@
+%% -*- coding:utf-8 -*-
 $m$ can be recovered from $c$ using the following formula:
 \begin{equation}
 m \equiv c^d \mod{n}.
@@ -6,10 +7,10 @@ m \equiv c^d \mod{n}.
 Having $m$, the original message $M$ can be restored.
 \begin{example}
 \emph{(RSA. Decryption)}
-Suppose we have a private key $\left(n=21, d=5\right)$ (see example \ref{exAddRSAKeyGen}) and ciphertext $c = 2$ from example \ref{exAddRSACode}.
+Suppose we have a private key $\left(n=21, d=5\right)$ (see ex. \ref{exAddRSAKeyGen}) and ciphertext $c = 2$ from example \ref{exAddRSACode}.
 
 %(%i2) power_mod(2,5,21);
 %(%o2)                                 11
-The original text is calculated by formula \eqref{eqAddRSADeCode} $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
+The original text is calculated using the formula \eqref{eqAddRSADeCode} $m \equiv 2^5 \mod{21} = 11 = 1101_2$.
 \label{exAddRSADeCode}
 \end{example}

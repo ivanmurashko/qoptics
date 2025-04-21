@@ -1,17 +1,17 @@
 %% -*- coding:utf-8 -*-
 \section{Elgamal Scheme}
 \label{sec:add:dm:elgamal}
-One of the variations of the Diffie-Hellman protocol is the Elgamal scheme. It is important to distinguish between the Elgamal encryption algorithm and the Elgamal digital signature algorithm. The Elgamal digital signature underlies the US Digital Signature Algorithm (DSA) and the Russian standard (GOST R 34.10-94).
+One variation of the Diffie-Hellman protocol is the Elgamal scheme. It's important to distinguish between the Elgamal encryption algorithm and the Elgamal digital signature algorithm. The Elgamal digital signature is the basis for the digital signature standards of the USA (DSA) and Russia (GOST R 34.10-94).
 
 Below we will consider the algorithm in encryption mode.
 
 \subsection{Key Generation}
 
 \begin{itemize}
-\item Generate a prime number $p$.
-\item Choose an integer $g$.
-\item Choose a random integer $x: 1 < x < p$.
-\item Compute $y = g^x \mod p$.
+\item A prime number $p$ is generated.
+\item An integer $g$ is chosen.
+\item A random integer $x: 1 < x < p$ is chosen.
+\item Compute $y = g^x \mod p$
 \end{itemize}
 
 The public key is the triple $p, g, y$. The private key is the number $x$.
@@ -22,46 +22,47 @@ Choose $p = 21, g = 10, x = 3$. $y = 10^3 \mod 21 = 13$.
 \end{example}
 
 \subsection{Encryption}
-The message to be encrypted $M$ must satisfy $0 < M < p$.
+The message $M$ to be encrypted must satisfy the criterion $0 < M < p$.
 \begin{itemize}
-\item Choose a session key — a random number $k: 1 < k < p - 1$.
-\item Compute $a = g^k \mod p$.
-\item Compute $b = y^k M \mod p$.
+\item A session key is chosen - a random number $k: 1 < k < p - 1$.
+\item Compute $a = g^k \mod p$
+\item Compute $b = y^k M \mod p$
 \end{itemize}
 
 The pair of numbers $(a, b)$ is considered the ciphertext.
 \begin{example}[Encryption (Elgamal)]
 Suppose we want to encrypt $M=6$.
-Choose $k = 7$. Then $a = 10^7 \mod 21 = 10$ and $b = 13^7 \cdot 6 \mod 21 = 15$.
+Choose $k = 7$. $a = 10^7 \mod 21 = 10$, $b = 13^7 \cdot 6 \mod 21 = 15$.
 \label{ex:add:dm:elgamal_crypt}
 \end{example}
 
 \subsection{Decryption}
-Knowing the private key $x$, we can recover the original message by
+Knowing the private key $x$, we can recover the original message using
 \begin{equation}
-M = b \cdot \left(a^x\right)^{-1} \mod p,
+M = b\cdot \left(a^x\right)^{-1} \mod p,
 \label{eq:add:dm:elgamal_decrypt}
 \end{equation}
-indeed, since
+due to the fact that
 \[
-\left(a^x\right)^{-1} = g^{-kx} \mod p,
+\left(a^x\right)^{-1} = g^{-kx} \mod p
 \]
 we have
 \[
-b \cdot \left(a^x\right)^{-1} = 
+b\cdot \left(a^x\right)^{-1} = 
 y^k M g^{-kx} = g^{kx} M g^{-kx} = M \mod p.
 \]
 \begin{example}[Decryption (Elgamal)]
-The encrypted message from example \ref{ex:add:dm:elgamal_crypt} 
-is $C = (a=10, b=15)$. Using \eqref{eq:add:dm:elgamal_decrypt} we have
+The encrypted message from ex. \ref{ex:add:dm:elgamal_crypt} 
+$C = (a=10, b=15)$. Using \eqref{eq:add:dm:elgamal_decrypt} we have
 \[
-M = 15 \cdot 13 \mod 21 = 6,
+M = 15 \cdot 13 \mod 21 = 6
 \]
-where
+where it was used
 \[
 \left(10^3\right)^{-1} \equiv 13 \mod 21,
 \]
-since $13 \cdot 10^3 = 1 \mod 21$.
-Thus, we have recovered the message $M=6$ encrypted in example \ref{ex:add:dm:elgamal_crypt}.
+because $13 \cdot 10^3 = 1 \mod 21$.
+Thus we recovered the message $M=6$ encrypted in
+ex. \ref{ex:add:dm:elgamal_crypt}.
 \label{ex:add:dm:elgamal_crypt}
 \end{example}

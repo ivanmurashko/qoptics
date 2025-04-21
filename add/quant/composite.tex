@@ -1,70 +1,47 @@
-%% -*- coding:utf-8 -*-
 \section{Composite Systems}
 \label{sec:add:quantum:composite}
-Systems consisting of several parts behave fundamentally differently
-in the case of classical and quantum systems.
+Systems consisting of multiple parts behave fundamentally differently for the case of classical and quantum systems.
 
-As an example, consider a system of two particles. The position of the first
-is described by 3 coordinates, which represent a point in
-some linear space $L_1$: $(x_1, y_1, z_1) \in L_1$. For the second,
-suppose we have 2 coordinates in space $L_2$ fully defining
-the location:  
-$(x_2, y_2) \in L_2$. Obviously, for a complete description of the positions of two
-particles, we need 5 coordinates: $(x_1, y_1, z_1, x_2, y_2) \in L_1
-\times L_2$. Thus, composite systems in the classical case
-are described by points in the space $L^{classical}$, which is the Cartesian
-product of the originals: $L = L_1 \times L_2$. A distinctive
-feature of the Cartesian product is that the dimensions
-of the corresponding spaces add up:
+As an example, consider a system of two particles. The position of the first one is described by 3 coordinates, which represent a point in some linear space $L_1$: $(x_1, y_1, z_1) \in L_1$. For the second, we assume we have 2 coordinates in space $L_2$ that fully determine the location: $(x_2, y_2) \in L_2$. Obviously, to fully describe the position of the two particles we need 5 coordinates: $(x_1, y_1, z_1, x_2, y_2) \in L_1 \times L_2$. Thus, composite systems, in the classical case, are described by points in space $L^{classical}$, which is the Cartesian product of the originals: $L = L_1 \times L_2$. A distinguishing feature of the Cartesian product is that the dimensions of the corresponding spaces add:
 \[
 \dim{L^{classical}} = \dim{L_1} + \dim{L_2}.
-\] 
+\]
 
-In the quantum case, a composite system is described by vectors (points) in
-a space that is the tensor product of the originals: 
+In the quantum case, a composite system is described by vectors (points) in space that is the tensor product of the originals:
 \[
 L^{quantum} = L_1 \otimes L_2.
 \]
-This space has 6 basis vectors, and accordingly, to
-describe the position of the system, 6 numbers are required:
-$(x_1 \cdot x_2, y_1 \cdot x_2, z_1 \cdot x_2, 
-x_1 \cdot y_2, y_1 \cdot y_2, z_1 \cdot y_2) \in L^{quantum}$. 
-Correspondingly, the dimensions multiply:
+In this space, there are 6 basis vectors, and accordingly, to describe the state of the system, 6 numbers are required: $(x_1 \cdot x_2, y_1 \cdot x_2, z_1 \cdot x_2, x_1 \cdot y_2, y_1 \cdot y_2, z_1 \cdot y_2) \in L^{quantum}$. Accordingly, the dimensions multiply:
 \[
 \dim{L^{quantum}} = \dim{L_1} \cdot \dim{L_2}.
-\] 
+\]
 
-Thus, if we have two independent quantum systems with
-wave functions $\ket{\psi_1}$ and $\ket{\psi_2}$, then the composite
-system will have the following wave function
+Thus, if we have two independent quantum systems with wave functions $\ket{\psi_1}$ and $\ket{\psi_2}$, then the composite system will have the following wave function
 \[
 \ket{\psi_{12}} = \ket{\psi_1} \otimes \ket{\psi_2},
 \]
-and obviously the following equalities hold
+and it is obvious that the following equalities hold
 \begin{eqnarray}
 \ket{\psi_1} = Sp_2 \ket{\psi_{12}}, \\
 \nonumber
-\ket{\psi_2} = Sp_1 \ket{\psi_{12}} 
+\ket{\psi_2} = Sp_1 \ket{\psi_{12}}
 \nonumber
 \end{eqnarray}
-i.e., to obtain the state of subsystem 1, one must take the trace over
-the states of system 2 from the overall wave function. 
+i.e., to obtain the state of subsystem 1, one must take the trace over the states of system 2 from the overall wave function.
 
-Composite systems have an interesting property: although
-the parts of this system represent mixed states, the entire system
-as a whole is pure. As an example, consider the so-called entangled states \index{entangled states}:
+Composite systems have an interesting property where, despite the parts of this system being mixed states, the entire system as a whole is pure. As an example, consider the so-called entangled states \index{entangled states}:
 \[
 \ket{\psi} = \frac{\ket{0_1}\ket{1_2} - \ket{1_1}\ket{0_2}}{\sqrt{2}}
 \]
 which is pure. At the same time, for the first particle, we have
 \begin{eqnarray}
-\rho_1 = Sp_2 \ket{\psi} \otimes \bra{\psi} = 
+\rho_1 = Sp_2 \ket{\psi} \otimes \bra{\psi} =
 \nonumber \\
 =
-\bra{0_2}\ket{\psi}\bra{\psi}\ket{0_2} + 
-\bra{1_2}\ket{\psi}\bra{\psi}\ket{1_2} = 
+\bra{0_2}\ket{\psi}\bra{\psi}\ket{0_2} +
+\bra{1_2}\ket{\psi}\bra{\psi}\ket{1_2} =
 \nonumber \\
-= \frac{\ket{1_1}\bra{1_1} + 
+= \frac{\ket{1_1}\bra{1_1} +
 \ket{0_1}\bra{0_1}}{2}
 \nonumber
 \end{eqnarray}

@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*- 
 \subsection{Theorem on Operator Decomposition}
-\begin{theorem}[On the Operator Identity]
+\begin{theorem}[On Operator Identity]
 \label{thm:addoperatorequality}
 \begin{equation}
 e^{\hat{A}}\hat{B}e^{-\hat{A}} = 
@@ -15,8 +15,8 @@ f\left(\alpha\right) =
 e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}},
 \label{eqAddTheorem1_F}
 \end{equation}
-which coincides with the desired expression at $\alpha = 1$. We expand
-\eqref{eqAddTheorem1_F} into a Taylor series:
+which coincides with the desired expression at $\alpha = 1$. Expand
+\eqref{eqAddTheorem1_F} in a Taylor series:
 \begin{equation}
 f\left(\alpha\right) = 
 f\left(0\right) + \frac{\alpha}{1!}f'\left(0\right) +
@@ -25,7 +25,7 @@ f\left(0\right) + \frac{\alpha}{1!}f'\left(0\right) +
 \frac{\alpha^k}{k!}f^{(k)}\left(0\right) + \dots.
 \label{eqAddTheorem1_T}
 \end{equation}
-The following recursive relation holds:
+The following recurrence relation holds:
 \begin{eqnarray}
 f^{(k)}\left(\alpha\right) = \left[\hat{A},
   f^{(k-1)}\left(\alpha\right)\right] = 
@@ -43,7 +43,7 @@ where
 \[
 f^{(0)}\left(\alpha\right) = f\left(\alpha\right).
 \]
-Indeed, by induction for the first derivative we have:
+Indeed, by induction we have for the first derivative:
 \begin{eqnarray}
 f^{(1)}\left(\alpha\right) = \hat{A}
   e^{\alpha\hat{A}}\hat{B}e^{-\alpha\hat{A}} -
@@ -59,13 +59,13 @@ f^{(1)}\left(\alpha\right) = \hat{A}
 \left[\hat{A}, f^{(0)}\left(\alpha\right)\right],
 \label{eqAddTheorem1_rec_1}
 \end{eqnarray}
-i.e. \eqref{eqAddTheorem1_rec} holds for $k = 1$. In deriving
-\eqref{eqAddTheorem1_rec_1} we used the fact that 
+i.e. \eqref{eqAddTheorem1_rec} is valid for $k = 1$. In deriving
+\eqref{eqAddTheorem1_rec_1}, we considered the fact that 
 \begin{equation}
 \hat{A}e^{-\alpha\hat{A}} = e^{-\alpha\hat{A}} \hat{A}.
 \nonumber
 \end{equation}
-For the $(k+1)$-th derivative we get:
+For the $k+1$ derivative we obtain:
 \begin{eqnarray}
 f^{(k + 1)}\left(\alpha\right) = 
 \frac{\partial f^{(k)}\left(\alpha\right)}{\partial \alpha} =
@@ -98,7 +98,7 @@ f^{(0)}\left(\alpha\right)
 \underbrace{]\dots]]}_{k + 1},
 \nonumber
 \end{eqnarray}
-which together with \eqref{eqAddTheorem1_rec_1} proves the validity 
+which along with \eqref{eqAddTheorem1_rec_1} proves the validity 
 of \eqref{eqAddTheorem1_rec}.
 
 Considering that 
@@ -106,7 +106,7 @@ Considering that
 f^{(0)}\left(\alpha\right) = \hat{B},
 \nonumber
 \end{equation}
-we can obtain from \eqref{eqAddTheorem1_T} the desired identity
+one can obtain from \eqref{eqAddTheorem1_T} the desired identity
 \eqref{eqAddTheorem1_Main} at $\alpha = 1$. 
 \end{proof}
 \end{theorem}

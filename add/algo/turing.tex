@@ -2,61 +2,62 @@
 \section{Turing Machine}
 \label{addTuring}
 
-A Turing machine $TM$ is a mathematical object consisting of
+A Turing Machine $TM$ is a mathematical object consisting of
 a control device (head) and an infinite tape divided into
-cells, each of which can contain one symbol.
+cells, each of which can hold one symbol.
 
 \input ./add/algo/figturing.tex
 
-The control device of $TM$ can be in one of the states $q_i
+The control device $TM$ can be in one of the states $q_i
 \in Q$, where $Q$ 
-is the set of different states. The state in which $TM$ was at
-the initial moment in time $q_0 \in Q$ is called the initial state.
+is a set of different states. The state in which $TM$ was at
+the initial time $q_0 \in Q$ is called the initial state.
 
-Among the elements of the set $Q$ a subset $F \subset Q$
-of final states is chosen. If $TM$ ends up in a state $f \in F \subset
-Q$, it is said that the Turing machine has finished (terminated) its work.
+Among the elements of the set $Q$, a subset $F \subset Q$
+of final states is selected. If $TM$ is in a state $f \in F \subset
+Q$, it is said that the Turing Machine has terminated its operation.
 
-The symbols written on the tape form some set (alphabet)
+The symbols recorded on the tape form a certain set (alphabet)
 $\Gamma = \left\{\gamma_i\right\}$.
 
-The input alphabet $\Sigma$ of the Turing machine is called
-a subset of elements of $\Gamma$ with which the control device $TM$ operates,
-i.e. those symbols that it can recognize on the tape. Those symbols
+The input alphabet $\Sigma$ of the Turing Machine is a 
+subset of the elements $\Gamma$ with which the control device $TM$
+operates, i.e., the symbols it can recognize on the tape. Those symbols
 that the control device cannot recognize will be denoted by the symbol
 $\beta$ (blank).
 
-During operation, $TM$ performs the following actions:
+In the process of operation, $TM$ performs the following actions:
 \begin{itemize}
 \item{reads the element pointed to by the control device
   (see \autoref{figAddAlgoTuring})}
 \item{changes (or leaves unchanged) this symbol to an element
   $\sigma \in \Sigma \subset \Gamma$}
 \item{changes the position of the control device by one cell to the right
-  ($R$), to the left ($L$), or does not change it ($S$)}
+  ($R$), to the left ($L$) or does not change it ($S$)}
 \end{itemize}
 
 \input ./add/algo/figturingtrans.tex
 
-The change of state of $TM$ is described by the transition table
-$\Delta$. An element of the transition table is written as: 
+The change of state $TM$ is described by a transition table
+$\Delta$. An element of the transition table is recorded in the following form: 
 $\delta_j\left(q_{old}, \gamma_{old}\right)$ where $q_{old} \in Q$ is the current state,
-$\gamma_{old} \in \Gamma$ is the selected element on the tape. The transition
-value may be 
-undefined or written as $\left\{q_{new}, \gamma_{new},
+$\gamma_{old} \in \Gamma$ is the selected element on the tape. The value
+of the transition can be 
+undefined or recorded in the form $\left\{q_{new}, \gamma_{new},
 d\right\}$ (see \autoref{figAddAlgoTuringTrans}), where
-$q_{new} \in Q$ is the new state of the Turing machine, $\gamma_{new} \in \Gamma$ is the new value of the element on the tape pointed to by the control device,
-i.e. $\gamma_{old}$ is replaced by $\gamma_{new}$. $d \in D =
-\left\{L, R, S\right\}$ is the direction
-of movement of the control device ($L$ left, $R$ right, $S$
+$q_{new} \in Q$ is the new state of the Turing Machine, $\gamma_{new} \in \Gamma$ is the
+new value of the element on the tape pointed to by the control device,
+i.e., $\gamma_{old}$ is replaced by $\gamma_{new}$. $d \in D =
+\left\{L, R, S\right\}$ is the direction of 
+movement of the control device ($L$ left, $R$ right, $S$
 stay in the same place). In the case of an undefined
-transition, it is said that the Turing machine has halted in the state $q_{old}$.
+transition, it is said that the Turing Machine has halted in state $q_{old}$.
 
-\begin{definition}[Language of a Turing Machine $L\left(M\right)$]
-The initial symbols on the tape can be interpreted as some string $x$
-which is input to the Turing machine $M$. All those strings which
-bring the machine $M$ to some final state $f \in F$
-are called the language $L\left(M\right)$ of the machine $M$
+\begin{definition}[Language of the Turing Machine $L\left(M\right)$]
+The original symbols on the tape can be interpreted as a certain string $x$
+that is fed to the input of the Turing Machine $M$. All those strings that
+take the machine $M$ to a certain final state $f \in F$
+are called the language $L\left(M\right)$ of machine $M$
 \end{definition}
 
 \begin{definition}[Deterministic Turing Machine]
@@ -65,14 +66,14 @@ If in the transition table the mapping
 \left(q_{old}, \gamma_{old}\right) \rightarrow 
 \left\{q_{new}, \gamma_{new}, d\right\}
 \)
-is a bijection
-\footnote{A bijection is a one-to-one mapping, i.e., in our
-  case, for each state $\left(q_{old}, \gamma_{old}\right)$
-  there corresponds only one element of the transition table 
+is a bijection 
+\footnote{Bijection is a one-to-one mapping, i.e., in our
+  case, each state $\left(q_{old}, \gamma_{old}\right)$
+  corresponds to only one element of the transition table 
   $\left\{q_{new}, \gamma_{new}, d\right\}$
 },
-then the corresponding Turing machine
-is called a deterministic Turing machine
+then the corresponding Turing Machine
+is called a deterministic Turing Machine
 \label{defAlgoDMT}
 \end{definition}
 
@@ -85,7 +86,7 @@ If in the transition table the mapping
 is not a bijection, i.e., the state $\left(q_{old}, \gamma_{old}\right)$
 may correspond to several elements of the transition table 
 $\left\{q_{new}, \gamma_{new}, d\right\}$,
-then the corresponding Turing machine
-is called a non-deterministic Turing machine
+then the corresponding Turing Machine
+is called a non-deterministic Turing Machine
 \label{defAlgoNDMT}
 \end{definition}

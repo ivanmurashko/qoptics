@@ -1,30 +1,27 @@
 %% -*- coding:utf-8 -*-
 \section{Fourier Transform}
 \label{sec:cont_fourier}
-In this course, we will use the following form of the
-Fourier transform
+In this course, we will use the following form of the Fourier transform
 \footnote{
-Most commonly, the Fourier transform is defined as
+Most commonly, the following definition of the Fourier transform is used
 \[
 \tilde{x}\left(\omega\right) = \frac{1}{\sqrt{2 \pi}}
 \int_{-\infty}^{\infty}x\left(t\right)e^{-i \omega t}dt.
 \]
-However, according to \cite{wiki:fourier_transform}, there are
-alternative definitions differing by the sign before the frequency and
-the coefficient before the integral.}
+However, according to \cite{wiki:fourier_transform}, there are alternative definitions differing in the sign before the frequency and the coefficient before the integral.}
 \begin{equation}
 \tilde{x}\left(\omega\right) = \frac{1}{2 \pi}
 \int_{-\infty}^{\infty}x\left(t\right)e^{i \omega t}dt,
 \label{eq:direct_fourier}
 \end{equation}
-while the inverse Fourier transform takes the following form
+while the inverse Fourier transform is as follows
 \begin{equation}
 x\left(t\right) =
 \int_{-\infty}^{\infty}\tilde{x}\left(\omega\right)e^{-i \omega t}dt, 
 \label{eq:reverse_fourier}
 \end{equation}
 
-The following table contains important transform pairs
+The following table contains important transform formulas
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
@@ -38,8 +35,7 @@ $\delta\left(t\right)$  & $\frac{1}{2 \pi}$  \\
 \label{tbl:fourier}
 \end{table}
 
-From \autoref{tbl:fourier} follows an important formula (integral
-representation of the delta function) \cite{wiki:deltafunction}
+From \autoref{tbl:fourier}, an important formula follows (integral representation of the delta function) \cite{wiki:deltafunction}
 \begin{equation}
 \delta\left(\omega\right) = \frac{1}{2 \pi} \int_{-\infty}^{\infty}
 e^{i \omega t} dt

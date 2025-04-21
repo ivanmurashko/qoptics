@@ -1,27 +1,20 @@
-%% -*- coding:utf-8 -*-
 \begin{itemize}
-\item Two prime numbers $p$ and $q$ are chosen
-\item The product of the chosen prime numbers is calculated $n = p\cdot q$
-\item The \myref{def:add:discretmath:eulerfun}{Euler function}
-(is calculated) (see properties \ref{prop:add:discretmath:eulerfun1} and \ref{prop:add:discretmath:eulerfun2})
+\item Two prime numbers $p$ and $q$ are chosen.
+\item The product of the chosen prime numbers is calculated $n = p\cdot q$.
+\item Euler's \myref{def:add:discretmath:eulerfun}{function} is calculated (see properties \ref{prop:add:discretmath:eulerfun1} and \ref{prop:add:discretmath:eulerfun2})
 \(
 \phi\left(n\right)=\left(p - 1 \right)\left(q - 1 \right)
 \)
 \item An integer $e$ is chosen such that 
 \(
 1 < e < \phi\left(n\right)
-\) and $e$ and $\phi\left(n\right)$ are coprime,
-i.e.
+\) and $e$ and $\phi\left(n\right)$ are coprime, i.e. 
 \(
 \gcd\left( e, \phi\left(n\right) \right) = 1.
 \)
-\item Compute $d \equiv e^{-1} \mod{\phi\left(n\right)}$, i.e.
-$d \cdot e \equiv 1 \mod{\phi\left(n\right)}$.
+\item Calculate $d \equiv e^{-1} \mod{\phi\left(n\right)}$, i.e. $d \cdot e \equiv 1 \mod{\phi\left(n\right)}$.
 \end{itemize}
 
-The public key consists of two numbers: the modulus $n$ and the public exponent
-$e$. These two numbers are used to encrypt the original
-message.
+The public key consists of two numbers: the modulus $n$ and the public exponent $e$. These two numbers are used to encrypt the original message.
 
-The private key also consists of two numbers: the modulus $n$ and the private exponent
-$d$.
+The private key also consists of two numbers: the modulus $n$ and the private exponent $d$.

@@ -1,31 +1,29 @@
-%% -*- coding:utf-8 -*-
 \section{Discrete Logarithm}
 \label{AddDiscretLog}
 
 \begin{definition}[Discrete Logarithm]
-Consider some abelian multiplicative group $G$ and the equation 
+Consider an Abelian multiplicative group $G$ and the equation 
 \begin{equation}
 g^x = a
 \label{eq:add:dm:discretlog}
 \end{equation}
-A solution of this equation, i.e., a non-negative integer $x$
+The solution to this equation, i.e., a whole non-negative number $x$
 satisfying the equality \eqref{eq:add:dm:discretlog} is called
-a discrete logarithm.
+the discrete logarithm.
 \end{definition}
 
-The equation \eqref{eq:add:dm:discretlog} does not, in general, have a solution
-for any value of $a$. But in the case when $g$ is a generating
-element of $G$, i.e., $G=\langle g\rangle$, then the solution always exists and it is
-unique. Further, when speaking about the discrete logarithm, we will
-assume that $g$ is chosen such that $G=\langle g\rangle$.
+The equation \eqref{eq:add:dm:discretlog} generally does not have a solution for all values of $a$. However, if $g$ is a generating
+element of $G$, i.e., $G=<g>$, then a solution always exists and it is
+unique. In further discussion of the discrete logarithm, we will
+assume that $g$ is chosen such that $G=<g>$.
 
-In applied cryptography, a special kind of
-discrete logarithm in the ring of residues modulo $p$ is often used:
-\begin{definition}[Discrete Logarithm in the Ring of Residues modulo $p$]
+In applied cryptography, one often deals with a special kind of
+discrete logarithm in the ring of residues modulo $p$:
+\begin{definition}[Discrete Logarithm in the Ring of Residues Modulo $p$]
 The discrete logarithm $ind_g\left(a\right) \mod{p}$
 \footnote{From the word {\bf ind}ex - an alternative name for the discrete logarithm}
 is called
-the minimal number $x$ that satisfies the following equation
+the minimum number $x$ that satisfies the following equation
 (if such a number exists): 
 \begin{equation}
 g^x \equiv a \mod{p}
@@ -34,7 +32,7 @@ g^x \equiv a \mod{p}
 
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
-Let us solve the problem by brute force \cite{bWikiDiscretLog}:
+We solve the problem by enumeration \cite{bWikiDiscretLog}:
 \begin{eqnarray}
 3^1 \equiv 3 \mod{17},\: 
 3^2 \equiv 9 \mod{17},\: 
@@ -57,18 +55,18 @@ Let us solve the problem by brute force \cite{bWikiDiscretLog}:
 3^{16} \equiv 1 \mod{17},
 \nonumber
 \end{eqnarray}
-thus, one can see that $ind_3{14} \mod{17} = 9$, 
+thus, it can be seen that $ind_3{14} \mod{17} = 9$, 
 since $3^9 \equiv 14 \mod{17}$. 
 \label{ex:dm:discretlog}
 \end{example}
 
-The problem of finding the discrete logarithm is a hard
+The problem of finding the discrete logarithm is a difficult
 problem. The fastest known algorithm
-\cite{bGordon93discretelogarithms} solves it in time approximately
+\cite{bGordon93discretelogarithms} solves it in time of the order 
 \(
 O\left(c \cdot
-\exp\left(\log{p}^{\frac{1}{3}}\log{\log{p}}^{\frac{2}{3}}
+exp\left(\log{p}^{\frac{1}{3}}\log{\log{p}}^{\frac{2}{3}}
 \right)\right)
 \), where $c$ is some constant,
-which explains the widespread use of algorithms that utilize
-the discrete logarithm in cryptography.
+which is why algorithms using
+discrete logarithms are widely applied in cryptography.

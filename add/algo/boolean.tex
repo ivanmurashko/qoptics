@@ -1,9 +1,8 @@
 %% -*- coding:utf-8 -*-
-\section{Boolean Logic. CNF Boolean Formulas}
+\section{Boolean Logic. Boolean Formulas in CNF}
 
-\begin{definition}[Conjunction (logical ``AND'')]
-For the logical operation ``AND'' ($a \& b$), the following truth table
-\ref{tblAddAlgoAND} holds.
+\begin{definition}[Conjunction (logical "AND")]
+For the logical operation "AND" ($a \& b$), the following truth table \ref{tblAddAlgoAND} holds.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|}
@@ -19,9 +18,8 @@ $a$ & $b$ & $a \& b$ \\ \hline
 \end{table}
 \end{definition}
 
-\begin{definition}[Disjunction (logical ``OR'')]
-For the logical operation ``OR'' ($a \| b$), the following truth table
-\ref{tblAddAlgoOR} holds.
+\begin{definition}[Disjunction (logical "OR")]
+For the logical operation "OR" ($a \| b$), the following truth table \ref{tblAddAlgoOR} holds.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|}
@@ -38,28 +36,24 @@ $a$ & $b$ & $a \| b$ \\ \hline
 \end{definition}
 
 \begin{definition}[Boolean Formula]
-A Boolean formula is defined as a set of Boolean literals
-combined by logical operations.
+A Boolean formula is a set of Boolean literals combined by logical operations.
 \end{definition}
 
 \begin{definition}[CNF - Conjunctive Normal Form (SAT)]
-A conjunctive normal form in Boolean logic is called a Boolean
-formula that has the form of a conjunction of disjunctions of literals.
+In Boolean logic, a conjunctive normal form is a Boolean formula that is a conjunction of disjunctions of literals.
 \end{definition}
 
 \begin{example}
 \emph{SAT Problem}
 \label{exAddAlgoSAT}
-The SAT problem is the problem of satisfiability of CNF. Suppose the following
-Boolean formula in CNF form is given:
+The SAT problem is the problem of determining the satisfiability of CNF. Suppose the following Boolean formula is given in CNF form:
 \begin{equation}
 \left(x_1 \| x_2 \| \bar{x_3} \right) \& \left(x_1 \| \bar{x_2} \| x_3 \right)
 \nonumber
 \end{equation}
-It is satisfiable; it suffices to assign $x_1 = 1$, and the values of
-$x_{2,3}$ can be arbitrary.
+It is satisfiable; it is sufficient to set $x_1 = 1$, and the values of $x_{2,3}$ can be arbitrary.
 
-At the same time, the following formula is unsatisfiable:
+Meanwhile, the following formula is unsatisfiable:
 \begin{equation}
 \left(x_1 \| x_2 \| \bar{x_3} \right) \& 
 \left(\bar{x_1} \| \bar{x_2} \| x_3 \right).
@@ -68,18 +62,16 @@ At the same time, the following formula is unsatisfiable:
 
 \end{example}
 
-\begin{theorem}[Reduction to CNF]
+\begin{theorem}[Reducibility to CNF]
 Any Boolean formula can be reduced to CNF. 
 \end{theorem}
 
 \begin{proof}
-For the proof, one can use: the law of double negation, De Morgan's law,
-and distributivity.
+For the proof, you may use: the law of double negation, De Morgan's laws, distributivity.
 \end{proof}
 
-\begin{theorem}[Reduction to 3-CNF (3-SAT)]
-Any Boolean formula in conjunctive normal form can be
-reduced to 3-CNF.  
+\begin{theorem}[Reducibility to 3-CNF (3-SAT)]
+Any Boolean formula in conjunctive normal form can be reduced to 3-CNF.  
 \end{theorem}
 
 \begin{proof}
