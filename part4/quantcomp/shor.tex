@@ -1,29 +1,30 @@
 %% -*- coding:utf-8 -*- 
 \section{Shor's Algorithm}
 \label{Part4QuantCompShor}
-One of the most popular encryption algorithms, RSA (see 
+One of the most popular RSA encryption algorithms (see 
 \autoref{AddRSA}) \rindex{RSA algorithm}
-is based on the assumption of the difficulty of factorization
-(decomposition into prime factors) of large numbers. Accordingly,
-algorithms that allow factorization
-are of particular interest. Below is a description of such
-an algorithm proposed by Shor \cite{bShor94}.
+is based on the assumption of the complexity of factoring
+(decomposing into prime factors) large numbers. Accordingly,
+algorithms that enable decomposition into prime factors
+are of particular interest. Below is a description of such an
+algorithm proposed by Shor \cite{bShor94}.
 
-\subsection{Number Factorization and Period Finding of Functions}
+\subsection{Factoring Numbers and Finding the Period of Functions}
 \label{sec:part4:algoshor:periodfind}
-The problem of factoring a number $N$ is closely related to finding the period
-of functions. Consider the following function, which is called modular exponentiation:
+The task of factoring a number $N$ is closely related to finding the period
+of functions. Consider the following function, which is called the exponentiation
+function modulo
 \begin{equation}
 f\left(x, a\right) = a^x \mod N.
 \label{eqPart4QuantCompShorClassPart}
 \end{equation}
-The function \eqref{eqPart4QuantCompShorClassPart} depends on
-the number $N$ under analysis and two arguments $x$ and $a$. The argument $a$
-is chosen under the following conditions:
+Function \eqref{eqPart4QuantCompShorClassPart} depends on
+the analyzed number $N$ and two arguments $x$ and $a$. The argument $a$
+is chosen under the following conditions
 \begin{eqnarray}
 0 < a < N,
 \nonumber \\
-\mbox{gcd}\left(N, a\right) = 1.
+\mbox{GCD}\left(N, a\right) = 1.
 \label{eqPart4QuantCompShorAConditions}
 \end{eqnarray}
 A typical graph of the function \eqref{eqPart4QuantCompShorClassPart} is shown in
@@ -37,36 +38,36 @@ A typical graph of the function \eqref{eqPart4QuantCompShorClassPart} is shown i
 
 \input ./part4/quantcomp/figshorclass.tex
 
-The conditions for choosing the coefficient $a$
-\eqref{eqPart4QuantCompShorAConditions} ensure that $a$ and $N$ have no
-common divisors. If such divisors do exist, then they are the
-solution to the factorization problem and can be easily found using
-the Euclidean algorithm (see \autoref{AddEuclidean}).
+The conditions for choosing coefficient $a$
+\eqref{eqPart4QuantCompShorAConditions} are such that $a$ and $N$ do not have
+common divisors. If such divisors exist, they are
+the desired solution for the factoring problem and can be easily found
+using the Euclidean algorithm (see \autoref{AddEuclidean}).
 
-The function \eqref{eqPart4QuantCompShorClassPart} is periodic,
+Function \eqref{eqPart4QuantCompShorClassPart} is periodic,
 i.e., there exists a number $r$ such that $f\left(x + r, a\right) = 
-f\left(x, a\right)$. The smallest such number $r$ is called
+f\left(x, a\right)$. The smallest possible number $r$ is called
 the period of the function \eqref{eqPart4QuantCompShorClassPart}. 
 
 To prove periodicity, note that $f\left(x, a\right)$ cannot
-be zero. Indeed, if 
-$f\left(x, a\right) = 0$ were true, then
+be zero. Indeed, if the condition
+$f\left(x, a\right) = 0$ is fulfilled, then 
 \[
 \exists x \in \left\{0, 1, \dots\right\}:
 a^x = k \cdot N,
 \]
-where $k$ is an integer, which is impossible due to
-the coprimeness of $a$ and $N$ \eqref{eqPart4QuantCompShorAConditions}
-\footnote{It is obviously assumed that $N > 1$.}.
+where $k$ is an integer, which is not possible due to
+the coprimality of $a$ and $N$ \eqref{eqPart4QuantCompShorAConditions}
+\footnote{It is assumed here, obviously, that $N > 1$}.
 
-Thus, the range of the function
+Thus, the range of values of function
 \eqref{eqPart4QuantCompShorClassPart} is limited to the set 
 \begin{equation}
 f\left(x,
 a\right) \in \left\{1, \dots, N - 1\right\},
 \nonumber
 \end{equation}
-from which it follows that
+from which 
 \begin{equation}
 \exists k,j: k > j, k,j \in \left\{0, 1, \dots, N\right\},
 f\left(k,a\right) = f\left(j,a\right),
@@ -84,51 +85,50 @@ a^r \equiv 1 \mod{N}.
 \label{eqPart4QuantCompShorPeriodConditions}
 \end{equation}
 
-
-The period of the function \eqref{eqPart4QuantCompShorClassPart} may be
-either even or odd. In Shor's algorithm, we are interested in the first case:
-the period is an even number. Otherwise, a new number $a$ is chosen and
-the period finding is repeated. Thus, with $r= 2\cdot l$, we can rewrite
-\eqref{eqPart4QuantCompShorPeriodConditions} as
+The period of the function \eqref{eqPart4QuantCompShorClassPart} can be either
+even or odd. In Shor's algorithm, we are interested in the first case:
+period - even number. Otherwise, a new number $a$ is chosen and
+the period is found again. Thus, considering $r= 2\cdot l$ we
+can rewrite \eqref{eqPart4QuantCompShorPeriodConditions} as
 \begin{equation}
 a^{2 \cdot l} \equiv 1 \mod{N},
 \nonumber
 \end{equation}
-and since $r$ is the minimal number satisfying the periodicity condition,
+and since $r$ is the smallest number satisfying the periodicity condition,
 \[
 a^{l} \not\equiv 1 \mod{N}.
 \]
-If at the same time the number $a$ is chosen such that
+If, in addition, a number $a$ is selected such that 
 \[
 a^{l} \not\equiv -1 \mod{N},
 \]
-then we have
+then we have 
 \begin{equation}
 \left(a^l - 1\right)\left(a^l + 1\right) = k \cdot N,
 \label{eqPart4QuantCompShorPeriodFinal}
 \end{equation}
 where $k$ is some integer. From
-\eqref{eqPart4QuantCompShorPeriodFinal}, it follows that $a^l \pm 1$ have
-common nontrivial (different from 1) divisors with $N$.
+\eqref{eqPart4QuantCompShorPeriodFinal} we find that $a^l \pm 1$ have
+nontrivial common divisors (other than 1) with $N$.
 
 \begin{example}
-\emph{Finding the divisors of the number $N=21$}
+\emph{Finding divisors of the number $N=21$}
 \label{exPart4QuantCompShorGCD}
-As an example, consider the problem of finding divisors of the number $N =
-21$. Choosing $a=2$, we get the period of the function
-\eqref{eqPart4QuantCompShorClassPart} $r = 6$ (see
+As an example, consider the task of finding the divisors of the number $N =
+21$. Choosing $a=2$, we get the period of
+function \eqref{eqPart4QuantCompShorClassPart} $r = 6$ (see
 \autoref{picPart4QuantCompShorClassPart}). 
-Obviously,
+Obviously, 
 \[
 2^3 \equiv 8 \mod{21} \not\equiv -1 \mod{21}.
 \]
-Thus, by finding the corresponding greatest common divisors, we solve
-the problem
+Thus, finding the corresponding greatest common divisors solves
+the task
 \begin{eqnarray}
-\mbox{gcd}\left( 2^3 - 1, 21 \right) = \mbox{gcd}\left( 7, 21 \right)
+\mbox{GCD}\left( 2^3 - 1, 21 \right) = \mbox{GCD}\left( 7, 21 \right)
 = 7,
 \nonumber \\
-\mbox{gcd}\left( 2^3 + 1, 21 \right) = \mbox{gcd}\left( 9, 21 \right)
+\mbox{GCD}\left( 2^3 + 1, 21 \right) = \mbox{GCD}\left( 9, 21 \right)
 = 3,
 \nonumber \\
 21 = 7 \cdot 3.
@@ -136,8 +136,8 @@ the problem
 \end{eqnarray}
 \end{example}
 
-Thus, the problem of factoring the number $N$ can be reduced to
-the problem of finding the period of a certain function by means of the
-following algorithm:
+Thus, the task of factoring the number $N$ can be reduced to
+the task of finding the period of a certain function using the following
+algorithm:
 \rindex{Shor's algorithm}
 \input part4/quantcomp/shoralgo.tex

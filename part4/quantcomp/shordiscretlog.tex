@@ -1,48 +1,28 @@
-%% -*- coding:utf-8 -*- 
-\section{Quantum Fourier Transform and Discrete Logarithm}
-The discrete logarithm (see \autoref{AddDiscretLog}) is the basis for
-a large number of modern cryptographic algorithms (see
-\autoref{sec:add:dm:elgamal}, \autoref{sec:add:dm:dh}). At the same time, 
-the method proposed by Shor for factoring integers can also be
-applied to computing discrete logarithms, making it possible to break
-the corresponding cryptographic algorithms.
+\section{Quantum Fourier Transform and Discrete Logarithms}
 
-Let's set the problem as follows: there is an expression
+The discrete logarithm (see \autoref{AddDiscretLog}) is the basis for many modern cryptographic algorithms (see \autoref{sec:add:dm:elgamal}, \autoref{sec:add:dm:dh}). Meanwhile, Shor's method for factoring integers can also be applied to compute discrete logarithms, making it possible to break the corresponding cryptographic algorithms.
+
+Let's set the task as follows: there is an expression 
 \[
 b = a^x \mod p,
 \]
-in which the numbers $a, b$, and $p$ are given, and the number $x$ is
-unknown and needs to be determined. By analogy with the application
-of the quantum Fourier transform for factoring numbers (see
-\autoref{sec:part4:algoshor:periodfind}), we must
-construct some periodic function, the period of which will allow us to
-determine the desired number $x$. We choose the analyzed function as
+where the numbers $a, b,$ and $p$ are given, and the number $x$ is unknown, which needs to be determined. Analogous to the application of the quantum Fourier transform for factoring numbers (see \autoref{sec:part4:algoshor:periodfind}), we must construct some periodic function whose period will allow us to determine the unknown number $x$. We choose the function to be analyzed as
 \begin{equation}
 f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = a^{x \cdot x_1} a^{x_2} \mod p
 \label{eq:part4:quantcomp:discretlogfunc}
 \end{equation}
 
-As an example, we will consider the quantum analog of solving the problem from example
-\ref{ex:dm:discretlog}:
+As an example, we will consider the quantum analog of solving the problem from example \ref{ex:dm:discretlog}:
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
-% maxima
-% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
-% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
-%
-% scene:points(pts);
 \input ./part4/quantcomp/figdiscretlog0.tex
-In our example, $p = 17$, $b=14$, and $a=3$. The function
-\eqref{eq:part4:quantcomp:discretlogfunc} has the form
+In our example $p = 17$, $b=14$, and $a=3$. The function \eqref{eq:part4:quantcomp:discretlogfunc} is
 \[
 f\left(x_1, x_2\right) = b^{x_1}a^{x_2} = 14^{x_1}3^{x_2}.
 \]
-and is shown in \autoref{fig:part4:quantcomp:dl0}.
+and is depicted in \autoref{fig:part4:quantcomp:dl0}.
 
-Both $b=14$ and $a=3$ are generators of
-$\left(\mathbb{Z}/17\mathbb{Z}\right)^\times$. Moreover, $3 \equiv 14^9
-\mod 17$. The periods of the depicted function, as seen in
-\autoref{fig:part4:quantcomp:dl0}, are the following numbers:
+Both $b=14$ and $a=3$ are generators of $\left(\mathbb{Z}/17\mathbb{Z}\right)^\times$. Moreover, $3 \equiv 14^9 \mod 17$. The periods of the function shown, as seen from \autoref{fig:part4:quantcomp:dl0}, will be the following numbers 
 \begin{eqnarray}
 t_1 \equiv 1 \mod 16,
 \nonumber \\
@@ -51,25 +31,15 @@ t_2 \equiv 9 \mod 16
 \label{ex:part4:quantcomp:discretlog:periodfinding0}
 \end{example}
 
-
-By analogy with the factorization problem solution, a measurement
-of this function is made. Suppose the result of the measurement is a number $c \in
-\left(\mathbb{Z}/p\mathbb{Z}\right)^\times$. Since $a$
-is a generating element (see def.
-\ref{def:add:algebra:cyclic_group}) of the multiplicative group   
-$\left(\mathbb{Z}/p\mathbb{Z}\right)^\times$ (see def.
-\ref{def:add:algebra:mult_group}), $\exists x_0: c = a^{x_0}$. Thus,
-taking into account \myref{addDiscretSmallFerma}{Fermat's little theorem} $a^{p-1}
-\equiv 1 \mod p$ and therefore
+In analogy with the factorization problem, you measure this function. Suppose the measurement yields a number $c \in \left(\mathbb{Z}/p\mathbb{Z}\right)^\times$. Given that $a$ is a generating element (see definition \ref{def:add:algebra:cyclic_group}) of the multiplicative group $\left(\mathbb{Z}/p\mathbb{Z}\right)^\times$ (see definition \ref{def:add:algebra:mult_group}) $\exists x_0: c = a^{x_0}$. Then, considering \myref{addDiscretSmallFerma}{Fermat's Little Theorem} $a^{p-1} \equiv 1 \mod p$, it follows that
 \[
 x_0 \equiv x x_1 + x_2 \mod q,
 \] 
-where $q = p - 1$.
-From this expression it follows that
+where $q = p - 1$. From this expression, it follows that
 \[
 x_2 \equiv x_0 - x x_1 \mod q.
 \]
-That is, if the function is periodic in the first argument:
+This means if the function is periodic in the first argument:
 \[
 f(x_1 + t_1, x_2) = f(x_1,x_2),
 \]
@@ -77,45 +47,30 @@ then it will also be periodic in the second argument
 \[
 f(x_1, x_2 + t_2) = f(x_1,x_2),
 \]
-with
+where 
 \begin{equation}
 t_2 \equiv x t_1 \mod q.
 \label{eq:part4:quantcomp:discretlogeq}
 \end{equation}
 
-\subsection{Two-dimensional Fourier Transform and Period of the Function $f(x_1,
-  x_2)$}
-Our function to analyze will be the following:
+\subsection{Two-Dimensional Fourier Transform and Period of the Function $f(x_1, x_2)$}
+Our function of interest will be:
 \begin{equation}
 \label{eq:part4:quantcomp:shordiscretlog:fprime}
 f'\left(x_1, x_2\right) = 
 \begin{cases}
-1, & x x_1 + x_2 \equiv x_0 \mod q \\
-0, & x x_1 + x_2 \not\equiv x_0 \mod q \\
+1, x x_1 + x_2 \equiv x_0 \mod q \\
+0, x x_1 + x_2 \not\equiv x_0 \mod q \\
 \end{cases}
 \end{equation}
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
-% maxima
-% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
-% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
-%
-% scene:points(pts);
-
 \input ./part4/quantcomp/figdiscretlog1.tex
-Continuing example \ref{ex:part4:quantcomp:discretlog:periodfinding0}
-suppose that as a result of measuring the function $f$ we obtained the value
-$f = 3$. That is, $f = a^{x_0} = 3^{x_0} \equiv 3 \mod 17$.  
-As a result, only those values of $x_1, x_2$ remain that correspond
-to the observed function value (see
-\autoref{fig:part4:quantcomp:dl1}), i.e. $x x_1 + x_2 = x_0 \equiv 1
-\mod 16$. Here, with fixed values $x, x_1$ and the number
-of samples $M = q = 16$. 
+Continuing example \ref{ex:part4:quantcomp:discretlog:periodfinding0}, suppose the measurement of function $f$ yields $f = 3$. That is, $f = a^{x_0} = 3^{x_0} \equiv 3 \mod 17$. The only values for $x_1, x_2$ that remain are those corresponding to the observed function value (see \autoref{fig:part4:quantcomp:dl1}), i.e., $x x_1 + x_2 = x_0 \equiv 1 \mod 16$. With fixed values of $x, x_1$, and the number of counts $M = q = 16$. 
 \label{ex:part4:quantcomp:discretlog:periodfinding1}
 \end{example}
 
-
-For the Fourier image $\tilde{f'}$ we have 
+For the Fourier transform $\tilde{f'}$, we have 
 \begin{eqnarray}
 \tilde{f'}\left(j_1, j_2\right) = 
 \frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{x_2 = 0}^{M-1} 
@@ -124,24 +79,23 @@ f'\left(x_1, x_2\right)e^{-i \omega\left(x_1 j_1 + x_2j_2\right)},
 \end{eqnarray}
 where $\omega = \frac{2 \pi}{M}$, $M$ is the number of samples. 
 
-Consider first the case when $M = q$. In this case, there are
-two options for $x_2$:  
+First, consider the case when $M = q$. There are two options for $x_2$:  
 \begin{enumerate}
 \item $x_2 = x_0 - x x_1$, if $x_0 \ge x x_1$
 \item $x_2 = x_0 + q - x x_1$, if $x_0 < x x_1$
 \end{enumerate}
 Thus,
 \begin{eqnarray}
-e^{-i \omega x_2 j_2} = e^{-i \omega\left(x_0 - x x_1 + q\right) j_2} = 
+e^{-i \omega x_2j_2} = e^{-i \omega\left(x_0 - x x_1 + q\right) j_2} = 
 \nonumber \\
 = e^{-i \omega\left(x_0 - x x_1\right) j_2 - i \omega q j_2} = 
 e^{-i \omega\left(x_0 - x x_1\right) j_2},
 \nonumber
 \end{eqnarray}
-i.e., both cases coincide and can be reduced to the first:
+i.e., both options coincide and can be reduced to the first:
 $x_2 = x_0 - x x_1$.
 
-Therefore, continuing \eqref{eq:part4:quantcomp:discretlog:ftq16_pre} we get
+Continuing from \eqref{eq:part4:quantcomp:discretlog:ftq16_pre}, we have
 \begin{eqnarray}
 \tilde{f'}\left(j_1, j_2\right) = 
 \frac{1}{M}\sum_{x_1 = 0}^{M-1}\sum_{x_2 = 0}^{M-1} 
@@ -158,14 +112,12 @@ e^{-i  \omega x_1 \left(j_1 - x j_2\right)} =
 \sum_{x_1 = 0}^{M-1} e^{-i  \omega x_1 \left(j_1 - x j_2\right)}.
 \label{eq:part4:quantcomp:discretlog:ftq16}
 \end{eqnarray}
-In the expression
-\eqref{eq:part4:quantcomp:discretlog:ftq16} $\tilde{f'}(j_1, j_2) =
-e^{-i \omega x_0 j_2} \ne 0$, if 
+In expression \eqref{eq:part4:quantcomp:discretlog:ftq16}, $\tilde{f'}(j_1, j_2) = e^{-i \omega x_0 j_2} \ne 0$, if 
 \begin{equation}
 j_1 \equiv x j_2 \mod M.
 \label{eq:part4:quantcomp:discretlog:j1xj2}
 \end{equation} 
-Otherwise, using the formula for a geometric series 
+Otherwise, using the geometric progression formula:
 \begin{eqnarray}
 \tilde{f'}\left(j_1 \ne x j_2, j_2\right) = 
 e^{-i \omega x_0 j_2}\frac{1}{M}
@@ -183,91 +135,46 @@ e^{-i \omega x_0 j_2}\frac{1}{M}
   \omega \left(j_1 - x j_2\right)} - 1} = 0.
 \nonumber
 \end{eqnarray} 
-Thus, to determine the period it is necessary to find the coordinates $(j_1, j_2)$
-of some maximum of the Fourier transform and use the expression 
+
+Thus, to determine the period, we need to find the coordinates $(j_1, j_2)$ of a maximum of the Fourier transform and use the expression 
 \begin{equation}
 x \equiv j_1 j_2^{-1} \mod M,
 \label{eq:part4:quantcomp:discretlog:periodfourier}
 \end{equation}
 which follows from \eqref{eq:part4:quantcomp:discretlog:j1xj2}.
 
-\begin{remark}[On zero divisors in $\mathbb{Z}/M\mathbb{Z}$]
-If there exists a number $y$ such that 
+\begin{remark}[On Zero Divisors in $\mathbb{Z}/M\mathbb{Z}$]
+If there exists such a number $y$ that 
 \[
 j_2 y \equiv 0 \mod M,
 \]
 then $j_2$ is called a zero divisor. 
-It is also clear that 
+It is obvious that 
 \[
 \gcd\left(j_2, M\right) \ne 1,
 \]
-thus from \autoref{sec:add:discretmath:mod:equationsolve}
-it follows that $j_2^{-1}$ does not exist. Therefore, for such
-$j_2$, the expression
-\eqref{eq:part4:quantcomp:discretlog:periodfourier} is undefined. In
-this case, other coordinates $(j_1, j_2)$ must be used. 
+thus, from \autoref{sec:add:discretmath:mod:equationsolve}, it follows that $j_2^{-1}$ does not exist. Therefore, for such $j_2$, expression \eqref{eq:part4:quantcomp:discretlog:periodfourier} is undefined. In that case, different coordinates $(j_1, j_2)$ must be used. 
 \end{remark}
 
 \begin{example}
 \emph{($ind_3{14} \mod{17}$)}
-% maxima
-% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
-% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
-%
-% scene:points(pts);
-
 \input ./part4/quantcomp/figdiscretlog2.tex
 
-The Fourier image of the function from \autoref{fig:part4:quantcomp:dl1} is shown in
-\autoref{fig:part4:quantcomp:dl2}, from which it is seen that with the highest
-probability, samples recorded follow with intervals $T_{j_1} = 9$ along coordinate $j_1$ and with interval $T_{j_2} =
-1$ along coordinate $j_2$. Given that the number of samples $M=16$, one can obtain
-the maximum coordinates of the Fourier transform $j_1 = 9$
-and $j_2 = 1$. The solution of the equation $3^x \equiv 14 \mod 17$
-is, according to
-\eqref{eq:part4:quantcomp:discretlog:periodfourier}, $x = 9 \cdot 1^{-1}
-= 9$, which corresponds to the result of example 
-\ref{ex:dm:discretlog}.
+The Fourier transform of the function from \autoref{fig:part4:quantcomp:dl1} is shown in \autoref{fig:part4:quantcomp:dl2}, from which it is clear that the counts most likely to be registered follow at intervals of $T_{j_1} = 9$ along the $j_1$ coordinate and at intervals of $T_{j_2} = 1$ along the $j_2$ coordinate. Considering the number of counts $M=16$, the coordinates of the Fourier transform maximum can be obtained as $j_1 = 9$ and $j_2 = 1$. The solution to the equation $3^x \equiv 14 \mod 17$ is, according to \eqref{eq:part4:quantcomp:discretlog:periodfourier}, $x = 9 \cdot 1^{-1} = 9$, which corresponds to the result of example \ref{ex:dm:discretlog}.
 
-A similar result can be obtained by taking the point with coordinates 
-$j_1 = 11, j_2 = 3$. Given that $3 \cdot 11 = 33 \equiv 1 \mod 16$,
-we have
-$j_2^{-1} \equiv 11 \mod 16$, i.e., $x \equiv 11 \cdot 11 \equiv 121
-\equiv 9 \mod 16$, which again corresponds to the result of example 
-\ref{ex:dm:discretlog}.
+A similar result can be obtained if the coordinates $j_1 = 11, j_2 = 3$ are considered. Given $3 \cdot 11 = 33 \equiv 1 \mod 16$, it follows that $j_2^{-1} \equiv 11 \mod 16$, i.e., $x \equiv 11 \cdot 11 \equiv 121 \equiv 9 \mod 16$, which again corresponds to the result of example \ref{ex:dm:discretlog}.
 
-It is worth noting that points lying on the diagonal, for example $j_1 = 6, j_2
-= 6$ will not give a correct result because $\gcd(6,
-16) = 2 \ne 1$
+It is worth noting that points lying on the diagonal, for example, $j_1 = 6, j_2 = 6$, will not yield a correct result because $\gcd\left(6, 16\right) = 2 \ne 1$.
 
 \label{ex:part4:quantcomp:discretlog:periodfinding}
 \end{example}
 
-Note that the obtained result
-\eqref{eq:part4:quantcomp:discretlog:periodfourier} directly
-corresponds to lemma \ref{lemmaAddFourierDiscretFourierPeriod} for
-the one-dimensional Fourier transform. At the same time, there is also an analog of
-commentary \ref{rem:dsp:fourier:periodprop}, which states that in
-case the number of samples in the Fourier transform is not equal to $q$: $M \ne
-q$, but $M \approx q$, we can still approximately consider the expression 
-\eqref{eq:part4:quantcomp:discretlog:periodfourier}
-\cite{Proos:2003:SDL:2011528.2011531}.  
-
+It is worth noting that the obtained result \eqref{eq:part4:quantcomp:discretlog:periodfourier} is in direct correspondence with lemma \ref{lemmaAddFourierDiscretFourierPeriod} for the one-dimensional Fourier transform. Furthermore, an analogue of comment \ref{rem:dsp:fourier:periodprop} holds, stating that when the number of Fourier transform counts is not equal to $q$: $M \ne q$, but $M \approx q$, we can still approximately consider expression \eqref{eq:part4:quantcomp:discretlog:periodfourier} to be valid \cite{Proos:2003:SDL:2011528.2011531}.  
 
 \begin{example}
 \emph{($ind_2{14} \mod{59}$)}
 
-As an example, consider $p = 59$ with number of samples $M = 64
-\approx q = p - 1 = 58$. The group generator $\mathbb{F}_{59}$ (see
-\autoref{sec:add:diskretmath:mod:fp}) 
-is $g = 2$, i.e. $\mathbb{F}_{59} = \langle 2 \rangle$. This
-means that the equation $2^x \equiv b \mod 59$ has a solution for
-any $b$, in particular $x = 19$ is a solution of the equation
-%% -- 2 is generator of F_59
-%% -- Prelude> filter (\x -> x == 2 ) $ map (\x -> mod (2^x) 59) [1..59]
-%% -- [2,2]
-%% -- Prelude> mod (2^19) 59
-%% -- 14
+As an example, consider $p = 59$ where the number of counts $M = 64 \approx q = p - 1 = 58$. The generator of the group $\mathbb{F}_{59}$ (see \autoref{sec:add:diskretmath:mod:fp}) is $g = 2$, i.e., $\mathbb{F}_{59} = \left<2\right>$. This means that the equation $2^x \equiv b \mod 59$ will have a solution for any $b$, in particular, $x = 19$ is a solution to the equation
 \[
 2^x \equiv 14 \mod 59.
 \] 
@@ -276,46 +183,33 @@ The function under study is
 \[
 f(x_1, x_2) = 14^{x_1} 2^{x_2} \mod 59,
 \]
-%% Prelude> mod (2^50) 59
-%% 3
-Suppose $x_0 = 50$, i.e., the recorded function value is
-$f(x_1, x_2) = 2^{x_0} = 2^{50} \equiv 3 \mod 59$.
+Suppose $x_0 = 50$, i.e., the registered value of the function is $f(x_1, x_2) = 2^{x_0} = 2^{50} \equiv 3 \mod 59$.
 
 \input ./part4/quantcomp/figdiscretlog4.tex
 
-As stated above, for the number of Fourier transform samples we have $M=64$. It should be noted that
-$q = p - 1 = 58 \not\equiv 0 \mod 64$.
+As mentioned earlier, the number of Fourier transform counts is $M=64$. Note that $q = p - 1 = 58 \not\equiv 0 \mod 64$.
 
-The Fourier image of the sampled function 
+The Fourier transform of the function 
 \[
 f'(x_1, x_2) = 
 \begin{cases}
-1, & \text{if } 14^{x_1} 2^{x_2} \equiv 3 \mod 59 \\
-0, & \text{if } 14^{x_1} 2^{x_2} \not\equiv 3 \mod 59 
+1, \mbox{ if } 14^{x_1} 2^{x_2} \equiv 3 \mod 59 \\
+0, \mbox{ if } 14^{x_1} 2^{x_2} \not\equiv 3 \mod 59 
 \end{cases}
 \]
 is shown in \autoref{fig:part4:quantcomp:dl4}. 
-The three lowest maxima have coordinates 
+The three lower maxima have coordinates 
 \[
 (j_1, j_2) \approx (20,1), (41,2.2), (62,3), 
 \]
-which give the following estimates of $x$: $x \approx 20, 18.6, 20.6$,
-which is close to the actual value $x = 19$.
+which give the following estimates for $x$: $x \approx 20, 18.6, 20.6$, close to the actual value $x = 19$.
 \label{ex:part4:quantcomp:discretlog:periodfinding3}
 \end{example}
 
-
-
-
 \begin{example}
 \emph{($ind_3{14} \mod{19}$)}
-% maxima
-% pts:makelist(makelist([x,y,mod(power_mod(17, 13,
-% x)*power_mod(17,3,y),17)], x, 1, 25), y, 1, 25); 
-%
-% scene:points(pts);
 
-As an example, consider the problem of determining $x$ such that 
+As an example, consider the task of determining $x$ such that 
 \[
 3^x \equiv 14 \mod 19.
 \]
@@ -324,49 +218,41 @@ The function under study is
 \[
 f(x_1, x_2) = 14^{x_1} 3^{x_2} \mod 19,
 \]
-Suppose $x_0 = 1$, i.e., the recorded function value is
-$f(x_1, x_2) = 3$.
+Suppose $x_0 = 1$, i.e., the registered value of the function is $f(x_1, x_2) = 3$.
 
 \input ./part4/quantcomp/figdiscretlog3.tex
 
-We take the number of Fourier transform samples $M=64$. Note that,
-$18 \not\equiv 0 \mod 64$.
+The number of Fourier transform counts is chosen as $M=64$. Note that $18 \not\equiv 0 \mod 64$.
 
-The Fourier image of the sampled function 
+The Fourier transform of the function 
 \[
 f'(x_1, x_2) = 
 \begin{cases}
-1, & \text{if } 14^{x_1} 3^{x_2} \equiv 3 \mod 19 \\
-0, & \text{if } 14^{x_1} 3^{x_2} \not\equiv 3 \mod 19 
+1, \mbox{ if } 14^{x_1} 3^{x_2} \equiv 3 \mod 19 \\
+0, \mbox{ if } 14^{x_1} 3^{x_2} \not\equiv 3 \mod 19 
 \end{cases}
 \]
 is shown in \autoref{fig:part4:quantcomp:dl3}. The lowest maximum
-has coordinates $j_1 = 46, j_2 = 3.5$, from which the estimate
+has coordinates $j_1 = 46, j_2 = 3.5$, from which we get an estimate 
 \[
-x \approx \frac{46}{3.5} \approx 13.14
+x \approx \frac{46}{3.5} \approx 13.14.
 \]
-follows. It is worth noting that the solution of the desired equation $x = 13$ corresponds
-to the found approximate solution.
+It is noteworthy that the solution to the desired equation $x = 13$ is close to the approximate solution found.
 \label{ex:part4:quantcomp:discretlog:periodfinding2}
 \end{example}
 
-
-\subsection{Two-dimensional Quantum Fourier Transform}
+\subsection{Two-Dimensional Quantum Fourier Transform}
 
 \input part4/quantcomp/figquantfourier2d.tex
 
-To determine the periods of a two-argument function one can use
-the two-dimensional Fourier transform, which can be constructed from
-blocks performing the one-dimensional Fourier transform, as shown in \autoref{figQuantCompQuantFourier2d}. To analyze this
-scheme, consider the trivial case when
-at the input we have (see also \eqref{eqPart4QuantCompShorQuantFourierSeries})
+To determine the periods of a function with two arguments, we can use a two-dimensional Fourier transform, which can be constructed from blocks implementing the one-dimensional Fourier transform, as depicted in \autoref{figQuantCompQuantFourier2d}. For analyzing this circuit, consider the trivial case where the input is (see also \eqref{eqPart4QuantCompShorQuantFourierSeries})
 \begin{eqnarray}
 \ket{x} = \ket{x}_1 \otimes \ket{x}_2,
 \nonumber \\
 \ket{x}_{1,2} = \sum_{k_{1,2} = 0}^{M-1} x_{k_{1,2}}^{(1,2)} \ket{k_{1,2}}.
 \nonumber
 \end{eqnarray}
-Considering that the output is
+Given that the output is
 \[
 \ket{\tilde{X}} = \ket{\tilde{X}_1} \otimes \ket{\tilde{X}_2},
 \]
@@ -374,21 +260,19 @@ where
 \[
 \ket{\tilde{X}_{1,2}} = \sum_{j_{1,2} = 0}^{M-1} \tilde{X}_{j_{1,2}}^{(1,2)} \ket{j_{1,2}}
 \]
-and, according to \eqref{eqPart4QuantCompShorQuantFourierEnd}
+and in accordance with \eqref{eqPart4QuantCompShorQuantFourierEnd}
 \[
 \tilde{X}_{j_{1,2}}^{(1,2)} = \frac{1}{\sqrt{M}}\sum_{k_{1,2} = 0}^{M - 1}e^{-i \omega_{1,2} k_{1,2} j_{1,2}} x_{k_{1,2}}^{(1,2)}.
 \]
-we get
+we obtain
 \begin{eqnarray}
 \ket{\tilde{X}} = \ket{\tilde{X}_1} \otimes \ket{\tilde{X}_2} = 
 \nonumber \\
 = \sum_{j_1 = 0}^{M-1}\sum_{j_2 = 0}^{M-1}
-\tilde{X}_{j_{1}}^{(1)} \tilde{X}_{j_{2}}^{(2)} \ket{j_1} \otimes
-\ket{j_2} =
+\tilde{X}_{j_{1}}^{(1)} \tilde{X}_{j_{2}}^{(2)} \ket{j_1} \otimes \ket{j_2} =
 \nonumber \\
 = \sum_{j_1 = 0}^{M-1}\sum_{j_2 = 0}^{M-1}
-\tilde{X}_{j_{1},j_{2}} \ket{j_1} \otimes
-\ket{j_2}, 
+\tilde{X}_{j_{1},j_{2}} \ket{j_1} \otimes \ket{j_2}, 
 \nonumber
 \end{eqnarray}
 where
@@ -404,10 +288,7 @@ e^{-i \omega \left( k_{1} j_{1} + k_{2} j_{2}\right)}
 x_{k_1, k_2}
 \nonumber
 \end{eqnarray}
-which, according to definition \ref{def:add:dsp:fourier2d},
-\rindex{two-dimensional Fourier transform}
-is the two-dimensional Fourier transform of the original two-dimensional 
-signal
+which, in accordance with definition \ref{def:add:dsp:fourier2d}, is a two-dimensional Fourier transform of the initial two-dimensional signal
 \[
 \ket{x} = 
 \sum_{k_1 = 0}^{M-1}\sum_{k_2 = 0}^{M-1}
@@ -418,7 +299,4 @@ x_{k_1,k_2} \ket{k_1} \otimes \ket{k_2}.
 
 \input part4/quantcomp/figquantperiodfinding2.tex
 
-Therefore, using the scheme shown in
-\autoref{figQuantCompQuantPeriodFinding2}, one can determine the coordinates
-of the maxima of the two-dimensional Fourier transform $j_1, j_2$, and subsequently use
-\eqref{eq:part4:quantcomp:discretlog:periodfourier} to find the desired $x$.
+Therefore, using the scheme shown in \autoref{figQuantCompQuantPeriodFinding2}, the coordinates of the maxima of the two-dimensional Fourier transform $j_1, j_2$ can be determined and subsequently used in \eqref{eq:part4:quantcomp:discretlog:periodfourier} to find the desired $x$.

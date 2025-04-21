@@ -1,16 +1,12 @@
 %% -*- coding:utf-8 -*- 
-\subsection{ Implementation of basic elements of Grover's algorithm}
+\subsection{ Implementation of Basic Elements of Grover's Algorithm}
 
-\subsubsection{Phase inversion}
-How can the phase inversion be implemented: what does the quantum logic gate look like that performs the transformation
-\eqref{eqQuantCompGroverUxast}, i.e., how can $f\left(x\right)$
-be ``sent'' into the phase?
+\subsubsection{Phase Inversion}
+How can phase inversion be implemented: what does the quantum logic element look like that performs the transformation \eqref{eqQuantCompGroverUxast}, i.e., how can $f\left(x\right)$ be "sent" into the phase?
 
 \input ./part4/quantcomp/figgroverphaseinvimpl.tex
 
-Consider the circuit shown in
-\autoref{figQuantCompGroverPhaseInvImpl}. The proposed circuit
-performs the following transformation:
+Consider the circuit shown in \autoref{figQuantCompGroverPhaseInvImpl}. The proposed circuit performs the following transformation:
 \begin{equation}
 \ket{x}\otimes\ket{b} \rightarrow 
 \ket{x}\otimes\left|b\oplus f\left(x\right)\right>,
@@ -23,7 +19,7 @@ For the case $\ket{b} = \ket{-} =
 \begin{eqnarray}
 \ket{x}\otimes\ket{-} \rightarrow 
 \ket{x}\otimes\left(\frac{\left|0\oplus 0\right> -
-  \left|1\oplus 0\right>}{\sqrt{2}}\right) = 
+  \left|1\otimes 0\right>}{\sqrt{2}}\right) = 
 \nonumber \\
 = \ket{x}\otimes\left(\frac{\ket{0} -
   \ket{1}}{\sqrt{2}}\right) =
@@ -47,15 +43,11 @@ thus we have the following transformation
 \label{eqQuantCompGroverPhaseInvImpl}
 \end{equation}
 
-\subsubsection{Inversion about the mean}
+\subsubsection{Inversion about the Mean}
 
 \input ./part4/quantcomp/figgrovermeaninvimpl.tex
 
-Consider the circuit shown in
-\autoref{figQuantCompGroverMeanInvImpl}. The element $\hat{U}_{x \ne 0}$
-performs a transformation analogous to
-\eqref{eqQuantCompGroverPhaseInvImpl}, but with the function
-$f\left(x = 0\right) = 0$ and $f\left(x \ne 0\right) = 1$, thus
+Consider the circuit shown in \autoref{figQuantCompGroverMeanInvImpl}. Element $\hat{U}_{x \ne 0}$ performs a transformation similar to \eqref{eqQuantCompGroverPhaseInvImpl} whereby the function $f\left(x = 0\right) = 0$, and $f\left(x \ne 0\right) = 1$, thus
 \begin{eqnarray}
 \hat{U}_{x \ne 0} \ket{x}\otimes\ket{-} 
 = \ket{x}\otimes\ket{-}, x = 0,
@@ -64,7 +56,7 @@ $f\left(x = 0\right) = 0$ and $f\left(x \ne 0\right) = 1$, thus
 = - \ket{x}\otimes\ket{-}, x \ne 0,
 \nonumber
 \end{eqnarray}
-i.e., the transformation matrix looks like:
+i.e., the transformation matrix looks as follows
 \begin{eqnarray}
 \hat{U}_{x \ne 0} = 
 \begin{pmatrix}
@@ -98,10 +90,7 @@ i.e., the transformation matrix looks like:
 \nonumber
 \end{eqnarray}
 
-Combining this result with two Hadamard transforms
-\rindex{Hadamard transform}, and using
-\eqref{eq:quantcomp:hadamar_prop},
-we obtain:
+Combining this result with two Hadamard transforms \rindex{Hadamard transform}, and using \eqref{eq:quantcomp:hadamar_prop}, we get:
 \begin{eqnarray}
 \hat{H}^{\otimes n}
 \left\{
@@ -167,9 +156,8 @@ we obtain:
 \label{eqQuantCompGroverMeanInvImpl}
 \end{eqnarray}
 
-If we act with the operator $\hat{H}^{\otimes n}\hat{U}_{x \ne
-  0}\hat{H}^{\otimes n}$, then using the result
-\eqref{eqQuantCompGroverMeanInvImpl} we get:
+If we apply the operator $\hat{H}^{\otimes n}\hat{U}_{x \ne
+  0}\hat{H}^{\otimes n}$, then using the result \eqref{eqQuantCompGroverMeanInvImpl} we get:
 \begin{eqnarray}
 \hat{H}^{\otimes n}\hat{U}_{x \ne
   0}\hat{H}^{\otimes n} \sum_x \alpha_x \ket{ x } = 
@@ -202,5 +190,4 @@ If we act with the operator $\hat{H}^{\otimes n}\hat{U}_{x \ne
 \sum_x \left(2 \mathcal{M} - \alpha_x \right)\ket{ x }.
 \nonumber
 \end{eqnarray}
-Thus, the circuit proposed in \autoref{figQuantCompGroverMeanInvImpl}
-indeed performs inversion about the mean.
+Thus, the circuit proposed in \autoref{figQuantCompGroverMeanInvImpl} indeed performs inversion about the mean.

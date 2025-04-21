@@ -1,9 +1,8 @@
-%% -*- coding:utf-8 -*- 
 \section{One-Time Pad}
-\rindex{One-Time Pad}
-The one-time pad scheme was proposed in 1917 by Major J. Moborn and G. Vernam. The classic one-time pad represents some set of random keys, each of which is the same size as the message being sent and is used only once.
+\index{One-Time Pad}
+The one-time pad scheme was proposed in 1917 by Major J. Mauborgne and G. Vernam. The classic one-time pad consists of a set of random keys, each equal in size to the message being sent and used only once.
 
-Suppose we want to encrypt a message in some language (for example, English). Let the number of symbols (letters) used in the alphabet be denoted by $X$. For the English language (without punctuation marks and case differences) $X = 26$. Next, we assign each character of the language a number $c$, such that $0 \le c \le X$. For example, for the English language one can write
+Let's assume we want to encrypt a message in some language (e.g., in English). The number of symbols (letters) used in the alphabet is denoted as $X$. For the English language (without punctuation and case sensitivity) $X = 26$. Then we assign a number $c$ to each symbol of the language such that $0 \le c < X$. For example, in English, we can write
 \begin{equation}
 \begin{array}{c}
 A \rightarrow 0 \\
@@ -13,22 +12,22 @@ Z \rightarrow 25 \\
 \end{array}
 \nonumber
 \end{equation}
-
+  
 The encryption procedure \eqref{eqPart3CryptoEncryptClass} is described by the following expression
 \begin{equation}
 E_{K_i}\left(P_i\right) = P_i + K_i \mod X = C_i,
 \label{eqPart3CryptoEncryptVernam}
 \end{equation}
-where $i$ is the index of the encrypted character.
+where $i$ is the index of the encrypted symbol.
 
 The decryption procedure \eqref{eqPart3CryptoDeEncryptClass} is described by the following expression
 \begin{equation}
 D_{K_i}\left(C_i\right) = C_i - K_i \mod X = P_i,
 \label{eqPart3CryptoDeEncryptVernam}
 \end{equation}
-where $i$ is the index of the encrypted character.
+where $i$ is the index of the encrypted symbol.
 
-This procedure is easily generalized to the case of binary data, where instead of addition modulo $X$, the XOR operation ($a \oplus b$) is used for both encryption and decryption:
+This procedure easily generalizes to the case of binary data, where instead of modular addition, the XOR operation ($a \oplus b$) is used for both encryption and decryption:
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|}
@@ -43,30 +42,30 @@ $a$ & $b$ & $a \oplus b$ \\ \hline
 \label{tblXOR}
 \end{table}
 
-Claude Shannon showed \cite{bShenonCrypto} that if the key is truly random, has the same length as the original message, and is never reused, then the proposed one-time pad scheme is perfectly secure.
+Claude Shannon showed \cite{bShenonCrypto} that if the key is truly random, has the same length as the original message, and is not reused, the proposed one-time pad scheme is perfectly secure.
 
 According to Shannon, perfect security can be defined as follows.
 \begin{definition}
-A cipher $(E,D)$ is perfectly secure if for any two messages of the same length $m_0$ and $m_1$, some ciphertext $c$, and key $k \leftarrow_R K$, the probabilities that the original texts are $m_0$ or $m_1$ are equal:
+A cipher $\left(E, D\right)$ is perfectly secure if for any two messages of the same length $m_0$ and $m_1$, some ciphertext $c$, and key $k \leftarrow_R K$, the probabilities that the original text is $m_0$ or $m_1$ are equal:
 \begin{equation}
 P\left(E\left(m_0, k\right) = c \right) = 
 P\left(E\left(m_1, k\right) = c \right)
 \nonumber
 \end{equation}
 \end{definition}
-Rephrasing this definition, one can say that no information about the original message can be derived from the statistics of the ciphertext.
+Rephrasing this definition, one can say that from the initial statistics of the ciphertext, no information about the original message can be obtained.
 
-\begin{theorem}[Security of the One-Time Pad]
-The one-time pad scheme has perfect security.
+\begin{theorem}[Cryptographic Strength of the One-Time Pad]
+The one-time pad scheme is perfectly secure.
 \end{theorem}
 
 \begin{proof}
-Let $\left|K\right|$ denote the number of all possible keys of length $l$. Where $l$ is also the length of the original messages: $\left|m_{0,1}\right| = l$. Because the key by which the message is encrypted is uniquely defined:
+Let $\left|K\right|$ be the number of all possible keys of length $l$. Where $l$ is also the length of the original messages: $\left|m_{0,1}\right| = l$. Since the key used to encrypt the message is uniquely defined:
 \begin{equation}
 k_{0,1} = c \oplus m_{0,1},
 \nonumber
 \end{equation} 
-we get for the probabilities
+we obtain for the probabilities
 \begin{equation}
 P\left(E\left(m_0, k\right) = c \right) = 
 P\left(E\left(m_1, k\right) = c \right) = 
@@ -77,20 +76,14 @@ P\left(E\left(m_1, k\right) = c \right) =
 
 \section{Problems of Classical Cryptography}
 
-If there exists a perfectly secure cryptographic system (one-time pad), then what is wrong with classical cryptography? The problem lies in obtaining keys that satisfy the requirements of the one-time pad (key length equal to the message length, key consists of random data and is never reused) and transmitting these keys to Bob and Alice.
+If there exists a perfectly secure cryptographic system (one-time pad), what is wrong with classical cryptography? The problem lies in obtaining keys that meet the requirements of the one-time pad (the key length is equal to the message length, the key consists of random data, and it is not reused) and transferring these keys to Bob and Alice.
 
-Problems arise both at the key generation stage, \footnote{obtaining large sequences of random numbers is a non-trivial mathematical problem} as well as during the transmission of these keys.
+Problems arise both at the stage of key generation,\footnote{obtaining large sequences of random numbers is a non-trivial mathematical task} and at the stage of transferring these keys.
 
-To transmit keys in classical cryptography, so-called public key algorithms are used. There are several key exchange protocols based on public key cryptographic systems. All of them are based on the fact that there are two keys, the first called the public key, used only for encryption, and the second—the private key—for decryption. To obtain the private key from the public key, one must perform some complex mathematical operation. For example, the security of one of the most popular public key systems—RSA (see \ref{AddRSA}),
-\rindex{RSA algorithm}
-is based on the difficulty of factoring\footnote{decomposing into prime factors} large numbers.
+In classical cryptography, so-called public key algorithms are used to transfer keys. There are several key exchange protocols based on public key cryptographic systems. They are all based on the existence of two keys: the first, called the public key, is used only for encryption, and the second, the private key, is used for decryption. To obtain the private key from the public one, a complex mathematical operation is required. For example, the security of one of the most popular public key systems—RSA (see \ref {AddRSA})—\index{RSA algorithm} is based on the difficulty of factoring\footnote{decomposition into prime factors} large numbers.
 
-The key distribution protocol scheme based on public key cryptography can be described as follows. In the first step, Alice creates a public and private key and sends the first to Bob. Bob, on his part, creates the key that both Alice and Bob would like to have (the key to be distributed). This key is encrypted (for example, using RSA) with Alice's public key and sent to her. Alice, upon receiving this encrypted key, can decrypt it using her private key.
+A key distribution protocol scheme based on public key cryptography can be described as follows. In the first stage, Alice creates public and private keys and sends the first to Bob. Bob, for his part, creates the key that Alice and Bob want to have (which needs to be distributed). This key is encrypted (for example, via RSA) using Alice's public key and sent to her. Alice, receiving this encrypted key, can decrypt it with her private key.
 
-If an intruder (Eve) wants to learn the transmitted key, she must solve the difficult mathematical problem of factoring large numbers. It is believed, but not proven, that the complexity of factoring grows exponentially with the number of digits in the number
-\cite{bPhisQuantInfo}.\footnote{The fastest known algorithms solve the factoring problem for a number $N$ in time on the order of $O\left(\exp\left(\log^{\frac{1}{3}}N \left(\log \log N\right)^{\frac{2}{3}}\right)\right)$.} 
-Thus, as the number of digits increases, the problem quickly becomes intractable.
+If an intruder (Eve) wants to learn the transmitted key, she must solve a complex mathematical problem of factoring large numbers. It is believed, but not proven, that the complexity of factoring grows exponentially with the number of digits in the number \cite{bPhisQuantInfo}.\footnote{The fastest known algorithm solves the factoring problem for number $N$ in time approximately $O\left(exp\left(log^{\frac{1}{3}}N\left(log \, log N\right)^{\frac{2}{3}}\right)\right)$.} Thus, as the number of digits increases, the task quickly becomes unsolvable.
 
-There are several problems in this scheme. The first is that the complexity of factorization has not been proven. Moreover, there are algorithms for quantum computers—the Shor's algorithm (see \ref{Part4QuantCompShor}), which solve the factoring problem for a number $N$ in time $O\left(\log N\right)$, i.e., in time proportional to the number of digits in $N$. Therefore, at the moment when a quantum computer is built, all systems based on RSA \rindex{RSA algorithm} will lose their relevance.
-
-%% There is another problem which makes key distribution systems based on public cryptography insecure. Imagine a situation where Eve can intercept all messages sent by Alice and Bob and substitute them with her own, which is not an absolutely unsolvable problem in classical communication theory. In this case, Eve can impersonate Bob to Alice and Alice to Bob, thus fully controlling the message exchange between them and at the moment of key transmission she can decrypt it. 
+This scheme has several problems. The first is that the complexity of factoring is not proven. Moreover, there are algorithms for quantum computers—Shor's algorithm (see \ref {Part4QuantCompShor})—that solve the factoring problem for number $N$ in time $O\left(log N\right)$, i.e., on the order of the number of digits in $N$. Thus, at the moment a quantum computer is built, all systems based on RSA \index{RSA algorithm} will become obsolete.

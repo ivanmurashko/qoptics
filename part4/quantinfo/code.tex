@@ -2,96 +2,65 @@
 \section{Information Encoding}
 
 \subsection{Shannon's Coding Theorem}
-Suppose we have a message that can consist of
-a certain limited set of symbols (an alphabet). Assume that
-our alphabet has $k$ symbols:
+Suppose we have a message that may consist of a certain limited set of symbols (alphabet). Suppose our alphabet has $k$ symbols:
 \begin{equation}
 \left\{
 a_1, \dots a_k.
 \right\}
 \label{eqShenonAlphabetClass}
 \end{equation}
-Each symbol appears with some known probability
-$p_k = p\left(a_k\right)$. Next, consider a message consisting of $n
-\gg 1$ symbols. We are interested in the question: is it possible to compress this message,
-i.e. is it possible to encode this message in such a way that the
-result contains fewer than $n$ symbols and at the same time it would be
-possible to recover the original message without loss of information?
+Each symbol appears with some known probability $p_k = p\left(a_k\right)$. Now consider a message consisting of $n \gg 1$ symbols. We are interested in the question: is it possible to compress this message, i.e., can we encode this message in such a way that the result contains fewer than $n$ symbols while still allowing the original message to be retrieved without loss of information?
 
-The answer was given by Shannon, and it states that the maximally compressed message
-will consist of $n H$ bits, where $H = - \sum_k p_k \log p_k$ is
-the quantity of information characterizing our alphabet. This
-result is known as Shannon's theorem for a noiseless channel.
+An answer was given by Shannon, stating that the maximally compressed message will consist of $n H$ bits, where $H = - \sum_k p_k \log p_k$ is the amount of information characterizing our alphabet. This result is known as Shannon's theorem for a noiseless channel.
 
-As an example, it is convenient to use the binary alphabet, in which 0
-occurs with probability $p$, and 1 with probability $1 -
-p$. Thus, if we have a message of length $n$ bits, then it is
-possible to compress it to $n H$ bits. It is obvious that 
+As a convenient example, consider a binary alphabet, where 0 occurs with probability $p$, and 1 with probability $1 - p$. Thus, if we have a message of length $n$ bits, it is possible to compress it to $n H$ bits. It is clear that 
 \begin{equation}
 n \ge n H > 0.
 \label{eqShenonAlphabetClassBit}
 \end{equation}
-Equality in \eqref{eqShenonAlphabetClassBit} holds only when the probability distribution is uniform, $p =
-\frac{1}{2}$. Indeed, in this case 
+The equality in \eqref{eqShenonAlphabetClassBit} holds only with equiprobable distribution, $p = \frac{1}{2}$. In this case,
 \[
-n H = n \left(- \frac{1}{2} \log \frac{1}{2} - \frac{1}{2} \log
-  \frac{1}{2}\right) = n.
+n H = n \left(- \frac{1}{2} \log \frac{1}{2} - \frac{1}{2} \log \frac{1}{2}\right) = n.
 \]
 
 \subsection{Quantum Coding Theorem}
-What would the quantum analogue of Shannon's theorem for a noiseless channel look like? First of all, consider the quantum analogue of the alphabet
-\eqref{eqShenonAlphabetClass}. A quantum message is encoded
-by some set of states 
+What is the quantum analog of Shannon's theorem for a noiseless channel? First, consider the quantum analog of the alphabet \eqref{eqShenonAlphabetClass}. A quantum message is encoded by certain states
 \begin{equation}
 \left\{
 \ket{a_1}, \dotsc \ket{a_k}.
 \right\}
 \label{eqSchumacherAlphabet}
 \end{equation}
-Each of the states appears with some probability $p_k =
-p\left(\ket{a_k}\right)$. Thus, we can write
-the density matrix for each symbol of our message:
+Each state appears with some probability $p_k = p\left(\ket{a_k}\right)$. Thus, we can write a density matrix for each symbol of our message:
 \begin{equation}
 \hat{\rho} = \sum_k p_k \ket{a_k}\bra{a_k}.
 \label{eqQuantCodeMatrix}
 \end{equation}
 A message consisting of $n$ symbols has the following density matrix:
 \begin{equation}
-\hat{\rho}^n = \hat{\rho} \otimes \dots \otimes \hat{\rho}.
+\hat{\rho}^n = \hat{\rho}\otimes \dots \otimes \hat{\rho}.
 \nonumber
 \end{equation}
-Can this message be compressed, and if yes, to what limit? The answer
-is given by the quantum coding theorem for a noiseless channel (Schumacher's theorem). The limit is reached when using 
+Can this message be compressed, and if so, to what extent? The answer is given by the quantum coding theorem for a noiseless channel (Schumacher's theorem). The limit is achieved using
 \begin{equation}
-n H = - n \operatorname{Tr} \left(\hat{\rho} \log \hat{\rho} \right),
+n H = - n Sp \left(\hat{\rho} \log \hat{\rho} \right),
 \nonumber
 \end{equation}
 
-As an example, consider encoding using the polarization states of a photon. Suppose our alphabet consists of two
-states:
+As an example, consider encoding with the polarization states of a photon. Suppose our alphabet consists of two states:
 \begin{enumerate}
-\item $\ket{x}$ - photon polarized along the $x$-axis
-\item $\ket{y}$ - photon polarized along the $y$-axis
+\item $\ket{x}$ - photon polarized along the $x$ axis
+\item $\ket{y}$ - photon polarized along the $y$ axis
 \end{enumerate}
-Assume that the state $\ket{x}$ occurs with
-probability $p_{\ket{x}} = p$, and the state $\ket{y}$ with
-probability $p_{\ket{y}} = 1 - p_{\ket{x}} = 1 - p$.
-Thus, the density matrix \rindex{Density Matrix}
-\eqref{eqQuantCodeMatrix} will
-have the form
+Assume state $\ket{x}$ occurs with probability $p_{\ket{x}} = p$, and state $\ket{y}$ with probability $p_{\ket{y}} = 1 - p_{\ket{x}} = 1 - p$.
+Thus the density matrix \rindex{Density matrix}
+\eqref{eqQuantCodeMatrix} will have the form
 \begin{equation}
-\hat{\rho} = p \ket{x}\bra{x} + \left(1 - p\right)
-\ket{y}\bra{y}.
+\hat{\rho} = p \ket{x}\bra{x} + \left(1 - p\right) \ket{y}\bra{y}.
 \label{eqQuantCodeMatrixQBIT}
 \end{equation}
-In this case, it is convenient
-to use qubits as the unit of information and, accordingly,
-if the original message is encoded by $n$ photons, then it can be
-compressed to 
+In this case, it is convenient to use a qubit as the unit of information, and accordingly, if the original message is coded by $n$ photons, it can be compressed to
 \(
-n H = - n \operatorname{Tr} \left(\hat{\rho} \log \hat{\rho} \right)
+n H = - n Sp \left(\hat{\rho} \log \hat{\rho} \right)
 \)
-qubits, i.e. fewer than $n$ photons \rindex{photon} can be used to transmit
-this message. The main difference between the quantum case and the classical one
-is that compression of information is possible even if $p =
-\frac{1}{2}$.
+qubits, i.e., it is possible to use fewer than $n$ photons \rindex{photon} to transmit this message. The main difference in the quantum case from the classical case is that compression of information is possible even when $p = \frac{1}{2}$.

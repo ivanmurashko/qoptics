@@ -1,26 +1,26 @@
 %% -*- coding:utf-8 -*- 
-Algorithms play a significant role in computing. An algorithm is a sequence of steps necessary to solve a problem. Each problem is characterized by a certain number that defines its size. The complexity of an algorithm is evaluated as the number of elementary operations necessary to solve the given problem. Obviously, in most cases (but not always), this number grows with the size of the problem.
+Algorithms play a significant role in computational techniques. An algorithm represents a sequence of steps necessary to obtain an answer to a certain problem. Each problem is characterized by some number, which determines its size. The complexity of an algorithm is evaluated as the number of elementary operations necessary to solve the given problem. Obviously, in most cases (but not always), this number grows with the size of the problem.
 
 \begin{example}
 \emph{Array Element Search}
 \label{exFind}
-The task is to find an element in an array that satisfies certain conditions. The size of the problem is the number of elements in the array $N$.
+The task is to find an element of an array that satisfies certain conditions. The size of the problem is the number of elements in the array $N$.
 
-In the general case (unstructured data array), the search is conducted by a simple iteration. This search requires a number of operations (comparisons) that grows linearly with the size of the array $O\left( N \right)$.
+In the general case (unstructured data array), the search is conducted through a simple enumeration. This search requires a number of operations (comparisons) that grows linearly with the size of the array $O\left( N \right)$.
 
 In the case of structured data, the number of operations required for the search can be reduced. For example, in the case of a sorted array, the complexity of the task grows as $O\left(log N\right)$.
 \end{example}
 
-At the same time, the existence of an algorithm does not yet guarantee its practical implementation. In particular, algorithms requiring an exponential number of steps relative to the size of the original problem are considered practically unfeasible even though, from a theoretical point of view, a solution exists.
+Moreover, the existence of an algorithm does not guarantee its practical implementability. In particular, algorithms requiring an exponential number of steps based on the size of the original problem are considered practically unfeasible, despite the theoretical existence of a solution.
 
 One example is the problem of factoring a natural number, i.e., the problem of decomposing it into prime factors (see example \ref{exFactor}).
 
 \begin{example}
 \emph{Factorization of Natural Numbers}
 \label{exFactor}
-The task is to find the decomposition of a number into prime factors. The size of the problem is the bit length of the original number. For example, for the case of bit length $r = 4$: $1 \le N = 15 \le 2^r = 2^4 = 16$). The result can be found easily and quickly: $15 = 3 \cdot 5$.
+The task is to find the decomposition of a number into prime factors. The size of the problem is the digit length of the original number. For example, in the case of a digit length $r = 4$: $1 \le N = 15 \le 2^r = 2^4 = 16$). The result can be found easily and quickly: $15 = 3 \cdot 5$.
 
-As the number of bits $r$ increases, the number of operations required for factorization in classical algorithms grows as $O\left(2^r\right)$, which for the case $r = 1000 - 2000$ means the practical impossibility of factoring such numbers.
+With an increase in the number of digits $r$, the number of operations necessary for factorization in classical algorithms grows as $O\left(2^r\right)$, which for the case $r = 1000 - 2000$ means the practical impossibility of factorizing such numbers.
 \end{example}
 
-Quantum objects possess properties different from classical objects, and therefore algorithms based on quantum objects may, in some cases, have characteristics unattainable for classical algorithms. For example, Grover's quantum algorithm \cite{Grover96afast} solves the problem of searching in an unstructured data array (see example \ref{exFind}) with $O\left(\sqrt{N}\right)$ operations. Shor's algorithm \cite{bShor94} allows solving the factorization problem (see example \ref{exFactor}) using a linear number of operations $O\left(r\right)$.
+Quantum objects have properties different from classical objects; accordingly, algorithms based on quantum objects may, in some cases, have characteristics inaccessible to classical algorithms. For example, Grover's quantum algorithm \cite{Grover96afast} solves the search problem in an unstructured data array (see example \ref{exFind}) using $O\left(\sqrt{N}\right)$ operations. Shor's algorithm \cite{bShor94} allows solving the problem of number factorization (see example \ref{exFactor}) using a linear number of operations $O\left(r\right)$. 

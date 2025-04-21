@@ -19,17 +19,17 @@ The schematic form of Grover's algorithm is given in Alg.
 \end{algorithmic}
 \end{algorithm}
 
-We will be interested in two questions: what is the algorithmic complexity
-of Grover's algorithm and are there algorithms that can perform
-the search task in an unstructured data volume more efficiently than
+We are interested in two questions: what is the algorithmic complexity
+of Grover's algorithm and are there any algorithms that can perform
+the search task in an unstructured set of data more efficiently than
 Grover's algorithm.
 
-The criterion for algorithm efficiency is the following fact: a good
-algorithm should find the desired value with a minimal number of
-function calls \eqref{eqQuantCompGroverF}.
+The criterion for the efficiency of an algorithm is as follows: a good
+algorithm should find the desired value with a minimal number of function
+calls \eqref{eqQuantCompGroverF}.
 
-Consider the very first iteration. The initial state
-$\left|\psi\right>_0$ is as follows
+Let's consider the very first iteration. The initial state
+$\left|\psi\right>_0$ has the following form
 \begin{equation}
 \left|\psi\right>_0 =
 \sum_x \alpha_x \ket{x} =  
@@ -39,7 +39,7 @@ $\left|\psi\right>_0$ is as follows
 \frac{1}{\sqrt{N}} \left|x^{\ast}\right>.
 \nonumber
 \end{equation}
-Thus, the coefficient in front of the desired element is of the form
+Thus, the coefficient before the desired element is
 $\alpha_x^{\ast} = \frac{1}{\sqrt{N}}$. 
 
 After applying the phase inversion operator
@@ -53,7 +53,7 @@ $U_{x^{\ast}}$ from \eqref{eqQuantCompGroverUxast}, we get
 where $\beta_{x^\ast} = - \frac{1}{\sqrt{N}}$ and $\beta_{x \ne x^\ast} =
 \frac{1}{\sqrt{N}}$. 
 
-After applying the operator reflection relative to the average $\hat{U}_s$ 
+After applying the inversion about the mean operator $\hat{U}_s$ 
 from \eqref{eqQuantCompGroverUs}, we get
 \begin{eqnarray}
 \hat{U}_G \left|\psi\right>_0 = 
@@ -70,7 +70,7 @@ from \eqref{eqQuantCompGroverUs}, we get
 \frac{3}{\sqrt{N}} \left|x^{\ast}\right>.
 \label{eqQuantCompGroverAnalyzeRought}
 \end{eqnarray}
-In deriving \eqref{eqQuantCompGroverAnalyzeRought}, it was accepted  
+In deriving \eqref{eqQuantCompGroverAnalyzeRought}, it was assumed 
 \[
 \mathcal{M} = \frac{\sum_x \alpha_x}{N} \approx
 \frac{N}{N \sqrt{N}} = \frac{1}{\sqrt{N}}.
@@ -78,9 +78,9 @@ In deriving \eqref{eqQuantCompGroverAnalyzeRought}, it was accepted
 
 Thus, after the first iteration of Grover's algorithm, the amplitude
 $\alpha_{x^{\ast}}$ increased by $\frac{2}{\sqrt{N}}$. If
-we approximate this result for an arbitrary iteration, we can
-get that a $50\%$ probability to find $\left|x^{\ast}\right>$
-will be achievable after the following number of iterations:
+this result is approximated for an arbitrary iteration, it can
+be determined that a $50\%$ probability of finding $\left|x^{\ast}\right>$
+will be achieved after the following number of iterations:
 \[
 \frac{1}{\sqrt{2}}/\frac{2}{\sqrt{N}} =
 \frac{\sqrt{N}}{2 \sqrt{2}} = O\left(\sqrt{N}\right).
@@ -89,9 +89,9 @@ will be achievable after the following number of iterations:
 More accurate calculations \cite{nielsen2000quantum} give for the number of iterations
 $\frac{\pi}{4}\sqrt{N}$. 
 
-One might ask about the optimality of Grover's algorithm: is there
+One could ask about the optimality of Grover's algorithm: Is there
 a quantum algorithm that performs a search in an unstructured
-data volume faster than $O\left(\sqrt{N}\right)$ calls to
-function \eqref{eqQuantCompGroverF}? It is shown in the article
-\cite{bBennettGroverOptimal} that such an algorithm
+set of data faster than $O\left(\sqrt{N}\right)$ calls to the
+function \eqref{eqQuantCompGroverF}? In the article
+\cite{bBennettGroverOptimal}, it is shown that such an algorithm
 does not exist.

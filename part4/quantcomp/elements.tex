@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*- 
 \section{Quantum Logic Elements}
-How can an element be constructed that performs the transformation $\hat{U}_f$ \eqref{eqQuantCompQuantComp}? There exists a set of elements from which an element performing the necessary transformation $\hat{U}_f$ can be constructed with a given accuracy. Such sets are called universal.
+How can an element be constructed that performs the transformation $\hat{U}_f$ \eqref{eqQuantCompQuantComp}? There is a set of elements from which an element performing the necessary transformation $\hat{U}_f$ can be constructed with a given accuracy. Such sets are called universal.
 
 \subsection{Universal Set of Quantum Gates}
 
@@ -43,7 +43,7 @@ One of the basic quantum logic elements is the Hadamard transformation (see \aut
 \nonumber
 \end{eqnarray}
 
-In matrix form, this transformation can be written as
+In matrix form this transformation can be written as
 \begin{equation}
 \hat{H} = \frac{1}{\sqrt{2}}
 \begin{pmatrix}
@@ -67,7 +67,7 @@ and
 
 \input ./part4/quantcomp/fighadamar1.tex
 
-From \eqref{eq:quantcomp:hadamar} one can derive the following property of the operator $\hat{H}$:
+From \eqref{eq:quantcomp:hadamar}, we can obtain the following property of the operator $\hat{H}$:
 \begin{equation}
 \hat{H} \hat{H} = \frac{1}{2}
 \begin{pmatrix}
@@ -85,7 +85,7 @@ From \eqref{eq:quantcomp:hadamar} one can derive the following property of the o
 \label{eq:quantcomp:hadamar_prop}
 \end{equation}
 
-This transformation is used to obtain superpositions of states containing all possible values of the argument of the computed function (see \autoref{figQuantCompHadamar2}). 
+This transformation is used to obtain a superposition of states containing all possible values of the argument of the computed function (see \autoref{figQuantCompHadamar2}).
 
 \input ./part4/quantcomp/fighadamar2.tex
 
@@ -101,7 +101,7 @@ CNOT=\begin{pmatrix}
 \end{pmatrix}
 \]
 
-This gate (see \autoref{figQuantCompCNOT}) is applied to two qubits and inverts the state of the second qubit only if the first qubit is equal to one.
+This gate (see \autoref{figQuantCompCNOT}) is used for two qubits and inverts the state of the second qubit only if the first qubit is equal to one.
 
 \input ./part4/quantcomp/figcnot.tex
 
@@ -109,7 +109,7 @@ Thus, if our initial state of two qubits was
 \[
 \ket{\psi_i} = a \ket{00} + b \ket{01} + c \ket{10} + d \ket{11}
 \]
-then it transforms into
+it transforms to
 \[
 CNOT \ket{\psi_i} = \ket{\psi_f} = 
 a \ket{00} + b \ket{01} + c \ket{11} + d \ket{10}

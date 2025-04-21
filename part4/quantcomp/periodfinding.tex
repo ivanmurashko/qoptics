@@ -1,50 +1,51 @@
+%% -*- coding:utf-8 -*- 
 \subsection{Finding the Period of Functions Using Quantum Fourier Transform}
 
-To determine the period of the function \eqref{eqPart4QuantCompShorClassPart}, the scheme presented in \autoref{figQuantCompQuantPeriodFinding} is used.
+To determine the period of the function \eqref{eqPart4QuantCompShorClassPart}, the scheme shown in \autoref{figQuantCompQuantPeriodFinding} is used.
 
 \input part4/quantcomp/figquantperiodfinding.tex
 
-The first element is the Hadamard transform of $n$ qubits, which prepares the initial state as follows:
+The first element is the Hadamard transform for $n$ qubits, \rindex{Hadamard Transform} which prepares the initial state as follows:
 \begin{equation}
-\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x} \otimes\ket{0}.
+\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x} \otimes \ket{0}.
 \nonumber
 \end{equation}
 
-After the function-computing element $\hat{U}_f$, the state becomes
+After the element computing the function $\hat{U}_f$, we have for the state
 \begin{equation}
-\hat{U}_f\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x} \otimes\left|f\left(x\right)\right>.
+\hat{U}_f\ket{in} = \frac{1}{\sqrt{2^n}}\sum_{x=0}^{2^n - 1} \ket{x} \otimes \left|f\left(x\right)\right>.
 \nonumber
-\end{equation} 
+\end{equation}
 
 \input part4/quantcomp/figshorquant.tex
 
-After measuring the function value, only those elements for which the function value equals the measured value will remain in the coordinate list. As a result, the state of the Fourier transform measuring element is 
+After measuring the function value, only those elements for which the function value equals the measured value will remain in the list of coordinates. As a result, the input to the Fourier transformation measurement element is a state of the form
 \begin{equation}
 \ket{in'} = \sum_{x'} \ket{x'},
 \nonumber
-\end{equation} 
-where all non-zero elements have equal amplitude and follow the period of the studied function. The initial value will be shifted depending on the experiment (different experiments will have different shifts). According to lemma \ref{lemmaAddFourierDiscretFourierShiftTime}, the Fourier image will be the same for different function measurements.
+\end{equation}
+where all non-zero elements have the same amplitude and follow with a period equal to the period of the investigated function. The initial value will be shifted depending on the experiment (the shift will vary in different experiments). By lemma \ref{lemmaAddFourierDiscretFourierShiftTime}, the Fourier image will be the same for different function measurements.
 
-Furthermore, by lemma \ref{lemmaAddFourierDiscretFourierPeriod} (on periodicity) (see also comment \ref{rem:dsp:fourier:periodprop}), the most probable samples (probability maxima) follow with a period related to the original function's period. Thus, through several experiments, the period of the desired function can be found with the required probability level (see \autoref{picPart4QuantCompShorQuantPart}).
+Further, by lemma \ref{lemmaAddFourierDiscretFourierPeriod}, (on periodicity) (see also comment \ref{rem:dsp:fourier:periodprop}), it follows that the most probable readings (probability maxima) follow with a period related to the original period of the function. Thus, as a result of several experiments, the desired function period can be found with the required probability level (see \autoref{picPart4QuantCompShorQuantPart}).
 
 \begin{example}
-\emph{Finding the Period of the Function $f\left(x\right) = 2^x \mod 21$}
+\emph{Finding the period of the function $f\left(x\right) = 2^x \mod 21$}
 \label{exPart4QuantCompShorQuantPeriodFinding}
-As an example, consider the problem of finding the period of the function $f\left(x, a\right) = a^x \mod{N}$ with $a=2$, $N = 21$ (see \autoref{picPart4QuantCompShorQuantPart}).
+As an example, consider the task of finding the period of the function $f\left(x, a\right) = a^x \mod{N}$ with $a=2$, $N=21$; see \autoref{picPart4QuantCompShorQuantPart}.
 
-The number of samples $M$ should be a power of two. In our example, we choose $M = 2^6 = 64$ as the number of samples. Thus, 6 qubits are necessary for our example.
+The number of samples $M$ must be a power of two. In our example, we choose $M = 2^6 = 64$ as the number of samples. Thus, 6 qubits are needed for our example.
 
-The initial state after the Hadamard transform is:
+The initial state after the Hadamard transform is as follows:
 \begin{equation}
 \ket{in} = \frac{1}{8}\sum_{x = 0}^{63}\ket{x} \otimes \ket{0},
 \nonumber
 \end{equation}
-where $\ket{x}$ denotes the tensor product of 6 qubits encoding the binary representation of the argument of the studied function. For example, for $x=5_{10}=000101_2$, we have
+where $\ket{x}$ represents the tensor product \rindex{Tensor Product} of 6 qubits that encode the binary representation of the function argument. For example, for $x=5_{10}=000101_2$ we have
 \[
 \ket{x} = \ket{0}\otimes \ket{0}\otimes \ket{0}\otimes \ket{1}\otimes \ket{0}\otimes \ket{1}
 \]
 
-After computing the function, we have the state (see the top graph in \autoref{picPart4QuantCompShorQuantPart})
+After computing the function, we have a state of the form (see the top plot in \autoref{picPart4QuantCompShorQuantPart})
 \begin{eqnarray}
 \hat{U}_f\ket{in} = \frac{1}{8}\sum_{x = 0}^{63}\ket{x} \otimes \left|f\left(x\right)\right> = 
 \nonumber \\
@@ -64,7 +65,7 @@ After computing the function, we have the state (see the top graph in \autoref{p
 \label{eqPart4QuantCompShorPFExample1}
 \end{eqnarray}
 
-If the function measurement result was $1$, then from the entire sum \eqref{eqPart4QuantCompShorPFExample1}, only the terms for which the function value equals $1$ will remain (see the middle graph in \autoref{picPart4QuantCompShorQuantPart}):
+If the result of the function measurement was $1$, then from the entire sum \eqref{eqPart4QuantCompShorPFExample1}, the terms for which the function value equals $1$ will remain (see the middle plot in \autoref{picPart4QuantCompShorQuantPart}):
 \begin{equation}
 \ket{in'} = \frac{1}{\sqrt{10}}\left( 
 \ket{5}\otimes\ket{1} +
@@ -77,6 +78,6 @@ If the function measurement result was $1$, then from the entire sum \eqref{eqPa
 \end{equation} 
 Expression \eqref{eqPart4QuantCompShorPFExample2} contains 10 terms of equal amplitude, so the normalization factor is $\frac{1}{\sqrt{10}}$.
 
-The Fourier transform for the sequence \eqref{eqPart4QuantCompShorPFExample2} is shown in the bottom graph of \autoref{picPart4QuantCompShorQuantPart}. The most probable values of the Fourier transform measurement result will be those corresponding to local maxima, repeating with a period of $\frac{M}{r}\approx10.67$, from which the period of the desired function $r=6$ can be found.
+The Fourier transform for the sequence \eqref{eqPart4QuantCompShorPFExample2} is shown in the bottom plot \autoref{picPart4QuantCompShorQuantPart}. The most probable values of the Fourier transform measurement result will correspond to local maxima that repeat with a period of $\frac{M}{r}\approx10.67$ from which the period of the desired function $r=6$ can be found.
 
 \end{example}
