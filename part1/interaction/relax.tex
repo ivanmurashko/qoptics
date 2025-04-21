@@ -1,45 +1,35 @@
-%% -*- coding:utf-8 -*- 
-\section{Relaxation of a dynamical system. Density matrix method}
-In quantum electronics and quantum optics, we deal with open
-systems. Such systems must be considered using
-the density matrix. We consider a small dynamical system
-(atom, molecules, resonator mode, etc.) weakly coupled to
-a large system called a reservoir (dissipative
-system, thermostat), consisting of a large number of atoms,
-molecules or oscillators, in equilibrium at
-a certain temperature. Thus, in the general case,
-we consider a dynamical system ($A$) interacting with
-a reservoir ($B$) (see \autoref{figPart1Ch2_add2}). The density operator
-of the combined system ($AB$) is denoted by $\hat{\rho}_{AB}$.
-The density operator traced over the variables of the reservoir (thermostat) 
-describes the behavior of the dynamical system taking into account the averaged
-interaction with the thermostat. We have:
+\section{Relaxation of a Dynamic System. Method of Density Matrix}
+
+In quantum electronics and quantum optics, we deal with open systems. Such systems must be considered using the density matrix. A small dynamic system (atom, molecules, resonator mode, etc.) is considered, weakly connected with a large system called a reservoir (dissipative system, thermostat), consisting of a large number of atoms, molecules, or oscillators in equilibrium at a certain temperature. Thus, in general, we consider a dynamic system ($A$) interacting with a reservoir ($B$) (see \autoref{figPart1Ch2_add2}). The density operator of the combined system ($AB$) is denoted by $\hat{\rho}_{AB}$. The density operator collapsed over the reservoir (thermostat) variables describes the behavior of the dynamic system taking into account the averaged interaction with the thermostat. We have:
+
 \begin{equation}
 \hat{\rho}_{A} = Sp_{B} \hat{\rho}_{AB} = 
 \sum_{\left(B\right)}
 \bra{B}\hat{\rho}_{AB}\ket{B}.
 \end{equation}
-At the initial time $t_0$, the dynamical system and the reservoir
-are considered independent (uncorrelated). Then
+
+At the initial moment of time $t_0$, the dynamic system and the reservoir are considered independent (uncorrelated). Then
+
 \begin{equation}
 \hat{\rho}_{AB}\left(t_0\right) = 
 \hat{\rho}_{A}\left(t_0\right)
 \otimes
 \hat{\rho}_{B}\left(t_0\right)
 \end{equation}
-where $Sp_B \hat{\rho}_{B} = 1$, $\otimes$ denotes the external or
-tensor product. \rindex{Tensor product} 
+
+where $Sp_B \hat{\rho}_{B} = 1$, $\otimes$ is the sign of the external or tensor product. \rindex{Tensor product}
 
 \input ./part1/interaction/fig_add2.tex
 
-The equation of motion for the density operator in the interaction picture
-is
+The equation of motion of the density operator in the interaction representation is
+
 \[
 \frac{d}{d t}\hat{\rho}_{AB} = 
 - \frac{i}{\hbar}\left[\hat{V}_{AB}, \hat{\rho}_{AB}\right],
 \]
-where $\hat{V}_{AB}$ is the interaction Hamiltonian between systems $A$ 
-and $B$. This equation can be solved using the following iterative process.
+
+where $\hat{V}_{AB}$ is the interaction Hamiltonian between systems $A$ and $B$. This equation can be solved using the following iterative process.
+
 \begin{equation}
 \hat{\rho}_{AB}\left(t\right) = 
 \hat{\rho}^{(0)}_{AB}\left(t\right) +
@@ -47,15 +37,18 @@ and $B$. This equation can be solved using the following iterative process.
 \hat{\rho}^{(2)}_{AB}\left(t\right) + \dots,
 \label{eqCh2_rho_iter}
 \end{equation}
-where the term \(\hat{\rho}^{(0)}_{AB}\left(t\right)\) is found under the assumption
-of no interaction, i.e.
+
+where the term \(\hat{\rho}^{(0)}_{AB}\left(t\right)\) is found assuming the absence of interaction, i.e.
+
 \[
 \hat{\rho}^{(0)}_{AB}\left(t\right) = \hat{\rho}_{AB}\left(t_0\right) = 
 \hat{\rho}_{A}\left(t_0\right)
 \otimes
 \hat{\rho}_{B}\left(t_0\right).
 \]
-The subsequent terms of the iterative relation \eqref{eqCh2_rho_iter} are given by
+
+The subsequent terms of the iterative relation \eqref{eqCh2_rho_iter} are defined by the following relation
+
 \begin{eqnarray}
 \hat{\rho}^{(s)}_{AB}\left(t\right) = - \frac{i}{\hbar}\int_{t_0}^{t} dt_s
 \left[\hat{V}_{AB}\left(t_s\right), \hat{\rho}^{(s - 1)}_{AB}\left(t_s\right)
@@ -93,8 +86,8 @@ The subsequent terms of the iterative relation \eqref{eqCh2_rho_iter} are given 
 \label{eqCh2_rho_iter_member}
 \end{eqnarray}
 
-Substituting \eqref{eqCh2_rho_iter_member} into \eqref{eqCh2_rho_iter} and performing averaging 
-over the thermostat variables, we obtain
+Substituting \eqref{eqCh2_rho_iter_member} into \eqref{eqCh2_rho_iter} and averaging over the thermostat variables, we obtain
+
 \begin{eqnarray}
 \hat{\rho}_{A}\left(t\right) = 
 \hat{\rho}_{A}\left(t_0\right) + 
@@ -115,8 +108,9 @@ over the thermostat variables, we obtain
 \right].
 \label{eqCh2_rho_sequance}
 \end{eqnarray}
-Usually, only the first few terms
-of the expansion are considered. For example, the first two terms of the expansion are:
+
+Usually, only the first few terms of the expansion are considered. For example, the first two terms of the expansion are
+
 \begin{eqnarray}
 \hat{\rho}_{A}\left(t\right) = 
 \hat{\rho}_{A}\left(t_0\right) - \frac{i}{\hbar} Sp_B \left\{

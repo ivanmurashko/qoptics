@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*- 
 \section{Representation of the Density Operator through Coherent States}
-An important aspect of quantum optics is the description of optical phenomena using coherent states. By using the double completeness condition for states with different numbers of photons, for a given statistical operator, we obtain:
+An important aspect of quantum optics is the description of optical phenomena using coherent states. By utilizing the completeness condition twice for states with different numbers of photons, for an arbitrary statistical operator we get: 
 \[
 \hat{\rho} = \hat{I}\hat{\rho}\hat{I} = 
 \sum_{(n)}\sum_{(m)}
@@ -24,14 +24,14 @@ R\left(\alpha^{*}, \beta\right) =
 \left<\alpha\right|\hat{\rho}\left|\beta\right>
 e^{\frac{1}{2}\left|\alpha\right|^2 +\frac{1}{2}\left|\beta\right|^2}
 \]
-Expressing $\left|\alpha\right>$ and $\left|\beta\right>$ through states $\ket{n}$, we obtain the formula
+If we express $\left|\alpha\right>$ and $\left|\beta\right>$ through states $\ket{n}$, we obtain the formula 
 \begin{equation}
 R\left(\alpha^{*}, \beta\right) = \sum_{(n)}\sum_{(m)}
 \frac{\left(\alpha^{*}\right)^n \left(\beta\right)^m}{\sqrt{n!m!}}\rho_{nm}
 \end{equation}
-i.e., $R\left(\alpha^{*}, \beta\right)$ can be easily found if the density matrix
-\rindex{Density Matrix}
-is known in the Fock state (photon number) representation. For example, consider thermal excitation of a mode:
+i.e., $R\left(\alpha^{*}, \beta\right)$ is easily found if the density matrix is known 
+\index{Density Matrix}
+in the occupation number representation (photon numbers). As an example, consider the thermal excitation of a mode: 
 \begin{eqnarray}
 R\left(\alpha^{*}, \beta\right) = \sum_{(n)}\sum_{(m)}
 \frac{\left(\alpha^{*}\right)^n \left(\beta\right)^m}{\sqrt{n!m!}}
@@ -44,47 +44,50 @@ e^{-\beta n \hbar \omega}\left(1  -  e^{-\beta \hbar \omega}\right) =
   e^{-\beta \hbar \omega}}.
 \end{eqnarray}
 
-This representation depends on two parameters $\alpha^{*}$ and $\beta$. A more convenient representation of the density matrix, introduced by R. Glauber \cite{bQuantumOpticsAndRadioPhisicsLecture1966}, called the diagonal representation, depends on one parameter. It has the form 
+This representation depends on two parameters $\alpha^{*}$ and $\beta$.
+A more convenient representation of the density matrix, introduced by R. Glauber \cite{bQuantumOpticsAndRadioPhisicsLecture1966}, called the diagonal representation and depending on one parameter, is of the form  
 \begin{equation}
 \hat{\rho} = \int
 P\left(\alpha\right)\left|\alpha\right>\left<\alpha\right| d^2 \alpha,
 \label{eqCh1_rhorepresent}
 \end{equation}
-where $P\left(\alpha\right)$ is a real function, satisfying the condition 
+where $P\left(\alpha\right)$ is a real function that satisfies the condition 
 \[
 \int
 P\left(\alpha\right) d^2 \alpha = 1.
 \]
-Furthermore, $P\left(\alpha\right)$ is a real function of a complex argument. This follows from the conditions $Sp\left(\hat{\rho}\right) = 1$ and $\hat{\rho} = \hat{\rho}^{\dag}$.
- 
-Such decomposition is possible due to the overcompleteness of the coherent state system. If $P\left(\alpha\right)$ is a positive function, it can be interpreted as a probability distribution. This is applicable to some of the most practically interesting field states, such as a completely chaotic state, but it is not true in general. Sometimes $P\left(\alpha\right)$ may be negative in some limited range of values of $\alpha$, in which case it cannot be interpreted as a probability distribution. $P\left(\alpha\right)$ can also be a generalized function (an example is a $\delta$-function). 
+Moreover, $P\left(\alpha\right)$ is a real function of a complex argument. This all follows from the conditions $Sp\left(\hat{\rho}\right) = 1$ and $\hat{\rho} = \hat{\rho}^{\dag}$.
+  
+Such decomposition is possible due to the overcompleteness of the coherent state system. If $P\left(\alpha\right)$ is a positive function, it can be interpreted as a probability distribution. This applies to some of the most practically interesting field states, such as the completely chaotic state, but this is not true in the general case. Sometimes $P\left(\alpha\right)$ may be negative over a limited range of $\alpha$, then it cannot be interpreted as a probability distribution. $P\left(\alpha\right)$ may also be a generalized function (an example being the $\delta$-function). 
 
-A rigorous justification of the possibility of representation \eqref{eqCh1_rhorepresent} is contained in the literature \cite{bQuantumOpticsAndRadioPhisicsLecture1966}, \cite{bKaluderSudershan1970}. The possibility of introducing the diagonal representation \eqref{eqCh1_rhorepresent} can be justified as follows. Assume the statistical operator $\hat{\rho}$, like any other operator acting on the electromagnetic field, can be represented as a function of creation and annihilation operators:
+A rigorous justification for the possibility of the representation \eqref{eqCh1_rhorepresent} is contained in the literature \cite{bQuantumOpticsAndRadioPhisicsLecture1966}, \cite{bKaluderSudershan1970}. 
+The possibility of introducing the diagonal representation \eqref{eqCh1_rhorepresent} can be justified as follows. Suppose the statistical operator $\hat{\rho}$, like any other operator acting on the electromagnetic field, can be represented as a function of creation and annihilation operators:
 \[
 \hat{\rho} = \bar{f}\left(\hat{a}^{\dag}, \hat{a}\right).
 \]
-The operator can then be represented in ordered form: normal and antinormal. In the first case, creation operators are placed to the right of the annihilation operators, and in the second case, vice versa - to the left. For example,
+Then the operator can be represented in ordered form: normal and antinormal. In the first case, creation operators are positioned to the right of annihilation operators, and in the second case, the opposite - on the left.
+For example,
 \[
 \left(\hat{a}^{\dag}\right)^m\left(\hat{a}\right)^n
 \]
-is a normally ordered operator. In an antinormally ordered operator, the order is reversed: creation operators are on the right of the annihilation operator. For example, the operator 
+is a normally ordered operator. In the antinormally ordered operator, the order is reversed: creation operators are on the right of the annihilation operator. For example, the operator 
 \[
 \left(\hat{a}\right)^n\left(\hat{a}^{\dag}\right)^m
 \]
-is antinormally ordered. Ordering can be achieved by repeatedly applying the commutation relation. For example, the operator 
+is antinormally ordered. Ordering can be achieved by multiple applications of the commutation relation. For example, the operator  
 \[
 \left(\hat{a}^{\dag}\hat{a}\right)^2 =
 \hat{a}^{\dag}\hat{a}\hat{a}^{\dag}\hat{a} 
 \]
 is neither normal nor antinormal. Using the condition 
 $\left[\hat{a},\hat{a}^{\dag}\right] = 1$,
-we bring it to normal form: 
+bring it to normal form: 
 \[
 \left(\hat{a}^{\dag}\hat{a}\right)^2 = \hat{a}^{\dag}\left(1 +
 \hat{a}^{\dag}\hat{a}\right)\hat{a} = 
 \hat{a}^{\dag}\hat{a} + \left(\hat{a}^{\dag}\right)^2\left(\hat{a}\right)^2
 \]
-this operator can be presented in antinormal form:
+and this operator can be presented in antinormal form:
 \begin{eqnarray}
 \left(\hat{a}^{\dag}\hat{a}\right)^2 = 
 \left(\hat{a}\hat{a}^{\dag} - 1\right) \left(\hat{a}\hat{a}^{\dag} -
@@ -98,18 +101,18 @@ this operator can be presented in antinormal form:
 \nonumber
 \end{eqnarray}
 
-There are other, more efficient methods for ordering operators \cite{bLuisell1972}.
+There are also other, more efficient methods of operator ordering \cite{bLuisell1972}.
 
-Let's represent the density operator in antinormal form (considering a single-mode case): 
+Let's represent the density operator in antinormal form (considering the single-mode case): 
 \begin{equation}
 \hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{\dag}\right) = 
 \sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\left(\hat{a}^{\dag}\right)^m
 \end{equation}
-Now use the decomposition \eqref{eqCh1_full4coh} for the identity operator $\hat{I}$
+Now use the expansion \eqref{eqCh1_full4coh} for the unit operator $\hat{I}$
 \[
 \hat{I} = \frac{1}{\pi}\int \left|\alpha\right>\left<\alpha\right| d^2 \alpha
 \]
-as a result, we obtain
+as a result, we get
 \begin{eqnarray}
 \hat{\rho}^{\left(a\right)}\left(\hat{a},\hat{a}^{\dag}\right) = 
 \sum_{(n)}\sum_{(m)}C^{\left(a\right)}_{nm}\left(\hat{a}\right)^n\hat{I}\left(\hat{a}^{\dag}\right)^m
@@ -126,21 +129,21 @@ C^{\left(a\right)}_{nm}
 \alpha^{*m}
 \left|\alpha\right>\left<\alpha\right|.
 \end{eqnarray}
-Now denoting 
+Now denote 
 \[
 P\left(\alpha, \alpha^{*}\right) = \frac{1}{\pi}\sum_{(n)}\sum_{(m)}
 C^{\left(a\right)}_{nm}
 \alpha^n
 \alpha^{*m}
 \]
-we find that $\hat{\rho}$ can be represented as
+and obtain that $\hat{\rho}$ can be represented in the form
 \begin{equation}
 \hat{\rho} = \int d^2 \alpha P\left(\alpha, \alpha^{*}\right) 
 \left|\alpha\right>\left<\alpha\right|.
 \label{eqCh1_Rho_in_alpha}
 \end{equation}
 
-The average value of an operator using the diagonal representation 
+The average value of the operator using the diagonal representation 
 \begin{eqnarray}
 \left<\hat{O}\right> = Sp \left(\hat{\rho}\hat{O}\right) =
 \nonumber \\
@@ -160,7 +163,7 @@ The average value of an operator using the diagonal representation
 \end{eqnarray}
 since $\sum_{(n)}\ket{n}\bra{n} = \hat{I}$. 
 
-The expression $\left<\alpha\right|\hat{O}\left|\alpha\right>$ is easily calculated if operator $\hat{O}$ is presented in normal form:
+The expression $\left<\alpha\right|\hat{O}\left|\alpha\right>$ is easily calculated if the operator $\hat{O}$ is represented in normal form:
 \begin{equation}
 \hat{O} = \hat{O}^{(n)} = \sum_{(n)}\sum_{(m)} d_{nm}
 \left(\hat{a}^{\dag}\right)^n
@@ -178,10 +181,10 @@ then
 \sum_{(n)}\sum_{(m)} d_{nm}
 \alpha^{*n}\alpha^{m}.
 \end{equation}
-From here follows a simple rule: to obtain the necessary matrix element, we replace operators in normal ordered form by $\hat{a}\rightarrow\alpha$, 
+From here, we derive a simple rule: to obtain the required matrix element, in the operator represented in normally ordered form, make the replacement $\hat{a}\rightarrow\alpha$, 
 $\hat{a}^{\dag}\rightarrow\alpha^{*}$.
 
-As an example, we show that for thermal excitation of a mode 
+As an example, we show that for the thermal excitation of a mode 
 \begin{equation}
 P\left(\alpha, \alpha^{*}\right) = \frac{1}{\pi \bar{n}}
 e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
@@ -195,7 +198,7 @@ e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
 \left|\alpha\right>
 \left<\alpha\right|.
 \]
-Now find matrix elements of operator $\hat{\rho}$ in the Fock state (photon number) representation
+Now find the matrix elements of the operator $\hat{\rho}$ in the occupation number representation (photon numbers)
 \begin{eqnarray}
 \bra{n}
 \hat{\rho}
@@ -215,11 +218,11 @@ e^{- \frac{\left|\alpha\right|^2}{\bar{n}}}
 e^{- \left|\alpha\right|^2} 
 \nonumber 
 \end{eqnarray}
-The resulting integral can be computed using polar coordinates:
+The resulting integral can be computed by writing in polar coordinate system:
 \[
 \alpha = r e^{i \varphi}, \quad 
 d^2 \alpha = r d r d \varphi , \quad 
-\mbox{ i.e. } 
+\mbox{i.e.} 
 \left|\alpha\right| = r, \quad arg\,\alpha = \varphi,
 \]
 from where
@@ -257,18 +260,18 @@ e^{-x}x^n dx =
 {\left(\bar{n} + 1\right)^{n + 1}},
 \label{eqCh1_matrelemRho}
 \end{eqnarray}
-where a change of variable $x = r^2\frac{\bar{n} + 1}{\bar{n}}$ is made.
+where the substitution $x = r^2\frac{\bar{n} + 1}{\bar{n}}$ was made.
 
-Thus, we have obtained the well-known matrix element of the statistical operator of a chaotic field in the Fock state representation. Hence, the expression \eqref{eqCh1_123a} is indeed the statistical operator of a chaotic field in the coherent state representation. Therefore, for thermal photon excitation in a mode we have
+Thus, we obtained the well-known matrix element of the statistical operator of the chaotic field in the occupation number representation. From here, it follows that expression \eqref{eqCh1_123a} is indeed the statistical operator of the chaotic field in the representation of coherent states. Therefore, for the thermal excitation of photons in the mode we have
 \begin{equation}
 P\left(\alpha\right) = \frac{1}{\pi \bar{n}}
 e^{-\frac{\left|\alpha\right|^2}{\bar{n}}},
-\mbox{ where }
+\mbox{where }
 \bar{n} = \frac{1}{e^{\hbar \omega \beta} - 1}
 \label{eqCh1_task4}
 \end{equation}
   
-Generalizing the obtained expressions to the multimode case is straightforward: 
+The generalization of the obtained expressions to the multimode case is obvious: 
 \begin{equation}
 \left<\hat{O}\right> = \idotsint\limits_{\left\{\alpha_k\right\}}
 P^{(a)}

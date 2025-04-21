@@ -1,12 +1,6 @@
-\section{Expansion of the Field into Plane Waves in Free Space}
-So far, we have considered the electromagnetic field in a physically
-distinguished volume—in a resonator. If we are dealing with free
-space, we can artificially distinguish a sufficiently large volume
-containing the region of space of interest, define modes (types of oscillations) for it with appropriate boundary conditions, and then
-proceed in the manner already considered. If necessary, the volume in
-the final result can be extended to infinity. Usually, a sufficiently large cubic volume with a side $L$ 
-(\autoref{figCh1_Vfree}) is used. In this case, it is customary to use
-periodic boundary conditions:  
+%% -*- coding:utf-8 -*- 
+\section{Field Decomposition by Plane Waves in Free Space}
+So far, we have considered the electromagnetic field in a physically defined volume - in a resonator. If we are dealing with free space, we can artificially select a sufficiently large volume containing the region of interest, define modes (types of oscillations) with appropriate boundary conditions, and then proceed as already considered. If necessary, the volume in the final result can be taken to infinity. A sufficiently large cubic volume with a side $L$ is usually used (\autoref{figCh1_Vfree}). In this case, it is customary to use periodic boundary conditions:  
 \begin{eqnarray}
 \vec{E}\left(0, y, z \right) = \vec{E}\left(L, y, z \right),
 \nonumber \\
@@ -18,13 +12,11 @@ periodic boundary conditions:
 
 \input ./part1/quantel/fig2.tex
 
-It is convenient to decompose into plane waves. As known from the course
-of electromagnetic oscillations, the solution corresponding to a plane wave
-has the form 
+It is convenient to decompose by plane waves. As known from the course of electromagnetic oscillations, the solution corresponding to a plane wave has the form 
 \begin{equation}
 \vec{E}_k\left(r, t\right) = 
 A_k\left(t\right)\vec{e}_k e^{i\left(\vec{k}\vec{r}\right)} +
-\text{(c. c.)},
+\mbox{(c.c.)},
 \label{eqCh1_Emode}
 \end{equation}
 where $\vec{e}_k$ is the unit vector of wave polarization;  
@@ -36,12 +28,12 @@ The magnetic field is related to the electric field by the relation
 \vec{H}_k\left(r, t\right) =
 \sqrt{\frac{\varepsilon_0}{\mu_0}}
 \frac{1}{k}\left[\vec{k} \vec{e}_k\right] A_k\left(t\right) 
-e^{i\left(\vec{k}\vec{r}\right)} + \text{(c. c.)}
+e^{i\left(\vec{k}\vec{r}\right)} + \mbox{(c.c.)}
 .
 \label{eqCh1_Hmode}
 \end{equation}
 
-The following equalities are valid:
+The following equalities hold:
 \begin{equation}
 \left(\vec{k}\vec{E}_k\right) = 
 \left(\vec{k}\vec{H}_k\right) = 
@@ -52,11 +44,9 @@ k^2 = \left(\vec{k}\vec{k}\right) =
 \end{equation}
 indicating that 
 $\vec{E}_k$
-and $\vec{H}_k$ are perpendicular to the direction of wave propagation and to each
-other (the wave is transverse). 
+and $\vec{H}_k$ are perpendicular to the direction of wave propagation and to each other (the wave is transverse). 
 
-The periodicity condition \eqref{eqCh1_period_def} will be satisfied
-if 
+The periodicity condition \eqref{eqCh1_period_def} will be satisfied if 
 \begin{equation}
 \vec{k} = \frac{2 \pi}{L}\left(n_x \vec{x}_0
 + n_y \vec{y}_0
@@ -66,7 +56,7 @@ if
 n_x, n_y, n_z = 0, \pm 1, \pm 2, \dots .
 \label{eqCh1_period}
 \end{equation}
-Then we get
+Then we obtain
 \begin{eqnarray}
 \left(\vec{k}\vec{r}\right) = \frac{2 \pi}{L}\left(n_x x
 + n_y y
@@ -78,12 +68,12 @@ Then we get
 \right) = 
 2 \pi n_x + \left.\left(\vec{k}\vec{r}\right)\right|_{x = 0}.
 \end{eqnarray}
-Consequently,    
+Thus,    
 $e^{i\left(\vec{k}\vec{r}\right)}$
-is periodic in $x$. In the same way, periodicity in $y$ and $z$ is shown.
-
-In the future, instead of the real functions \eqref{eqCh1_Emode}, 
-\eqref{eqCh1_Hmode} we will use
+is periodic in $x$. The periodicity is demonstrated in the same way for $y$ and $z$.
+ 
+In the future, instead of real functions \eqref{eqCh1_Emode}, 
+\eqref{eqCh1_Hmode}, we will use
 complex eigenfunctions 
 \begin{equation}
 \vec{E}_k\left(r\right) = \vec{e}_k e^{i \left( \vec{k}\vec{r}\right)},
@@ -92,7 +82,7 @@ complex eigenfunctions
 \left[\vec{k}\vec{E}_k\left(r\right)\right].
 \label{eqCh1_EHmode}
 \end{equation}
-The relations are valid:
+The following relations hold
 \[
 \left(\vec{k}\vec{E}_k\right) = 
 \left(\vec{k}\vec{H}_k\right) = 
@@ -101,22 +91,21 @@ The relations are valid:
 k^2 = \left(\vec{k}\vec{k}\right) = 
 \frac{\omega_k^2}{c^2}.
 \]
-The eigenfrequencies $\omega_k$ are determined by the equation
-\eqref{eqCh1_period}. Indeed, from \eqref{eqCh1_period} taking into account
-$k^2 = \frac{\omega_k^2}{c^2}$ we have 
+The eigenfrequencies $\omega_k$ are determined by equation
+\eqref{eqCh1_period}. Indeed, from \eqref{eqCh1_period}, considering
+$k^2 = \frac{\omega_k^2}{c^2}$, we have 
 \begin{equation}
 \omega_k = c \sqrt{k_x^2 + k_y^2 + k_z^2} = 
 \frac{2 \pi c}{L} \sqrt{n_x^2 + n_y^2 + n_z^2}.
 \end{equation}
 
-With linear polarization, the polarization vectors $\vec{e}_k$ are:
+For linear polarization, the polarization vectors $\vec{e}_k$ are:
 \[
 \vec{e}_{k_1} = \vec{\xi}_0,
 \quad
 \vec{e}_{k_2} = \vec{\eta}_0,
 \]
-where $\vec{\xi}_0$, $\vec{\eta}_0$, are the unit vectors of directions, forming a 
-rectangular system of directions with the vector $\vec{k}$, consequently, 
+where $\vec{\xi}_0$, $\vec{\eta}_0$, are unit vectors of directions forming a rectangular system with the vector $\vec{k}$, therefore, 
 \[
 \left(\vec{\xi}_0\vec{k}\right) =
 \left(\vec{\eta}_0\vec{k}\right) =
@@ -136,15 +125,15 @@ and normalization conditions:
 $\left(\vec{e}_{k_1} \vec{e}_{k_1}^{*}\right) = \left(\vec{e}_{k_2}
 \vec{e}_{k_2}^{*}\right) = 1$.
 
-An arbitrary electromagnetic field using complex functions 
-\eqref{eqCh1_EHmode} can be represented by decompositions 
+An arbitrary electromagnetic field can be represented using complex functions 
+\eqref{eqCh1_EHmode} by decompositions 
 \begin{eqnarray}
 \vec{E}\left(r, t\right) = 
 \sum_{(k)} 
-A_k\left(t\right) \vec{E}_k\left(r\right) + \text{(c. c.)},
+A_k\left(t\right) \vec{E}_k\left(r\right) + \mbox{(c.c.)},
 \nonumber \\
 \vec{H}\left(r, t\right) = 
 \sum_{(k)} 
 A_k\left(t\right) \vec{H}_k\left(r\right) +
-\text{(c. c.)}
+\mbox{(c.c.)}
 \end{eqnarray}

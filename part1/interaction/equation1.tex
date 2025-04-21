@@ -1,15 +1,10 @@
-%% -*- coding:utf-8 -*- 
-\section{Equation for the field density matrix in the number representation}
+\section{Equation for the Density Matrix of the Field in the Occupation Number Representation}
 \label{ch2_7}
-In the number representation (photon number representation), the matrix elements are defined by the equality
+In the occupation number representation (photon numbers), the matrix elements are defined by the equality
 \[
 \rho_{nm} = \bra{n}\hat{\rho}\ket{m}.
 \]
-To obtain the required equation, multiply
-\eqref{eqCh2_rho_final2} from the left by $\bra{n}$ and from the right by  
-$\ket{m}$. Using
-the properties of the operators $\hat{a}$ and $\hat{a}^{\dag}$, we obtain a system
-of equations relating the matrix elements 
+To obtain the required equation, multiply \eqref{eqCh2_rho_final2} on the left by $\bra{n}$ and on the right by $\ket{m}$. Using the properties of the operators $\hat{a}$ and $\hat{a}^{\dag}$, we obtain a system of equations relating the matrix elements
 \begin{eqnarray}
 \dot{\rho}_{nm} = - \frac{1}{2}
 \left(
@@ -22,12 +17,12 @@ R_a\sqrt{nm}\rho_{n - 1, m - 1} +
 R_b\sqrt{\left(n + 1\right)\left(m + 1\right)}\rho_{n + 1, m + 1}.
 \label{eqCh2_task5}
 \end{eqnarray}
-For diagonal elements $n = m$, hence
+For diagonal elements $n = m$, therefore
 \begin{eqnarray}
 \dot{\rho}_{nn} = - 
 \left(
 R_a\left(n + 1\right) + 
-R_b n
+R_b\left(n\right)
 \right)\rho_{nn} +
 \nonumber \\
 + 
@@ -38,10 +33,7 @@ R_b\left(n + 1\right)\rho_{n + 1, n + 1}.
 
 \input ./part1/interaction/fig8.tex
 
-This equation can be considered as a balance of probability flows
-of photon numbers. This is schematically shown in \autoref{figPart1Ch2_8}. At
-thermal equilibrium, the flows must be equal. Using
-the principle of detailed balance, we obtain equalities: 
+This equation can be considered as the balance of probability flows of photon numbers. This is conditionally depicted in \autoref{figPart1Ch2_8}. In thermal equilibrium, the flows should be equal. Hence, using the principle of detailed balance, we obtain the equalities:
 \begin{eqnarray}
 R_a n \rho_{n - 1, n - 1} = R_b n \rho_{nn},
 \nonumber \\
@@ -55,33 +47,29 @@ From \eqref{eqCh2_52} we have
 e^{-\frac{\hbar \omega}{k_B T}}\rho_{nn},
 \label{eqCh2_53}
 \end{equation}
-since  
+because  
 \(
 \frac{R_a}{R_b} = 
 \exp \left(-\frac{\hbar \omega}{k_B T}\right)
 \)
-(the reservoir is in equilibrium at temperature
-$T$). Applying \eqref{eqCh2_53} successively starting at $n=0$, 
-we get:  
+(the reservoir is in equilibrium at temperature $T$). Using \eqref{eqCh2_53} successively, starting with $n = 0$, we obtain:  
 \begin{equation}
 \rho_{nn} = \rho_{00} 
 e^{-\frac{n \hbar \omega}{k_B T}} =
 \left(1 - e^{-\frac{\hbar \omega}{k_B T}}\right) 
 e^{-\frac{n \hbar \omega}{k_B T}},
 \end{equation}
-where $\rho_{00}$ is found from the normalization condition $\sum_{(n)}\rho_{nn} = 1$.
+where $\rho_{00}$ is found from the condition $\sum_{(n)}\rho_{nn} = 1$.
 
-The average photon number in the mode, as expected, is given by the Planck formula 
+The average number of photons in the mode, as expected, is determined by the Planck formula
 \begin{equation}
 \bar{n} = \left<n\right> = 
 \sum_{(n)} n \rho_{nn} = 
 \frac{1}{ e^{\frac{\hbar \omega}{k_B T}} - 1}.
 \end{equation}
 
-It follows that over time the radiation temperature 
-approaches the temperature of the atomic beam (reservoir).  
-The time evolution of the average photon number can be obtained from equation 
-\eqref{eqCh2_51}
+From all said, it follows that over time the temperature of the radiation becomes equal to the temperature of the atomic beam (reservoir).  
+The change in the average number of photons over time is obtained from the equation \eqref{eqCh2_51}
 \begin{eqnarray}
 \frac{d}{d t}\left<n\left(t\right)\right> = \sum_{(n)}n \dot{\rho} = 
 \nonumber \\
@@ -93,7 +81,7 @@ R_b \left(n^2 + n\right) \rho_{n +1, n+ 1} +
 R_a n^2 \rho_{n - 1, n - 1}
 \right).
 \end{eqnarray}
-Change the summation variables by $m= n + 1$ in the third sum and $m = n - 1$ in the fourth sum. We get:
+Replace the summation variables $m= n + 1$ in the third sum and $m = n - 1$ in the fourth sum. We get:
 \begin{eqnarray}
 \frac{d}{d t}\left<n\right> = 
 -R_a \sum_{(n)}\left(n^2 + n\right)\rho_{nn}
@@ -119,44 +107,37 @@ and we obtain the previous relation
 \frac{1}{e^{\frac{\hbar \omega}{k_B T}} - 1}.
 \end{equation}
 
-\begin{definition}[Quality factor (Q factor)]
+\begin{definition}[Q-factor]
 \label{def:Qfactor}
-The quality factor $Q$ of an oscillatory system is defined as the number of oscillations 
-performed by the system during the characteristic decay time $\tau$ \cite{bKarlov2003}. That is, if 
-the change in the energy of the system $U$ (complex amplitude) satisfies the equation
+The Q-factor of an oscillatory system $Q$ is called \cite{bKarlov2003} the number of oscillations performed by the system during the characteristic time of their damping $\tau$. That is, if the change in the energy of the system $U$ (complex amplitude) obeys the equation
 \begin{equation}
 \label{eq:part1:q:remark}
 \frac{d U}{d t} = - \frac{1}{\tau} \left(U - U_0\right),
 \end{equation}
 then
 \[
-U = \left(\left.U\right|_{t=0} - U_0 \right)e^{-\frac{t}{\tau}} + U_0.
+U = \left(\left.U\right|_{t=0} - U_0 \right)e^{-\frac{t}{\tau}} + U_0
 \]
-Thus,
+Thus
 \[
-Q = \omega \tau,
+Q = \omega \tau
 \]
-and equation \eqref{eq:part1:q:remark} can be rewritten as
+therefore the equation \eqref{eq:part1:q:remark} can be rewritten as 
 \[
-\frac{d U}{d t} = - \frac{\omega}{Q} \left(U-U_0\right).
+\frac{d U}{d t} = - \frac{\omega}{Q} \left(U-U_0\right)
 \]
 \end{definition}
 
 
-Equation \eqref{eqCh2_57} describes the change of the photon number (energy)
-over time due to relaxation (interaction with a dissipative
-system). The classical equation describing this process is
-(see def. \ref{def:Qfactor})
+Equation \eqref{eqCh2_57} describes the change in the number of photons (energy) over time as a result of relaxation (interaction with a dissipative system). The classical equation describing this process has the form (see def. \ref{def:Qfactor})
 \begin{equation}
 \frac{d}{d t}\left<n\right> = 
-- \frac{\omega}{Q}\left<n\right> + \frac{\omega}{Q} \left<n\right>_{\mathrm{eq}},
+- \frac{\omega}{Q}\left<n\right> + \frac{\omega}{Q} \left<n\right>_{\mbox{eq.}},
 \nonumber
 \end{equation}
-where $\left<n\right>_{\mathrm{eq}} = \bar{n}_T$ is the equilibrium value of
-$\left<n\right>$ at temperature $T$, and $Q$ is the quality factor of the resonator
-(see def. \ref{def:Qfactor}).
-\rindex{Quality factor}
-Therefore, one can set
+where $\left<n\right>_{\mbox{eq.}} = \bar{n}_T$ is the equilibrium value of $\left<n\right>$ at temperature $T$, and $Q$ is the Q-factor of the resonator (see def. \ref{def:Qfactor}).
+\rindex{Q-factor}
+Therefore, it is possible to assume 
 \begin{eqnarray}
 R_b - R_a = \frac{\omega}{Q},
 \nonumber \\
@@ -165,28 +146,20 @@ R_a = \bar{n}_T \frac{\omega}{Q},
 R_b = \frac{\omega}{Q} \left(1 + \bar{n}_T\right),
 \label{eqCh2_RabQw}
 \end{eqnarray}
-i.e., the introduced quantities $R_a$ and $R_b$ are expressed through
-the classical quantity $\frac{\omega}{Q}$ characterizing losses in
-the resonator. 
+i.e., the quantities $R_a$ and $R_b$ introduced by us are expressed through the classical quantity $\frac{\omega}{Q}$, characterizing the losses in the resonator. 
 
 Another quantity of interest is the average electromagnetic field
 \begin{eqnarray}
 \bar{E}_{(f)} = E_0 \sin k z
-\mathrm{Tr}\left(\hat{\rho}\left(\hat{a}^{\dag} + \hat{a}\right)\right) = 
+Sp\left(\hat{\rho}\left(\hat{a}^{\dag} + \hat{a}\right)\right) = 
 \nonumber \\
-= E_0 \sin k z \mathrm{Tr}\left(\hat{\rho}\hat{a}\right) + \mathrm{c.c.} = 
+= E_0 \sin k z Sp\left(\hat{\rho}\hat{a}\right) + \text{c.c.} = 
 \nonumber \\
-= E_1 \mathrm{Tr}\left(\hat{\rho}\hat{a}\right) + \mathrm{c.c.} =
-\left<E\right> + \mathrm{c.c.}, 
+= E_1 Sp\left(\hat{\rho}\hat{a}\right) + \text{c.c.} =
+\left<E\right> + \text{c.c.}, 
 \nonumber
 \end{eqnarray}
-where $\left<E\right>$ is the analytic signal of the classical
-field. 
-The equation satisfied by the field can be obtained using the equation of motion for the density matrix. Write the equation for
-the density operator of the mode field  
-\eqref{eqCh2_rho_final2} and
-using the expressions for $R_a$, $R_b$ through $Q$ and $\bar{n}_T$
- \eqref{eqCh2_RabQw}, we have
+where $\left<E\right>$ is the analytical signal of the classical field. The equation satisfied by the field can be obtained using the equation of motion for the density matrix. Write the equation for the statistical operator of the field mode \eqref{eqCh2_rho_final2} and using for $R_a$, $R_b$ their expressions through $Q$ and $\bar{n}_T$ \eqref{eqCh2_RabQw}, we have
 \begin{eqnarray}
 \dot{\hat{\rho}} =
 - \frac{\omega}{2Q}\bar{n}_T
@@ -205,21 +178,21 @@ using the expressions for $R_a$, $R_b$ through $Q$ and $\bar{n}_T$
 
 Since 
 \begin{equation}
-\left<E\right> = E_1 \mathrm{Tr}\left(\hat{\rho}\hat{a}\right), \quad
-\frac{d \left<E\right>}{d t} = E_1 \mathrm{Tr}\left(\frac{d \hat{\rho}}{dt}\hat{a}\right),
+\left<E\right> = E_1 Sp\left(\hat{\rho}\hat{a}\right), \quad
+\frac{d \left<E\right>}{d t} = E_1 Sp\left(\frac{d \hat{\rho}}{dt}\hat{a}\right),
 \label{eqCh2_eq1_add2}
 \end{equation}
-we multiply equation \eqref{eqCh2_eq1_add1} by $E_1 \hat{a}$ and take the trace. The result is:
+Therefore, equation \eqref{eqCh2_eq1_add1} must be multiplied by $E_1 \hat{a}$ and $Sp$ taken. As a result, we obtain:
 \begin{eqnarray}
 \dot{\left<E\right>} =
 - \frac{\omega E_1}{2Q}\bar{n}_T
-\left\{\mathrm{Tr}\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+\left\{Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
 2 \hat{a}^{\dag}\hat{\rho}\hat{a}\hat{a} +
 \hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) + 
 \right.
 \nonumber \\
 +\left.
-\mathrm{Tr}\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
 + \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
 \right)
@@ -227,69 +200,64 @@ we multiply equation \eqref{eqCh2_eq1_add1} by $E_1 \hat{a}$ and take the trace.
 - 
 \nonumber \\
 - \frac{\omega E_1}{2Q}
-\mathrm{Tr}\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
 + \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
-\right).
+\right)
 \label{eqCh2_eq1_add3}
 \end{eqnarray}
-It is known that under the trace one can perform cyclic permutations
-of operators. Apply this to \eqref{eqCh2_eq1_add3}.
-For example,
+It is known that under the sign $Sp$, circular permutation of operators can be performed. Apply this to \eqref{eqCh2_eq1_add3}.
+For example
 \begin{eqnarray}
-\mathrm{Tr}\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
 2 \hat{a}^{\dag}\hat{\rho}\hat{a}\hat{a} +
 \hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) = 
 \nonumber \\
-= \mathrm{Tr}\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+= Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
 \hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a}\right) = 
 \nonumber \\
-= \mathrm{Tr}\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+= Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
 \hat{\rho}\hat{a}\left(\hat{a}\hat{a}^{\dag} - 1\right)\right) = 
 \nonumber \\
-\mathrm{Tr}\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
+Sp\left(\hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{a}^{\dag}\hat{\rho}\hat{a} +
 \left(\hat{a}\hat{a}^{\dag} - 1\right)\hat{\rho}\hat{a}\right) = 
-- \mathrm{Tr}\left(\hat{\rho}\hat{a}\right).
+- Sp\left(\hat{\rho}\hat{a}\right).
 \label{eqCh2_eq1_add4}
 \end{eqnarray}
-Doing the same for the second bracket in \eqref{eqCh2_eq1_add3}, we get
+Doing the same with the second bracket in \eqref{eqCh2_eq1_add3}, we get
 \begin{eqnarray}
-\mathrm{Tr}\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
+Sp\left(\hat{a}^{\dag}\hat{a}\hat{\rho}\hat{a} - 
 2 \hat{a}\hat{\rho}\hat{a}^{\dag}\hat{a}
 + \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
 \nonumber \\
 = 
-\mathrm{Tr}\left(\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a} - 
+Sp\left(\hat{\rho}\hat{a}\hat{a}^{\dag}\hat{a} - 
 2 \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
 + \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
 \nonumber \\
 = 
-\mathrm{Tr}\left(\hat{\rho}\left(\hat{a}^{\dag}\hat{a} + 1\right)\hat{a} - 
+Sp\left(\hat{\rho}\left(\hat{a}^{\dag}\hat{a} + 1\right)\hat{a} - 
 2 \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a}
 + \hat{\rho}\hat{a}^{\dag}\hat{a}\hat{a} \right) = 
-\mathrm{Tr}\left(\hat{\rho}\hat{a}\right).
+Sp\left(\hat{\rho}\hat{a}\right).
 \label{eqCh2_eq1_add5}
 \end{eqnarray}
-Substituting \eqref{eqCh2_eq1_add4} and \eqref{eqCh2_eq1_add5} into 
-\eqref{eqCh2_eq1_add3}, we have
+Substituting \eqref{eqCh2_eq1_add4} and \eqref{eqCh2_eq1_add5} into \eqref{eqCh2_eq1_add3}, we have
 \begin{eqnarray}
 \dot{\left<E\right>} =
 - \frac{\omega E_1}{2Q}\bar{n}_T
-\left\{\mathrm{Tr}\left(\hat{\rho}\hat{a}\right) -
-\mathrm{Tr}\left(\hat{\rho}\hat{a}\right)\right\} -
+\left\{Sp\left(\hat{\rho}\hat{a}\right) -
+Sp\left(\hat{\rho}\hat{a}\right)\right\} -
 \nonumber \\
-- \frac{\omega E_1}{2Q}
-\mathrm{Tr}\left(\hat{\rho}\hat{a}\right) = 
+- \frac{\omega E_1}{2Q}Sp\left(\hat{\rho}\hat{a}\right) = 
 - \frac{\omega}{2Q}\left<E\right>.
 \label{eqCh2_61}
 \end{eqnarray}
 
-Thus, we have related the reservoir parameters (beam parameters) to the classical quantity $Q$ and to the average photon number in the mode 
-at the reservoir temperature. This enables writing the density matrix equation of motion 
-for the field in a general form, while the specific reservoir model does not matter 
+Thus, we have related the parameters of the reservoir (parameters of the beam) with the classical value $Q$ and with the average number of photons in the mode at the reservoir temperature. This allows us to write the equations of motion for the density matrix of the field in general form, while the specific model of the reservoir does not matter
 \begin{eqnarray}
 \dot{\rho}_{nm} = - \frac{\omega}{2 Q}
 \left(2 \bar{n}_T\left( n + m + 1\right) + n + m \right)\rho_{nm} +
@@ -300,7 +268,7 @@ for the field in a general form, while the specific reservoir model does not mat
 \rho_{n + 1, m + 1}
 \label{eqCh2_63}
 \end{eqnarray}
-In operator form, this equation reads
+In operator form, this equation is written as
 \begin{eqnarray}
 \dot{\rho} = - \frac{\omega}{2 Q}
 \left\{
@@ -312,8 +280,7 @@ In operator form, this equation reads
 \left .
 \left(\bar{n}_T + 1\right)\left(\hat{a}^{\dag}\hat{a}\hat{\rho} - 
 \hat{a}\hat{\rho}\hat{a}^{\dag}\right)
-\right\} + \mathrm{h.c.}
+\right\} + \text{h.c.}
 \label{eqCh2_64}
 \end{eqnarray}
-The equations \eqref{eqCh2_rho_final2}, \eqref{eqCh2_64} in
-number representation are one of many possible. Often it is convenient to use other representations.  
+The recording of the equation \eqref{eqCh2_rho_final2}, \ref{eqCh2_64} in the occupancy number representation is one of many. It is often convenient to use other representations.  

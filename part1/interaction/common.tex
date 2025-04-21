@@ -1,15 +1,13 @@
 %% -*- coding:utf-8 -*- 
 \section{General Theory of Interaction of a Dynamic System with a Thermostat}
 
-So far, we have dealt with a particular model of the interaction of a resonator mode (dynamic system) with an atomic beam in equilibrium at temperature $T$ (with a reservoir). Here we will consider a more general approach to the problem of interaction of a dynamic system with a reservoir \cite{bLaks1974}. We are dealing with two interacting systems: $A$ - a dynamic system, and $B$ - a reservoir (dissipative system). Systems $A$ and $B$ are weakly coupled, meaning the coupling energy is small compared to the energy of the dynamic system. The interaction Hamiltonian is denoted by $\hat{V}$. The dissipative system $B$ is an extensive system in thermodynamic equilibrium at temperature $T$. Initially, the systems $A$ and $B$ will be considered on equal footing. Denote the statistical operator of the whole system by $\hat{\rho}_{AB}$. 
-
-Introduce statistical operators $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ referring respectively only to systems $A$ and $B$. These operators are related to operator $\hat{\rho}_{AB}$ by the relations 
+So far, we have dealt with a specific model of the interaction of a resonator mode (dynamic system) with an atomic beam in equilibrium at temperature $T$ (with a reservoir). Here we consider a more general approach to the problem of interaction between a dynamic system and a reservoir \cite{bLaks1974}. We are dealing with two interacting systems: $A$ - the dynamic system and $B$ - the reservoir (dissipative system). The systems $A$ and $B$ are weakly connected, meaning the binding energy is small compared to the energy of the dynamic system. We denote the interaction Hamiltonian as $\hat{V}$. The dissipative system $B$ is a vast system in thermodynamic equilibrium at temperature $T$. We will initially consider systems $A$ and $B$ as equal. Let the statistical operator of the full system be $\hat{\rho}_{AB}$. We introduce statistical operators $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ related respectively to systems $A$ and $B$. These are related to the operator $\hat{\rho}_{AB}$ by the relations 
 \begin{equation}
 \hat{\rho}_{A} = Sp_B\left\{\hat{\rho}_{AB}\right\}, \quad
 \hat{\rho}_{B} = Sp_A\left\{\hat{\rho}_{AB}\right\}, \quad
 \label{eqCh2_78}
 \end{equation}
-The equation of motion for the statistical operator of the whole combined system in the interaction representation is 
+The equation of motion of the statistical operator of the entire combined system in the interaction representation has the form 
 \begin{equation}
 i\hbar\dot{\hat{\rho}}_{AB}
  = \left[
@@ -17,7 +15,7 @@ i\hbar\dot{\hat{\rho}}_{AB}
 \right].
 \label{eqCh2_79}
 \end{equation}
-The equations of motion for the reduced operators are clearly 
+The equations of motion for reduced operators are evidently equal to
 \begin{eqnarray}
 i\hbar\dot{\hat{\rho}}_{A} = Sp_B
 \left[
@@ -30,14 +28,14 @@ i\hbar\dot{\hat{\rho}}_{B} = Sp_A
 \right].
 \label{eqCh2_80}
 \end{eqnarray}
-The statistical operator $\hat{\rho}_{AB}$ can be represented in the form
+We represent the statistical operator $\hat{\rho}_{AB}$ in the following form
 \begin{equation}
 \hat{\rho}_{AB} = \hat{\rho}_{A} \otimes \hat{\rho}_{B} + \hat{\rho}_{C},
 \label{eqCh2_81}
 \end{equation}
-where $\hat{\rho}_{C}$ arises from the interaction between the systems, $\otimes$ denotes the external (tensor) product. 
-\rindex{Tensor product}
-At the initial time $t_0$ the systems are assumed to be non-interacting, so the total statistical operator equals the tensor product 
+where $\hat{\rho}_{C}$ is a consequence of the interaction between systems, $\otimes$ denotes the outer (tensor) product.
+\rindex{Tensor Product}
+At the initial moment $t_0$, the systems are assumed to be non-interacting, then the full statistical operator equals the outer product
 \[
 \left.\hat{\rho}_{AB}\right|_{t = t_0} = \hat{\rho}_{A} \otimes \hat{\rho}_{B},
 \] 
@@ -45,9 +43,9 @@ and
 \[
 \left.\hat{\rho}_{C}\right|_{t = t_0} = 0.
 \] 
-Now transform the term 
-$\left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right]$
-appearing in equation \eqref{eqCh2_80}, and obtain  
+Let us now transform the term 
+$\left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right]$,
+included in equation \eqref{eqCh2_80}, and we obtain  
 \begin{eqnarray}
 \left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] = 
 \hat{V}  \hat{\rho}_{A} \otimes \hat{\rho}_{B} - 
@@ -57,11 +55,12 @@ appearing in equation \eqref{eqCh2_80}, and obtain
 \hat{\rho}_{A} \otimes \hat{\rho}_{B} \hat{V}.
 \label{eqCh2_82}
 \end{eqnarray}
-because 
+since 
 \(
 \hat{\rho}_{A} \otimes \hat{\rho}_{B} = 
 \hat{\rho}_{B} \otimes \hat{\rho}_{A}
-\)   due to the fact that $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ act on different variables. From here, applying the partial trace $Sp_B$, we get 
+\)   because $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ act on
+different variables. From here, performing the operation $Sp_B$, we have 
 \begin{eqnarray}
 Sp_B \left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] = 
 Sp_B\left(\hat{V} \hat{\rho}_{B}\right) \hat{\rho}_{A} - 
@@ -78,9 +77,9 @@ Sp_A \left[\hat{V}, \hat{\rho}_{A} \otimes \hat{\rho}_{B}\right] =
 \label{eqCh2_84}
 \end{equation}
 where $\hat{V}_B= Sp_A\left(\hat{V}\hat{\rho}_A\right)$.  
-Taking into account the equalities \eqref{eqCh2_81}, \eqref{eqCh2_82},
+Considering the equalities \eqref{eqCh2_81}, \eqref{eqCh2_82},
 \eqref{eqCh2_83}, \eqref{eqCh2_84}, the equations of motion 
-for $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ can be written as  
+for $\hat{\rho}_{A}$ and $\hat{\rho}_{B}$ can be represented as  
 \begin{eqnarray}
 i\hbar\frac{d}{d t} \hat{\rho}_A\left(t\right) = 
 \left[\hat{V}_A\left(t\right), \hat{\rho}_A\right] +
@@ -91,7 +90,10 @@ i\hbar\frac{d}{d t} \hat{\rho}_B\left(t\right) =
 Sp_A \left[\hat{V}, \hat{\rho}_C\right].
 \label{eqCh2_85}
 \end{eqnarray}
-From the form of \eqref{eqCh2_85} it is clear that $\hat{V}_A$ and $\hat{V}_B$ represent the energy shifts of one system associated with its interaction with the other, for example, with the interaction of the dynamic system with the thermostat. These changes are small and in our case may be neglected. Thus \eqref{eqCh2_85} reduces to 
+From the form of \eqref{eqCh2_85} it is clear that $\hat{V}_A$ and $\hat{V}_B$ have
+the meaning of the energy change of one system connected with its interaction with
+another, such as the interaction of a dynamic system with
+a thermostat. These changes are small and in our case can be neglected. Thus \eqref{eqCh2_85} transforms into 
 \begin{eqnarray}
 i\hbar\frac{d}{d t} \hat{\rho}_A\left(t\right) = 
 Sp_B \left[\hat{V}, \hat{\rho}_C\right],
@@ -101,11 +103,11 @@ Sp_A \left[\hat{V}, \hat{\rho}_C\right].
 \label{eqCh2_85a}
 \end{eqnarray}
 
-For the operator $\hat{\rho}_C$, using that
+For the operator $\hat{\rho}_C$, using the fact that  
 \[
 \hat{\rho}_C = \hat{\rho}_{AB} - \hat{\rho}_A \otimes \hat{\rho}_B
 \]
-we can write the equation of motion as
+we can write the equation of motion as follows
 \begin{eqnarray}
 i \hbar \frac{d \hat{\rho}_C}{d t} = i \hbar \frac{d
   \hat{\rho}_{AB}}{d t} - i \hbar 
@@ -120,7 +122,7 @@ i \hbar \frac{d \hat{\rho}_C}{d t} = i \hbar \frac{d
 \label{eqCh2_86}
 \end{eqnarray}
 Using the equations of motion for $\hat{\rho}_{AB}$, $\hat{\rho}_{A}$,
-and $\hat{\rho}_{B}$ \eqref{eqCh2_85a}, for \eqref{eqCh2_86} we get 
+$\hat{\rho}_{B}$  \eqref{eqCh2_85a},  for \eqref{eqCh2_86} we obtain 
 \begin{eqnarray}
 i \hbar \frac{d \hat{\rho}_C}{d t} = 
 \left[\hat{V}, \left(\hat{\rho}_A \otimes \hat{\rho}_B +
@@ -131,29 +133,30 @@ i \hbar \frac{d \hat{\rho}_C}{d t} =
 \hat{\rho}_A \left(Sp_A\left[\hat{V}, \hat{\rho}_C\right]\right)
 \label{eqCh2_89}
 \end{eqnarray}
-Neglecting terms of second order smallness, we obtain a simple equation:
+Neglecting second-order small terms, we obtain a simple equation:
 \begin{equation}
 i \hbar \frac{d \hat{\rho}_C}{d t} = 
 \left[\hat{V}, \left(\hat{\rho}_A \otimes \hat{\rho}_B\right)\right]. 
 \label{eqCh2_90}
 \end{equation}
-First order small terms are $\hat{V}$ and $\hat{\rho}_C$.
-This follows from the assumption that interaction between the dynamic system and the thermostat is small. Terms containing products like $\hat{V}\hat{\rho}_C$ are considered second order small. The formal solution of equation \eqref{eqCh2_90} is  
+First-order small terms are $\hat{V}$, $\hat{\rho}_C$.
+This follows from the assumption that interaction between the dynamic
+system and the thermostat is small. Terms involving products like $\hat{V}\hat{\rho}_C$ are considered small of the second order. A formal solution to equation \eqref{eqCh2_90} is 
 \begin{equation}
 \hat{\rho}_C\left(t\right) = - \frac{i}{\hbar}\int_{t_0}^t
 \left[\hat{V}\left(t'\right), \left(\hat{\rho}_A \otimes
   \hat{\rho}_B\right)\right] dt' 
 \label{eqCh2_91}
 \end{equation}
-with initial condition $\hat{\rho}_C\left(t_0\right) = 0$. 
+with initial conditions $\hat{\rho}_C\left(t_0\right) = 0$. 
 
-So far, we have considered systems $A$ and $B$ as equal. Now take into account that the dynamic system $A$ is small, while the dissipative system $B$ is so large that its interaction with the dynamic system cannot significantly disturb its equilibrium. Incorporate this by setting $\frac{d \hat{\rho}_B}{d t} = 0$: 
+So far, we have considered systems $A$ and $B$ as equal. Now we take into account that the dynamic system $A$ is small, and the dissipative system $B$ is so large that interaction with the dynamic system cannot significantly disrupt its equilibrium. We account for this by setting $\frac{d \hat{\rho}_B}{d t} = 0$: 
 \begin{equation}
 \hat{\rho}_B\left(t'\right) =
 \hat{\rho}_B\left(t_0\right).
 \label{eqCh2_92}
 \end{equation}
-Substituting into the equation for $\hat{\rho}_A$ \eqref{eqCh2_85} the expressions \eqref{eqCh2_89} and \eqref{eqCh2_91}, we get 
+Substituting in the equation for $\hat{\rho}_A$ \eqref{eqCh2_85} the equalities \eqref{eqCh2_89} and \eqref{eqCh2_91}, we obtain 
 \begin{eqnarray}
 \frac{d \hat{\rho}_A}{d t} = - \frac{1}{\hbar^2}
 \int_{t_0}^t Sp_B\left[
@@ -202,10 +205,9 @@ Substituting into the equation for $\hat{\rho}_A$ \eqref{eqCh2_85} the expressio
 \label{eqCh2_93}
 \end{eqnarray}
 
-This equation is for the density operator of the dynamic system $A$ interacting with the dissipative system $B$. For the extensive system $B$, the correlation time of $\hat{V}\left(t\right)$ and $\hat{V}\left(t'\right)$ is very short, much less than the characteristic time of change of $\hat{\rho}_A$. Therefore, the significant integration region is near $t' = t$. Then in many cases during integration we can put
+This is the equation for the density operator of the dynamic system $A$ interacting with the dissipative system $B$. For the vast system $B$, the correlation time of $\hat{V}\left(t\right)$ and $\hat{V}\left(t'\right)$ is very small, significantly less than the characteristic time change of $\hat{\rho}_A$. Thus, the significant integration region is in the vicinity of $t' = t$. Then, in many cases during integration, we can set
 \[
 \hat{\rho}_A\left(t'\right) =
 \hat{\rho}_A\left(t\right).
 \]
-A more detailed exposition of the general theory of interaction of a dynamic system with a thermostat can be found in \cite{bLaks1974}. Let us apply the general theory to specific cases.  
- 
+For further details on the general theory of interaction of a dynamic system with a thermostat, see \cite{bLaks1974}. We will apply the general theory to specific cases.

@@ -2,20 +2,16 @@
 \section{Quantization of the Free Electromagnetic Field}
 \label{Ch1_quantumemf}
 \rindex{quantization!free electromagnetic field}
-Using the analogy noted earlier, one can quantize
-the electromagnetic field similarly to how a simple
-mechanical harmonic oscillator is quantized.
+Using the previously noted analogy, the electromagnetic field can be quantized similarly to a simple mechanical harmonic oscillator.
 
-Upon quantization, $q_n$ and $p_n$ become operators $\hat{q}_n$,
-$\hat{p}_n$, satisfying the same commutation relations as
-coordinate and momentum:
+In quantization, $q_n$ and $p_n$ become operators $\hat{q}_n$,
+$\hat{p}_n$, satisfying the same commutation relations as position and momentum:
 \begin{equation}
 \left[\hat{q}_n, \hat{p}_n\right] = \hat{q}_n\hat{p}_n -
 \hat{p}_n \hat{q}_n = i\hbar
 \label{eqCh1_comut}
 \end{equation}
-where $\hat{q}_n$ and $\hat{p}_n$ are Hermitian (self-adjoint)
-operators. In the Schrödinger representation they are time-independent, in the Heisenberg representation they are time-dependent. It is convenient to introduce new operators through these, which are not self-adjoint but are conjugates of each other:
+where $\hat{q}_n$ and $\hat{p}_n$ are Hermitian (self-adjoint) operators. In the Schrödinger picture, they are time-independent, while in the Heisenberg picture, they depend on time. It is convenient to introduce new operators via these operators, which are not self-adjoint but are conjugate to each other:
 \begin{equation}
 \hat{a}_n = \frac{1}{\sqrt{2 \hbar \omega_n}}
 \left( \omega_n \hat{q}_n + i \hat{p}_n\right),
@@ -24,7 +20,7 @@ operators. In the Schrödinger representation they are time-independent, in the 
 \left( \omega_n \hat{q}_n - i \hat{p}_n\right),
 \label{eqCh1_aadef}
 \end{equation}
-The inverse relations yield
+The inverse relation gives
 \begin{equation}
 \hat{q}_n = \sqrt{\frac{\hbar}{2 \omega_n}}
 \left(\hat{a}_n + \hat{a}_n^{\dag}\right),
@@ -35,7 +31,7 @@ The inverse relations yield
 \end{equation}
 
 Using expressions \eqref{eqCh1_comut}, 
-\eqref{eqCh1_aadef}, \eqref{eqCh1_qpdef} one can obtain commutation
+\eqref{eqCh1_aadef}, \eqref{eqCh1_qpdef}, one can obtain the commutation
 relations for the operators $\hat{a}_n$ and $\hat{a}_n^{\dag}$:
 \begin{eqnarray}
 \left[\hat{a}_n, \hat{a}_n^{\dag}\right] = 
@@ -56,7 +52,7 @@ Thus,
 \left[\hat{a}_n, \hat{a}_n^{\dag}\right] = 1.
 \label{eqCh1_aacomutation}
 \end{equation}
-Moreover, it is obvious that
+Additionally, it is obvious that
 \begin{equation}
 \left[\hat{a}_n, \hat{a}_n\right] = 0,
 \quad
@@ -87,25 +83,24 @@ The Hamiltonian, expressed through the new operators, takes the form
 \label{eqCh1_quant_stoyachie_volny}
 \end{eqnarray}
 
-Here the relations between $\hat{q}_n$, $\hat{p}_n$ 
-and $\hat{a}_n^{\dag}$, $\hat{a}_n$ \eqref{eqCh1_aadef} are used, as well as
-the commutation relation \eqref{eqCh1_aacomutation}.
+Here, the relation of $\hat{q}_n$, $\hat{p}_n$
+with $\hat{a}_n^{\dag}$, $\hat{a}_n$ \eqref{eqCh1_aadef}, as well as the
+commutation relation \eqref{eqCh1_aacomutation}, are used.
 
-The energy $\frac{1}{2}\omega_n \hbar$ corresponds to zero-point
-oscillations. The total zero-point energy
+The energy $\frac{1}{2}\omega_n \hbar$ corresponds to zero
+oscillations. The total energy of zero oscillations
 \[
 \frac{1}{2}\sum_{(n)}\omega_n \hbar \to \infty,
 \] 
-since the number of modes is infinite. This does not lead to 
-significant problems because we are only interested in energy differences,
-and the constant term can be discarded. Then the Hamiltonian
-takes the form
+as the number of modes is infinite. This does not lead to 
+significant difficulties since we are only interested in energy differences, and the constant part can be discarded. Then the Hamiltonian
+takes the form 
 \begin{equation}
 \hat{\mathcal{H}} = \sum_{(n)}\hat{\mathcal{H}_n} =
 \sum_{(n)}\hbar \omega_n \hat{a}_n^{\dag}\hat{a}_n
 \end{equation}
 
-The electric and magnetic field operators can be expressed as
+Operators of the electric and magnetic fields can be represented as
 \begin{eqnarray}
 \hat{\vec{E}} = \sum_{(n)}\frac{\hat{q}_n
   \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right) = 
@@ -120,11 +115,7 @@ i \sum_{(n)}\sqrt{\frac{\hbar \omega_n}{2 \mu_0}}
 \vec{H}_n\left(r\right).
 \end{eqnarray}
 
-Let us consider a simple example. In laser theory one considers a resonator
-formed by two parallel mirrors. Often, an approximate field representation
-is used, assuming the field depends only on the longitudinal coordinate (\autoref{figCh1_Res}). In
-this approximation, the normalized eigenfunction (mode) can be
-represented as:
+Let's provide a simple example. In laser theory, a resonator is considered, formed by two parallel mirrors. In this case, an approximate field representation is often used, assuming that the field depends only on the longitudinal coordinate (\autoref{figCh1_Res}). In this approximation, the normalized eigenfunction (mode) can be presented as follows:
 \begin{equation}
 E_{nx} = \sqrt{\frac{2}{V}} \sin k_n z,
 \quad
@@ -134,11 +125,11 @@ k_n = \frac{\pi n}{L},
 \quad
 \omega_n = \frac{c \pi n}{L},
 \end{equation}
-where  $V = SL$,  $L$ is the resonator length,  $S$ is the cross-section of the light beam.
+where $V = SL$, $L$ - length of the resonator, $S$ - cross-section of the light beam.
 
 \input ./part1/quantel/fig1.tex
 
-The operator of the mode's electric field in this case will be:
+The operator of the electric field mode will then have the form:
 \begin{eqnarray}
 \hat{E}_{nx} = 
 \sqrt{\frac{\hbar \omega_n}{2 \varepsilon_0}}
@@ -150,7 +141,7 @@ E_1 \left(\hat{a}_n^{\dag} + \hat{a}_n \right) \sin k_n z,
 \left(\hat{a}_n^{\dag} - \hat{a}_n \right) \cos k_n z,
 \label{eqCh1_EH_simple}
 \end{eqnarray}
-where
-$E_1 = \sqrt{\frac{\hbar \omega}{\varepsilon_0 V}}$ is the
+where 
+$E_1 = \sqrt{\frac{\hbar \omega}{\varepsilon_0 V}}$ - 
 electric field corresponding to one photon (quantum) in
 the mode. 

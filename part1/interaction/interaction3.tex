@@ -1,13 +1,11 @@
 %% -*- coding:utf-8 -*- 
-\section{Interaction of the resonator electromagnetic field with an atom reservoir at temperature $T$}
+\section{Interaction of Electromagnetic Field of the Resonator with a Reservoir of Atoms at Temperature $T$}
 \label{ch2_6}
-Let us apply the general approach described above to a system consisting of a harmonic oscillator (electromagnetic field mode) interacting with a reservoir in the form of an atomic beam of two-level atoms in equilibrium at temperature $T$. As we will see later, the specific model of the reservoir does not affect the final result.\footnote{If the interaction is weak, i.e., the binding energy is small compared to the energy of the dynamical system.} The considered model is shown in \autoref{figPart1Ch2_7}.
+We apply the general approach outlined above to a system consisting of a harmonic oscillator (electromagnetic field mode) interacting with a reservoir in the form of a beam of two-level atoms in equilibrium at temperature $T$. As we will see later, the specific model of the reservoir does not matter for the final result.\footnote{If the interaction is weak, i.e., the binding energy is small compared to the energy of the dynamic system.} The considered model is depicted in \autoref{figPart1Ch2_7}.  
 
 \input ./part1/interaction/fig7.tex
 
-The initial atomic density matrix
-\rindex{Density matrix}
-corresponds to a Boltzmann distribution at temperature $T$:
+The initial atomic density matrix \rindex{Density matrix} corresponds to the Boltzmann distribution at temperature $T$:  
 \begin{equation}
 \hat{\rho}_{at} = 
 \left(
@@ -29,10 +27,8 @@ e^{-\frac{\hbar \omega_a}{k_B T}} & 0
 \end{equation}
 Here $\hbar \omega_a = E_a$ is the energy of the upper level;  
 $\hbar \omega_b = E_b$ is the energy of the lower level; 
-$z = e^{-\frac{\hbar \omega_a}{k_B T}} + e^{-\frac{\hbar \omega_b}{k_B T}}$ is the partition function; $T$ is the reservoir temperature.
-The interaction Hamiltonian is taken in the form
-\eqref{eqCh2_task22}. For simplicity, let 
-$\omega_{ab} = \omega$, i.e., the transition frequency equals the mode frequency. Then  
+$z = e^{-\frac{\hbar \omega_a}{k_B T}} + e^{-\frac{\hbar \omega_b}{k_B T}}$ is the partition function; $T$ is the temperature of the reservoir. 
+We take the interaction Hamiltonian in the form of \eqref{eqCh2_task22}. For simplicity, assume that $\omega_{ab} = \omega$, i.e., the transition frequency equals the mode frequency. Then  
 \begin{equation}
 \hat{V} = \hbar g \left(\hat{\sigma}\hat{a}^{\dag} + 
 \hat{\sigma}^{\dag}\hat{a} \right)= 
@@ -65,9 +61,9 @@ since
 0 & 0 
 \end{array}
 \right)
-\); $g$ is the interaction constant.
+\); $g$ is the interaction constant. 
 
-We keep terms up to second order inclusive in the iterative series \eqref{eqCh2_rho_sequance}. In our case, after integration, a simple expression is obtained:
+We retain terms up to the second order in the iterative series \eqref{eqCh2_rho_sequance}. In our case, after integration, we get a simple expression  
 \begin{eqnarray}
 \hat{\rho}_{f}\left(t\right) =
 \hat{\rho}_{f}\left(t_0 + \tau\right) = 
@@ -77,15 +73,13 @@ Sp_{at}
 \left\{
 - \frac{i}{\hbar}\tau\left[\hat{V}, \hat{\rho}_{at, f}\right]
 - \frac{1}{2} \left(\frac{\tau}{\hbar}\right)^2
-\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}
-\right]\right]
+\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right]\right]
 \right\}, 
 \label{eqCh2_task4}
 \end{eqnarray}
-where $\hat{\rho}_{at, f}$ is the statistical operator of the atom-field system;
-$\hat{\rho}_{f}$ is the statistical operator of the field traced over the atomic variables.
+where $\hat{\rho}_{at, f}$ is the statistical operator of the atom-field system; $\hat{\rho}_{f}$ is the statistical operator of the field, folded over atomic variables.
   
-In obtaining \eqref{eqCh2_task4}, it was assumed that an atom from the beam interacts with the field during the time $\tau$ (the transit time through the resonator). From the initial conditions (at time $t_0$), we have:  
+In deriving \eqref{eqCh2_task4}, it was assumed that the atom beam interacts with the field for a time $\tau$ (time of flight through the resonator). From the initial conditions (at time $t_0$), we have:  
 \begin{equation}
 \hat{\rho}_{at, f} = \hat{\rho}_{f}
 \left(
@@ -103,7 +97,7 @@ In obtaining \eqref{eqCh2_task4}, it was assumed that an atom from the beam inte
 \end{array}
 \right)
 \end{equation}
-The first order term in \eqref{eqCh2_task4} gives a matrix with zero diagonal elements with respect to reservoir variables. The trace of this matrix over these variables is obviously zero:
+The first-order term in \eqref{eqCh2_task4} gives a matrix with zero diagonal elements in the reservoir variables. The trace of the matrix in these variables is obviously zero  
 \begin{eqnarray}
 Sp_{at}\left[\hat{V}, \hat{\rho}_{at, f}\right] = 
 \hbar g Sp_{at}
@@ -131,7 +125,7 @@ Sp_{at}\left[\hat{V}, \hat{\rho}_{at, f}\right] =
 = 0.
 \label{eqCh2_sp_1}
 \end{eqnarray}
-The matrix entering the second order term has nonzero diagonal elements, and its trace over reservoir variables is nonzero and can be computed:
+The matrix included in the second-order term has non-zero diagonal elements, its trace in the reservoir variables is non-zero and can be calculated: 
 \begin{eqnarray}
 Sp_{at}\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right] \right]
 = \hbar^2 g^2 \cdot
@@ -146,11 +140,10 @@ Sp_{at}\left[\hat{V},\left[\hat{V}, \hat{\rho}_{at, f}\right] \right]
 \hat{a}^{\dag} \hat{a}\rho_{bb} \hat{\rho}_{f} -
 \hat{a}^{\dag}\rho_{aa} \hat{\rho}_{f}\hat{a} 
 \end{array}
-\right) + \text{h.c.} 
+\right) + \mbox{c.c.} 
 \label{eqCh2_sp_2}
 \end{eqnarray}
-From here, using equations \eqref{eqCh2_task4},
-\eqref{eqCh2_sp_1}, \eqref{eqCh2_sp_2}, we obtain the final equation for the field statistical operator $\hat{\rho}$:  
+From here, using equations \eqref{eqCh2_task4}, \eqref{eqCh2_sp_1}, \eqref{eqCh2_sp_2}, we obtain the final equation for the statistical operator of the field $\hat{\rho}$:  
 \begin{eqnarray}
 \hat{\rho}_{f}\left(t_0 + \tau\right) =
 \hat{\rho}_{f}\left(t_0\right) - \frac{1}{2}g^2 \tau^2
@@ -165,16 +158,16 @@ From here, using equations \eqref{eqCh2_task4},
 \left(\hat{a}^{\dag}\hat{a}\hat{\rho}_{f} - 
 \hat{a}\hat{\rho}_{f}\hat{a}^{\dag}
 \right)\rho_{bb}
-\right\} + \text{h.c.}
+\right\} + \mbox{c.c.}
 \label{eqCh2_rho_final}
 \end{eqnarray}
-Thus, due to the interaction with one atom, the statistical operator of the mode changes by an amount 
+Thus, the statistical operator of the mode due to interaction with one atom changes by an amount 
 \(
 \delta\hat{\rho}_{f}=
 \hat{\rho}_{f}\left(t_0 + \tau\right) -
 \hat{\rho}_{f}\left(t_0\right)
-\), given by \eqref{eqCh2_rho_final}. If the injection rate of atoms into the resonator is $r$ atoms per second, then during the time $\Delta t$, $r \Delta t$ atoms will have interacted. The change in the density operator over this time will be 
-$\Delta \hat{\rho}_{f} = \delta\hat{\rho}_{f}r \Delta t$. Define the average derivative as 
+\), determined by \eqref{eqCh2_rho_final}. If the injection rate of atoms into the resonator is $r$ atoms per second, during the time $\Delta t$ $r \Delta t$ atoms will interact. The change in the density operator over this time will be 
+$\Delta \hat{\rho}_{f} = \delta\hat{\rho}_{f}r \Delta t$. We define a smoothed derivative as 
 \[
 \dot{\hat{\rho}}_{f} = \frac{\Delta \hat{\rho}_{f}}{\Delta t} = 
 \delta\hat{\rho}_{f} r = r 
@@ -183,7 +176,7 @@ $\Delta \hat{\rho}_{f} = \delta\hat{\rho}_{f}r \Delta t$. Define the average der
 \hat{\rho}_{f}\left(t_0\right)
 \right).
 \]
-Denote $r_a = r \rho_{aa}$ as the injection rate of atoms in the upper state, and $r_b = r \rho_{bb}$ as the injection rate of atoms in the lower state. This leads to the final form of the equation for the statistical operator of the resonator mode field:
+Let us denote: $r_a = r \rho_{aa}$ as the injection rate of atoms in the upper state; $r_b = r \rho_{bb}$ as the injection rate of atoms in the lower state. This leads us to the final form of the equation for the statistical operator of the resonance mode field 
 \begin{eqnarray}
 \dot{\hat{\rho}}_{f} =
 - \frac{1}{2}R_a
@@ -196,15 +189,14 @@ Denote $r_a = r \rho_{aa}$ as the injection rate of atoms in the upper state, an
 \left(\hat{a}^{\dag}\hat{a}\hat{\rho}_{f} - 
 \hat{a}\hat{\rho}_{f}\hat{a}^{\dag}
 \right)
- + \text{h.c.}
+ + \mbox{c.c.}
 \label{eqCh2_rho_final2}
 \end{eqnarray}
-Here we denote 
+Here it is denoted 
 \begin{eqnarray}
 R_a=r_a g^2\tau^2,
 \nonumber \\
 R_b=r_b g^2\tau^2.
 \label{eqCh2_RaRbDefenition}
 \end{eqnarray}
-Equation
-\eqref{eqCh2_rho_final2} is written in operator form. It can be written in various representations.
+Equation \eqref{eqCh2_rho_final2} is written in operator form. It can be written in different representations.   

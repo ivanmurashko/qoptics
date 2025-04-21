@@ -1,16 +1,8 @@
-%% -*- coding:utf-8 -*- 
-\section{Relaxation of an atom in the case of the simplest
-  reservoir consisting of harmonic oscillators}
-Consider a multimode electromagnetic field described by creation and annihilation operators $\hat{a}_k^{\dag}$,
-$\hat{a}_k$. The frequency of the $k$-th mode is denoted by $\omega_k$. 
+\section{Relaxation of an Atom in the Simplest Reservoir Consisting of Harmonic Oscillators}
+Consider a multimode electromagnetic field described using the creation and annihilation operators $\hat{a}_k^{\dag}$, $\hat{a}_k$. The frequency of the $k$-th mode is denoted as $\omega_k$.
 
-This electromagnetic field interacts with a certain two-level
-atom. The atom can be in two states: 
-excited $\ket{a}$ and non-excited
-$\ket{b}$. The transition operators remain 
-$\hat{\sigma}$ and $\hat{\sigma}^{\dag}$. The transition frequency is denoted by
-\rindex{Hamiltonian}
-$\Omega$. The interaction Hamiltonian in this case has the form  
+This electromagnetic field interacts with a certain two-level atom. The atom can be in two states: excited $\ket{a}$ and unexcited $\ket{b}$. The transition operators remain $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$. The transition frequency is denoted as \rindex{Hamiltonian} $\Omega$. The interaction Hamiltonian in this case is 
+
 \begin{equation}
 \hat{V}\left(t\right) = \hbar
 \sum_{(k)} g_k \hat{a}_k^{\dag} \hat{\sigma}e^{-i \left(
@@ -19,13 +11,9 @@ $\Omega$. The interaction Hamiltonian in this case has the form
 \mbox{h.c.}
 \label{eqCh2_94}
 \end{equation}
-where $g_k$ is the interaction constant.
+where $g_k$ is the coupling constant.
 
-Thus, the system $B$ (the reservoir) is the multimode
-electromagnetic field, and the dynamic system $A$ under study is a
-two-level atom. The density operator of the reservoir (electromagnetic
-field) is denoted by $\hat{\rho}_R$. The density operator of the dynamic
-system (atom) under study is denoted by $\hat{\rho}_{at}$.
+Thus, system $B$ (the reservoir) will be a multimode electromagnetic field, and the dynamic system under study $A$ is a two-level atom. The density operator of the reservoir (electromagnetic field) is denoted as $\hat{\rho}_R$. The density operator of the dynamic system under study (atom) is denoted as $\hat{\rho}_{at}$.
 
 The following relations hold:
 \begin{equation}
@@ -36,8 +24,7 @@ Sp_R\left(
 \right) = \bar{n}_k
 \label{eqCh2_96}
 \end{equation}
-where $\bar{n}_k$ is the
-average number of photons in the reservoir mode; 
+where $\bar{n}_k$ is the average number of photons in the mode of the reservoir; 
 \begin{eqnarray}
 Sp_R\left(\hat{a}_k\hat{a}_k^{\dag}\hat{\rho}_R\right) = \bar{n}_k + 1,
 \nonumber \\
@@ -45,8 +32,7 @@ Sp_R\left(\hat{a}_k\hat{a}_k\hat{\rho}_R\right) =
 Sp_R\left(\hat{a}_k^{\dag}\hat{a}_k^{\dag}\hat{\rho}_R\right) = 0.
 \label{eqCh2_96_add}
 \end{eqnarray}
-Using these equalities, the general equation
-\eqref{eqCh2_93} can be rewritten as:  
+Using these equalities, the general equation \eqref{eqCh2_93} can be represented as:
 %FIXME!!! check it
 \begin{eqnarray}
 \dot{\hat{\rho}}_{at}\left(t\right) = 
@@ -89,30 +75,23 @@ e^{-i\left(\Omega - \omega_k\right)
 \label{eqCh2_97}
 \end{eqnarray}
 
-Summation over $k$, taking into account the quasi-continuous spectrum of states
-of the dissipative system, can be replaced by integrals
-\eqref{eqCh1_modenumber_kvazy_contig} 
+Summation over $k$, considering the quasi-continuous spectrum of the dissipative system's states, can be replaced by integration
+\eqref{eqCh1_modenumber_kvazy_contig}
 \[
 \sum_{(k)} \rightarrow \int D\left(\omega\right)d \omega,
 \]  
-where $D\left(\omega\right)$ is the spectral density of states. We replace
-$D\left(\omega\right)$, $\bar{n}\left(\omega\right)$,
-$g^2\left(\omega\right)$ with $D$, $\bar{n}$, $g^2$ — their values at
-$\omega = \Omega$, assuming that these functions slowly   
-depend on frequency. We use the equality (see
-the integral representation of the delta function
-\eqref{eq:delta_from_integral})
+where $D\left(\omega\right)$ is the spectral density of states. Replace $D\left(\omega\right)$, $\bar{n}\left(\omega\right)$, $g^2\left(\omega\right)$ with $D$, $\bar{n}$, $g^2$ - their values at $\omega = \Omega$, assuming these functions slowly depend on frequency. Using the equality (see integral representation of the delta function \eqref{eq:delta_from_integral})
 \begin{eqnarray}
 \int_{0}^\infty
-e^{\pm i\left(\Omega - \omega\right)
+e^{\pm\left(\Omega - \omega\right)
 \left(t - t'\right)}d \omega = \left|\nu = \omega - \Omega\right| =
 \nonumber \\
 =
 \int_{-\Omega}^\infty
-e^{ - i \nu
+e^{ - \nu
 \left(t \mp t'\right)}d \nu \approx
 \int_{-\infty}^\infty
-e^{ - i \nu
+e^{ - \nu
 \left(t \mp t'\right)}d \nu = 
 \nonumber \\
 = 2 \pi \delta \left(t \mp t'\right) 
@@ -137,21 +116,13 @@ and integrate over time. This leads us to the equation
 + \mbox{h.c.}
 \label{eqCh2_99}
 \end{eqnarray}
-where $\gamma =4 \pi D g^2$, with $\bar{n}$ taken at the mode frequency $\Omega$.
-Equation \eqref{eqCh2_99} has the same form as equation
-\eqref{eqCh2_64} obtained earlier. The equations 
-completely coincide if one takes $\gamma = \frac{\omega}{Q}$ and
-makes the substitution $\hat{\sigma} \rightarrow \hat{a}$, $\hat{\sigma}^{\dag}
-\rightarrow \hat{a}^{\dag}$.  This once again confirms that the final
-result does not depend on the nature of the reservoir.   
+where $\gamma =4 \pi D g^2$, $\bar{n}$ taken at the mode frequency $\Omega$. Equation \eqref{eqCh2_99} has the same form as equation \eqref{eqCh2_64}, obtained earlier. The equations fully coincide if we accept $\gamma = \frac{\omega}{Q}$ and make the substitution $\hat{\sigma} \rightarrow \hat{a}$, $\hat{\sigma}^{\dag} \rightarrow \hat{a}^{\dag}$. This again confirms that the final result does not depend on the nature of the reservoir.
 
-At reservoir temperature $T = 0$  photons are absent and $\bar{n} =
-0$.  Assume that at the initial moment the atom is excited 
+At a reservoir temperature $T = 0$, photons are absent and $\bar{n} = 0$. Assume that initially the atom is excited 
 \[
 \hat{\rho}_{at}\left(t_0\right) = 1.
 \]
-Using the properties \eqref{eqCh2_8} - \eqref{eqCh2_task1} of the operators 
-$\hat{\sigma}$ and $\hat{\sigma}^{\dag}$, we obtain   
+Using the properties \eqref{eqCh2_8} - \eqref{eqCh2_task1} of the operators $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$, we obtain   
 \begin{eqnarray}
 \dot{\rho}_{aa} = \bra{a}\dot{\hat{\rho}}_{at}\ket{a} =
 -\frac{1}{2}\gamma
@@ -172,11 +143,10 @@ Here we used the relations
 \(\hat{\sigma}^{\dag}\ket{a} = 0\),
 \(\hat{\sigma}^{\dag}\ket{b} = \ket{a}\),
 \(\hat{\sigma}\ket{a} = \ket{b}\),
-\(\hat{\sigma}\ket{b} = 0\),
-and their conjugates. The final result is 
+\(\hat{\sigma}\ket{b} = 0\)
+and their conjugates. The final result 
 \begin{equation}
 \dot{\hat{\rho}}_{aa} = - \gamma \rho_{aa}.
 \label{eqCh2_102}
 \end{equation}
-This means that as a result of spontaneous emission the probability
-of finding the atom in the upper level decreases exponentially. 
+This means that as a result of spontaneous emission, the probability of finding the atom at the upper level exponentially decreases. 

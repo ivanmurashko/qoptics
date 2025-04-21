@@ -1,5 +1,5 @@
 %% -*- coding:utf-8 -*- 
-\section{Decomposition of the Electromagnetic Field into Modes (Types of Oscillations)}
+\section{Decomposition of the Electromagnetic Field by Modes (Types of Oscillations)}
 The electromagnetic field satisfies the system of Maxwell's equations:
 \begin{equation}
 rot \vec{H} = \frac{\partial \vec{D}}{\partial t} + \vec{j}, 
@@ -9,7 +9,7 @@ rot \vec{E} = - \frac{\partial \vec{B}}{\partial t},
 div \vec{D} = \rho, \quad
 div \vec{B} = 0.
 \end{equation}
-In free space ($\vec{j} = 0$, $\rho = 0$) we have a simpler system: 
+In free space ($\vec{j} = 0$, $\rho = 0$) we have a simpler system:
 \begin{eqnarray}
 rot \vec{H} = \varepsilon_0 \frac{\partial \vec{E}}{\partial t}, 
 \quad
@@ -27,7 +27,7 @@ div \vec{E} = 0,
 \label{eqCh1_EMF_at_FreeSpace}
 \end{eqnarray}
 
-By eliminating the quantity $\vec{H}$ from \eqref{eqCh1_EMF_at_FreeSpace}, we obtain the equation:
+Eliminating the term $\vec{H}$ from \eqref{eqCh1_EMF_at_FreeSpace}, we obtain the equation:
 \begin{equation}
 rot rot \vec{E} = - \mu_0 \frac{\partial}{\partial t} rot \vec{H} = -
 \varepsilon_0 \mu_0 \frac{\partial^2 \vec{E}}{\partial t^2} = 
@@ -50,18 +50,18 @@ div \vec{E} = 0,
 \varepsilon_0 = \frac{1}{c^2}.
 \label{eqCh1_EMF_at_FreeSpace2}
 \end{eqnarray}
-which is fully equivalent to the original system of equations. 
+which is fully equivalent to the original system of equations.
 
-For quantizing the electromagnetic field, it is convenient to represent its equations in the so-called Hamiltonian form. The essence of the method, well known to radio physicists, is that the field is decomposed into modes, and solving the equations is reduced to solving a system of ordinary differential equations for the expansion coefficients that depend on time. For this purpose, a system of orthogonal vector functions is introduced, representing the field distributions corresponding to the electromagnetic field's inherent oscillations in a certain volume $V$ bounded by a perfectly conducting surface $S$. The fields must satisfy the system of equations \eqref{eqCh1_EMF_at_FreeSpace2}. On the surface $S$, certain boundary conditions must be met, for example:
+For quantizing the electromagnetic field, its equations are conveniently represented in the so-called Hamiltonian form. The essence of the method, well known to radiophysicists, is that the field is decomposed into modes, and solving the equations is reduced to solving a system of ordinary differential equations for the expansion coefficients, which depend on time. For this purpose, a system of orthogonal vector functions is introduced, which are the distribution of fields corresponding to the natural oscillations of the electromagnetic field in a certain volume $V$, bounded by an ideally conducting surface $S$. The fields must satisfy the system of equations \eqref{eqCh1_EMF_at_FreeSpace2}. On the surface $S$ certain boundary conditions must be satisfied, for example:
 \begin{equation}
 \left. \left[ \vec{n} \vec{E} \right] \right|_S = 0 \,
-or
+\mbox{or}
 \left. \left( \vec{n} \vec{H} \right) \right|_S = 0,
 \label{eqCh1_bound}
 \end{equation}
-corresponding to a perfectly conducting surface.
+corresponding to an ideally conducting surface.
 
-An arbitrary electromagnetic field within volume $V$ is represented by the expansions:
+An arbitrary electromagnetic field in volume $V$ is represented by decompositions:
 \begin{equation}
 \vec{E}\left(r, t\right) = \sum_{(n)} Q_n\left(t\right)\vec{E}_n\left(r\right),
 \quad
@@ -69,15 +69,15 @@ An arbitrary electromagnetic field within volume $V$ is represented by the expan
 \label{eqCh1_sep0}
 \end{equation}
 where $Q_n\left(t\right)\vec{E}_n\left(r\right)$ and 
-$P_n\left(t\right)\vec{H}_n\left(r\right)$ are partial solutions of the equations satisfying the boundary conditions \eqref{eqCh1_bound}; $\vec{E}_n\left(r\right)$ and  
+$P_n\left(t\right)\vec{H}_n\left(r\right)$ are partial solutions of the equations satisfying boundary conditions \eqref{eqCh1_bound}; $\vec{E}_n\left(r\right)$ and  
 $\vec{H}_n\left(r\right)$ correspond to the $n$-th type of oscillation in volume $V$ (mode).
-From the equations \eqref{eqCh1_EMF_at_FreeSpace2} we have:
+From the equations \eqref{eqCh1_EMF_at_FreeSpace2}, we have:
 \begin{equation}
 Q_n\left(t\right) \, \Delta \vec{E}_n\left(r\right) = 
 \frac{1}{c^2} \frac{d^2 Q_n}{d t^2}\vec{E}_n\left(r\right). 
 \end{equation}
 
-By separating variables, we obtain:
+Separating variables, we get:
 \begin{equation}
 \frac{d^2 Q_n}{d t^2} + \omega_n^2 Q_n = 0,
 \quad
@@ -85,17 +85,17 @@ By separating variables, we obtain:
 \vec{E}_n \left(r\right)
 \label{eqCh1_after_sep}
 \end{equation}
-where $\omega_n$ is the separation constant, being the frequency of the inherent oscillations.
+where $\omega_n$ is the separation constant, which is the frequency of natural oscillations.
 
-The second of the equations \eqref{eqCh1_after_sep} takes the form:
+The second of the equations \eqref{eqCh1_after_sep} takes the following form:
 \begin{equation}
 \Delta \vec{E}_n\left(r\right) + k_n^2 \vec{E}_n\left(r\right) = 0,
 \quad
 k_n^2 = \frac{\omega_n^2}{c^2},
 \end{equation}
 with boundary conditions  
-$\left. \left[ \vec{n} \vec{E}_n \right] \right|_S = 0$. This problem has a solution only at certain values  
-$k_n\left(\omega_n\right)$.  
+$\left. \left[ \vec{n} \vec{E}_n \right] \right|_S = 0$. This problem has a solution only at certain values of  
+$k_n\left(\omega_n\right)$.
 
 To determine $\vec{H}_n\left(r\right)$, we use the equations 
 \eqref{eqCh1_EMF_at_FreeSpace2}:
@@ -106,18 +106,18 @@ Q_n\left(t\right)  rot
 \label{eqCh1_separationH_before_podstanovka}
 \end{equation}
 
-Firstly, we make the following substitution:
+First, we make the following substitution:
 \begin{equation}
 Q_n\left(t\right) = \frac{\omega_n}{\sqrt{\varepsilon_0}}q_n\left(t\right),
 \quad
 P_n\left(t\right) = \frac{1}{\sqrt{\mu_0}}p_n\left(t\right).
 \label{eqCh1_separation_podstanovka}
 \end{equation}
-For the new variable $q_n$ we obviously have from \eqref{eqCh1_after_sep}
+For the new variable $q_n$, it is obvious from \eqref{eqCh1_after_sep} that we have
 \[
 \frac{d^2 q_n}{d t^2} + \omega_n^2 q_n = 0.
 \]
-The expansion \eqref{eqCh1_sep0} in new variables takes the form:
+The decomposition \eqref{eqCh1_sep0} in the new variables has the form:
 \begin{equation}
 \vec{E}\left(r, t\right) = \sum_{(n)}
 \frac{q_n\left(t\right) \omega_n}{\sqrt{\varepsilon_0}} \vec{E}_n\left(r\right),
@@ -128,14 +128,14 @@ The expansion \eqref{eqCh1_sep0} in new variables takes the form:
 \end{equation}
 
 Considering the substitution \eqref{eqCh1_separation_podstanovka} and the expression for the speed of light $c =   \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$
-\eqref{eqCh1_EMF_at_FreeSpace} we can rewrite 
-\eqref{eqCh1_separationH_before_podstanovka} in the following form 
+\eqref{eqCh1_EMF_at_FreeSpace}, we can rewrite 
+\eqref{eqCh1_separationH_before_podstanovka} in the following form:
 \begin{equation}
 q_n\left(t\right) rot \vec{E}_n\left(r\right) = - \frac{1}{c \omega_n}
 \frac{d p_n\left(t\right)}{d t} \vec{H}_n\left(r\right)
 \label{eqCh1_after_sep2}
 \end{equation}
-The equations \eqref{eqCh1_after_sep2} will be satisfied if  
+The equations \eqref{eqCh1_after_sep2} will be satisfied if 
 \[
 p_n = \frac{d q_n}{d t}, \quad \frac{d p_n}{d t} = 
 \frac{d^2 q_n}{d t^2} = - \omega_n^2 q_n,
@@ -148,7 +148,8 @@ rot \vec{E}_n\left(r\right) = k_n \vec{H}_n\left(r\right),
 \end{eqnarray}
 
 From the course "Electromagnetic Oscillations," it is known that the system of functions  
-$\vec{E}_n\left(r\right)$, $\vec{H}_n\left(r\right)$ is orthogonal and can be normalized: 
+$\vec{E}_n\left(r\right)$, $\vec{H}_n\left(r\right)$ is orthogonal and
+can be normalized:
 \begin{equation}
 \int_{\nu} \left( \vec{E}_n \vec{E}_m \right) d \nu = \delta_{nm},
 \quad
@@ -158,5 +159,6 @@ $\vec{E}_n\left(r\right)$, $\vec{H}_n\left(r\right)$ is orthogonal and can be no
 \label{eqCh1_task1}
 \end{equation}
 
-The solution to the original electrodynamic problem is reduced to finding the coefficients $q_n\left(t\right)$, $p_n\left(t\right)$    
-in the expansions \eqref{eqCh1_sep1}.
+Solving the original electrodynamic problem reduces to finding
+the coefficients  $q_n\left(t\right)$, $p_n\left(t\right)$    
+in the decompositions \eqref{eqCh1_sep1}.

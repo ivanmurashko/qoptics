@@ -1,5 +1,5 @@
 %% -*- coding:utf-8 -*- 
-\section{Hamiltonian of the atom-field system}
+\section{Hamiltonian of Atom-Field System}
 \rindex{Hamiltonian!atom-field system}
 The Hamiltonian of the atom-field system can be represented as
 \begin{equation}
@@ -8,11 +8,11 @@ The Hamiltonian of the atom-field system can be represented as
 \nonumber
 \end{equation}
 where
-$\hat{\mathcal{H}}^{(A)}$ is the Hamiltonian of the two-level atom,
+$\hat{\mathcal{H}}^{(A)}$ is the Hamiltonian of a two-level atom,
 $\hat{\mathcal{H}}^{(F)}$ is the Hamiltonian of the electromagnetic field, and
 $\hat{V}$ is the interaction Hamiltonian.
 
-For the Hamiltonian of the electromagnetic field, we have the expression
+For the electromagnetic field Hamiltonian, we have the expression
 \eqref{eqCh1_quant_stoyachie_volny}:
 \begin{equation}
 \hat{\mathcal{H}}^{(F)} = \hbar \omega 
@@ -20,7 +20,7 @@ For the Hamiltonian of the electromagnetic field, we have the expression
 \nonumber
 \end{equation}
 
-In the case of the Hamiltonian of the two-level atom, we use the following
+In the case of the two-level atom Hamiltonian, we use the following
 relations:
 \begin{eqnarray}
 \hat{\mathcal{H}}^{(A)}\ket{a} = \hbar \omega_a \ket{a},
@@ -53,7 +53,7 @@ where the following notations are introduced
 \hat{\sigma}_b = \ket{b}\bra{b}.
 \nonumber
 \end{equation}
-The expression \eqref{eqCh2HamiltonianAOperator} can be rewritten in
+Expression \eqref{eqCh2HamiltonianAOperator} can be rewritten in
 matrix form:
 \begin{equation}
 \hat{\mathcal{H}}^{(A)} = \hbar 
@@ -67,13 +67,13 @@ matrix form:
 \label{eqCh2HamiltonianA}
 \end{equation}
 
-For the interaction Hamiltonian $\hat{V}$ within the semiclassical
-approach in the dipole approximation, we have:
+For the interaction Hamiltonian $\hat{V}$ in the semiclassical
+approach under the dipole approximation, we have:
 \begin{equation}
 \hat{V} = - e \left(\hat{\vec{r}} \vec{E}\left(t\right)\right).
 \label{eqCh2HamiltonianVsemiclass}
 \end{equation}
-Applying the completeness condition twice to \eqref{eqCh2HamiltonianVsemiclass}, we obtain
+Applying the completeness condition twice to \eqref{eqCh2HamiltonianVsemiclass} we obtain
 \begin{eqnarray}
 \hat{V} = \hat{I}\hat{V}\hat{I} = - e \left(\vec{E}\left(t\right)
 \hat{I}\hat{\vec{r}}\hat{I}\right) = 
@@ -89,12 +89,13 @@ Applying the completeness condition twice to \eqref{eqCh2HamiltonianVsemiclass},
     \vec{P}_{ba}\ket{b}\bra{a}\right)\right),
 \label{eqCh2HamiltonianVsemiclass2}
 \end{eqnarray}
-where
+where 
 \[
 \vec{P}_{ab} = \vec{P}_{ba}^{*} = e \bra{a}\hat{\vec{r}}\ket{b}
 \]
-is the matrix element of the electric dipole moment.
-For simplicity, we assume $\vec{P}_{ab} = \vec{P}_{ba} = \vec{p}$ to be a real quantity. As a result, expression
+is the matrix element of the electric dipole moment. 
+For simplicity, we will assume $\vec{P}_{ab} = \vec{P}_{ba} =
+\vec{p}$ - a real quantity. As a result, the expression
 \eqref{eqCh2HamiltonianVsemiclass2} can be written as
 \begin{eqnarray}
 \hat{V} 
@@ -108,22 +109,24 @@ For simplicity, we assume $\vec{P}_{ab} = \vec{P}_{ba} = \vec{p}$ to be a real q
 \end{eqnarray}
 where  $\hat{\sigma}^{\dag} = \ket{a}\bra{b}$ and 
 $\hat{\sigma} = \ket{b}\bra{a}$ 
-are the transition operators. 
-$\hat{\sigma}^{\dag}$ is the raising operator corresponding to the transition from the lower to the upper state:
+are transition operators. 
+$\hat{\sigma}^{\dag}$ is the transition operator from the lower state to the upper one (raising
+operator):
 \[
 \hat{\sigma}^{\dag} \ket{b} = 
 \ket{a}\bra{b}\ket{b} = 
 \ket{a},
 \]
-$\hat{\sigma}$
-is the lowering operator corresponding to the transition from the upper to the lower state:
+and $\hat{\sigma}$
+is the operator for the transition from the upper state to the lower
+(lowering operator):
 \[
 \hat{\sigma}
 \ket{a} = 
 \ket{b}\bra{a}\ket{a} = 
 \ket{b}.
 \]
-In addition, the following equalities hold:
+In addition, the equalities hold
 \[
 \hat{\sigma}^{\dag} \ket{a} = 
 \ket{a}\bra{b}\ket{a} = 
@@ -136,7 +139,7 @@ and
 \ket{b}\bra{a}\ket{b} = 
 0.
 \]
-For the operators $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$, the following relation can be written: 
+For operators $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$ the following relation can be written: 
 \begin{eqnarray}
 \hat{\sigma}\hat{\sigma}^{\dag} + \hat{\sigma}^{\dag}\hat{\sigma} =
 \nonumber \\
@@ -148,8 +151,8 @@ For the operators $\hat{\sigma}$ and $\hat{\sigma}^{\dag}$, the following relati
 \end{eqnarray}
 where $\hat{I}$ is the identity operator.
 
-Expression \eqref{eqCh2HamiltonianVsemiclass3} can also be
-written in matrix form:
+Expression \eqref{eqCh2HamiltonianVsemiclass3} can also
+be written in matrix form 
 \begin{equation}
 \hat{V} = - \left(\vec{p} \vec{E}\right)
 \left(
@@ -162,17 +165,18 @@ written in matrix form:
 \label{eqCh2_8}
 \end{equation}
 
-Transition from the semiclassical interaction Hamiltonian to the fully
+The transition from the semiclassical interaction Hamiltonian to the fully
 quantum expression is made by replacing the classical
-electric field with the operator of the electric field. Thus, we obtain 
+electric field with the electric field operator. Thus, we obtain 
 \begin{equation}
 \hat{V} = - p E_1 \sin k z \left(\hat{a} + \hat{a}^{\dag}\right)
 \left(\hat{\sigma} + \hat{\sigma}^{\dag}\right)
 \label{eqCh2_8_add1}
 \end{equation}
-Here, the simplest expression for the mode electric field operator \eqref{eqCh1_EH_simple} is used.
+Here, the simplest expression for the electric field
+operator of the mode \eqref{eqCh1_EH_simple} was used. 
 
-The total Hamiltonian of the atom-field system has the form
+The complete Hamiltonian of the atom-field system is
 \begin{equation}
 \hat{\mathcal{H}}_{AF} = 
 \hbar \omega_a \sigma_a + \hbar \omega_b \sigma_b +
@@ -183,7 +187,7 @@ The total Hamiltonian of the atom-field system has the form
 \nonumber
 \end{equation}
 where $g = -\frac{p}{\hbar}E_1 \sin k z$ is the interaction constant,
-depending on the spatial distribution of the mode field.  
+dependent on the mode field distribution in space.  
 
 \input ./part1/interaction/fig2_1.tex
 
@@ -193,30 +197,29 @@ depending on the spatial distribution of the mode field.
 
 \input ./part1/interaction/fig2_4.tex
 
-
-Not all terms entering the interaction Hamiltonian
+Not all terms in the interaction Hamiltonian
 \eqref{eqCh2_8_add1} are equivalent. When multiplying the brackets, we obtain
 terms: 
 \begin{enumerate}
-\item $\hat{a}\hat{\sigma}$ - this term corresponds to the absorption of
-  a photon and the transition of the atom from the upper state to the lower state. This process is conditionally depicted in \autoref{figPart1Ch2_2_1};  
-\item $\hat{a}\hat{\sigma}^{\dag}$ - this term corresponds to the absorption
+\item $\hat{a}\hat{\sigma}$ - This term corresponds to the absorption
+  of a photon and the transition of the atom from the upper state to the lower state. This
+  process is conditionally depicted in \autoref{figPart1Ch2_2_1};  
+\item $\hat{a}\hat{\sigma}^{\dag}$ - This term corresponds to the absorption
   of a photon and the transition of the atom from the lower state to the upper state (see \autoref{figPart1Ch2_2_2});  
-\item $\hat{a}^{\dag}\hat{\sigma}$ - this term corresponds to the emission
+\item $\hat{a}^{\dag}\hat{\sigma}$ - This term corresponds to the emission
   of a photon and the transition of the atom from the upper state to the lower state (see \autoref{figPart1Ch2_2_3}); 
-\item $\hat{a}^{\dag}\hat{\sigma}^{\dag}$ - this term corresponds to
-  the emission of a photon and the transition of the atom from the lower state to the upper state (see \autoref{figPart1Ch2_2_4}). 
+\item $\hat{a}^{\dag}\hat{\sigma}^{\dag}$ - This term corresponds
+  to the emission of a photon and the transition of the atom from the lower state to the upper state (see \autoref{figPart1Ch2_2_4}). 
 \end{enumerate}
 
-
-Cases 1 and 4 correspond to processes (see \autoref{figPart1Ch2_2_1} and
-\ref{figPart1Ch2_2_4}) where the energy conservation law is violated.
-These processes can be classified as so-called virtual processes. Their
-probability tends to zero as time increases, and
-their contribution to the interaction Hamiltonian can be
-neglected. Remaining are terms 2 and 3 (see \autoref{figPart1Ch2_2_2} and
-\ref{figPart1Ch2_2_3}), corresponding to processes
-that occur without violation of the energy conservation law. Considering all the above, the interaction Hamiltonian takes the form: 
+Cases 1 and 4 refer to processes (see \autoref{figPart1Ch2_2_1} and
+\ref{figPart1Ch2_2_4}) in which the law of energy conservation is violated.
+These processes can be attributed to the so-called virtual processes. Their
+probability approaches 0 over time, and their contribution to the interaction Hamiltonian can be
+neglected. The remaining terms 2 and 3 (see \autoref{figPart1Ch2_2_2} and
+\ref{figPart1Ch2_2_3}) correspond to processes
+that occur without violating the law of energy conservation. Considering all
+that was said, the interaction Hamiltonian takes the form: 
 \begin{equation}
 \hat{V} = g \hbar \left(
 \hat{a}\hat{\sigma}^{\dag} + 
@@ -224,8 +227,8 @@ that occur without violation of the energy conservation law. Considering all the
 \right)
 \end{equation}
 
-It is convenient to switch to the interaction picture (see \autoref{AddWaveFuncInter}),
-using the well-known 
+It is convenient to transition to the interaction representation (see \autoref{AddWaveFuncInter}),
+using the known 
 formula \eqref{eqAddWaveFunc_VInter}
 \begin{equation}
 \hat{V}_I = 
@@ -241,7 +244,7 @@ where
 \hat{\mathcal{H}}^{\left(F\right)}
 \)
 is the unperturbed Hamiltonian of the atom-field system. It can be shown that in
-the interaction picture, the interaction Hamiltonian has the form 
+the interaction representation the interaction Hamiltonian takes the form 
 \begin{equation}
 \hat{V}_I = 
 g \hbar \left(
@@ -254,6 +257,6 @@ This is most easily done by calculating the matrix elements
 $\left<n +
 1\right|\bra{b}\hat{V}_I\ket{a}\ket{n}$ and
 $\bra{n}\bra{a}\hat{V}_I\ket{b}\left|n +
-1\right>$ for the operator $\hat{V}_I$, which can be represented in
+1\right>$ for the interaction operator $\hat{V}_I$, represented in
 the form \eqref{eqCh2_task21} and \eqref{eqCh2_task22}, and verifying that they
-are the same in both cases.
+are identical in both cases.

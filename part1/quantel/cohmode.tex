@@ -1,23 +1,28 @@
 %% -*- coding:utf-8 -*- 
 \section{Coherent States}
-States $\ket{n}$ do not tend with increasing $n$ to the classical solution for the oscillator. This property is possessed by the so-called coherent states. They were introduced by E. Schrödinger and later developed in our time by R. Glauber \cite{bQuantumOpticsAndRadioPhisicsLecture1966} and E. Sudarshan \cite{bKaluderSudershan1970} in relation to problems of quantum optics. A coherent state can be defined in various ways. We will use the definition in the form of a superposition of states $\ket{n}$:
+The states $\ket{n}$ do not approach the classical solution for the oscillator as $n$ increases. This property is held by the so-called coherent states. They were introduced by E. Schrödinger and further developed in modern times by R. Glauber \cite{bQuantumOpticsAndRadioPhisicsLecture1966} and E. Sudarshan \cite{bKaluderSudershan1970} in the context of quantum optics problems. A coherent state can be defined in various ways. We use the definition as a superposition of the states $\ket{n}$:
 \begin{equation}
-\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2} \sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\ket{n},
+\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\ket{n},
 \quad
-\left<\alpha\right| = e^{-\frac{1}{2} \left|\alpha\right|^2} \sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\bra{n},
+\left<\alpha\right| = e^{-\frac{1}{2} \left|\alpha\right|^2}
+\sum_{(n)} \frac{\alpha^{*n}}{\sqrt{n!}}\bra{n},
 \label{eqCh1_coh_def}
 \end{equation}
-where $\alpha$ is some complex parameter, the meaning of which will become clear later.
+where $\alpha$ is a certain complex parameter, whose meaning will be clarified later.
 
-From the definition \eqref{eqCh1_coh_def} follows a number of properties of coherent states. First of all,
+From the definition \eqref{eqCh1_coh_def}, several properties of coherent states follow. First of all,
 \begin{equation}
-\left<\alpha\right|\left.\alpha\right> = e^{-\left|\alpha\right|^2}\sum_{(n)}
-\frac{\left(\alpha\alpha^{*}\right)^n}{n!} = e^{\left|\alpha\right|^2} e^{-\left|\alpha\right|^2} = 1,
+\left<\alpha\right|\left.\alpha\right> = 
+e^{-\left|\alpha\right|^2}\sum_{(n)}
+\frac{\left(\alpha\alpha^{*}\right)^n}{n!} = 
+e^{\left|\alpha\right|^2} e^{-\left|\alpha\right|^2} = 1,
 \end{equation}
 i.e., coherent states are normalized. However, these states are not orthogonal:
 \begin{equation}
 \left<\alpha\right|\left.\beta\right> = 
-e^{-\frac{1}{2}\left(\left|\alpha\right|^2 + \left|\beta\right|^2\right)}\sum_{(n)} 
+e^{-\frac{1}{2}\left(\left|\alpha\right|^2 +
+  \left|\beta\right|^2\right)}\sum_{(n)} 
 \frac{\left(\alpha^{*}\beta\right)^n}{n!} = 
 e^{
 -\frac{1}{2} \left|\alpha\right|^2  -\frac{1}{2} \left|\beta\right|^2
@@ -26,7 +31,7 @@ e^{
 }
 \label{eqCh1_ortog}
 \end{equation}
-Hence
+From this,
 \begin{equation}
 \left|\left<\alpha\right|\left.\beta\right>\right|^2 = 
 e^{
@@ -35,11 +40,12 @@ e^{
 \alpha^{*} \beta  + \alpha \beta^{*}} = 
 e^{-\left|\alpha - \beta\right|^2}, 
 \end{equation}
-i.e., these states can be considered approximately orthogonal if $\left|\alpha - \beta\right|$ is sufficiently large.
+i.e., these states can be considered approximately orthogonal if
+$\left|\alpha - \beta\right|$ is sufficiently large.
 
-The non-orthogonality of coherent states is a consequence of the over-completeness of the system ($\alpha$ is any complex number, whereas $n$ are only integers).
+The non-orthogonality of coherent states is a consequence of the over-completeness of the system ($\alpha$ is any complex number, while $n$ is only integer numbers).
 
-Coherent states are eigenstates of the annihilation operator with an eigenvalue of $\alpha$:
+Coherent states are eigenstates of the annihilation operator with eigenvalue $\alpha$:
 \begin{equation}
 \hat{a}\left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}
 \sum_{(n)} \frac{\alpha^n}{\sqrt{n!}}\sqrt{n}\ket{n - 1} = 
@@ -48,7 +54,7 @@ e^{-\frac{1}{2} \left|\alpha\right|^2}
 \alpha\left|\alpha\right>
 \end{equation}
 
-The conjugate relationship looks like
+The conjugate relation has the form
 \begin{equation}
 \left<\alpha\right|\hat{a}^{\dag} =  
 \alpha^{*}\left<\alpha\right|
@@ -63,13 +69,13 @@ e^{-\left|\alpha\right|^2}
 \end{equation}
 corresponds to the Poisson distribution
 with an average number of photons  
-$\left<n\right> = \left|\alpha\right|^2$. Using the known relationship 
+$\left<n\right> = \left|\alpha\right|^2$. Using the known relation
 \begin{equation}
 \ket{n} = \frac{1}{\sqrt{n!}}
 \left(\hat{a}^{\dag}\right)^n\ket{0}
 \label{eqCh1_nstate}
 \end{equation}
-the coherent state can be represented as
+a coherent state can be represented as
 \begin{equation}
 \left|\alpha\right> = e^{-\frac{1}{2} \left|\alpha\right|^2}\sum_{(n)}
 \frac{\left(\alpha \hat{a}^{\dag}\right)^n}{n!}\ket{0} = 
@@ -78,7 +84,7 @@ e^{\alpha \hat{a}^{\dag} -
 \label{eqCh1_astate}
 \end{equation}
 
-Rewriting \eqref{eqCh1_astate} in another form, we use the following relation
+We rewrite \eqref{eqCh1_astate} in a different form, using the following relation
 \[
 e^{- \alpha^{*} \hat{a}} \ket{0} = \left(1 - \alpha^{*} \hat{a} +
 \dots\right) \ket{0} = \ket{0},
@@ -92,7 +98,7 @@ e^{- \alpha^{*} \hat{a}}
 \ket{0}.
 \label{eqCh1_astate_add}
 \end{equation}
-Next, we apply the operator identity (Baker-Hausdorff formula)
+Next, we use the operator identity (Baker-Campbell-Hausdorff formula)
 \begin{equation}
 e^{\hat{c} + \hat{d}} = e^{- \frac{1}{2}\left[\hat{c},
     \hat{d}\right]}e^{\hat{c}} e^{\hat{d}} 
@@ -101,8 +107,8 @@ e^{\hat{c} + \hat{d}} = e^{- \frac{1}{2}\left[\hat{c},
 valid under the condition  
 $\left[\hat{c},\left[\hat{c}, \hat{d}\right]\right] =
 \left[\hat{d},\left[\hat{c}, \hat{d}\right]\right] = 0$.
-If we let $\hat{c} = \alpha\hat{a}^{\dag}$, $\hat{d} = -\alpha^*\hat{a}$
-then from \eqref{eqCh1_astate_add} we get 
+If we set $\hat{c} = \alpha\hat{a}^{\dag}$, $\hat{d} = -\alpha^*\hat{a}$
+then from \eqref{eqCh1_astate_add} we obtain 
 \begin{eqnarray}
 \left|\alpha\right> =  
 e^{\alpha \hat{a}^{\dag}} 
@@ -119,33 +125,33 @@ e^{\alpha \hat{a}^{\dag} - \alpha^{*} \hat{a}}\ket{0}.
 \label{eqCh1_astate4squeezed}
 \end{eqnarray}
 
-In order to vividly represent coherent states, in \autoref{AddQCoh} a coordinate representation of the coherent state is given.
+To visually represent coherent states, the coordinate representation of the coherent state is given in \autoref{AddQCoh}.
 
-Here are a few more useful relationships obtained from \eqref{eqCh1_astate}. Differentiating \eqref{eqCh1_astate} by $\alpha$,
-we have:  
+We provide some more useful relations derived from \eqref{eqCh1_astate}. By differentiating \eqref{eqCh1_astate} with respect to  $\alpha$,
+we have:
 \[
 \frac{\partial}{\partial \alpha}\left|\alpha\right> = 
 \left( \hat{a}^{\dag} - \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>,
 \]
-or equivalently 
+or otherwise 
 \[
 \hat{a}^{\dag}\left|\alpha\right> = \left(\frac{\partial}{\partial
   \alpha} +  \frac{1}{2}\alpha^{*}\right)\left|\alpha\right>.
 \]
-The conjugate equality looks like
+the conjugate equality has the form
 \[
 \left<\alpha\right|\hat{a} = \left(\frac{\partial}{\partial
   \alpha^{*}} +  \frac{1}{2}\alpha\right)\left<\alpha\right|
 \]
 
-In general, the operator of the positive frequency part of the electric field looks like
+In general, the operator of the positive frequency part of the electric field has the form
 \[
 \hat{\vec{E}}^{(+)} = \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
 V}} \hat{a}_k\left(t\right) \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
   \right)}, 
 \]
 
-Suppose that the field (multimode) is in the state
+Assume that the field (multimode) is in the state
 \[
 \left| \left\{\alpha_s\right\}\right> = 
 \left| \alpha_1, \alpha_2, \dots, \alpha_s, \dots\right> = 
@@ -160,7 +166,7 @@ Suppose that the field (multimode) is in the state
 \dots,
 \]
 where $\left\{\alpha_s\right\}= \left\{\alpha_{k_s}\right\}$
-denotes a certain set of parameters $\alpha$. Applying the operator $\hat{\vec{E}}^{(+)}$ to the state $\left|\left\{\alpha_{k_s}\right\}\right>$, we obtain 
+indicates a certain set of parameters $\alpha$. If the operator $\hat{\vec{E}}^{(+)}$ acts on the state  $\left|\left\{\alpha_{k_s}\right\}\right>$,  we get 
 \begin{eqnarray}
 \hat{\vec{E}}^{(+)}\left|\left\{\alpha_{k_s}\right\}\right> = 
 \left\{ \sum_{(k_s)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
@@ -172,46 +178,56 @@ V}} \hat{a}_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
 V}} \alpha_{k_s} \vec{e}_k e^{-i \omega_k t + i \left(\vec{k}\vec{r}
   \right)}\left|\left\{\alpha_{k_s}\right\}\right>,
 \end{eqnarray}
-i.e., $\left|\left\{\alpha_{k_s}\right\}\right>$ is an eigenvector of the positive-frequency part of the electric field operator, and the eigenvalue is a classical field (analytical signal), whose complex mode amplitudes are  
+i.e., $\left|\left\{\alpha_{k_s}\right\}\right>$  is an eigenvector of the operator of the positive-frequency part of the electric field, and
+the eigenvalue is the classical field (analytic signal), whose mode complex amplitudes are equal to  
 \(
 \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
 V}} \alpha_k.
 \)
-From this, it follows that each classical field corresponds to some coherent state.
+From this, it follows that each classical field corresponds to a certain coherent state.
 
 The average value of the electric field operator $\hat{\vec{E}} =
-\hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)}$ in a coherent state is obtained by first considering a single mode: 
+\hat{\vec{E}}^{(+)} + \hat{\vec{E}}^{(-)}$ in a coherent
+state is obtained by first considering one mode: 
 \[
 \left<\alpha_{k}\right|\hat{\vec{E}}_k\left|\alpha_{k}\right> = 2
 \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
 V}}\left|\alpha_{k}\right|\cos 
 \left(\omega_k t - \left(\vec{k} \vec{r} + \theta_k\right) \right),
 \]
-where $\alpha_k = \left|\alpha_{k}\right| e^{i \theta_k}$, which follows from the relations
+where $\alpha_k = \left|\alpha_{k}\right| e^{i \theta_k}$, as follows from the relations
 \[
 \left<\alpha_k\right|\hat{a}_k\left|\alpha_k\right> = \alpha_k, \quad
 \left<\alpha_k\right|\hat{a}^{\dag}_k\left|\alpha_k\right> = \alpha^{*}_k
 \]
-Generalizing this to a multimode case, we obtain
+Generalizing this to the multi-mode case, we obtain
 \begin{equation}
 \left<\left\{\alpha_{k}\right\}\right|\hat{\vec{E}}\left|\left\{\alpha_{k}\right\}\right>
 = 2 \sum_{(k)} \sqrt{\frac{\hbar \omega_k}{2 \varepsilon_0
 V}} \left|\alpha_k\right|\cos \left(\omega_k t -
 \left(\vec{k}\vec{r}\right) + \theta_k \right),
 \end{equation}
-which corresponds to a classical multimode field, i.e., the average value of $\hat{\vec{E}}$ in a coherent state is a classical field with corresponding mode amplitudes and phases.
+which corresponds to the classical multi-mode field, i.e., the average
+value of $\hat{\vec{E}}$ in the coherent state is
+a classical field with the corresponding amplitudes and phases of the modes. 
 
-Coherent states, as we have seen, are not orthogonal due to the over-completeness of the system of eigenvectors, but they satisfy the completeness condition:
+Coherent states, as we have seen, are not orthogonal due to
+the over-completeness of the system of eigenvectors, but they satisfy
+the completeness condition: 
 \begin{equation}
 \frac{1}{\pi}\int \left|\alpha\right>\left<\alpha\right| d^2 \alpha =
 \hat{I},
 \label{eqCh1_full4coh}
 \end{equation}
-Here $d^2 \alpha = d\, Re \alpha\, d\, Im \alpha$, $\hat{I}$ is the identity operator, and the integration is carried out over the entire complex plane. We will prove this using polar coordinates, shown in \autoref{figCh1_Coh}.
+Here $d^2 \alpha = d\, Re \alpha\, d\, Im \alpha$, $\hat{I}$ is the identity
+operator, and integration is carried out over the entire complex
+plane. We will prove this by using polar coordinates,
+depicted in \autoref{figCh1_Coh}.  
 
 \input ./part1/quantel/fig5.tex
 
-Using the decomposition of $\left|\alpha\right>$ by $\ket{n}$ in polar coordinates, we get 
+Using the expansion of $\left|\alpha\right>$ in terms of $\ket{n}$ in
+polar coordinates, we obtain 
 \begin{eqnarray}
 \int d^2 \alpha \left|\alpha\right>\left<\alpha\right| =
 \nonumber \\
@@ -234,7 +250,7 @@ d\left|\alpha\right| =
 e^{-x}dx = 
 \pi \sum_{(n)}\ket{n}\bra{n} = \pi \hat{I},
 \end{eqnarray}
-where it is considered that
+where we have taken into account that
 \[
 \int_0^{2\pi} e^{-i \left(n - m\right)\varphi} = 2 \pi \delta_{nm},
 \]
@@ -243,12 +259,14 @@ a change of variables was made:
 \left|\alpha\right|^2 = x, \quad 2 \left|\alpha\right| d
 \left|\alpha\right| = d x,
 \]
-and the integral representation of the factorial is used:
+and we used the integral representation of the factorial:
 \[
 n! = \int_0^{\infty}x^ne^{-x}dx
 \]
 
-Thus, the formula \eqref{eqCh1_full4coh} is proved. With the help of this relationship, one coherent state can be expressed through all the others: 
+Thus, the formula \eqref{eqCh1_full4coh} is proven. Using
+this relation, one coherent state can be expressed through all
+the others: 
 \[
 \left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>\left<\beta\right|\left.\alpha\right> d^2 \beta,
 \]
@@ -261,7 +279,7 @@ e^{
 \alpha^{*} \beta
 },
 \)
-thus,
+therefore,
 \begin{equation}
 \left|\alpha\right> = \frac{1}{\pi}\int\left|\beta\right>
 e^{
