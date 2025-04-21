@@ -8,7 +8,7 @@ pdf: main.tex main.bib algorithmic.sty questions.tex
 	biber main
 	pdflatex main.tex
 	pdflatex main.tex
-	cp main.pdf qo.pdf
+	cp main.pdf qoptics.pdf
 
 clean:
 	rm -rf qo.pdf qo.dvi main.aux main.bbl main.dvi main.pdf main.blg main.toc main.out questions.pdf questions.aux questions.log main.bcf 
