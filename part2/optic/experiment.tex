@@ -1,43 +1,21 @@
-%% -*- coding:utf-8 -*- 
-\section{Experiments on photon counting. Application of photon counting technique for spectral measurements}
-We have seen that the distribution of photo counts depends on the counting time
-$T$. When the counting time is compared with the correlation time, the nature of
-the distribution changes, a maximum appears on the curve. With further
-increase in counting time, the nature of the curve is preserved, and at large
-counting times the distribution tends to the Poisson distribution. \rindex{Poisson distribution}
-Therefore, by measuring $P_m\left(T\right)$ at different
-$T$, one can estimate $\tau_c$ and the spectral width of the light beam $\sim
-1/\tau_c$. Such methods, in which spectral parameters
-of light are determined from photon counting experiments, are called intensity fluctuation spectroscopy. The minimum
-counting time is determined by the resolution of the photodetector, which is on the order of
-$10^{-8} - 10^{-9}$ sec, corresponding to frequencies of $10^{8}\div
-10^{9}$ Hz. This is the upper frequency limit of the method. The lower
-limit is determined by the maximum counting time, which is usually
-$1$ sec, corresponding to a resolution of $1$ Hz.
+\section{Photon Counting Experiments. Application of Photon Counting Technique for Spectral Measurements}
 
-Thus, the photon counting method can be used to study the frequency range
-from $1$ Hz to $10^8$ Hz. Therefore, this method complements conventional
-spectroscopy, which operates in the frequency range from $10^7$ Hz to
-$10^{15}$ Hz. It is more convenient to use photon counting experiments
-of another type. They measure the correlation between photon numbers $m_1$ and
-$m_2$, i.e., $\left<m_1 m_2\right>$, recorded in two
-short time intervals $\Delta t_1 = \Delta t_2 = \Delta t$,
-delayed relative to each other by time $\tau$. Both intervals
-have the same duration $\Delta t$, which is less than $\tau$ and the
-correlation time $\tau_c$. In this case, the second-order coherence is measured,
-defined by the formula
+We have seen that the distribution of photocounts depends on the counting time $T$. When the counting time is compared with the correlation time, the nature of the distribution changes, and a peak appears on the curve. With further increase in counting time, the nature of the curve is preserved, and for large counting times, the distribution will tend towards the Poisson distribution. \rindex{Poisson distribution}
+
+Therefore, by measuring $P_m\left(T\right)$ at different $T$, one can estimate $\tau_c$ and the width of the light beam spectrum $\sim 1/\tau_c$. Such methods, where spectral parameters of light are determined from photon counting experiments, are called intensity fluctuation spectroscopy. The minimum counting time is determined by the resolution of the photodetector, which is about $10^{-8} - 10^{-9}$ seconds, corresponding to a frequency of $10^{8}\div 10^{9}$ Hz. This is the upper limit of the frequency changes of the method. The lower limit is determined by the maximum counting time, which is usually $1$ second, corresponding to a resolution of $1$ Hz.
+
+Thus, the photon counting method can investigate the frequency interval from $1$ Hz to $10^8$ Hz. Consequently, this method complements conventional spectroscopy, which operates in the frequency range from $10^7$ Hz to $10^{15}$ Hz. It is more convenient to use another type of photon counting experiment. In these, the correlation between the numbers of photons $m_1$ and $m_2$, that is $\left<m_1 m_2\right>$, recorded in two short time intervals $\Delta t_1 = \Delta t_2 = \Delta t$, delayed relative to each other by time $\tau$, is measured. Both intervals have the same duration $\Delta t$, less than $\tau$, and the correlation time $\tau_c$. In this case, the second-order coherence is measured, defined by the formula 
 \[
 G_{12}^{(2)} = \frac{\left<m_1 m_2\right>}{\left(\bar{m}\right)^2} = 
 1 + \left(G_{12}^{(1)}\right)^2
 \]
-where $\bar{m}$ is the average number of counts in time $\Delta t$.
+where $\bar{m}$ is the average number of counts over time $\Delta t$.
 
-Knowing $G_{12}^{(2)}$ for chaotic light, the first-order coherence function can be calculated as
+Knowing $G_{12}^{(2)}$ for chaotic light, one can calculate the first-order coherence function
 \[
 G_{12}^{(1)} = \sqrt{G_{12}^{(2)} - 1}
 \]
-and via its Fourier transform, the shape and width of the spectral line of the light beam can be obtained. For chaotic light with
-a Lorentzian spectral line we have:
+and the form and width of the spectral line of the light beam related to it by Fourier transformation. For chaotic light with a Lorentzian spectral line, we have:
 \begin{equation}
 \left<m_1 m_2\right> = \bar{m}^2\left(e^{-2 \gamma \left|\tau\right|}
 + 1\right),
@@ -49,9 +27,4 @@ and for a Doppler line -
 + 1\right).
 \label{eqCh4_69}
 \end{equation}
-Here $\delta$ and $\gamma$ determine the line widths in these
-cases. By measuring these parameters experimentally, one can determine
-the spectral width of the lines.
-%One of the schemes suitable for such
-%measurements is shown in Fig. 7 (shifted coincidence scheme).  
-%Fig. 7.
+Here $\delta$ and $\gamma$ define the line widths in these cases. By measuring these parameters in the experiment, the spectral width of the lines can be determined.

@@ -1,33 +1,16 @@
 %% -*- coding:utf-8 -*- 
-\section{Photocount distribution for coherent and chaotic
-  light}
-To get an idea of how the statistics of photo counts are related to the statistics of light incident on the photodetector,
-we apply formula \eqref{eqCh4_49} to two limiting cases:
-light constant in amplitude (intensity) and chaotic light with
-fluctuating
-intensity. Let us start with the simplest case when the intensity of the incident
-light is constant. In this case, $\bar{I}\left(t, T\right)$ does not depend
-on $t$ and $T$, $\bar{I}\left(t, T\right) = I_0 = const$,  so
-the second averaging is not necessary. The same result can be obtained if in
-\eqref{eqCh4_49} we consider $P\left(\bar{I}\right) =
-\delta\left(\bar{I} - I_0\right)$.  The final expression for the case
-of intensity-constant light is:
+\section{Distribution of Photo-Counts for Coherent and Chaotic Light}
+
+To understand how the statistics of photo-counts relate to the statistics of light incident on the photodetector, we apply formula \eqref{eqCh4_49} to two extreme cases: constant amplitude (intensity) light and chaotic light with fluctuating intensity. Let's start with the simplest case, when the intensity of the incident light is constant. In this case, $\bar{I}\left(t, T\right)$ does not depend on $t$ and $T$, $\bar{I}\left(t, T\right) = I_0 = const$, so the second averaging is not needed. We get the same result if in \eqref{eqCh4_49} we assume $P\left(\bar{I}\right) = \delta\left(\bar{I} - I_0\right)$. The final expression for the case of light with constant intensity is: 
 \begin{equation}
 P_m = \frac{\bar{m}^m}{m!}e^{- \bar{m}}.
 \label{eqCh4_50}
 \end{equation}
-where $\bar{m} = \xi I_0 T$ is the mean number of photo counts registered
-by the photodetector during time $T$.  Thus, for constant
-intensity, the photo count distribution is a Poisson distribution. \rindex{Poisson distribution}
-Note that for sufficiently large $T$ (much greater than
-the correlation time $\tau_c$), $\bar{I}\left(t, T\right)$ in any case\footnote{including for chaotic light} will tend to
-a constant value, and the photo count distribution approaches a Poisson distribution. \rindex{Poisson distribution}
-
-In the other limiting case, when $T \ll \tau_c$, one can consider
-$\bar{I}\left(t, T\right) = I\left(t\right)$ - the instantaneous
-intensity. In the case of chaotic light, $P\left(I\right) =
-\frac{1}{\bar{I}} e^{- \frac{I}{\bar{I}}}$ \cite{bLoudon1976}.
-According to Mandel's formula we have:
+where $\bar{m} = \xi I_0 T$ is the average number of photo-counts recorded by the photodetector over time $T$. Thus, for constant intensity, the distribution of photo-counts is a Poisson distribution. \rindex{Poisson distribution}
+Note that for sufficiently large $T$ (significantly larger than the correlation time $\tau_c$), $\bar{I}\left(t, T\right)$ in any case\footnote{including chaotic light} will tend to a constant value, and the distribution of photo-counts will become a Poisson distribution. \rindex{Poisson distribution}
+  
+In another extreme case, when $T \ll \tau_c$, we can consider $\bar{I}\left(t, T\right) = I\left(t\right)$ - the instantaneous intensity. In the case of chaotic light, $P\left(I\right) = \frac{1}{\bar{I}} e^{- \frac{I}{\bar{I}}}$ \cite{bLoudon1976}.  
+By Mandel's formula, we have:
 \begin{eqnarray}
 P_m\left(T\right) = \frac{1}{\bar{I}}\int_0^{\infty} e^{- \frac{I}{\bar{I}}}
 \frac{\left(\xi I T\right)^m}{m!} e^{-
@@ -37,7 +20,7 @@ P_m\left(T\right) = \frac{1}{\bar{I}}\int_0^{\infty} e^{- \frac{I}{\bar{I}}}
   T\right)^m}{m!\left(1 + \bar{m}\right)^{m + 1}} e^{-y} dy.
 \label{eqCh4_51}
 \end{eqnarray}
-Here a change of variables was made:
+Here a change of variables is made:
 \[
 y = I \left(\frac{1}{\bar{I}} + \xi T\right),
 \]
@@ -60,16 +43,6 @@ since
 \int_0^{\infty}y^m e^{-y}dy = m!.
 \]
 
-We have obtained that the photo count distribution replicates the
-photon statistics for chaotic fields, but with a modified scale. It is much
-more complicated to determine the photo count distribution for a counting time $T$
-corresponding to the intermediate case $T \approx \tau_c$. Only numerical calculations
-are possible here. The results of such calculations are shown
-in \autoref{figPart4Ch2_6} \cite{bLoudon1976}. They allow judging the nature
-of changes in the photo count distribution as the ratio
-$T/\tau_c$ increases. From the graphs, it is clear that the character of the distribution changes
-near $T = \tau_c$.  This allows, by conducting measurements for various
-$T$, to estimate $\tau_c$ and the width of the spectrum of the incident
-light $\sim 1/\tau_c$. 
+We have found that the distribution of photo-counts follows the distribution of photons for a chaotic field, but with a modified scale. It is much more difficult to determine the distribution of photo-counts for the counting time $T$, corresponding to the intermediate case $T \approx \tau_c$. Here, only numerical calculations are possible. The results of such calculations are provided in \autoref{figPart4Ch2_6} \cite{bLoudon1976}. They allow us to understand the nature of the change in the distribution of photo-counts with an increasing ratio of $T/\tau_c$. From the graphs, it is evident that the nature of the distribution changes near $T = \tau_c$. This allows, by conducting measurements at different $T$, to estimate $\tau_c$ and the width of the incident light spectrum $\sim 1/\tau_c$. 
 
 \input ./part2/optic/fig6.tex
